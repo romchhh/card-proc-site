@@ -8,7 +8,7 @@ export const siteConfig = {
   description:
     'Stripe payment processing for any niche from 1.5%. Warmed-up accounts, 99.9% uptime, CRM access and unlimited withdrawals in EUR, USD, PLN and USDT.',
   descriptionRu:
-    'Купить Stripe аккаунт или арендовать готовый верифицированный аккаунт с оборотом. Продажа Stripe аккаунтов для бизнеса и россиян. Процессинг от 1.5%, вывод EUR/USD/USDT.',
+    'Купить Stripe аккаунт или арендовать готовый верифицированный аккаунт с оборотом. Продажа Stripe аккаунтов для бизнеса. Процессинг от 1.5%, вывод EUR/USD/USDT.',
   descriptionEn:
     'Buy verified Stripe account with instant delivery. Stripe account for sale — warmed, ready for business. Rent or buy. Processing from 1.5%. Payouts in EUR, USD, USDT.',
   url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://wayofprocessing.com',
@@ -28,7 +28,6 @@ export const siteConfig = {
     'готовый stripe аккаунт',
     'stripe аккаунт на продажу',
     'продажа stripe аккаунтов',
-    'купить stripe для россиян',
     'купить stripe аккаунт бизнес',
     'аренда stripe аккаунта',
     'арендовать аккаунт stripe',
