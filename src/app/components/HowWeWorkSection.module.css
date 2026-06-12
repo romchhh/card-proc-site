@@ -196,7 +196,7 @@
     align-items: center;
     flex-shrink: 0;
     width: clamp(56px, 15vw, 72px);
-    overflow: visible;
+    overflow: hidden;
   }
 
   .numberMobile {

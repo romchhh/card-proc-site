@@ -1,5 +1,7 @@
 .section {
   position: relative;
+  overflow-x: clip;
+  max-width: 100%;
   background: linear-gradient(
     180deg,
     var(--gray-100) 0%,
@@ -185,7 +187,6 @@
   .viewport {
     grid-column: 1 / -1;
     grid-row: 1;
-    margin: 0 -8px;
   }
 
   .image {
@@ -225,7 +226,4 @@
     padding-right: var(--page-padding-x-sm);
   }
 
-  .viewport {
-    margin: 0 -4px;
-  }
 }

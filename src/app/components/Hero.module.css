@@ -210,8 +210,9 @@
     font-size: clamp(13px, 3.6vw, 16px);
     padding: 10px 16px;
     white-space: normal;
-    text-align: center;
-    align-self: flex-start;
+    text-align: left;
+    align-self: stretch;
+    max-width: 100%;
   }
 
   .description {
