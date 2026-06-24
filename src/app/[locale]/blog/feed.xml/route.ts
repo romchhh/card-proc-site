@@ -3,14 +3,15 @@ import { isValidLocale, localePath } from '@/lib/i18n/config'
 import { absoluteUrl, escapeXml } from '@/lib/seo'
 import { siteConfig } from '@/lib/site'
 
-type Params = { params: { locale: string } }
+type RouteContext = { params: Promise<{ locale: string }> }
 
 export function generateStaticParams() {
   return [{ locale: 'ru' }, { locale: 'en' }]
 }
 
-export function GET(_request: Request, { params }: Params) {
-  const locale = isValidLocale(params.locale) ? params.locale : 'ru'
+export async function GET(_request: Request, { params }: RouteContext) {
+  const { locale: rawLocale } = await params
+  const locale = isValidLocale(rawLocale) ? rawLocale : 'ru'
   const isEn = locale === 'en'
   const posts = getAllPosts()
   const channelTitle = escapeXml(isEn ? siteConfig.pages.blog.titleEn : siteConfig.pages.blog.title)

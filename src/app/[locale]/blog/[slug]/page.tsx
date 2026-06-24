@@ -12,7 +12,7 @@ import { isValidLocale, localePath, locales, type Locale } from '@/lib/i18n/conf
 import { absoluteUrl, buildArticleMetadata, buildBreadcrumbJsonLd, buildGraphJsonLd, buildWebPageJsonLd } from '@/lib/seo'
 import { siteConfig } from '@/lib/site'
 
-type Props = { params: { locale: string; slug: string } }
+type Props = { params: Promise<{ locale: string; slug: string }> }
 
 export function generateStaticParams() {
   return getAllSlugs().flatMap((slug) =>
@@ -20,11 +20,12 @@ export function generateStaticParams() {
   )
 }
 
-export function generateMetadata({ params }: Props): Metadata {
-  const post = getPostBySlug(params.slug)
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale: rawLocale, slug } = await params
+  const post = getPostBySlug(slug)
   if (!post) return {}
 
-  const locale = (isValidLocale(params.locale) ? params.locale : 'ru') as Locale
+  const locale = (isValidLocale(rawLocale) ? rawLocale : 'ru') as Locale
   const view = post[locale]
 
   return buildArticleMetadata({
@@ -41,13 +42,14 @@ export function generateMetadata({ params }: Props): Metadata {
   })
 }
 
-export default function BlogPost({ params }: Props) {
-  const post = getPostBySlug(params.slug)
+export default async function BlogPost({ params }: Props) {
+  const { locale: rawLocale, slug } = await params
+  const post = getPostBySlug(slug)
   if (!post) notFound()
 
-  const locale = (isValidLocale(params.locale) ? params.locale : 'ru') as Locale
+  const locale = (isValidLocale(rawLocale) ? rawLocale : 'ru') as Locale
   const view = post[locale]
-  const related = getRelatedPosts(params.slug)
+  const related = getRelatedPosts(slug)
   const postPath = localePath(`/blog/${post.slug}`, locale)
   const isEn = locale === 'en'
 

@@ -18,10 +18,11 @@ import { isValidLocale, type Locale } from '@/lib/i18n/config'
 import { buildPageMetadata } from '@/lib/seo'
 import { siteConfig } from '@/lib/site'
 
-type Props = { params: { locale: string } }
+type Props = { params: Promise<{ locale: string }> }
 
-export function generateMetadata({ params }: Props): Metadata {
-  const locale = isValidLocale(params.locale) ? params.locale : 'ru'
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale: rawLocale } = await params
+  const locale = isValidLocale(rawLocale) ? rawLocale : 'ru'
 
   if (locale === 'en') {
     return buildPageMetadata({
@@ -44,8 +45,9 @@ export function generateMetadata({ params }: Props): Metadata {
   })
 }
 
-export default function Home({ params }: Props) {
-  const locale = (isValidLocale(params.locale) ? params.locale : 'ru') as Locale
+export default async function Home({ params }: Props) {
+  const { locale: rawLocale } = await params
+  const locale = (isValidLocale(rawLocale) ? rawLocale : 'ru') as Locale
 
   return (
     <>
