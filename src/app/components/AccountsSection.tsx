@@ -6,10 +6,10 @@ import { useTranslation } from 'react-i18next'
 import styles from './AccountsSection.module.css'
 
 const ACCOUNT_IMAGES = [
-  { src: '/images/accounts/Group%202087327393.jpg', width: 2360, height: 1006 },
-  { src: '/images/accounts/Group%202087327394.jpg', width: 2258, height: 964 },
-  { src: '/images/accounts/Group%202087327395.jpg', width: 2372, height: 986 },
-  { src: '/images/accounts/Group%202087327396.jpg', width: 2372, height: 1030 },
+  { src: '/images/accounts/account-1.jpg', width: 2360, height: 1006 },
+  { src: '/images/accounts/account-2.jpg', width: 2258, height: 964 },
+  { src: '/images/accounts/account-3.jpg', width: 2372, height: 986 },
+  { src: '/images/accounts/account-4.jpg', width: 2372, height: 1030 },
 ] as const
 
 export default function AccountsSection() {

@@ -1,4 +1,5 @@
 import type { BlogLocale, BlogPost } from './blog'
+import { localePath } from './i18n/config'
 import { absoluteUrl } from './seo'
 import { siteConfig } from './site'
 
@@ -92,7 +93,9 @@ function excerptArticleBody(body: string, maxLength = 500): string {
 export function buildBlogPostingJsonLd(post: BlogPost, locale: BlogLocale = 'ru') {
   const view = post[locale]
   const path = `/blog/${post.slug}`
-  const url = absoluteUrl(path)
+  const localizedPath = localePath(path, locale)
+  const url = absoluteUrl(localizedPath)
+  const blogPath = localePath('/blog', locale)
 
   return {
     '@type': 'BlogPosting',
@@ -122,24 +125,25 @@ export function buildBlogPostingJsonLd(post: BlogPost, locale: BlogLocale = 'ru'
       '@type': 'Thing',
       name,
     })),
-    inLanguage: locale === 'en' ? 'en' : 'ru',
+    inLanguage: locale === 'en' ? 'en-US' : 'ru-RU',
     isAccessibleForFree: true,
-    isPartOf: { '@id': `${siteConfig.url}/blog#blog` },
+    isPartOf: { '@id': `${absoluteUrl(blogPath)}#blog` },
     url,
   }
 }
 
 export function buildBlogItemListJsonLd(posts: BlogPost[], locale: BlogLocale = 'ru') {
+  const blogPath = localePath('/blog', locale)
   return {
     '@type': 'ItemList',
-    '@id': `${siteConfig.url}/blog#itemlist`,
+    '@id': `${absoluteUrl(blogPath)}#itemlist`,
     name: locale === 'en' ? `${siteConfig.name} Blog Articles` : `Статьи блога ${siteConfig.name}`,
     numberOfItems: posts.length,
     itemListElement: posts.map((post, index) => ({
       '@type': 'ListItem',
       position: index + 1,
       name: post[locale].title,
-      url: absoluteUrl(`/blog/${post.slug}`),
+      url: absoluteUrl(localePath(`/blog/${post.slug}`, locale)),
     })),
   }
 }

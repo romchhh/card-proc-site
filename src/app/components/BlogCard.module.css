@@ -1,0 +1,92 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none;
+  background: var(--white);
+  border: 1px solid rgba(10, 37, 64, 0.08);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.cardImgWrap {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: var(--gray-100);
+}
+
+.cardImg {
+  object-fit: cover;
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 22px 24px 26px;
+}
+
+.cardMeta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--text-sm);
+  color: var(--gray-400);
+  margin-bottom: 12px;
+}
+
+.cardTitle {
+  font-size: clamp(20px, 2vw, 24px);
+  font-weight: 700;
+  line-height: var(--leading-snug);
+  color: var(--gray-900);
+  margin-bottom: 10px;
+}
+
+.cardExcerpt {
+  font-size: var(--text-base);
+  line-height: var(--leading-body);
+  color: var(--gray-500);
+  margin-bottom: 18px;
+}
+
+.readMore {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--gray-900);
+  transition: gap 0.2s;
+}
+
+.card:hover .readMore {
+  gap: 14px;
+}
+
+.readMoreArrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--stripe-blue) 0%, var(--stripe-blue-hover) 100%);
+  color: #fff;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-glow);
+  transition: transform 0.25s var(--ease-out), box-shadow 0.25s;
+}
+
+.card:hover .readMoreArrow {
+  transform: rotate(45deg) scale(1.06);
+  box-shadow: 0 8px 24px rgba(99, 91, 255, 0.45);
+}

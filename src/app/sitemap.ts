@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next'
 import { getAllPosts } from '@/lib/blog'
+import { SERVICE_SLUGS } from '@/lib/services'
 import { localePath, locales } from '@/lib/i18n/config'
 import { siteConfig } from '@/lib/site'
 
@@ -18,6 +19,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   )
 
+  const serviceEntries = locales.flatMap((locale) =>
+    SERVICE_SLUGS.map((slug) => ({
+      url: `${siteConfig.url}${localePath(`/services/${slug}`, locale)}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.9,
+    })),
+  )
+
   const postEntries = locales.flatMap((locale) =>
     posts.map((post) => ({
       url: `${siteConfig.url}${localePath(`/blog/${post.slug}`, locale)}`,
@@ -27,5 +37,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   )
 
-  return [...staticEntries, ...postEntries]
+  return [...staticEntries, ...serviceEntries, ...postEntries]
 }

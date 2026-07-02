@@ -385,6 +385,15 @@
       }
     }
   },
+  "servicePages": {
+    "aboutService": "About this service",
+    "introCta": "Get a free consultation",
+    "benefitsHeading": "Key Benefits",
+    "ctaHeading": "Ready to get started?",
+    "ctaDescription": "Get a free consultation and personalized offer for your business",
+    "relatedServices": "Other services",
+    "relatedBlog": "Related articles"
+  },
   "footer": {
     "navLabel": "Navigation",
     "brandBold": "WAYOF",

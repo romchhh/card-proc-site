@@ -7,8 +7,16 @@ export function isValidLocale(value: string): value is Locale {
 }
 
 export function localePath(path: string, locale: Locale): string {
-  const normalized = !path || path === '/' ? '' : path.startsWith('/') ? path : `/${path}`
-  return normalized === '' ? `/${locale}` : `/${locale}${normalized}`
+  const [pathname, hash = ''] = path.split('#')
+  const normalized =
+    !pathname || pathname === '/' ? '' : pathname.startsWith('/') ? pathname : `/${pathname}`
+  const localized = normalized === '' ? `/${locale}` : `/${locale}${normalized}`
+  return hash ? `${localized}#${hash}` : localized
+}
+
+export function localeHashPath(hash: string, locale: Locale): string {
+  const id = hash.startsWith('#') ? hash.slice(1) : hash
+  return `${localePath('/', locale)}#${id}`
 }
 
 export function stripLocalePrefix(pathname: string): string {

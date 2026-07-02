@@ -11,7 +11,7 @@ type FaqItem = {
 
 export default function FaqSection() {
   const { t } = useTranslation()
-  const [openIndex, setOpenIndex] = useState<number | null>(0)
+  const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   const items = t('seo.faq', { returnObjects: true }) as FaqItem[]
 
@@ -46,8 +46,14 @@ export default function FaqSection() {
                     </span>
                   </button>
                 </h3>
-                <div className={styles.answerWrap} hidden={!isOpen}>
-                  <p className={styles.answer}>{item.answer}</p>
+                <div
+                  className={styles.answerWrap}
+                  aria-hidden={!isOpen}
+                  data-open={isOpen}
+                >
+                  <div className={styles.answerInner}>
+                    <p className={styles.answer}>{item.answer}</p>
+                  </div>
                 </div>
               </article>
             )

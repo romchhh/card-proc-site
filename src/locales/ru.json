@@ -385,6 +385,15 @@
       }
     }
   },
+  "servicePages": {
+    "aboutService": "Об услуге",
+    "introCta": "Получить бесплатную консультацию",
+    "benefitsHeading": "Ключевые преимущества",
+    "ctaHeading": "Готовы начать?",
+    "ctaDescription": "Получите бесплатную консультацию и персональное предложение для вашего бизнеса",
+    "relatedServices": "Другие услуги",
+    "relatedBlog": "Полезные статьи"
+  },
   "footer": {
     "navLabel": "Навигация",
     "brandBold": "WAYOF",

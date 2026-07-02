@@ -26,6 +26,17 @@ WayOfProcessing helps businesses accept payments worldwide via Stripe.
 - Contact form: /ru/#kontakt or /en/#kontakt
 - Blog RSS: /ru/blog/feed.xml, /en/blog/feed.xml
 
+## Service pages
+
+- /ru/services/stripe-account-rent — Аренда Stripe аккаунта (RU)
+- /en/services/stripe-account-rent — Stripe Account Rental (EN)
+- /ru/services/stripe-account-buy — Покупка Stripe аккаунта (RU)
+- /en/services/stripe-account-buy — Buy a Stripe Account (EN)
+- /ru/services/processing-turnkey — Процессинг Stripe под ключ (RU)
+- /en/services/processing-turnkey — Turnkey Stripe Processing (EN)
+- /ru/services/legal-entity-bank — Юрлицо, банк и Stripe (RU)
+- /en/services/legal-entity-bank — Legal Entity, Bank and Stripe (EN)
+
 ## Blog articles
 
 - /ru/blog/stripe-for-your-business — Stripe для вашего бизнеса (RU)

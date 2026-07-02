@@ -55,18 +55,18 @@ export default async function Home({ params }: Props) {
       <Navbar transparent />
       <main>
         <Hero />
-        <ScrollReveal><StatsSection /></ScrollReveal>
-        <ScrollReveal delay={80}><ServicesSection /></ScrollReveal>
-        <ScrollReveal delay={80}><AdvantagesSection /></ScrollReveal>
-        <ScrollReveal delay={80}><HowWeWorkSection /></ScrollReveal>
-        <ScrollReveal delay={80}><AccountsSection /></ScrollReveal>
-        <ScrollReveal delay={80}><SpecialistsSection /></ScrollReveal>
-        <ScrollReveal delay={80}><ClientsSection /></ScrollReveal>
-        <ScrollReveal delay={80}><FaqSection /></ScrollReveal>
-        <ScrollReveal delay={80}><ContactSection /></ScrollReveal>
+        <StatsSection />
+        <ServicesSection />
+        <AdvantagesSection />
+        <HowWeWorkSection />
+        <AccountsSection />
+        <ScrollReveal><SpecialistsSection /></ScrollReveal>
+        <ScrollReveal delay={40}><ClientsSection /></ScrollReveal>
+        <ScrollReveal delay={40}><FaqSection /></ScrollReveal>
+        <ScrollReveal delay={40}><ContactSection /></ScrollReveal>
         <SeoTextSection />
       </main>
-      <ScrollReveal delay={80}><Footer /></ScrollReveal>
+      <Footer />
     </>
   )
 }

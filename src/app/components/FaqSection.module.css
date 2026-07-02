@@ -96,8 +96,19 @@
   transform: rotate(45deg);
 }
 
-.answerWrap[hidden] {
-  display: none;
+.answerWrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.25s var(--ease-out);
+}
+
+.answerWrap[data-open='true'] {
+  grid-template-rows: 1fr;
+}
+
+.answerInner {
+  overflow: hidden;
+  min-height: 0;
 }
 
 .answer {

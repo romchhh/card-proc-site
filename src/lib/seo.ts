@@ -9,6 +9,8 @@ type PageMetaInput = {
   locale: Locale
   keywords?: string[]
   ogTitle?: string
+  ogImage?: string
+  ogImageAlt?: string
   noIndex?: boolean
 }
 
@@ -54,6 +56,8 @@ function buildSharedMeta({
   description,
   keywords,
   ogTitle,
+  ogImage,
+  ogImageAlt,
   path,
   locale,
   noIndex = false,
@@ -62,6 +66,8 @@ function buildSharedMeta({
   description: string
   keywords?: string[]
   ogTitle?: string
+  ogImage?: string
+  ogImageAlt?: string
   path: string
   locale: Locale
   noIndex?: boolean
@@ -70,9 +76,11 @@ function buildSharedMeta({
   const url = absoluteUrl(localizedPath)
   const ogLocale = localeOgLocale(locale)
   const alternateOgLocale = localeOgLocale(locale === 'ru' ? 'en' : 'ru')
+  const imagePath = ogImage ?? siteConfig.ogImage
+  const imageUrl = imagePath.startsWith('http') ? imagePath : absoluteUrl(imagePath)
 
   return {
-    title,
+    title: { absolute: title },
     description,
     keywords: keywords ?? siteConfig.keywords,
     alternates: noIndex ? undefined : buildHreflang(path, locale),
@@ -80,7 +88,7 @@ function buildSharedMeta({
       ? { index: false, follow: false }
       : { index: true, follow: true, googleBot },
     other: {
-      'content-language': locale,
+      'content-language': localeOgLocale(locale).replace('_', '-'),
     },
     openGraph: {
       locale: ogLocale,
@@ -91,10 +99,10 @@ function buildSharedMeta({
       description,
       images: [
         {
-          url: siteConfig.ogImage,
+          url: imageUrl,
           width: 1200,
           height: 630,
-          alt: siteConfig.ogImageAlt,
+          alt: ogImageAlt ?? siteConfig.ogImageAlt,
         },
       ],
     },
@@ -102,7 +110,7 @@ function buildSharedMeta({
       card: 'summary_large_image' as const,
       title: ogTitle ?? title,
       description,
-      images: [siteConfig.ogImage],
+      images: [imageUrl],
     },
   }
 }
@@ -114,9 +122,21 @@ export function buildPageMetadata({
   locale,
   keywords,
   ogTitle,
+  ogImage,
+  ogImageAlt,
   noIndex = false,
 }: PageMetaInput): Metadata {
-  const shared = buildSharedMeta({ title, description, keywords, ogTitle, path, locale, noIndex })
+  const shared = buildSharedMeta({
+    title,
+    description,
+    keywords,
+    ogTitle,
+    ogImage,
+    ogImageAlt,
+    path,
+    locale,
+    noIndex,
+  })
 
   return {
     ...shared,
@@ -140,19 +160,19 @@ export function buildArticleMetadata({
   keywords,
   ogTitle,
 }: ArticleMetaInput): Metadata {
+  const pageTitle = `${title} | ${siteConfig.name}`
   const shared = buildSharedMeta({
-    title: `${title} | ${siteConfig.name}`,
+    title: pageTitle,
     description,
     keywords,
     ogTitle: ogTitle ?? title,
     path,
     locale,
   })
-  const ogImage = image.startsWith('http') ? image : absoluteUrl(image)
+  const ogImageUrl = image.startsWith('http') ? image : absoluteUrl(image)
 
   return {
     ...shared,
-    title: `${title} | ${siteConfig.name}`,
     openGraph: {
       ...shared.openGraph,
       type: 'article',
@@ -163,7 +183,7 @@ export function buildArticleMetadata({
       tags: keywords,
       images: [
         {
-          url: ogImage,
+          url: ogImageUrl,
           width: 1200,
           height: 630,
           alt: imageAlt,
@@ -172,9 +192,15 @@ export function buildArticleMetadata({
     },
     twitter: {
       ...shared.twitter,
-      images: [ogImage],
+      images: [ogImageUrl],
     },
   }
+}
+
+export function breadcrumbItemUrl(path: string, locale: Locale) {
+  if (path.startsWith('http')) return path
+  if (path.startsWith(`/${locale}`)) return absoluteUrl(path)
+  return absoluteUrl(localePath(path, locale))
 }
 
 export function buildBreadcrumbJsonLd(
@@ -188,7 +214,7 @@ export function buildBreadcrumbJsonLd(
       '@type': 'ListItem',
       position: index + 1,
       name: item.name,
-      item: absoluteUrl(localePath(item.path, locale)),
+      item: breadcrumbItemUrl(item.path, locale),
     })),
   }
 }
@@ -206,23 +232,27 @@ export function buildWebPageJsonLd({
   path,
   locale,
   dateModified,
+  pageType = 'WebPage',
+  aboutId,
 }: {
   title: string
   description: string
   path: string
   locale: Locale
   dateModified?: string
+  pageType?: 'WebPage' | 'PrivacyPolicy' | 'CollectionPage'
+  aboutId?: string
 }) {
   const localizedPath = localePath(path, locale)
   return {
     '@context': 'https://schema.org',
-    '@type': 'WebPage',
+    '@type': pageType,
     '@id': `${absoluteUrl(localizedPath)}#webpage`,
     url: absoluteUrl(localizedPath),
     name: title,
     description,
     isPartOf: { '@id': `${siteConfig.url}/#website` },
-    about: { '@id': `${siteConfig.url}/#service` },
+    ...(aboutId ? { about: { '@id': aboutId } } : {}),
     inLanguage: locale,
     ...(dateModified ? { dateModified } : {}),
   }

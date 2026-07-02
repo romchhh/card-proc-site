@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next'
 import { siteConfig } from '@/lib/site'
 import { stripLocalePrefix } from '@/lib/i18n/config'
 import { useLocalizedPath } from '@/lib/i18n/use-locale'
+import { useBodyScrollLock } from '@/lib/body-scroll-lock'
 import { useContactModal } from './ContactModalProvider'
 import { TelegramIcon } from './icons/SocialIcons'
 import LangSwitcher from './LangSwitcher'
@@ -24,18 +25,25 @@ export default function Navbar({ transparent = false }: { transparent?: boolean 
   const blogPath = lp('/blog')
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 60)
+    let frame = 0
+    const onScroll = () => {
+      if (frame) return
+      frame = window.requestAnimationFrame(() => {
+        setScrolled(window.scrollY > 60)
+        frame = 0
+      })
+    }
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+      if (frame) window.cancelAnimationFrame(frame)
+    }
   }, [])
 
-  useEffect(() => {
-    document.body.style.overflow = menuOpen ? 'hidden' : ''
-    return () => { document.body.style.overflow = '' }
-  }, [menuOpen])
+  useBodyScrollLock(menuOpen)
 
-  const isDark = !isHome || !transparent || scrolled
+  const isDark = !transparent || scrolled
   const isBlogActive = stripLocalePrefix(pathname) === '/blog' || pathname.includes('/blog/')
 
   return (

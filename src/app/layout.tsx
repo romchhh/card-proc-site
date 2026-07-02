@@ -1,8 +1,10 @@
 import type { Metadata, Viewport } from 'next'
+import { headers } from 'next/headers'
 import { Montserrat } from 'next/font/google'
 import './globals.css'
 import Providers from './components/Providers'
 import { siteConfig } from '@/lib/site'
+import { defaultLocale, isValidLocale } from '@/lib/i18n/config'
 
 const montserrat = Montserrat({
   subsets: ['latin', 'cyrillic'],
@@ -60,8 +62,11 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const localeHeader = headers().get('x-locale')
+  const htmlLang = localeHeader && isValidLocale(localeHeader) ? localeHeader : defaultLocale
+
   return (
-    <html lang="ru" className={montserrat.variable} suppressHydrationWarning>
+    <html lang={htmlLang} className={montserrat.variable} suppressHydrationWarning>
       <head>
         <link rel="alternate" type="text/plain" href="/ai.txt" title="AI information" />
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM information" />

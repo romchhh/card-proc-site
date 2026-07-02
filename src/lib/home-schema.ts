@@ -1,5 +1,6 @@
 import en from '@/locales/en.json'
 import ru from '@/locales/ru.json'
+import { buildFaqPageJsonLd } from './service-seo'
 import { localePath, type Locale } from './i18n/config'
 import { absoluteUrl } from './seo'
 import { siteConfig } from './site'
@@ -116,18 +117,7 @@ export function buildHomeJsonLd(locale: Locale) {
           cssSelector: ['h1', '#faq-heading'],
         },
       },
-      {
-        '@type': 'FAQPage',
-        '@id': `${absoluteUrl(homePath)}#faq`,
-        mainEntity: faqItems.map((item) => ({
-          '@type': 'Question',
-          name: item.question,
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: item.answer,
-          },
-        })),
-      },
+      buildFaqPageJsonLd(faqItems, absoluteUrl(homePath), '#faq'),
       {
         '@type': 'HowTo',
         '@id': `${absoluteUrl(homePath)}#how-to`,

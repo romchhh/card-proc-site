@@ -2,8 +2,9 @@ import type { Metadata } from 'next'
 import Navbar from '../../components/Navbar'
 import PrivacyPage from '../../components/PrivacyPage'
 import Footer from '../../components/Footer'
+import Breadcrumbs from '../../components/seo/Breadcrumbs'
 import JsonLdScript from '../../components/seo/JsonLdScript'
-import { isValidLocale, type Locale } from '@/lib/i18n/config'
+import { isValidLocale, localePath, type Locale } from '@/lib/i18n/config'
 import { buildBreadcrumbJsonLd, buildGraphJsonLd, buildPageMetadata, buildWebPageJsonLd } from '@/lib/seo'
 import { siteConfig } from '@/lib/site'
 
@@ -43,12 +44,19 @@ export default async function Privacy({ params }: Props) {
     description: isEn ? siteConfig.pages.privacy.descriptionEn : siteConfig.pages.privacy.description,
     path: '/privacy',
     locale,
+    pageType: 'PrivacyPolicy',
   })
 
   return (
     <>
       <JsonLdScript data={buildGraphJsonLd([breadcrumb, webPage])} />
       <Navbar />
+      <Breadcrumbs
+        items={[
+          { name: siteConfig.name, path: localePath('/', locale) },
+          { name: isEn ? 'Privacy Policy' : 'Политика конфиденциальности', path: localePath('/privacy', locale) },
+        ]}
+      />
       <main>
         <PrivacyPage />
       </main>

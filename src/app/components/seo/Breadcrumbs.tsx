@@ -6,9 +6,17 @@ type BreadcrumbItem = {
   path: string
 }
 
-export default function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
+type Props = {
+  items: BreadcrumbItem[]
+  theme?: 'light' | 'dark'
+}
+
+export default function Breadcrumbs({ items, theme = 'light' }: Props) {
   return (
-    <nav className={styles.nav} aria-label="Breadcrumb">
+    <nav
+      className={`${styles.nav} ${theme === 'dark' ? styles.navDark : ''}`}
+      aria-label="Breadcrumb"
+    >
       <ol className={styles.list}>
         {items.map((item, index) => {
           const isLast = index === items.length - 1

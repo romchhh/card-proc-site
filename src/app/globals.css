@@ -55,10 +55,9 @@
 }
 
 html {
-  scroll-behavior: smooth;
-  overflow-x: hidden;
+  scroll-padding-top: 96px;
+  overflow-x: clip;
   max-width: 100%;
-  overscroll-behavior-x: none;
 }
 
 body {
@@ -69,14 +68,15 @@ body {
   color: var(--gray-900);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  overflow-x: hidden;
   max-width: 100%;
-  position: relative;
 }
 
 main {
-  overflow-x: clip;
   max-width: 100%;
+}
+
+[id] {
+  scroll-margin-top: 96px;
 }
 
 @keyframes slowZoom {
@@ -108,5 +108,13 @@ main {
 @media (max-width: 768px) {
   :root {
     --hero-header-padding-x: 16px;
+  }
+
+  html {
+    scroll-padding-top: 80px;
+  }
+
+  [id] {
+    scroll-margin-top: 80px;
   }
 }

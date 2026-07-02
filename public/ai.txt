@@ -57,6 +57,17 @@ Marketplaces, SaaS, e-commerce, online/offline business, subscriptions, online c
 - Blog RSS (RU): https://wayofprocessing.com/ru/blog/feed.xml
 - Blog RSS (EN): https://wayofprocessing.com/en/blog/feed.xml
 
+## Service pages
+
+- Stripe account rent (RU): https://wayofprocessing.com/ru/services/stripe-account-rent
+- Stripe account rent (EN): https://wayofprocessing.com/en/services/stripe-account-rent
+- Buy Stripe account (RU): https://wayofprocessing.com/ru/services/stripe-account-buy
+- Buy Stripe account (EN): https://wayofprocessing.com/en/services/stripe-account-buy
+- Turnkey Stripe processing (RU): https://wayofprocessing.com/ru/services/processing-turnkey
+- Turnkey Stripe processing (EN): https://wayofprocessing.com/en/services/processing-turnkey
+- Legal entity + bank + Stripe (RU): https://wayofprocessing.com/ru/services/legal-entity-bank
+- Legal entity + bank + Stripe (EN): https://wayofprocessing.com/en/services/legal-entity-bank
+
 ## Blog articles (16)
 
 - Stripe для вашего бизнеса: https://wayofprocessing.com/ru/blog/stripe-for-your-business

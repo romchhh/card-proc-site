@@ -132,6 +132,18 @@
   color: var(--gray-500);
 }
 
+.inlineLink {
+  color: var(--stripe-blue);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s;
+}
+
+.inlineLink:hover {
+  opacity: 0.8;
+}
+
 .strong {
   font-weight: 700;
   color: var(--gray-900);

@@ -4,6 +4,32 @@
   padding: 24px var(--page-padding-x) 0;
 }
 
+.navDark {
+  padding: 0;
+}
+
+.navDark .sep {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.navDark .link {
+  position: relative;
+  z-index: 1;
+  color: rgba(255, 255, 255, 0.92);
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.35);
+  text-underline-offset: 3px;
+}
+
+.navDark .link:hover {
+  color: #fff;
+  text-decoration-color: rgba(255, 255, 255, 0.85);
+}
+
+.navDark .current {
+  color: rgba(255, 255, 255, 0.72);
+}
+
 .list {
   display: flex;
   flex-wrap: wrap;
@@ -48,6 +74,10 @@
 @media (max-width: 768px) {
   .nav {
     padding: 20px var(--page-padding-x-md) 0;
+  }
+
+  .navDark .current {
+    max-width: min(46vw, 320px);
   }
 }
 

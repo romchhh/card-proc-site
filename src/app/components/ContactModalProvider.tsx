@@ -1,6 +1,7 @@
 'use client'
 
-import { createContext, useCallback, useContext, useEffect, useState } from 'react'
+import { createContext, useCallback, useContext, useState } from 'react'
+import { useBodyScrollLock } from '@/lib/body-scroll-lock'
 import ContactModal from './ContactModal'
 
 type ContactModalContextValue = {
@@ -17,10 +18,7 @@ export function ContactModalProvider({ children }: { children: React.ReactNode }
   const open = useCallback(() => setIsOpen(true), [])
   const close = useCallback(() => setIsOpen(false), [])
 
-  useEffect(() => {
-    document.body.style.overflow = isOpen ? 'hidden' : ''
-    return () => { document.body.style.overflow = '' }
-  }, [isOpen])
+  useBodyScrollLock(isOpen)
 
   return (
     <ContactModalContext.Provider value={{ isOpen, open, close }}>

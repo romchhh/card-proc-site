@@ -1,16 +1,15 @@
 'use client'
 
 import { useTranslation } from 'react-i18next'
-import { FINTECH_PLATFORMS } from '@/data/fintech-platforms'
-import { useContactModal } from './ContactModalProvider'
+import { SERVICE_SLUGS, getServiceBySlug, getServiceView } from '@/lib/services'
+import { useLocalizedPath } from '@/lib/i18n/use-locale'
+import ServiceCard from './ServiceCard'
 import styles from './ServicesSection.module.css'
 
-const PROCESSING_ITEMS = ['api', 'cloaking', 'invoice'] as const
-const JURISDICTIONS = ['gb', 'hk', 'cy', 'pl', 'ee', 'cz'] as const
-
 export default function ServicesSection() {
-  const { t } = useTranslation()
-  const { open: openContactModal } = useContactModal()
+  const { t, i18n } = useTranslation()
+  const lp = useLocalizedPath()
+  const locale = i18n.language === 'en' ? 'en' : 'ru'
 
   return (
     <section id="services" className={styles.section}>
@@ -18,97 +17,21 @@ export default function ServicesSection() {
         <h2 className={styles.heading}>{t('services.heading')}</h2>
 
         <div className={styles.grid}>
-          <div className={styles.topRow}>
-            <article className={styles.card}>
-              <h3 className={styles.title}>{t('services.complex.title')}</h3>
-              <p className={styles.desc}>{t('services.complex.desc')}</p>
-              <div className={styles.cardFooter}>
-                <a href="#kontakt" className={styles.more}>
-                  {t('services.more')}
-                  <span className={styles.moreArrow} aria-hidden="true">
-                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M2 6 H10 M7 3 L10 6 L7 9" />
-                    </svg>
-                  </span>
-                </a>
-                <div className={styles.flags} aria-label={t('services.complex.jurisdictionsLabel')}>
-                  {JURISDICTIONS.map((code) => (
-                    <span key={code} className={styles.flag} title={t(`services.complex.flags.${code}`)}>
-                      {t(`services.complex.flags.${code}`)}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </article>
+          {SERVICE_SLUGS.map((slug) => {
+            const service = getServiceBySlug(slug)
+            if (!service) return null
+            const view = getServiceView(service, locale)
 
-            <article className={styles.card}>
-              <h3 className={styles.title}>{t('services.processing.title')}</h3>
-              <p className={styles.desc}>{t('services.processing.intro')}</p>
-              <p className={styles.rate}>
-                <strong>{t('services.processing.rate')}</strong>
-                {t('services.processing.rateSuffix')}
-              </p>
-              <ul className={styles.list}>
-                {PROCESSING_ITEMS.map((key) => (
-                  <li key={key}>{t(`services.processing.items.${key}`)}</li>
-                ))}
-              </ul>
-              <a href="#kontakt" className={styles.more}>
-                {t('services.more')}
-                <span className={styles.moreArrow} aria-hidden="true">
-                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M2 6 H10 M7 3 L10 6 L7 9" />
-                  </svg>
-                </span>
-              </a>
-            </article>
-          </div>
-
-          <article className={`${styles.card} ${styles.cardFintech}`}>
-            <h3 className={styles.title}>{t('services.fintech.title')}</h3>
-            <p className={styles.desc}>{t('services.fintech.desc')}</p>
-            <ul className={styles.fintechGrid}>
-              {FINTECH_PLATFORMS.map(({ name, domain }) => (
-                <li key={domain} className={styles.fintechItem}>
-                  <span className={styles.fintechName}>{name}</span>
-                  <a
-                    href={`https://${domain}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.fintechLink}
-                  >
-                    {domain}
-                  </a>
-                </li>
-              ))}
-            </ul>
-            <a href="#kontakt" className={styles.more}>
-              {t('services.more')}
-              <span className={styles.moreArrow} aria-hidden="true">
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M2 6 H10 M7 3 L10 6 L7 9" />
-                </svg>
-              </span>
-            </a>
-          </article>
-
-          <article className={`${styles.card} ${styles.cardSupport}`}>
-            <h3 className={styles.title}>{t('services.support.title')}</h3>
-            <p className={styles.desc}>{t('services.support.desc')}</p>
-            <button type="button" className={styles.cta} onClick={openContactModal}>
-              {t('services.support.cta')}
-              <span className={styles.ctaArrow} aria-hidden="true">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M2 12 L12 2 M5 2 H12 V9" />
-                </svg>
-              </span>
-            </button>
-            <div className={styles.telegramBg} aria-hidden="true">
-              <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M22 2 L11 13 M22 2 L15 22 L11 13 L2 9 Z" />
-              </svg>
-            </div>
-          </article>
+            return (
+              <ServiceCard
+                key={slug}
+                slug={slug}
+                title={view.card.title}
+                description={view.card.desc}
+                href={lp(`/services/${slug}`)}
+              />
+            )
+          })}
         </div>
       </div>
     </section>
