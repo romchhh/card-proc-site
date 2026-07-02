@@ -21,6 +21,10 @@
   max-width: 100%;
 }
 
+.navMenuOpen {
+  z-index: 201;
+}
+
 .transparent {
   background: transparent;
 }
@@ -67,26 +71,37 @@
   grid-row: 1;
   justify-self: center;
   z-index: 2;
-  font-family: var(--font-sans);
-  font-weight: 800;
-  font-size: 28px;
-  letter-spacing: -0.03em;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0;
   text-decoration: none;
+  line-height: 1.1;
   flex-shrink: 0;
-  color: #fff;
-  transition: color 0.35s;
   white-space: nowrap;
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-.brand span {
-  color: var(--stripe-blue);
   transition: color 0.35s;
 }
 
-.navDark .brand {
+.brandBold {
+  font-family: var(--font-sans);
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: -0.03em;
+  color: #fff;
+  transition: color 0.35s;
+}
+
+.brandRegular {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+  color: var(--stripe-blue);
+}
+
+.navDark .brandBold {
   color: var(--gray-900);
 }
 
@@ -128,8 +143,9 @@
     font-size: 15px;
   }
 
-  .brand {
-    font-size: 22px;
+  .brandBold,
+  .brandRegular {
+    font-size: 20px;
   }
 
   .desktopRight {
@@ -280,7 +296,19 @@
   height: 3.5px;
   background: var(--gray-900);
   border-radius: 3px;
-  transition: background 0.35s;
+  transition: transform 0.3s var(--ease-out), opacity 0.3s, background 0.35s;
+}
+
+.hamburgerOpen span:nth-child(1) {
+  transform: translateY(9.5px) rotate(45deg);
+}
+
+.hamburgerOpen span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburgerOpen span:nth-child(3) {
+  transform: translateY(-9.5px) rotate(-45deg);
 }
 
 .drawer {
@@ -352,10 +380,10 @@
   .hamburger { display: flex; }
   .actions { gap: 8px; }
 
-  .brand {
-    font-size: clamp(16px, 2.4vw, 22px);
+  .brandBold,
+  .brandRegular {
+    font-size: clamp(16px, 2.4vw, 20px);
     letter-spacing: -0.04em;
-    line-height: 1.1;
   }
 
   .telegramBtn {
@@ -383,8 +411,9 @@
   .solid { padding: 14px 16px; }
   .actions { gap: 6px; }
 
-  .brand {
-    font-size: clamp(13px, 3.5vw, 17px);
+  .brandBold,
+  .brandRegular {
+    font-size: clamp(14px, 3.5vw, 17px);
     letter-spacing: -0.045em;
   }
 
@@ -413,7 +442,8 @@
   .solid { padding: 12px 12px; }
   .actions { gap: 4px; }
 
-  .brand {
+  .brandBold,
+  .brandRegular {
     font-size: 12px;
     letter-spacing: -0.05em;
   }

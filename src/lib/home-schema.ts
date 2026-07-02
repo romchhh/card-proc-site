@@ -1,6 +1,7 @@
 import en from '@/locales/en.json'
 import ru from '@/locales/ru.json'
 import { buildFaqPageJsonLd } from './service-seo'
+import { SERVICE_SLUGS, getServiceBySlug, getServiceView } from './services'
 import { localePath, type Locale } from './i18n/config'
 import { absoluteUrl } from './seo'
 import { siteConfig } from './site'
@@ -118,6 +119,22 @@ export function buildHomeJsonLd(locale: Locale) {
         },
       },
       buildFaqPageJsonLd(faqItems, absoluteUrl(homePath), '#faq'),
+      {
+        '@type': 'ItemList',
+        '@id': `${absoluteUrl(homePath)}#services-list`,
+        name: locale === 'en' ? `${siteConfig.name} services` : `Услуги ${siteConfig.name}`,
+        itemListElement: SERVICE_SLUGS.map((slug, index) => {
+          const service = getServiceBySlug(slug)
+          if (!service) return null
+          const view = getServiceView(service, locale)
+          return {
+            '@type': 'ListItem',
+            position: index + 1,
+            name: view.card.title,
+            url: absoluteUrl(localePath(`/services/${slug}`, locale)),
+          }
+        }).filter(Boolean),
+      },
       {
         '@type': 'HowTo',
         '@id': `${absoluteUrl(homePath)}#how-to`,

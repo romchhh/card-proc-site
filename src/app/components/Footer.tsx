@@ -1,23 +1,26 @@
 'use client'
 
+import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
 import { siteConfig } from '@/lib/site'
+import { SERVICE_SLUGS, getServiceBySlug, getServiceView } from '@/lib/services'
 import { useLocalizedPath } from '@/lib/i18n/use-locale'
 import { TelegramIcon, SupportIcon } from './icons/SocialIcons'
 import { useContactModal } from './ContactModalProvider'
+import SectionLink from './SectionLink'
 import styles from './Footer.module.css'
 
 const NAV_LINKS = [
-  { key: 'about', hash: 'specialists' },
-  { key: 'services', hash: 'services' },
-  { key: 'clients', hash: 'clients' },
+  { key: 'about', sectionId: 'specialists' },
+  { key: 'clients', sectionId: 'clients' },
   { key: 'blog', path: '/blog' },
 ] as const
 
 export default function Footer() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const { open: openContactModal } = useContactModal()
   const lp = useLocalizedPath()
+  const locale = i18n.language === 'en' ? 'en' : 'ru'
   const year = new Date().getFullYear()
 
   const contactItems = [
@@ -57,13 +60,34 @@ export default function Footer() {
           <h3 className={styles.heading}>{t('footer.infoHeading')}</h3>
           <nav className={styles.nav} aria-label={t('footer.navLabel')}>
             {NAV_LINKS.map((item) => (
-              <a
-                key={item.key}
-                href={'path' in item ? lp(item.path) : `${lp('/')}#${item.hash}`}
-              >
-                {t(`footer.${item.key}`)}
-              </a>
+              'path' in item ? (
+                <Link key={item.key} href={lp(item.path)}>
+                  {t(`footer.${item.key}`)}
+                </Link>
+              ) : (
+                <SectionLink key={item.key} sectionId={item.sectionId}>
+                  {t(`footer.${item.key}`)}
+                </SectionLink>
+              )
             ))}
+            <SectionLink sectionId="services">{t('footer.services')}</SectionLink>
+          </nav>
+        </div>
+
+        <div className={styles.col}>
+          <h3 className={styles.heading}>{t('footer.servicesHeading')}</h3>
+          <nav className={styles.nav} aria-label={t('footer.servicesHeading')}>
+            {SERVICE_SLUGS.map((slug) => {
+              const service = getServiceBySlug(slug)
+              if (!service) return null
+              const view = getServiceView(service, locale)
+
+              return (
+                <Link key={slug} href={lp(`/services/${slug}`)}>
+                  {view.card.title}
+                </Link>
+              )
+            })}
           </nav>
         </div>
 

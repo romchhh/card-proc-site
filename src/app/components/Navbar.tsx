@@ -10,6 +10,7 @@ import { useBodyScrollLock } from '@/lib/body-scroll-lock'
 import { useContactModal } from './ContactModalProvider'
 import { TelegramIcon } from './icons/SocialIcons'
 import LangSwitcher from './LangSwitcher'
+import SectionLink from './SectionLink'
 import styles from './Navbar.module.css'
 
 export default function Navbar({ transparent = false }: { transparent?: boolean }) {
@@ -19,9 +20,6 @@ export default function Navbar({ transparent = false }: { transparent?: boolean 
   const lp = useLocalizedPath()
   const [menuOpen, setMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-
-  const isHome = stripLocalePrefix(pathname) === '/'
-  const hash = (id: string) => (isHome ? `#${id}` : `${lp('/')}#${id}`)
   const blogPath = lp('/blog')
 
   useEffect(() => {
@@ -48,22 +46,29 @@ export default function Navbar({ transparent = false }: { transparent?: boolean 
 
   return (
     <>
-      <nav className={`${styles.nav} ${isDark ? styles.solid : styles.transparent} ${isDark ? styles.navDark : styles.navLight}`}>
+      <nav className={`${styles.nav} ${menuOpen ? styles.navMenuOpen : ''} ${isDark || menuOpen ? styles.solid : styles.transparent} ${isDark || menuOpen ? styles.navDark : styles.navLight}`}>
         <div className={styles.navStart}>
-          <button className={styles.hamburger} onClick={() => setMenuOpen(true)} aria-label={t('nav.openMenu')}>
+          <button
+            type="button"
+            className={`${styles.hamburger} ${menuOpen ? styles.hamburgerOpen : ''}`}
+            onClick={() => setMenuOpen((open) => !open)}
+            aria-label={menuOpen ? t('nav.closeMenu') : t('nav.openMenu')}
+            aria-expanded={menuOpen}
+          >
             <span/><span/><span/>
           </button>
 
           <div className={styles.center}>
-            <a href={hash('specialists')}>{t('nav.about')}</a>
-            <a href={hash('services')}>{t('nav.services')}</a>
-            <a href={hash('clients')}>{t('nav.clients')}</a>
+            <SectionLink sectionId="specialists">{t('nav.about')}</SectionLink>
+            <SectionLink sectionId="services">{t('nav.services')}</SectionLink>
+            <SectionLink sectionId="clients">{t('nav.clients')}</SectionLink>
             <a href={blogPath} className={isBlogActive ? styles.activeLink : ''}>{t('nav.blog')}</a>
           </div>
         </div>
 
         <a href={lp('/')} className={styles.brand}>
-          {t('footer.brandBold')}<span>{t('footer.brandRegular')}</span>
+          <span className={styles.brandBold}>{t('footer.brandBold')}</span>
+          <span className={styles.brandRegular}>{t('footer.brandRegular')}</span>
         </a>
 
         <div className={styles.actions}>
@@ -111,9 +116,15 @@ export default function Navbar({ transparent = false }: { transparent?: boolean 
           </svg>
         </button>
 
-        <a href={hash('specialists')} onClick={() => setMenuOpen(false)}>{t('nav.about')}</a>
-        <a href={hash('services')} onClick={() => setMenuOpen(false)}>{t('nav.services')}</a>
-        <a href={hash('clients')} onClick={() => setMenuOpen(false)}>{t('nav.clients')}</a>
+        <SectionLink sectionId="specialists" onNavigate={() => setMenuOpen(false)}>
+          {t('nav.about')}
+        </SectionLink>
+        <SectionLink sectionId="services" onNavigate={() => setMenuOpen(false)}>
+          {t('nav.services')}
+        </SectionLink>
+        <SectionLink sectionId="clients" onNavigate={() => setMenuOpen(false)}>
+          {t('nav.clients')}
+        </SectionLink>
         <a href={blogPath} onClick={() => setMenuOpen(false)}>{t('nav.blog')}</a>
         <button
           type="button"

@@ -401,6 +401,7 @@
     "copyright": "All rights reserved ©{{year}} WayOfProcessing",
     "legal": "International payment processing via Stripe. Warmed accounts, company registration, and 24/7 support. WayOfProcessing is an independent service, not affiliated with Stripe, Inc.",
     "infoHeading": "Information",
+    "servicesHeading": "Services",
     "about": "About company",
     "services": "All services",
     "clients": "Our clients",

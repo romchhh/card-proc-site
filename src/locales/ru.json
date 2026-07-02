@@ -401,6 +401,7 @@
     "copyright": "Все права защищены ©{{year}} WayOfProcessing",
     "legal": "Международный процессинг платежей через Stripe. Прогретые аккаунты, регистрация юрлиц и поддержка 24/7. WayOfProcessing — независимый сервис, не аффилирован со Stripe, Inc.",
     "infoHeading": "Информация",
+    "servicesHeading": "Услуги",
     "about": "О компании",
     "services": "Все услуги",
     "clients": "Наши клиенты",

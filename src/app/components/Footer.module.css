@@ -8,8 +8,8 @@
   max-width: var(--content-max);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.1fr 0.85fr 1fr 1.35fr;
-  gap: 40px 48px;
+  grid-template-columns: 1.1fr 0.75fr 1fr 1fr 1.2fr;
+  gap: 40px 40px;
   padding-bottom: 24px;
 }
 

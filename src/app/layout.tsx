@@ -69,6 +69,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   return (
     <html lang={htmlLang} className={montserrat.variable} suppressHydrationWarning>
       <head>
+        <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
         <link rel="alternate" type="text/plain" href="/ai.txt" title="AI information" />
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM information" />
       </head>
