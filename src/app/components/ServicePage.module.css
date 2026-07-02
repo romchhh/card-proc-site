@@ -803,6 +803,11 @@
     margin-bottom: 48px;
   }
 
+  .blogGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
   .faqSection {
     padding: 40px 0;
   }
