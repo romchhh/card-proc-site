@@ -61,8 +61,9 @@ export const metadata: Metadata = {
     : {}),
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const localeHeader = headers().get('x-locale')
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const headerList = await headers()
+  const localeHeader = headerList.get('x-locale')
   const htmlLang = localeHeader && isValidLocale(localeHeader) ? localeHeader : defaultLocale
 
   return (
