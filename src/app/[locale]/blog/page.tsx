@@ -7,7 +7,7 @@ import JsonLdScript from '../../components/seo/JsonLdScript'
 import { buildBlogItemListJsonLd } from '@/lib/blog-seo'
 import { getAllPosts } from '@/lib/blog'
 import { isValidLocale, localePath, type Locale } from '@/lib/i18n/config'
-import { absoluteUrl, buildBreadcrumbJsonLd, buildGraphJsonLd, buildPageMetadata, buildWebPageJsonLd } from '@/lib/seo'
+import { absoluteUrl, buildBreadcrumbJsonLd, buildGraphJsonLd, buildPageAlternates, buildPageMetadata, buildWebPageJsonLd } from '@/lib/seo'
 import { siteConfig } from '@/lib/site'
 
 type Props = { params: Promise<{ locale: string }> }
@@ -28,16 +28,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         : [`блог ${siteConfig.name}`, 'статьи Stripe', 'процессинг платежей', 'интеграция Stripe', 'payment routing'],
     }),
     alternates: {
-      canonical: localePath('/blog', locale),
-      languages: {
-        'ru-RU': localePath('/blog', 'ru'),
-        'en-US': localePath('/blog', 'en'),
-        'x-default': localePath('/blog', 'ru'),
-      },
+      ...buildPageAlternates('/blog', locale),
       types: {
         'application/rss+xml': [
-          { url: localePath('/blog/feed.xml', 'ru'), title: `${siteConfig.name} Blog RSS (RU)` },
-          { url: localePath('/blog/feed.xml', 'en'), title: `${siteConfig.name} Blog RSS (EN)` },
+          { url: absoluteUrl(localePath('/blog/feed.xml', 'ru')), title: `${siteConfig.name} Blog RSS (RU)` },
+          { url: absoluteUrl(localePath('/blog/feed.xml', 'en')), title: `${siteConfig.name} Blog RSS (EN)` },
         ],
       },
     },

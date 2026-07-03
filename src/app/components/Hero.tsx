@@ -13,7 +13,7 @@ export default function Hero() {
     <section className={styles.hero}>
       <div className={styles.bg}>
         <Image
-          src="/images/hero-stripe.png"
+          src="/images/hero-stripe.webp"
           alt={t('seo.heroImageAlt')}
           fill
           priority

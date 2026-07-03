@@ -18,7 +18,7 @@ export const siteConfig = {
   telegramOperatorUrl: 'https://t.me/wayofprocessing',
   locale: 'ru_RU',
   alternateLocale: 'en_US',
-  ogImage: '/images/hero-stripe.png',
+  ogImage: '/images/hero-stripe.webp',
   ogImageAlt: 'WayOfProcessing — международный процессинг платежей через Stripe',
   themeColor: '#635BFF',
   keywordsRu: [

@@ -26,6 +26,7 @@ export default function BlogCard({ post, href, titleAs: TitleTag = 'h2' }: Props
           fill
           sizes="(max-width: 768px) 100vw, 50vw"
           className={styles.cardImg}
+          loading="lazy"
         />
       </div>
       <div className={styles.cardBody}>

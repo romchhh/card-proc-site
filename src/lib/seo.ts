@@ -40,15 +40,28 @@ export function absoluteUrl(path: string) {
   return `${siteConfig.url}${path.startsWith('/') ? path : `/${path}`}`
 }
 
-function buildHreflang(path: string, locale: Locale) {
+export function buildHreflangLanguages(path: string) {
+  const ruUrl = absoluteUrl(localePath(path, 'ru'))
+  const enUrl = absoluteUrl(localePath(path, 'en'))
+
   return {
-    canonical: localePath(path, locale),
-    languages: {
-      'ru-RU': localePath(path, 'ru'),
-      'en-US': localePath(path, 'en'),
-      'x-default': localePath(path, 'ru'),
-    },
+    'ru-RU': ruUrl,
+    ru: ruUrl,
+    'en-US': enUrl,
+    en: enUrl,
+    'x-default': ruUrl,
   }
+}
+
+export function buildPageAlternates(path: string, locale: Locale) {
+  return {
+    canonical: absoluteUrl(localePath(path, locale)),
+    languages: buildHreflangLanguages(path),
+  }
+}
+
+function buildHreflang(path: string, locale: Locale) {
+  return buildPageAlternates(path, locale)
 }
 
 function buildSharedMeta({

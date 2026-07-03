@@ -9,10 +9,10 @@ export const SERVICE_SLUGS = [
 ] as const
 
 export const SERVICE_IMAGES: Record<ServiceSlug, string> = {
-  'stripe-account-rent': '/images/service-rent.png',
-  'stripe-account-buy': '/images/service-buy.png',
-  'processing-turnkey': '/images/service-processing.png',
-  'legal-entity-bank': '/images/service-legal.png',
+  'stripe-account-rent': '/images/service-rent.webp',
+  'stripe-account-buy': '/images/service-buy.webp',
+  'processing-turnkey': '/images/service-processing.webp',
+  'legal-entity-bank': '/images/service-legal.webp',
 }
 
 export type ServiceSlug = (typeof SERVICE_SLUGS)[number]
