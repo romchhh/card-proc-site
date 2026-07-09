@@ -15,13 +15,19 @@ if (!i18n.isInitialized) {
     lng: 'ru',
     fallbackLng: 'ru',
     interpolation: { escapeValue: false },
+    react: { useSuspense: false },
   })
 }
 
-export function setI18nLocale(locale: Locale) {
+/** Sync locale before render so SSR HTML matches the URL locale. */
+export function ensureI18nLocale(locale: Locale) {
   if (i18n.language !== locale) {
-    i18n.changeLanguage(locale)
+    i18n.language = locale
   }
+}
+
+export function setI18nLocale(locale: Locale) {
+  ensureI18nLocale(locale)
   if (typeof document !== 'undefined') {
     document.documentElement.lang = locale
   }

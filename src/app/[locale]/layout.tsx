@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation'
-import { isValidLocale, locales } from '@/lib/i18n/config'
+import LangSync from '../components/LangSync'
+import { isValidLocale, locales, type Locale } from '@/lib/i18n/config'
 
 type Props = {
   children: React.ReactNode
@@ -11,11 +12,18 @@ export function generateStaticParams() {
 }
 
 export default async function LocaleLayout({ children, params }: Props) {
-  const { locale } = await params
+  const { locale: rawLocale } = await params
 
-  if (!isValidLocale(locale)) {
+  if (!isValidLocale(rawLocale)) {
     notFound()
   }
 
-  return children
+  const locale = rawLocale as Locale
+
+  return (
+    <>
+      <LangSync locale={locale} />
+      {children}
+    </>
+  )
 }
