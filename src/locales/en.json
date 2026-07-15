@@ -260,7 +260,7 @@
     "error": "Could not send your request. Please try again or contact us on Telegram.",
     "modalTitle": "Contact WayOfProcessing",
     "close": "Close",
-    "imageAlt": "Stripe payment card",
+    "imageAlt": "WayOfProcessing — international Stripe payment processing",
     "services": {
       "stripe": "Stripe setup",
       "processing": "Payment processing",

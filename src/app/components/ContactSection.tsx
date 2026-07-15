@@ -15,7 +15,7 @@ export default function ContactSection() {
           <h2 className={styles.heading}>{t('contact.heading')}</h2>
           <div className={styles.imgWrap}>
             <Image
-              src="/images/contact-section.webp"
+              src="/images/hero-stripe.webp"
               alt={t('contact.imageAlt')}
               fill
               sizes="(max-width: 900px) 100vw, 50vw"

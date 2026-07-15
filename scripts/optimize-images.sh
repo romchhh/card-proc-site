@@ -31,6 +31,4 @@ for file in "$IMAGES"/accounts/account-*.jpg; do
   [ -f "$file" ] && convert_jpg "$file"
 done
 
-[ -f "$IMAGES/contact-section.jpg" ] && convert_jpg "$IMAGES/contact-section.jpg"
-
 echo "Done. Site uses .webp sources in code."

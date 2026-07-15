@@ -260,7 +260,7 @@
     "error": "Не удалось отправить заявку. Попробуйте ещё раз или напишите нам в Telegram.",
     "modalTitle": "Связаться с WayOfProcessing",
     "close": "Закрыть",
-    "imageAlt": "Stripe payment card",
+    "imageAlt": "WayOfProcessing — приём международных платежей через Stripe",
     "services": {
       "stripe": "Подключение Stripe",
       "processing": "Процесинг платежей",
