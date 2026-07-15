@@ -67,7 +67,6 @@ function buildHreflang(path: string, locale: Locale) {
 function buildSharedMeta({
   title,
   description,
-  keywords,
   ogTitle,
   ogImage,
   ogImageAlt,
@@ -95,7 +94,6 @@ function buildSharedMeta({
   return {
     title: { absolute: title },
     description,
-    keywords: keywords ?? siteConfig.keywords,
     alternates: noIndex ? undefined : buildHreflang(path, locale),
     robots: noIndex
       ? { index: false, follow: false }
@@ -133,7 +131,6 @@ export function buildPageMetadata({
   description,
   path,
   locale,
-  keywords,
   ogTitle,
   ogImage,
   ogImageAlt,
@@ -142,7 +139,6 @@ export function buildPageMetadata({
   const shared = buildSharedMeta({
     title,
     description,
-    keywords,
     ogTitle,
     ogImage,
     ogImageAlt,
@@ -177,7 +173,6 @@ export function buildArticleMetadata({
   const shared = buildSharedMeta({
     title: pageTitle,
     description,
-    keywords,
     ogTitle: ogTitle ?? title,
     path,
     locale,
