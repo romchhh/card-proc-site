@@ -1,17 +1,6 @@
 import type { Metadata, Viewport } from 'next'
-import { headers } from 'next/headers'
-import { Montserrat } from 'next/font/google'
 import './globals.css'
-import Providers from './components/Providers'
 import { siteConfig } from '@/lib/site'
-import { defaultLocale, isValidLocale } from '@/lib/i18n/config'
-
-const montserrat = Montserrat({
-  subsets: ['latin', 'cyrillic'],
-  weight: ['400', '500', '600', '700', '800'],
-  display: 'swap',
-  variable: '--font-montserrat',
-})
 
 const googleVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
 
@@ -61,21 +50,6 @@ export const metadata: Metadata = {
     : {}),
 }
 
-export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  const headerList = await headers()
-  const localeHeader = headerList.get('x-locale')
-  const htmlLang = localeHeader && isValidLocale(localeHeader) ? localeHeader : defaultLocale
-
-  return (
-    <html lang={htmlLang} className={montserrat.variable} suppressHydrationWarning>
-      <head>
-        <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-        <link rel="alternate" type="text/plain" href="/ai.txt" title="AI information" />
-        <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM information" />
-      </head>
-      <body className={montserrat.className}>
-        <Providers>{children}</Providers>
-      </body>
-    </html>
-  )
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return children
 }

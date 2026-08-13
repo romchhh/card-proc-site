@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation'
 import LangSync from '../components/LangSync'
+import SiteHtmlShell from '../components/SiteHtmlShell'
 import { isValidLocale, locales, type Locale } from '@/lib/i18n/config'
 
 type Props = {
@@ -21,9 +22,9 @@ export default async function LocaleLayout({ children, params }: Props) {
   const locale = rawLocale as Locale
 
   return (
-    <>
+    <SiteHtmlShell locale={locale}>
       <LangSync locale={locale} />
       {children}
-    </>
+    </SiteHtmlShell>
   )
 }

@@ -121,7 +121,7 @@ export default function ServicePage({ slug, breadcrumbs }: Props) {
 
       <article className={styles.inner}>
         <div className={styles.benefitsBlock}>
-          <h2 className={styles.benefitsTitle}>{t('servicePages.benefitsHeading') || 'Ключевые преимущества'}</h2>
+          <h2 className={styles.benefitsTitle}>{t('servicePages.benefitsHeading')}</h2>
           <ul className={styles.benefits}>
             {view.benefits.map((benefit) => (
               <li key={benefit.title} className={styles.benefitItem}>
@@ -158,8 +158,8 @@ export default function ServicePage({ slug, breadcrumbs }: Props) {
         <div className={styles.ctaBlock}>
           <div className={styles.ctaCard}>
             <div className={styles.ctaContent}>
-              <h3 className={styles.ctaTitle}>{t('servicePages.ctaHeading') || 'Готовы начать?'}</h3>
-              <p className={styles.ctaDescription}>{t('servicePages.ctaDescription') || 'Получите бесплатную консультацию и персональное предложение для вашего бизнеса'}</p>
+              <h3 className={styles.ctaTitle}>{t('servicePages.ctaHeading')}</h3>
+              <p className={styles.ctaDescription}>{t('servicePages.ctaDescription')}</p>
             </div>
             <button type="button" className={styles.ctaButton} onClick={openContactModal}>
               <span>{t('nav.cta')}</span>

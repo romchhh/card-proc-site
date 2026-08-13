@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import SiteHtmlShell from './components/SiteHtmlShell'
 import { buildPageMetadata } from '@/lib/seo'
 import styles from './not-found.module.css'
 
@@ -14,7 +15,7 @@ export const metadata = buildPageMetadata({
 
 export default function NotFound() {
   return (
-    <>
+    <SiteHtmlShell locale="ru">
       <Navbar />
       <main className={styles.main}>
         <p className={styles.code}>404</p>
@@ -32,6 +33,6 @@ export default function NotFound() {
         </div>
       </main>
       <Footer />
-    </>
+    </SiteHtmlShell>
   )
 }

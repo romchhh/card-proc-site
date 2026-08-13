@@ -23,16 +23,12 @@ export function proxy(request: NextRequest) {
   const segment = pathname.split('/').filter(Boolean)[0]
 
   if (segment && isValidLocale(segment)) {
-    const response = NextResponse.next()
-    response.headers.set('x-locale', segment)
-    return response
+    return NextResponse.next()
   }
 
   const url = request.nextUrl.clone()
   url.pathname = pathname === '/' ? `/${defaultLocale}` : `/${defaultLocale}${pathname}`
-  const response = NextResponse.redirect(url, 308)
-  response.headers.set('x-locale', defaultLocale)
-  return response
+  return NextResponse.redirect(url, 308)
 }
 
 export const config = {
