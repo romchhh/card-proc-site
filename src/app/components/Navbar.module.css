@@ -93,12 +93,20 @@
   transition: color 0.35s;
 }
 
+.navLight .brandRegular {
+  color: #c4c0ff;
+}
+
 .brandRegular {
   font-family: var(--font-sans);
   font-weight: 400;
   font-size: 22px;
   letter-spacing: -0.02em;
-  color: var(--stripe-blue);
+  color: var(--stripe-blue-hover);
+}
+
+.navDark .brandRegular {
+  color: var(--stripe-blue-hover);
 }
 
 .navDark .brandBold {
@@ -221,6 +229,10 @@
   background: transparent;
   cursor: pointer;
   flex-shrink: 0;
+  min-width: 48px;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
 }
 
 .contactIconArrow {
@@ -284,11 +296,15 @@
 .hamburger {
   display: none;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 6px;
   cursor: pointer;
   background: none;
   border: none;
-  padding: 6px 4px;
+  min-width: 48px;
+  min-height: 48px;
+  padding: 9px;
 }
 .hamburger span {
   display: block;
@@ -360,11 +376,14 @@
 }
 .drawerClose {
   position: absolute;
-  top: 28px; right: 28px;
+  top: 20px;
+  right: 20px;
   background: none;
   border: none;
   cursor: pointer;
-  padding: 8px;
+  min-width: 48px;
+  min-height: 48px;
+  padding: 10px;
   color: var(--gray-900);
 }
 
@@ -387,8 +406,8 @@
   }
 
   .telegramBtn {
-    width: 44px;
-    height: 44px;
+    width: 48px;
+    height: 48px;
   }
 
   .telegramBtn svg {
@@ -397,8 +416,8 @@
   }
 
   .contactIconArrow {
-    width: 44px;
-    height: 44px;
+    width: 48px;
+    height: 48px;
   }
 }
 
@@ -418,8 +437,8 @@
   }
 
   .telegramBtn {
-    width: 42px;
-    height: 42px;
+    width: 48px;
+    height: 48px;
   }
 
   .telegramBtn svg {
@@ -428,8 +447,8 @@
   }
 
   .contactIconArrow {
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
   }
 }
 
@@ -449,8 +468,8 @@
   }
 
   .telegramBtn {
-    width: 38px;
-    height: 38px;
+    width: 48px;
+    height: 48px;
   }
 
   .telegramBtn svg {
@@ -459,8 +478,8 @@
   }
 
   .contactIconArrow {
-    width: 36px;
-    height: 36px;
+    width: 48px;
+    height: 48px;
   }
 
   .hamburger span {

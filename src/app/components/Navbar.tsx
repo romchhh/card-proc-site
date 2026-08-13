@@ -54,6 +54,7 @@ export default function Navbar({ transparent = false }: { transparent?: boolean 
             onClick={() => setMenuOpen((open) => !open)}
             aria-label={menuOpen ? t('nav.closeMenu') : t('nav.openMenu')}
             aria-expanded={menuOpen}
+            aria-controls="site-nav-drawer"
           >
             <span/><span/><span/>
           </button>
@@ -109,7 +110,13 @@ export default function Navbar({ transparent = false }: { transparent?: boolean 
         </div>
       </nav>
 
-      <div className={`${styles.drawer} ${menuOpen ? styles.open : ''}`} role="dialog" aria-modal="true">
+      <div
+        id="site-nav-drawer"
+        className={`${styles.drawer} ${menuOpen ? styles.open : ''}`}
+        role="dialog"
+        aria-modal="true"
+        aria-label={t('nav.menuDialog')}
+      >
         <button className={styles.drawerClose} onClick={() => setMenuOpen(false)} aria-label={t('nav.closeMenu')}>
           <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round">
             <path d="M4 4 L24 24 M24 4 L4 24"/>
