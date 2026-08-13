@@ -30,9 +30,9 @@ export function buildHomeJsonLd(locale: Locale) {
         knowsAbout: siteConfig.seo.knowsAbout,
         logo: {
           '@type': 'ImageObject',
-          url: absoluteUrl(siteConfig.ogImage),
-          width: 1200,
-          height: 630,
+          url: absoluteUrl('/icon.svg'),
+          width: 512,
+          height: 512,
         },
         contactPoint: [
           {

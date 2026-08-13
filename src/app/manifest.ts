@@ -14,9 +14,10 @@ export default function manifest(): MetadataRoute.Manifest {
     categories: ['finance', 'business'],
     icons: [
       {
-        src: siteConfig.ogImage,
+        src: '/icon.svg',
         sizes: '512x512',
-        type: 'image/png',
+        type: 'image/svg+xml',
+        purpose: 'any',
       },
     ],
   }

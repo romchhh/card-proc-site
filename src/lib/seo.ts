@@ -45,9 +45,7 @@ export function buildHreflangLanguages(path: string) {
   const enUrl = absoluteUrl(localePath(path, 'en'))
 
   return {
-    'ru-RU': ruUrl,
     ru: ruUrl,
-    'en-US': enUrl,
     en: enUrl,
     'x-default': ruUrl,
   }

@@ -52,8 +52,9 @@ export const metadata: Metadata = {
   },
   category: 'finance',
   icons: {
-    icon: siteConfig.ogImage,
-    apple: siteConfig.ogImage,
+    icon: [{ url: '/icon.svg', type: 'image/svg+xml' }],
+    shortcut: '/icon.svg',
+    apple: '/icon.svg',
   },
   ...(googleVerification
     ? { verification: { google: googleVerification } }

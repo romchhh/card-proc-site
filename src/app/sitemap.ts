@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next'
 import { getAllPosts } from '@/lib/blog'
+import { HOME_UPDATED, PRIVACY_UPDATED, SERVICES_UPDATED } from '@/lib/content-dates'
 import { SERVICE_SLUGS } from '@/lib/services'
 import { localePath, locales, type Locale } from '@/lib/i18n/config'
 import { buildHreflangLanguages } from '@/lib/seo'
@@ -34,7 +35,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticEntries = locales.flatMap((locale) =>
     staticPaths.map((path) =>
       localizedSitemapEntry(path, locale, {
-        lastModified: path === '/blog' ? latestPostDate : new Date(),
+        lastModified:
+          path === '/blog'
+            ? latestPostDate
+            : path === '/privacy'
+              ? new Date(PRIVACY_UPDATED)
+              : new Date(HOME_UPDATED),
         changeFrequency: path === '/privacy' ? 'yearly' : 'weekly',
         priority: path === '/' ? 1 : path === '/blog' ? 0.6 : 0.3,
       }),
@@ -44,7 +50,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const serviceEntries = locales.flatMap((locale) =>
     SERVICE_SLUGS.map((slug) =>
       localizedSitemapEntry(`/services/${slug}`, locale, {
-        lastModified: new Date(),
+        lastModified: new Date(SERVICES_UPDATED),
         changeFrequency: 'monthly',
         priority: 0.9,
       }),
