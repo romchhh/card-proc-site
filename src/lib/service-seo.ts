@@ -73,7 +73,7 @@ export function buildServiceJsonLd({
       '@type': 'Service',
       '@id': `${pageUrl}#service`,
       name: view.h1,
-      description: view.lead,
+      description: [view.lead, ...(view.intro ?? [])].join(' '),
       url: pageUrl,
       provider: { '@id': `${siteConfig.url}/#organization` },
       areaServed: siteConfig.seo.areaServed.map((name) => ({

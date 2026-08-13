@@ -103,7 +103,13 @@ export default function ServicePage({ slug, breadcrumbs }: Props) {
           <h2 id="service-intro-heading" className={styles.introHeading}>
             {t('servicePages.aboutService')}
           </h2>
-          <p className={styles.introText}>{view.lead}</p>
+          <div className={styles.introCopy}>
+            {(view.intro?.length ? view.intro : [view.lead]).map((paragraph) => (
+              <p key={paragraph.slice(0, 48)} className={styles.introText}>
+                {paragraph}
+              </p>
+            ))}
+          </div>
           <button type="button" className={styles.introButton} onClick={openContactModal}>
             <span>{t('servicePages.introCta')}</span>
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -117,14 +123,17 @@ export default function ServicePage({ slug, breadcrumbs }: Props) {
         <div className={styles.benefitsBlock}>
           <h2 className={styles.benefitsTitle}>{t('servicePages.benefitsHeading') || 'Ключевые преимущества'}</h2>
           <ul className={styles.benefits}>
-            {view.benefits.map((benefit, i) => (
-              <li key={benefit} className={styles.benefitItem}>
+            {view.benefits.map((benefit) => (
+              <li key={benefit.title} className={styles.benefitItem}>
                 <div className={styles.benefitIcon}>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                     <polyline points="20 6 9 17 4 12" />
                   </svg>
                 </div>
-                <span>{benefit}</span>
+                <div className={styles.benefitCopy}>
+                  <strong className={styles.benefitName}>{benefit.title}</strong>
+                  <p className={styles.benefitDesc}>{benefit.description}</p>
+                </div>
               </li>
             ))}
           </ul>

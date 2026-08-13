@@ -36,7 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       localizedSitemapEntry(path, locale, {
         lastModified: path === '/blog' ? latestPostDate : new Date(),
         changeFrequency: path === '/privacy' ? 'yearly' : 'weekly',
-        priority: path === '/' ? 1 : path === '/blog' ? 0.85 : 0.4,
+        priority: path === '/' ? 1 : path === '/blog' ? 0.6 : 0.3,
       }),
     ),
   )
@@ -56,7 +56,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       localizedSitemapEntry(`/blog/${post.slug}`, locale, {
         lastModified: new Date(post.date),
         changeFrequency: 'monthly',
-        priority: 0.75,
+        priority: 0.5,
       }),
     ),
   )

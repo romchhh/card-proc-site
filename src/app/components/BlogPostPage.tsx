@@ -4,7 +4,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
 import type { BlogPost } from '@/lib/blog'
-import { formatBlogDate, localizePost } from '@/lib/blog'
+import { formatBlogDate, getRelatedServiceSlugs, localizePost } from '@/lib/blog'
+import { getServiceBySlug, getServiceView } from '@/lib/services'
 import { useLocale, useLocalizedPath } from '@/lib/i18n/use-locale'
 import { useContactModal } from './ContactModalProvider'
 import BlogPostContent from './BlogPostContent'
@@ -22,6 +23,18 @@ export default function BlogPostPage({
   const locale = useLocale()
   const lp = useLocalizedPath()
   const view = localizePost(post, locale)
+  const relatedServices = getRelatedServiceSlugs(post.slug)
+    .map((slug) => {
+      const service = getServiceBySlug(slug)
+      if (!service) return null
+      const serviceView = getServiceView(service, locale)
+      return {
+        slug,
+        title: serviceView.card.title,
+        description: serviceView.card.desc,
+      }
+    })
+    .filter(Boolean) as { slug: string; title: string; description: string }[]
 
   return (
     <article className={styles.page}>
@@ -74,6 +87,22 @@ export default function BlogPostPage({
         </header>
 
         <BlogPostContent body={view.body} />
+
+        {relatedServices.length > 0 && (
+          <nav className={styles.serviceLinks} aria-label={t('blog.relatedServices')}>
+            <h2 className={styles.serviceLinksTitle}>{t('blog.relatedServices')}</h2>
+            <ul className={styles.serviceLinksList}>
+              {relatedServices.map((item) => (
+                <li key={item.slug}>
+                  <Link href={lp(`/services/${item.slug}`)} className={styles.serviceLink}>
+                    <span className={styles.serviceLinkTitle}>{item.title}</span>
+                    <span className={styles.serviceLinkDesc}>{item.description}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )}
 
         <section className={styles.cta}>
           <h2 className={styles.ctaTitle}>{t('blog.ctaTitle')}</h2>

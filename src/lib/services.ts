@@ -48,6 +48,11 @@ export type ServiceOffer = {
   sub: string
 }
 
+export type ServiceBenefit = {
+  title: string
+  description: string
+}
+
 export type ServiceView = {
   meta: {
     title: string
@@ -56,9 +61,10 @@ export type ServiceView = {
   }
   h1: string
   lead: string
+  intro: string[]
   offer: ServiceOffer
   sections: ServiceSection[]
-  benefits: string[]
+  benefits: ServiceBenefit[]
   faq: ServiceFaqItem[]
   card: {
     title: string

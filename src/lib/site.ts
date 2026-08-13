@@ -1,16 +1,14 @@
 export const siteConfig = {
   name: 'WayOfProcessing',
   title: 'WayOfProcessing — Stripe Payment Processing',
-  titleRu:
-    'Купить Stripe аккаунт | Верифицированный готовый аккаунт — WayOfProcessing',
-  titleEn:
-    'Buy Verified Stripe Account | Stripe Account for Sale — WayOfProcessing',
+  titleRu: 'WayOfProcessing — процессинг Stripe для бизнеса от 1.5%',
+  titleEn: 'WayOfProcessing — Stripe processing for business from 1.5%',
   description:
     'Stripe payment processing for any niche from 1.5%. Warmed-up accounts, 99.9% uptime, CRM access and unlimited withdrawals in EUR, USD and USDT.',
   descriptionRu:
-    'Купить Stripe аккаунт или арендовать готовый верифицированный аккаунт с оборотом. Продажа Stripe аккаунтов для бизнеса. Процессинг от 1.5%, вывод EUR/USD/USDT.',
+    'Международный процессинг Stripe для бизнеса: аренда или покупка аккаунта, routing, CRM и вывод в EUR, USD, USDT. Комиссия от 1.5%.',
   descriptionEn:
-    'Buy verified Stripe account with instant delivery. Stripe account for sale — warmed, ready for business. Rent or buy. Processing from 1.5%. Payouts in EUR, USD, USDT.',
+    'International Stripe processing for business: rent or buy an account, routing, CRM and payouts in EUR, USD, USDT. Fees from 1.5%.',
   url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://wayofprocessing.com',
   email: 'hello@wayofprocessing.com',
   telegram: '@wayofprocessing',

@@ -239,7 +239,8 @@
     "viewAll": "View all articles",
     "ctaTitle": "Ready to connect Stripe?",
     "ctaText": "Submit a request — we'll discuss rates, timelines and find the right solution for your niche. Free expert consultation.",
-    "ctaButton": "Leave a request"
+    "ctaButton": "Leave a request",
+    "relatedServices": "Related services"
   },
   "contact": {
     "heading": "Request a connection",
