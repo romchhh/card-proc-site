@@ -1,6 +1,8 @@
 import en from '@/locales/en.json'
 import ru from '@/locales/ru.json'
+import { getAllPosts, localizePost } from './blog'
 import { buildFaqPageJsonLd } from './service-seo'
+import { INDEX_BLOG_SLUGS } from './seo-index'
 import { SERVICE_SLUGS, getServiceBySlug, getServiceView } from './services'
 import { localePath, type Locale } from './i18n/config'
 import { absoluteUrl } from './seo'
@@ -70,7 +72,10 @@ export function buildHomeJsonLd(locale: Locale) {
       {
         '@type': 'FinancialService',
         '@id': `${siteConfig.url}/#service`,
-        name: `${siteConfig.name} — ${locale === 'en' ? 'Stripe processing' : 'процессинг Stripe'}`,
+        name:
+          locale === 'en'
+            ? `${siteConfig.name} — Stripe payment system & processing`
+            : `${siteConfig.name} — платёжная система Stripe и процессинг`,
         description,
         url: absoluteUrl(homePath),
         provider: { '@id': `${siteConfig.url}/#organization` },
@@ -79,11 +84,12 @@ export function buildHomeJsonLd(locale: Locale) {
           name,
         })),
         serviceType: [
+          'Stripe payment system',
           'Stripe payment processing',
-          'Stripe account setup',
+          'Payment gateway integration',
           'Payment routing',
           'International payment acceptance',
-          'High-risk payment processing',
+          'Merchant account setup',
         ],
         termsOfService: absoluteUrl(localePath('/privacy', locale)),
         offers: {
@@ -119,6 +125,25 @@ export function buildHomeJsonLd(locale: Locale) {
         },
       },
       buildFaqPageJsonLd(faqItems, absoluteUrl(homePath), '#faq'),
+      {
+        '@type': 'ItemList',
+        '@id': `${absoluteUrl(homePath)}#guides-list`,
+        name:
+          locale === 'en'
+            ? 'Stripe payment system guides'
+            : 'Материалы о Stripe как платёжной системе',
+        itemListElement: INDEX_BLOG_SLUGS.map((slug, index) => {
+          const post = getAllPosts().find((item) => item.slug === slug)
+          if (!post) return null
+          const view = localizePost(post, locale)
+          return {
+            '@type': 'ListItem',
+            position: index + 1,
+            name: view.title,
+            url: absoluteUrl(localePath(`/blog/${slug}`, locale)),
+          }
+        }).filter(Boolean),
+      },
       {
         '@type': 'ItemList',
         '@id': `${absoluteUrl(homePath)}#services-list`,

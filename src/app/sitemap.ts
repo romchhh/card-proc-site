@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next'
 import { getAllPosts } from '@/lib/blog'
 import { HOME_UPDATED, PRIVACY_UPDATED, SERVICES_UPDATED } from '@/lib/content-dates'
+import { isIndexBlogSlug } from '@/lib/seo-index'
 import { SERVICE_SLUGS } from '@/lib/services'
 import { localePath, locales, type Locale } from '@/lib/i18n/config'
 import { buildHreflangLanguages } from '@/lib/seo'
@@ -42,7 +43,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
               ? new Date(PRIVACY_UPDATED)
               : new Date(HOME_UPDATED),
         changeFrequency: path === '/privacy' ? 'yearly' : 'weekly',
-        priority: path === '/' ? 1 : path === '/blog' ? 0.6 : 0.3,
+        priority: path === '/' ? 1 : path === '/blog' ? 0.65 : 0.3,
       }),
     ),
   )
@@ -52,7 +53,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       localizedSitemapEntry(`/services/${slug}`, locale, {
         lastModified: new Date(SERVICES_UPDATED),
         changeFrequency: 'monthly',
-        priority: 0.9,
+        priority: slug === 'processing-turnkey' ? 0.92 : 0.88,
       }),
     ),
   )
@@ -62,7 +63,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       localizedSitemapEntry(`/blog/${post.slug}`, locale, {
         lastModified: new Date(post.date),
         changeFrequency: 'monthly',
-        priority: 0.5,
+        priority: isIndexBlogSlug(post.slug) ? 0.62 : 0.48,
       }),
     ),
   )

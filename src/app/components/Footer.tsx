@@ -4,6 +4,8 @@ import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
 import { siteConfig } from '@/lib/site'
 import { SERVICE_SLUGS, getServiceBySlug, getServiceView } from '@/lib/services'
+import { getAllPosts, localizePost } from '@/lib/blog'
+import { INDEX_BLOG_SLUGS } from '@/lib/seo-index'
 import { useLocalizedPath } from '@/lib/i18n/use-locale'
 import { TelegramIcon, SupportIcon } from './icons/SocialIcons'
 import { useContactModal } from './ContactModalProvider'
@@ -16,12 +18,21 @@ const NAV_LINKS = [
   { key: 'blog', path: '/blog' },
 ] as const
 
+const FOOTER_GUIDE_SLUGS = INDEX_BLOG_SLUGS.slice(0, 4)
+
 export default function Footer() {
   const { t, i18n } = useTranslation()
   const { open: openContactModal } = useContactModal()
   const lp = useLocalizedPath()
   const locale = i18n.language === 'en' ? 'en' : 'ru'
   const year = new Date().getFullYear()
+
+  const postsBySlug = new Map(getAllPosts().map((post) => [post.slug, post]))
+  const guideLinks = FOOTER_GUIDE_SLUGS.map((slug) => {
+    const post = postsBySlug.get(slug)
+    if (!post) return null
+    return { slug, title: localizePost(post, locale).title }
+  }).filter(Boolean) as { slug: string; title: string }[]
 
   const contactItems = [
     {
@@ -88,6 +99,18 @@ export default function Footer() {
                 </Link>
               )
             })}
+          </nav>
+        </div>
+
+        <div className={styles.col}>
+          <h3 className={styles.heading}>{t('footer.guidesHeading')}</h3>
+          <nav className={styles.nav} aria-label={t('footer.guidesHeading')}>
+            {guideLinks.map((post) => (
+              <Link key={post.slug} href={lp(`/blog/${post.slug}`)}>
+                {post.title}
+              </Link>
+            ))}
+            <Link href={lp('/blog')}>{t('footer.allGuides')}</Link>
           </nav>
         </div>
 

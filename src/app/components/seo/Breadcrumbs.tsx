@@ -15,7 +15,7 @@ export default function Breadcrumbs({ items, theme = 'light' }: Props) {
   return (
     <nav
       className={`${styles.nav} ${theme === 'dark' ? styles.navDark : ''}`}
-      aria-label="Breadcrumb"
+      aria-label="Breadcrumbs"
     >
       <ol className={styles.list}>
         {items.map((item, index) => {

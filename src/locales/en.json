@@ -1,37 +1,39 @@
 {
   "seo": {
-    "heroImageAlt": "WayOfProcessing — international Stripe payment processing with warmed accounts",
-    "bottomTitle": "Who Stripe via WayOfProcessing is for",
-    "bottomText": "We help teams in the EU, UK, US and CIS accept card payments without building foreign company and banking setup from scratch. A typical path: niche and volume review → jurisdiction fit (GB, HK, CY, PL, EE, CZ) → account and CRM handoff → payouts to IBAN or USDT.\n\nOver seven years and 1,100+ accounts, we have handled verification, volume limits and failover routing when a primary account is under review. If you need Stripe as a working payment channel—with clear timelines and Telegram support—send a request and we will map the right setup for your case.",
-    "faqHeading": "Frequently asked questions about Stripe processing",
+    "heroImageAlt": "WayOfProcessing — Stripe payment system setup for business",
+    "bottomTitle": "Stripe as a payment system for international business",
+    "bottomText": "Stripe is an international payment system for cards, wallets and subscriptions online. WayOfProcessing helps teams in the EU, UK, US and CIS connect processing: merchant account, checkout, payment routing, CRM and payouts in EUR, USD or USDT.\n\nA typical path: niche review → jurisdiction (GB, HK, CY, PL, EE, CZ) or rental/purchase format → go-live from 3 days. Below: guides on Stripe as a payment system and our setup services.",
+    "guidesHeading": "Guides on Stripe and payment systems",
+    "servicesHeading": "Stripe setup services",
+    "faqHeading": "FAQ about Stripe and payment systems",
     "faq": [
       {
+        "question": "What is Stripe as a payment system?",
+        "answer": "Stripe is an international payment system and platform for accepting cards, digital wallets and subscriptions online. Businesses use it for website checkout, API integrations, invoicing and bank payouts."
+      },
+      {
         "question": "What is WayOfProcessing?",
-        "answer": "WayOfProcessing is an international Stripe payment processing service. We set up and support Stripe accounts, provide warmed accounts with turnover, CRM access and 24/7 support."
+        "answer": "WayOfProcessing helps connect international processing via Stripe: merchant account, checkout, payment routing, CRM, niche consulting and launch support."
       },
       {
         "question": "How much does Stripe processing cost with WayOfProcessing?",
         "answer": "Processing fees start from 1.5%. The exact rate depends on your niche, payment volume and chosen solution. A free consultation helps find the right plan."
       },
       {
-        "question": "Which niches does WayOfProcessing support?",
-        "answer": "We work with marketplaces, SaaS, e-commerce, online courses, subscriptions, and high-risk niches including forex, gaming, vape, supplements and more."
+        "question": "Which niches can connect Stripe processing?",
+        "answer": "We work with e-commerce, SaaS, marketplaces, subscriptions, online courses and some high-risk verticals after reviewing the site and dispute model."
       },
       {
-        "question": "Can I buy a Stripe account or only rent one?",
-        "answer": "Both options are available — buy a verified Stripe account or rent a ready account under WayOfProcessing's legal entity. Stripe accounts for sale and rental for businesses worldwide, with instant delivery for warmed accounts."
+        "question": "Rent or buy a merchant account — which to choose?",
+        "answer": "Rent fits pilots and a fast go-live. Buy when volume is predictable and you need your own access perimeter. On a call we compare both for your niche."
       },
       {
-        "question": "How fast can I get a ready Stripe account?",
-        "answer": "Buy a Stripe account with instant delivery when a warmed account is in stock. Creating a new verified account for your niche takes from 3 days with full setup."
+        "question": "How fast can I start accepting Stripe payments?",
+        "answer": "Basic setup from 3 business days with a ready site and agreed niche. Timing depends on format (Payment Link, API, routing) and entity bundle."
       },
       {
-        "question": "How much does a Stripe account cost?",
-        "answer": "Stripe account price depends on buy vs rent, niche, volume and jurisdiction. Submit a request — we'll calculate the cost for free and recommend the best option."
-      },
-      {
-        "question": "What happens if a Stripe account fails?",
-        "answer": "If one account fails, payments are automatically routed to another warmed Stripe account via our Payment routing solution. Uptime is 99.9%."
+        "question": "What is payment routing and why does it matter?",
+        "answer": "Payment routing switches transactions to a backup channel if the primary Stripe account is unavailable or under review — so checkout keeps working."
       },
       {
         "question": "How do I contact WayOfProcessing?",
@@ -56,16 +58,16 @@
     "headline": "Accept payments from anywhere in the world with",
     "stripe": "Stripe",
     "badge": "Processing for any niche from 1.5%",
-    "description": "Our warmed-up accounts tailored for different volumes — for industry professionals and aspiring entrepreneurs alike.",
+    "description": "We connect Stripe as your payment system: online cards, checkout, routing and payouts in EUR, USD or USDT — from 3 days.",
     "cardLabel": "Leave a request",
     "cardHighlight": "from 1.5%",
-    "cardSub": "Stripe account setup for your niche"
+    "cardSub": "Free consultation on Stripe setup for your niche"
   },
   "specialists": {
-    "heading": "Contact WayOfProcessing specialists to work with Stripe.",
-    "descriptionPrefix": "We will provide you with a ready «warmed-up» Stripe account or create a ",
-    "descriptionBold": "new one within 3 days",
-    "descriptionSuffix": ". We provide full infrastructure for fast and secure international payment acceptance and withdrawals in fiat or crypto.",
+    "heading": "Connect Stripe as a payment system with WayOfProcessing experts",
+    "descriptionPrefix": "We help you launch international card acceptance: merchant account, checkout and routing. Setup ",
+    "descriptionBold": "from 3 business days",
+    "descriptionSuffix": " — with CRM, payouts in EUR, USD or USDT and launch support.",
     "cta": "Get a free consultation",
     "lead": "We will take care of:",
     "item1": "Opening, closing and all legal entity reporting. You run the business — we handle all the paperwork",
@@ -90,7 +92,7 @@
     "cta": "Learn more about WayOfProcessing"
   },
   "services": {
-    "heading": "What we do for your business",
+    "heading": "Stripe setup and payment solutions for business",
     "more": "Learn more",
     "complex": {
       "title": "Legal entity, bank and Stripe — as one package",
@@ -232,7 +234,7 @@
   },
   "blog": {
     "title": "WayOfProcessing Blog",
-    "description": "Articles on Stripe: buying and renting accounts, payment processing, integrations, payment routing and accepting international payments for business.",
+    "description": "Stripe as a payment system: setup, international payments, checkout, webhooks, payment routing and processing for e-commerce and SaaS.",
     "backToBlog": "Back to blog",
     "backHome": "Back to home",
     "readAlso": "Read also",
@@ -401,9 +403,11 @@
     "brandBold": "WAYOF",
     "brandRegular": "PROCESSING",
     "copyright": "All rights reserved ©{{year}} WayOfProcessing",
-    "legal": "International payment processing via Stripe. Warmed accounts, company registration, and 24/7 support. WayOfProcessing is an independent service, not affiliated with Stripe, Inc.",
+    "legal": "Stripe payment system setup for business: processing, merchant account, routing and 24/7 support. WayOfProcessing is an independent service, not affiliated with Stripe, Inc.",
     "infoHeading": "Information",
     "servicesHeading": "Services",
+    "guidesHeading": "Stripe & payments",
+    "allGuides": "All blog articles",
     "about": "About company",
     "services": "All services",
     "clients": "Our clients",
@@ -413,7 +417,7 @@
     "telegramOperator": "Telegram operator",
     "support247": "24/7 support",
     "aboutHeading": "WayOfProcessing",
-    "aboutText": "We help businesses accept international payments via Stripe: warmed accounts, offshore company registration, processing for any niche, and free expert consultations.",
+    "aboutText": "WayOfProcessing helps connect Stripe as a payment system: merchant account, checkout, payment routing, offshore company registration and free expert consultations.",
     "privacy": "Privacy policy",
     "developedBy": "Developed by"
   }

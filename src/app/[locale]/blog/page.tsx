@@ -24,8 +24,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       path: '/blog',
       locale,
       keywords: isEn
-        ? [`${siteConfig.name} blog`, 'Stripe articles', 'payment processing', 'Stripe integration', 'payment routing']
-        : [`блог ${siteConfig.name}`, 'статьи Stripe', 'процессинг платежей', 'интеграция Stripe', 'payment routing'],
+        ? ['stripe payment system', 'stripe for business', 'payment processing', 'stripe integration', siteConfig.name]
+        : ['stripe платежная система', 'платёжная система stripe', 'подключение stripe', 'процессинг платежей', siteConfig.name],
     }),
     alternates: {
       ...buildPageAlternates('/blog', locale),

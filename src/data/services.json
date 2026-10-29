@@ -4,18 +4,19 @@
       "slug": "stripe-account-rent",
       "ru": {
         "meta": {
-          "title": "Аренда Stripe аккаунта для бизнеса | WayOfProcessing",
-          "description": "Аренда прогретого Stripe аккаунта с CRM, routing и выводом в EUR, USD, USDT. Подключение от 3 дней, комиссия от 1.5%. Риски, передача доступа и гарантии.",
+          "title": "Подключение Stripe для бизнеса — аренда merchant-аккаунта | WayOfProcessing",
+          "description": "Быстрый старт приёма платежей через Stripe: платёжная система, CRM, payment routing, вывод EUR, USD, USDT. Подключение от 3 дней, комиссия от 1.5%.",
           "keywords": [
+            "подключение stripe",
+            "stripe платежная система",
+            "приём платежей stripe",
             "аренда stripe аккаунта",
-            "арендовать аккаунт stripe",
-            "stripe аккаунт в аренду",
-            "готовый stripe аккаунт",
-            "верифицированный stripe",
+            "merchant аккаунт stripe",
+            "международные платежи",
             "WayOfProcessing"
           ]
         },
-        "lead": "Аренда Stripe аккаунта — способ начать принимать международные платежи без самостоятельной регистрации компании, банка и прохождения верификации Stripe.",
+        "lead": "Аренда merchant-аккаунта — быстрый способ подключить Stripe как платёжную систему и начать принимать международные платежи без самостоятельной регистрации компании, банка и верификации.",
         "intro": [
           "Самостоятельная регистрация Stripe часто занимает недели: нужно юрлицо в подходящей стране, расчётный счёт, сайт с офертой и refund policy, корректный MCC и история, которой у нового аккаунта нет. Для пилота или выхода на новый рынок это слишком долго и дорого.",
           "Аренда снимает эту связку с вас. Вы получаете доступ к уже верифицированному аккаунту с оборотом, CRM для контроля платежей и, при необходимости, routing на резервный канал. Юрлицо и банк остаются на инфраструктуре WayOfProcessing — вы платите за использование и процессинг, а не собираете комплект подрядчиков.",
@@ -99,15 +100,15 @@
             "answer": "Готовый прогретый аккаунт подключаем в кратчайшие сроки после заявки. Кастом под нишу, сайт и routing — от 3 рабочих дней. Точный срок называем после просмотра ниши и текущего checkout."
           }
         ],
-        "h1": "Аренда Stripe аккаунта для бизнеса",
+        "h1": "Подключение Stripe для бизнеса — аренда merchant-аккаунта",
         "offer": {
           "badge": "Процессинг от 1.5%",
           "highlight": "от 1.5%",
-          "sub": "Прогретый аккаунт с CRM и routing — подключение от 3 дней"
+          "sub": "Платёжная система Stripe с CRM и routing — от 3 дней"
         },
         "card": {
-          "title": "Аренда Stripe аккаунта",
-          "desc": "Прогретый верифицированный аккаунт с CRM, routing и выводом средств. Быстрый старт без самостоятельной регистрации."
+          "title": "Аренда Stripe для бизнеса",
+          "desc": "Быстрое подключение платёжной системы: CRM, routing и вывод средств без самостоятельной регистрации."
         },
         "relatedServices": [
           "stripe-account-buy",
@@ -116,24 +117,25 @@
         ],
         "relatedBlogSlugs": [
           "stripe-for-your-business",
-          "fast-payment-system",
+          "how-to-choose-payment-system",
           "stripe-payment-routing-uptime"
         ]
       },
       "en": {
         "meta": {
-          "title": "Rent a Stripe Account for Business | WayOfProcessing",
-          "description": "Rent a warmed Stripe account with CRM, payment routing and payouts in EUR, USD, USDT. Setup from 3 days, fees from 1.5%. How access, risk and failover work.",
+          "title": "Connect Stripe for Business — Merchant Account Rental | WayOfProcessing",
+          "description": "Start accepting payments with Stripe fast: payment system setup, CRM, payment routing, payouts in EUR, USD, USDT. From 3 days, fees from 1.5%.",
           "keywords": [
+            "connect stripe business",
+            "stripe payment system",
+            "accept stripe payments",
             "rent stripe account",
-            "stripe account rental",
-            "rented stripe account",
-            "ready stripe account",
-            "verified stripe account",
+            "stripe merchant account",
+            "international payments",
             "WayOfProcessing"
           ]
         },
-        "lead": "Renting a Stripe account lets you accept international cards without registering a company, opening a bank account and passing Stripe verification yourself.",
+        "lead": "Renting a merchant account is a fast way to connect Stripe as a payment system and accept international cards without registering a company, bank and verification yourself.",
         "intro": [
           "A DIY Stripe setup often takes weeks: a legal entity in the right country, a bank account, a site with terms and refund policy, a matching MCC, and transaction history that a brand-new account does not have. For a pilot or a new market that is slow and expensive.",
           "Rental removes that stack from your plate. You get access to a verified account with turnover, CRM for payment control and, if needed, routing to a backup channel. The entity and bank stay on WayOfProcessing infrastructure — you pay for usage and processing instead of assembling vendors.",
@@ -217,15 +219,15 @@
             "answer": "A ready warmed account can be connected shortly after the request. A custom niche, site and routing setup takes from 3 business days. We give a firm date after reviewing the niche and current checkout."
           }
         ],
-        "h1": "Stripe Account Rental for Business",
+        "h1": "Connect Stripe for Business — Merchant Account Rental",
         "offer": {
           "badge": "Processing from 1.5%",
           "highlight": "from 1.5%",
-          "sub": "Warmed account with CRM and routing — setup from 3 days"
+          "sub": "Stripe payment system with CRM and routing — from 3 days"
         },
         "card": {
-          "title": "Stripe Account Rental",
-          "desc": "Warmed verified account with CRM, routing and payouts. Fast start without registering everything yourself."
+          "title": "Stripe Rental for Business",
+          "desc": "Fast payment system setup: CRM, routing and payouts without registering everything yourself."
         },
         "relatedServices": [
           "stripe-account-buy",
@@ -234,7 +236,7 @@
         ],
         "relatedBlogSlugs": [
           "stripe-for-your-business",
-          "fast-payment-system",
+          "how-to-choose-payment-system",
           "stripe-payment-routing-uptime"
         ]
       }
@@ -243,18 +245,19 @@
       "slug": "stripe-account-buy",
       "ru": {
         "meta": {
-          "title": "Купить Stripe аккаунт для бизнеса | WayOfProcessing",
-          "description": "Покупка верифицированного Stripe аккаунта с документами, оборотом и сопровождением. Когда покупка лучше аренды, как проходит сделка и от чего зависит цена.",
+          "title": "Merchant-аккаунт Stripe для бизнеса — покупка и подключение | WayOfProcessing",
+          "description": "Верифицированный Stripe merchant-аккаунт с документами, оборотом и сопровождением. Когда покупка лучше аренды, сроки подключения платёжной системы и стоимость.",
           "keywords": [
+            "merchant аккаунт stripe",
+            "подключение stripe для бизнеса",
+            "stripe платежная система",
+            "верифицированный stripe",
+            "приём платежей stripe",
             "купить stripe аккаунт",
-            "продажа stripe аккаунтов",
-            "stripe аккаунт на продажу",
-            "купить верифицированный stripe",
-            "готовый stripe аккаунт",
             "WayOfProcessing"
           ]
         },
-        "lead": "Покупка Stripe аккаунта нужна бизнесу, которому важен контроль над каналом платежей и работа на дистанции месяцев, а не пилота на несколько недель.",
+        "lead": "Покупка merchant-аккаунта Stripe нужна бизнесу, которому важен контроль над платёжной системой и работа на дистанции месяцев, а не пилота на несколько недель.",
         "intro": [
           "Купить аккаунт имеет смысл, когда оборот уже понятен и вы не хотите зависеть от чужой инфраструктуры. Вы получаете верифицированный аккаунт с историей, подобранным MCC, связкой с юрлицом и счётом — не «пустой кабинет», который Stripe ещё не видел.",
           "Свежая регистрация с нуля почти всегда слабее на старте: нет истории, лимиты уже, любой скачок объёма выглядит подозрительно. Прогретый аккаунт проходит этот участок спокойнее, если ниша, сайт и MCC совпадают.",
@@ -336,15 +339,15 @@
             "answer": "От 3 рабочих дней, если документы и сайт в порядке. Срок растёт, если нужно довести комплаенс сайта или собрать кастомную связку юрлица и банка."
           }
         ],
-        "h1": "Купить Stripe аккаунт — готовый верифицированный аккаунт",
+        "h1": "Merchant-аккаунт Stripe — покупка и подключение для бизнеса",
         "offer": {
-          "badge": "Верифицированный аккаунт под ключ",
+          "badge": "Верифицированный merchant под ключ",
           "highlight": "от 3 дней",
-          "sub": "Аккаунт с документами и оборотом под вашу нишу"
+          "sub": "Документы, оборот и сопровождение под вашу нишу"
         },
         "card": {
-          "title": "Покупка Stripe аккаунта",
-          "desc": "Верифицированный готовый аккаунт с документами и оборотом. Stripe аккаунт на продажу с полным сопровождением."
+          "title": "Покупка merchant-аккаунта Stripe",
+          "desc": "Верифицированный merchant с документами и оборотом. Подключение платёжной системы Stripe под ключ."
         },
         "relatedServices": [
           "stripe-account-rent",
@@ -352,25 +355,26 @@
           "legal-entity-bank"
         ],
         "relatedBlogSlugs": [
-          "business-categories-stripe",
           "what-is-stripe-scaling-business",
+          "stripe-platform-rules",
           "stripe-chargeback-prevention"
         ]
       },
       "en": {
         "meta": {
-          "title": "Buy a Stripe Account for Business | WayOfProcessing",
-          "description": "Buy a verified Stripe account with documents, turnover and support. When buying beats rental, how the deal works, and what drives the price.",
+          "title": "Stripe Merchant Account for Business — Purchase and Setup | WayOfProcessing",
+          "description": "Verified Stripe merchant account with documents, turnover and support. When buying beats rental, payment system setup timelines and pricing.",
           "keywords": [
+            "stripe merchant account",
+            "connect stripe business",
+            "stripe payment system",
             "buy stripe account",
-            "stripe account for sale",
-            "buy verified stripe account",
-            "ready stripe account",
-            "aged stripe account",
+            "accept stripe payments",
+            "verified stripe account",
             "WayOfProcessing"
           ]
         },
-        "lead": "Buying a Stripe account fits businesses that need control over the payment channel for months, not a few-week pilot.",
+        "lead": "Buying a Stripe merchant account fits businesses that need control over the payment system for months, not a few-week pilot.",
         "intro": [
           "A purchase makes sense when volume is already clear and you do not want to depend on someone else’s infrastructure. You get a verified account with history, a matching MCC, and an entity plus bank bundle — not an empty dashboard Stripe has never seen.",
           "A fresh registration is almost always weaker at the start: no history, tighter limits, and any volume spike looks suspicious. A warmed account handles that stretch more calmly if niche, site and MCC match.",
@@ -452,15 +456,15 @@
             "answer": "From 3 business days if documents and the site are in order. It takes longer if the site needs compliance work or a custom entity and bank bundle."
           }
         ],
-        "h1": "Buy a Stripe Account — Verified Ready Account",
+        "h1": "Stripe Merchant Account — Purchase and Setup for Business",
         "offer": {
-          "badge": "Verified account turnkey",
+          "badge": "Verified merchant turnkey",
           "highlight": "from 3 days",
-          "sub": "Account with documents and turnover for your niche"
+          "sub": "Documents, turnover and support for your niche"
         },
         "card": {
-          "title": "Buy a Stripe Account",
-          "desc": "Verified ready account with documents and turnover. Stripe account for sale with full support."
+          "title": "Buy a Stripe Merchant Account",
+          "desc": "Verified merchant with documents and turnover. Turnkey Stripe payment system setup."
         },
         "relatedServices": [
           "stripe-account-rent",
@@ -468,8 +472,8 @@
           "legal-entity-bank"
         ],
         "relatedBlogSlugs": [
-          "business-categories-stripe",
           "what-is-stripe-scaling-business",
+          "stripe-platform-rules",
           "stripe-chargeback-prevention"
         ]
       }
@@ -478,18 +482,20 @@
       "slug": "processing-turnkey",
       "ru": {
         "meta": {
-          "title": "Процессинг Stripe под ключ | WayOfProcessing",
-          "description": "Приём платежей через Stripe под ключ: API или Payment Link, routing, CRM, вывод в EUR, USD, USDT. Комиссия от 1.5%, зачем нужен failover и как считается тариф.",
+          "title": "Процессинг Stripe под ключ — платёжная система для бизнеса | WayOfProcessing",
+          "description": "Приём платежей через Stripe под ключ: checkout, API, Payment Link, payment routing, CRM, вывод EUR, USD, USDT. Комиссия от 1.5%, аптайм 99.9%.",
           "keywords": [
             "процессинг stripe",
+            "stripe платежная система",
             "процессинг платежей",
-            "stripe под ключ",
             "приём платежей stripe",
+            "stripe под ключ",
             "payment routing",
+            "интеграция stripe",
             "WayOfProcessing"
           ]
         },
-        "lead": "Процессинг под ключ — это не «подключить кнопку Stripe», а рабочий контур: аккаунт, checkout, мониторинг, выплаты и резервный канал.",
+        "lead": "Процессинг под ключ — это не «кнопка Stripe на сайте», а полноценная платёжная система: merchant-аккаунт, checkout, мониторинг, выплаты и резервный канал.",
         "intro": [
           "Прямой Stripe удобен, если у вас уже есть юрлицо, банк, комплаенс сайта и команда, которая живёт в webhooks. У большинства запусков этого нет: интеграцию делают частично, аккаунт один, и любой review останавливает продажи.",
           "Под ключ мы собираем контур целиком. Checkout может быть API, Payment Element, Payment Link или Invoice — без требования «сначала наймите разработчиков на месяц». CRM показывает статусы, споры и выгрузки без ручных запросов.",
@@ -571,15 +577,15 @@
             "answer": "Payment Link можно поднять быстрее. API, routing и кастомный MCC — от нескольких рабочих дней после вводных по нише и сайту."
           }
         ],
-        "h1": "Процессинг Stripe под ключ",
+        "h1": "Процессинг Stripe под ключ — платёжная система для бизнеса",
         "offer": {
-          "badge": "Stripe под ключ",
+          "badge": "Платёжная система под ключ",
           "highlight": "от 1.5%",
-          "sub": "API, routing, CRM и вывод в EUR, USD, USDT"
+          "sub": "Checkout, routing, CRM и вывод в EUR, USD, USDT"
         },
         "card": {
           "title": "Процессинг Stripe под ключ",
-          "desc": "Приём платежей, API, routing, CRM и вывод средств. Комиссия от 1.5%, аптайм 99.9%."
+          "desc": "Платёжная система под ключ: checkout, API, routing, CRM. Комиссия от 1.5%, аптайм 99.9%."
         },
         "relatedServices": [
           "stripe-account-rent",
@@ -587,25 +593,26 @@
           "legal-entity-bank"
         ],
         "relatedBlogSlugs": [
-          "stripe-via-php-api",
-          "stripe-webhooks-guide",
-          "how-to-choose-payment-system"
+          "how-to-choose-payment-system",
+          "stripe-payment-routing-uptime",
+          "stripe-webhooks-guide"
         ]
       },
       "en": {
         "meta": {
-          "title": "Turnkey Stripe Processing | WayOfProcessing",
-          "description": "Turnkey Stripe acceptance: API or Payment Link, routing, CRM, payouts in EUR, USD, USDT. Fees from 1.5%, why failover matters, and how the rate is set.",
+          "title": "Turnkey Stripe Processing — Payment System for Business | WayOfProcessing",
+          "description": "Turnkey Stripe payment acceptance: checkout, API, Payment Link, payment routing, CRM, payouts in EUR, USD, USDT. Fees from 1.5%, 99.9% uptime.",
           "keywords": [
+            "stripe payment system",
             "stripe payment processing",
-            "stripe processing",
             "turnkey stripe",
-            "payment routing",
             "accept stripe payments",
+            "payment routing",
+            "stripe integration",
             "WayOfProcessing"
           ]
         },
-        "lead": "Turnkey processing is not “add a Stripe button”. It is a working loop: account, checkout, monitoring, payouts and a backup channel.",
+        "lead": "Turnkey processing is not “add a Stripe button”. It is a full payment system: merchant account, checkout, monitoring, payouts and a backup channel.",
         "intro": [
           "Direct Stripe works if you already have an entity, a bank, site compliance and a team that lives in webhooks. Most launches do not: integration is partial, there is one account, and any review stops sales.",
           "Turnkey means we assemble the loop. Checkout can be API, Payment Element, Payment Link or Invoice — without “hire developers for a month first”. CRM shows statuses, disputes and exports without manual requests.",
@@ -687,15 +694,15 @@
             "answer": "Payment Link can go live faster. API, routing and a custom MCC take several business days after we have niche and site inputs."
           }
         ],
-        "h1": "Turnkey Stripe Payment Processing",
+        "h1": "Turnkey Stripe Processing — Payment System for Business",
         "offer": {
-          "badge": "Turnkey Stripe setup",
+          "badge": "Payment system turnkey",
           "highlight": "from 1.5%",
-          "sub": "API, routing, CRM and payouts in EUR, USD, USDT"
+          "sub": "Checkout, routing, CRM and payouts in EUR, USD, USDT"
         },
         "card": {
           "title": "Turnkey Stripe Processing",
-          "desc": "Payment acceptance, API, routing, CRM and payouts. Commission from 1.5%, 99.9% uptime."
+          "desc": "Payment system turnkey: checkout, API, routing, CRM. Fees from 1.5%, 99.9% uptime."
         },
         "relatedServices": [
           "stripe-account-rent",
@@ -703,9 +710,9 @@
           "legal-entity-bank"
         ],
         "relatedBlogSlugs": [
-          "stripe-via-php-api",
-          "stripe-webhooks-guide",
-          "how-to-choose-payment-system"
+          "how-to-choose-payment-system",
+          "stripe-payment-routing-uptime",
+          "stripe-webhooks-guide"
         ]
       }
     },
@@ -713,18 +720,19 @@
       "slug": "legal-entity-bank",
       "ru": {
         "meta": {
-          "title": "Юрлицо, банк и Stripe под ключ | WayOfProcessing",
-          "description": "Регистрация компании, расчётный счёт и Stripe одним комплектом. Юрисдикции GB, HK, CY, PL, EE, CZ. Зачем связка важнее «просто открыть фирму».",
+          "title": "Подключение Stripe: юрлицо, банк и merchant-аккаунт | WayOfProcessing",
+          "description": "Регистрация компании, расчётный счёт и Stripe одним комплектом для приёма международных платежей. Юрисдикции GB, HK, CY, PL, EE, CZ. Подключение платёжной системы от 3 дней.",
           "keywords": [
+            "подключение stripe",
             "юрлицо для stripe",
+            "stripe платежная система",
             "регистрация компании за рубежом",
-            "банковский счёт stripe",
-            "открытие юрлица",
-            "stripe под ключ",
+            "merchant аккаунт stripe",
+            "международные платежи",
             "WayOfProcessing"
           ]
         },
-        "lead": "Stripe проверяет не кабинет отдельно, а связку: компания, банк и описание бизнеса. Комплект собирает эти три части так, чтобы они совпали с первого раза.",
+        "lead": "Чтобы подключить Stripe как платёжную систему, нужна связка: компания, банк и описание бизнеса. Комплект собирает эти три части так, чтобы они совпали с первого раза.",
         "intro": [
           "Открыть фирму «где дешевле» и потом отдельно искать банк и Stripe — частый путь к отказу на последнем шаге. Банк смотрит на деятельность, Stripe — на юрлицо и счёт, сайт должен говорить то же, что MCC. Если звенья из разных подрядчиков, расхождения всплывают поздно.",
           "Мы подбираем юрисдикцию под нишу и модель, а не под минимальный прайс регистрации. Для e-commerce, SaaS и high-risk нужны разные документы и коды. После запуска отчётность по юрлицу не расползается по трём чатам.",
@@ -806,15 +814,15 @@
             "answer": "Запрещённые категории Stripe и модели, где сайт нельзя привести в соответствие платежам. Если связка заведомо не пройдёт — говорим до оплаты регистрации."
           }
         ],
-        "h1": "Юрлицо, банк и Stripe — одним комплектом",
+        "h1": "Подключение Stripe: юрлицо, банк и merchant-аккаунт",
         "offer": {
           "badge": "Юрлицо + банк + Stripe",
           "highlight": "от 3 дней",
-          "sub": "GB, HK, CY, PL, EE, CZ — одним комплектом"
+          "sub": "GB, HK, CY, PL, EE, CZ — платёжная система одним комплектом"
         },
         "card": {
           "title": "Юрлицо, банк и Stripe",
-          "desc": "Регистрация компании, расчётный счёт и Stripe одним комплектом. Юрисдикции GB, HK, CY, PL, EE, CZ."
+          "desc": "Регистрация компании, счёт и подключение Stripe как платёжной системы. Юрисдикции GB, HK, CY, PL, EE, CZ."
         },
         "relatedServices": [
           "stripe-account-buy",
@@ -824,23 +832,24 @@
         "relatedBlogSlugs": [
           "stripe-international-payments-integration",
           "international-payments-for-business",
-          "business-categories-stripe"
+          "what-is-stripe-scaling-business"
         ]
       },
       "en": {
         "meta": {
-          "title": "Legal Entity, Bank and Stripe | WayOfProcessing",
-          "description": "Company, bank account and Stripe as one package. Jurisdictions GB, HK, CY, PL, EE, CZ. Why the bundle matters more than registering a company alone.",
+          "title": "Connect Stripe: Legal Entity, Bank and Merchant Account | WayOfProcessing",
+          "description": "Company registration, bank account and Stripe in one package for international payments. Jurisdictions GB, HK, CY, PL, EE, CZ. Payment system setup from 3 days.",
           "keywords": [
+            "connect stripe business",
+            "stripe payment system",
             "legal entity for stripe",
-            "offshore company registration",
-            "bank account stripe",
+            "stripe merchant account",
+            "international payments",
             "company setup stripe",
-            "stripe turnkey",
             "WayOfProcessing"
           ]
         },
-        "lead": "Stripe reviews the bundle — company, bank and business description — not the dashboard alone. The package lines those three parts up on the first pass.",
+        "lead": "Connecting Stripe as a payment system needs a bundle: company, bank and business description. The package lines those three parts up on the first pass.",
         "intro": [
           "Registering a company “where it is cheapest” and then hunting for a bank and Stripe separately is a common way to fail at the last step. The bank looks at activity, Stripe looks at the entity and account, and the site must match the MCC. If the parts come from different vendors, mismatches show up late.",
           "We pick a jurisdiction for the niche and model, not for the lowest registration fee. E-commerce, SaaS and high-risk need different documents and codes. After launch, entity reporting does not scatter across three chats.",
@@ -922,15 +931,15 @@
             "answer": "Stripe-prohibited categories and models where the site cannot be aligned with the charges. If the bundle will not pass, we say so before you pay for registration."
           }
         ],
-        "h1": "Legal Entity, Bank and Stripe — One Package",
+        "h1": "Connect Stripe: Legal Entity, Bank and Merchant Account",
         "offer": {
           "badge": "Entity + bank + Stripe",
           "highlight": "from 3 days",
-          "sub": "GB, HK, CY, PL, EE, CZ — one package"
+          "sub": "GB, HK, CY, PL, EE, CZ — payment system in one package"
         },
         "card": {
           "title": "Legal Entity, Bank & Stripe",
-          "desc": "Company registration, bank account and Stripe as one package. Jurisdictions GB, HK, CY, PL, EE, CZ."
+          "desc": "Company registration, bank account and Stripe payment system setup. Jurisdictions GB, HK, CY, PL, EE, CZ."
         },
         "relatedServices": [
           "stripe-account-buy",
@@ -940,7 +949,7 @@
         "relatedBlogSlugs": [
           "stripe-international-payments-integration",
           "international-payments-for-business",
-          "business-categories-stripe"
+          "what-is-stripe-scaling-business"
         ]
       }
     }

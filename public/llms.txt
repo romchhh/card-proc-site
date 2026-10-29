@@ -1,8 +1,8 @@
 # WayOfProcessing
 
-> International Stripe payment processing from 1.5%
+> Stripe as a payment system for business — connection and processing from 1.5%
 
-WayOfProcessing helps businesses accept payments worldwide via Stripe. WayOfProcessing is an independent service and is not affiliated with Stripe, Inc.
+WayOfProcessing helps businesses accept cards worldwide via Stripe: merchant account, checkout, payment routing, CRM and payouts. Independent service, not affiliated with Stripe, Inc.
 
 ## Key pages
 
@@ -12,42 +12,36 @@ WayOfProcessing helps businesses accept payments worldwide via Stripe. WayOfProc
 - [Blog (EN)](https://wayofprocessing.com/en/blog)
 - [Privacy (RU)](https://wayofprocessing.com/ru/privacy)
 - [Privacy (EN)](https://wayofprocessing.com/en/privacy)
-- [Contact form (RU)](https://wayofprocessing.com/ru#kontakt)
-- [Contact form (EN)](https://wayofprocessing.com/en#kontakt)
-- [Blog RSS (RU)](https://wayofprocessing.com/ru/blog/feed.xml)
-- [Blog RSS (EN)](https://wayofprocessing.com/en/blog/feed.xml)
+- [Contact (RU)](https://wayofprocessing.com/ru#kontakt)
 - [Sitemap](https://wayofprocessing.com/sitemap.xml)
-- [Robots](https://wayofprocessing.com/robots.txt)
 - [AI info](https://wayofprocessing.com/ai.txt)
 
 ## Service pages
 
-- [Stripe account rental (RU)](https://wayofprocessing.com/ru/services/stripe-account-rent)
-- [Stripe account rental (EN)](https://wayofprocessing.com/en/services/stripe-account-rent)
-- [Buy Stripe account (RU)](https://wayofprocessing.com/ru/services/stripe-account-buy)
-- [Buy Stripe account (EN)](https://wayofprocessing.com/en/services/stripe-account-buy)
-- [Turnkey Stripe processing (RU)](https://wayofprocessing.com/ru/services/processing-turnkey)
-- [Turnkey Stripe processing (EN)](https://wayofprocessing.com/en/services/processing-turnkey)
-- [Legal entity, bank & Stripe (RU)](https://wayofprocessing.com/ru/services/legal-entity-bank)
-- [Legal entity, bank & Stripe (EN)](https://wayofprocessing.com/en/services/legal-entity-bank)
+- [Stripe processing turnkey (RU)](https://wayofprocessing.com/ru/services/processing-turnkey)
+- [Stripe processing turnkey (EN)](https://wayofprocessing.com/en/services/processing-turnkey)
+- [Merchant rental (RU)](https://wayofprocessing.com/ru/services/stripe-account-rent)
+- [Merchant rental (EN)](https://wayofprocessing.com/en/services/stripe-account-rent)
+- [Merchant purchase (RU)](https://wayofprocessing.com/ru/services/stripe-account-buy)
+- [Merchant purchase (EN)](https://wayofprocessing.com/en/services/stripe-account-buy)
+- [Entity + bank + Stripe (RU)](https://wayofprocessing.com/ru/services/legal-entity-bank)
+- [Entity + bank + Stripe (EN)](https://wayofprocessing.com/en/services/legal-entity-bank)
 
-## Blog articles
+## Guides about Stripe payment system
 
-- [Stripe for your business (RU)](https://wayofprocessing.com/ru/blog/stripe-for-your-business)
-- [Stripe for your business (EN)](https://wayofprocessing.com/en/blog/stripe-for-your-business)
-- [Stripe via PHP API (RU)](https://wayofprocessing.com/ru/blog/stripe-via-php-api)
-- [Fast payment system (RU)](https://wayofprocessing.com/ru/blog/fast-payment-system)
-- [Business categories not suitable for Stripe (RU)](https://wayofprocessing.com/ru/blog/business-categories-stripe)
-- [Stripe webhooks guide (RU)](https://wayofprocessing.com/ru/blog/stripe-webhooks-guide)
-- [Stripe subscriptions for SaaS (RU)](https://wayofprocessing.com/ru/blog/stripe-subscriptions-saas)
-- [Stripe chargeback prevention (RU)](https://wayofprocessing.com/ru/blog/stripe-chargeback-prevention)
-- [Payment routing uptime (RU)](https://wayofprocessing.com/ru/blog/stripe-payment-routing-uptime)
+- [Stripe as a payment system for business](https://wayofprocessing.com/ru/blog/stripe-for-your-business)
+- [What is Stripe](https://wayofprocessing.com/ru/blog/what-is-stripe-scaling-business)
+- [Stripe payment system rules](https://wayofprocessing.com/ru/blog/stripe-platform-rules)
+- [How to choose a payment system](https://wayofprocessing.com/ru/blog/how-to-choose-payment-system)
+- [Connect Stripe for international payments](https://wayofprocessing.com/ru/blog/stripe-international-payments-integration)
+- [International payments for business](https://wayofprocessing.com/ru/blog/international-payments-for-business)
+- [Payment system for online stores](https://wayofprocessing.com/ru/blog/fast-payment-system)
+- [Payment routing 99.9%](https://wayofprocessing.com/ru/blog/stripe-payment-routing-uptime)
 
 ## Contact
 
 - Email: hello@wayofprocessing.com
 - Telegram: https://t.me/wayofprocessing
-- Website: https://wayofprocessing.com
 
 ## Attribution
 

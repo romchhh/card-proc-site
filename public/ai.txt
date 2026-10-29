@@ -1,106 +1,48 @@
 # WayOfProcessing
 
-> Stripe payment processing for any niche from 1.5%
+> Stripe as a payment system for business — setup and processing from 1.5%
 
 ## About
 
-WayOfProcessing provides Stripe payment processing services worldwide. We offer warmed-up Stripe accounts, payment routing with 99.9% uptime, CRM access, tax-optimized jurisdictions, and unlimited withdrawals in EUR, USD, USDT and more.
+WayOfProcessing helps companies connect Stripe as an international payment system: merchant account, checkout, payment routing, CRM and payouts in EUR, USD, USDT.
 
 WayOfProcessing is an independent service and is not affiliated with, endorsed by, or a subsidiary of Stripe, Inc.
 
 ## Key facts
 
-- 1100+ Stripe accounts created for clients
+- 1100+ Stripe merchant setups for clients
 - 7 years of Stripe experience
 - $53M+ total client payment volume
 - Processing from 1.5%
-- 99.9% uptime with Payment routing failover
-- Free expert consultation for every client
-- Languages: Russian (/ru, default), English (/en) — switcher changes URL
+- 99.9% uptime with payment routing failover
+- Free expert consultation
+- Languages: Russian (/ru, default), English (/en)
 
 ## Core services
 
-- Turnkey setup: foreign company + bank account + Stripe
-- Stripe account setup and verification
-- Payment processing for any niche from 1.5%
-- Warmed Stripe accounts with turnover
-- Payment routing between backup Stripe accounts
-- CRM for transaction monitoring
-- Withdrawals to IBAN and USDT
-- 24/7 Telegram support
+- [Turnkey Stripe processing](https://wayofprocessing.com/ru/services/processing-turnkey) — payment system under one roof
+- [Stripe merchant rental](https://wayofprocessing.com/ru/services/stripe-account-rent) — fast go-live
+- [Buy Stripe merchant account](https://wayofprocessing.com/ru/services/stripe-account-buy) — ownership and control
+- [Legal entity + bank + Stripe](https://wayofprocessing.com/ru/services/legal-entity-bank) — full bundle (GB, HK, CY, PL, EE, CZ)
 
-## Client niches
+## Guides (priority for indexing)
 
-Marketplaces, SaaS, e-commerce, online/offline business, subscriptions, online courses, forex, gaming, vape, supplements and other high-risk verticals.
-
-## Homepage sections
-
-- Hero: accept payments worldwide with Stripe
-- Stats: 1100+ accounts, 7 years, $53M volume
-- Services: https://wayofprocessing.com/#services
-- Advantages: https://wayofprocessing.com/#advantages
-- How we work: https://wayofprocessing.com/#how-we-work
-- Accounts in operation: https://wayofprocessing.com/#accounts
-- Specialists: https://wayofprocessing.com/#specialists
-- Clients: https://wayofprocessing.com/#clients
-- FAQ: https://wayofprocessing.com/#faq
-- Contact: https://wayofprocessing.com/#kontakt
+- [Stripe as a payment system](https://wayofprocessing.com/ru/blog/stripe-for-your-business)
+- [What is Stripe](https://wayofprocessing.com/ru/blog/what-is-stripe-scaling-business)
+- [Stripe payment system rules](https://wayofprocessing.com/ru/blog/stripe-platform-rules)
+- [How to choose a payment system](https://wayofprocessing.com/ru/blog/how-to-choose-payment-system)
+- [International payments via Stripe](https://wayofprocessing.com/ru/blog/international-payments-for-business)
+- [Payment routing 99.9%](https://wayofprocessing.com/ru/blog/stripe-payment-routing-uptime)
 
 ## Pages
 
-- Home (RU): https://wayofprocessing.com/ru
-- Home (EN): https://wayofprocessing.com/en
-- Blog (RU): https://wayofprocessing.com/ru/blog
-- Blog (EN): https://wayofprocessing.com/en/blog
-- Privacy (RU): https://wayofprocessing.com/ru/privacy
-- Privacy (EN): https://wayofprocessing.com/en/privacy
-- Blog RSS (RU): https://wayofprocessing.com/ru/blog/feed.xml
-- Blog RSS (EN): https://wayofprocessing.com/en/blog/feed.xml
-
-## Service pages
-
-- Stripe account rent (RU): https://wayofprocessing.com/ru/services/stripe-account-rent
-- Stripe account rent (EN): https://wayofprocessing.com/en/services/stripe-account-rent
-- Buy Stripe account (RU): https://wayofprocessing.com/ru/services/stripe-account-buy
-- Buy Stripe account (EN): https://wayofprocessing.com/en/services/stripe-account-buy
-- Turnkey Stripe processing (RU): https://wayofprocessing.com/ru/services/processing-turnkey
-- Turnkey Stripe processing (EN): https://wayofprocessing.com/en/services/processing-turnkey
-- Legal entity + bank + Stripe (RU): https://wayofprocessing.com/ru/services/legal-entity-bank
-- Legal entity + bank + Stripe (EN): https://wayofprocessing.com/en/services/legal-entity-bank
-
-## Blog articles (16)
-
-- Stripe для вашего бизнеса: https://wayofprocessing.com/ru/blog/stripe-for-your-business
-- Подключение Stripe через PHP с помощью API: https://wayofprocessing.com/ru/blog/stripe-via-php-api
-- Система быстрых оплат для интернет-магазина: https://wayofprocessing.com/ru/blog/fast-payment-system
-- Какие тематики не подходят для Stripe: https://wayofprocessing.com/ru/blog/business-categories-stripe
-- Stripe Webhooks: полное руководство: https://wayofprocessing.com/ru/blog/stripe-webhooks-guide
-- Stripe Subscriptions для SaaS: https://wayofprocessing.com/ru/blog/stripe-subscriptions-saas
-- Чарджбеки в Stripe: https://wayofprocessing.com/ru/blog/stripe-chargeback-prevention
-- Быстрая система оплат для e-commerce: https://wayofprocessing.com/ru/blog/fast-payment-system-ecommerce
-- Ограниченные ниши Stripe: https://wayofprocessing.com/ru/blog/stripe-restricted-business-categories
-- Правила платёжной системы Stripe: https://wayofprocessing.com/ru/blog/stripe-platform-rules
-- Как выбрать платёжную систему в 2026: https://wayofprocessing.com/ru/blog/how-to-choose-payment-system
-- Интеграция Stripe для WordPress: https://wayofprocessing.com/ru/blog/stripe-wordpress-integration
-- Что такое Stripe и масштабирование бизнеса: https://wayofprocessing.com/ru/blog/what-is-stripe-scaling-business
-- Интеграция Stripe для международных платежей: https://wayofprocessing.com/ru/blog/stripe-international-payments-integration
-- Приём международных платежей для бизнеса: https://wayofprocessing.com/ru/blog/international-payments-for-business
-- Payment routing в Stripe: https://wayofprocessing.com/ru/blog/stripe-payment-routing-uptime
+- Home: https://wayofprocessing.com/ru
+- Blog: https://wayofprocessing.com/ru/blog
+- Privacy: https://wayofprocessing.com/ru/privacy
+- Sitemap: https://wayofprocessing.com/sitemap.xml
+- LLM info: https://wayofprocessing.com/llms.txt
 
 ## Contact
 
 - Email: hello@wayofprocessing.com
-- Telegram channel: https://t.me/wayofprocessing
-- Telegram operator: https://t.me/wayofprocessing
-- Website: https://wayofprocessing.com
-
-## SEO & crawling
-
-- Sitemap: https://wayofprocessing.com/sitemap.xml
-- Robots: https://wayofprocessing.com/robots.txt
-- RSS feed: https://wayofprocessing.com/ru/blog/feed.xml
-- LLM info: https://wayofprocessing.com/llms.txt
-
-## Attribution
-
-Website developed by TeleBots: https://telebots.site/en
+- Telegram: https://t.me/wayofprocessing

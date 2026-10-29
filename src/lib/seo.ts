@@ -71,6 +71,7 @@ function buildSharedMeta({
   path,
   locale,
   noIndex = false,
+  keywords,
 }: {
   title: string
   description: string
@@ -92,6 +93,7 @@ function buildSharedMeta({
   return {
     title: { absolute: title },
     description,
+    ...(keywords?.length ? { keywords } : {}),
     alternates: noIndex ? undefined : buildHreflang(path, locale),
     robots: noIndex
       ? { index: false, follow: false }
@@ -133,6 +135,7 @@ export function buildPageMetadata({
   ogImage,
   ogImageAlt,
   noIndex = false,
+  keywords,
 }: PageMetaInput): Metadata {
   const shared = buildSharedMeta({
     title,
@@ -143,6 +146,7 @@ export function buildPageMetadata({
     path,
     locale,
     noIndex,
+    keywords,
   })
 
   return {
@@ -174,6 +178,7 @@ export function buildArticleMetadata({
     ogTitle: ogTitle ?? title,
     path,
     locale,
+    keywords,
   })
   const ogImageUrl = image.startsWith('http') ? image : absoluteUrl(image)
 

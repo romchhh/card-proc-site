@@ -5,16 +5,16 @@ import { siteConfig } from './site'
 
 const postKeywords: Record<string, { ru: string[]; en: string[] }> = {
   'stripe-for-your-business': {
-    ru: ['Stripe для бизнеса', 'приём платежей Stripe', 'Stripe аккаунт в аренду', 'подключение Stripe', 'международные платежи'],
-    en: ['Stripe for business', 'Stripe payment acceptance', 'rented Stripe account', 'Stripe integration', 'international payments'],
+    ru: ['stripe платежная система', 'платёжная система stripe', 'stripe для бизнеса', 'подключение stripe', 'приём платежей stripe', 'международные платежи'],
+    en: ['stripe payment system', 'stripe for business', 'accept stripe payments', 'stripe integration', 'international payments'],
   },
   'stripe-via-php-api': {
-    ru: ['Stripe PHP', 'интеграция Stripe API', 'Stripe Checkout', 'Stripe webhooks PHP', 'платёжный шлюз Stripe'],
-    en: ['Stripe PHP', 'Stripe API integration', 'Stripe Checkout', 'Stripe webhooks PHP', 'Stripe payment gateway'],
+    ru: ['интеграция stripe php', 'платёжная система stripe', 'stripe api', 'stripe checkout', 'подключение stripe'],
+    en: ['stripe php integration', 'stripe payment system', 'stripe api', 'stripe checkout', 'connect stripe'],
   },
   'fast-payment-system': {
-    ru: ['быстрые платежи', 'checkout интернет-магазин', 'конверсия оплаты', 'Stripe Payment Element', 'payment routing'],
-    en: ['fast payments', 'e-commerce checkout', 'payment conversion', 'Stripe Payment Element', 'payment routing'],
+    ru: ['платёжная система интернет-магазин', 'stripe платежная система', 'быстрые платежи', 'checkout интернет-магазин', 'приём платежей stripe'],
+    en: ['payment system online store', 'stripe payment system', 'fast payments', 'e-commerce checkout', 'accept stripe payments'],
   },
   'business-categories-stripe': {
     ru: ['high-risk Stripe', 'ниши Stripe', 'блокировка Stripe', 'прогретый аккаунт', 'процессинг платежей'],
@@ -33,40 +33,40 @@ const postKeywords: Record<string, { ru: string[]; en: string[] }> = {
     en: ['Stripe chargeback', 'chargeback rate', 'Stripe disputes', '3D Secure Stripe', 'chargeback protection'],
   },
   'fast-payment-system-ecommerce': {
-    ru: ['оплата интернет-магазин', 'Stripe e-commerce', 'Apple Pay Google Pay', 'PCI DSS Stripe', 'онлайн-оплата'],
-    en: ['online store payments', 'Stripe e-commerce', 'Apple Pay Google Pay', 'PCI DSS Stripe', 'online checkout'],
+    ru: ['checkout интернет-магазин', 'платёжная система stripe', 'конверсия оплаты', 'apple pay google pay', 'онлайн-оплата'],
+    en: ['e-commerce checkout', 'stripe payment system', 'payment conversion', 'apple pay google pay', 'online checkout'],
   },
   'stripe-restricted-business-categories': {
     ru: ['ограничения Stripe', 'запрещённые ниши Stripe', 'форекс Stripe', 'гейминг Stripe', 'high-risk процессинг'],
     en: ['Stripe restrictions', 'restricted Stripe niches', 'forex Stripe', 'gaming Stripe', 'high-risk processing'],
   },
   'stripe-platform-rules': {
-    ru: ['правила Stripe', 'PCI DSS Level 1', 'политика Stripe', 'подключение Stripe СНГ', 'платёжный шлюз'],
-    en: ['Stripe rules', 'PCI DSS Level 1', 'Stripe policy', 'Stripe CIS connection', 'payment gateway'],
+    ru: ['stripe платежная система', 'платёжная система stripe', 'правила stripe', 'PCI DSS Level 1', 'подключение stripe'],
+    en: ['stripe payment system', 'stripe rules', 'PCI DSS Level 1', 'connect stripe business', 'payment gateway'],
   },
   'how-to-choose-payment-system': {
-    ru: ['выбор платёжной системы', 'Stripe vs PayPal', 'платёжный провайдер', 'Stripe WooCommerce', 'процессинг 2026'],
-    en: ['choose payment system', 'Stripe vs PayPal', 'payment provider', 'Stripe WooCommerce', 'payment processing 2026'],
+    ru: ['выбор платёжной системы', 'платёжная система для интернет-магазина', 'stripe vs PayPal', 'платёжный провайдер', 'процессинг 2026'],
+    en: ['choose payment system', 'payment system e-commerce', 'Stripe vs PayPal', 'payment provider', 'payment processing 2026'],
   },
   'stripe-wordpress-integration': {
-    ru: ['Stripe WordPress', 'плагин Stripe WooCommerce', 'интеграция Stripe API', 'платежи WordPress', 'Stripe под ключ'],
-    en: ['Stripe WordPress', 'Stripe WooCommerce plugin', 'Stripe API integration', 'WordPress payments', 'Stripe turnkey'],
+    ru: ['подключение stripe wordpress', 'stripe woocommerce', 'платёжная система wordpress', 'интеграция stripe', 'приём платежей'],
+    en: ['connect stripe wordpress', 'stripe woocommerce', 'wordpress payment system', 'stripe integration', 'accept payments'],
   },
   'what-is-stripe-scaling-business': {
-    ru: ['что такое Stripe', 'масштабирование бизнеса', 'международные платежи Stripe', 'Stripe Connect', 'рекуррентные платежи'],
-    en: ['what is Stripe', 'scale online business', 'Stripe international payments', 'Stripe Connect', 'recurring payments'],
+    ru: ['что такое stripe', 'stripe платежная система', 'платёжная система stripe', 'международные платежи', 'масштабирование бизнеса'],
+    en: ['what is stripe', 'stripe payment system', 'international payments', 'scale online business', 'stripe connect'],
   },
   'stripe-international-payments-integration': {
-    ru: ['международные платежи Stripe', 'интеграция Stripe', 'Stripe СНГ', 'аренда Stripe аккаунта', 'Payoneer вывод'],
-    en: ['Stripe international payments', 'Stripe integration', 'Stripe CIS', 'rent Stripe account', 'Payoneer withdrawal'],
+    ru: ['подключение stripe', 'международные платежи stripe', 'stripe платежная система', 'интеграция stripe', 'приём платежей'],
+    en: ['connect stripe', 'stripe international payments', 'stripe payment system', 'stripe integration', 'accept payments'],
   },
   'international-payments-for-business': {
-    ru: ['приём международных платежей', 'Stripe для ИП', 'зарубежные рынки', 'международный e-commerce', 'процессинг СНГ'],
-    en: ['international payment acceptance', 'Stripe for sole traders', 'foreign markets', 'international e-commerce', 'CIS processing'],
+    ru: ['международные платежи', 'stripe для бизнеса', 'платёжная система stripe', 'приём платежей из-за рубежа', 'процессинг'],
+    en: ['international payments', 'stripe for business', 'stripe payment system', 'cross-border payments', 'payment processing'],
   },
   'stripe-payment-routing-uptime': {
-    ru: ['payment routing Stripe', 'аптайм 99.9%', 'резервный Stripe аккаунт', 'отказоустойчивый процессинг', 'маршрутизация платежей'],
-    en: ['Stripe payment routing', '99.9% uptime', 'backup Stripe account', 'fault-tolerant processing', 'payment routing'],
+    ru: ['payment routing stripe', 'платёжная система stripe', 'аптайм 99.9%', 'резервный канал платежей', 'приём платежей без простоев'],
+    en: ['stripe payment routing', 'stripe payment system', '99.9% uptime', 'payment failover', 'checkout without downtime'],
   },
 }
 

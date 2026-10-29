@@ -3,6 +3,8 @@
 import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
 import { getAllServices, getServiceView } from '@/lib/services'
+import { getAllPosts, localizePost } from '@/lib/blog'
+import { INDEX_BLOG_SLUGS } from '@/lib/seo-index'
 import { useLocale, useLocalizedPath } from '@/lib/i18n/use-locale'
 import styles from './SeoTextSection.module.css'
 
@@ -16,6 +18,14 @@ export default function SeoTextSection() {
     return { slug: service.slug, title: view.card.title }
   })
 
+  const postsBySlug = new Map(getAllPosts().map((post) => [post.slug, post]))
+  const blogLinks = INDEX_BLOG_SLUGS.map((slug) => {
+    const post = postsBySlug.get(slug)
+    if (!post) return null
+    const view = localizePost(post, locale)
+    return { slug, title: view.title }
+  }).filter(Boolean) as { slug: string; title: string }[]
+
   return (
     <section className={styles.section} aria-labelledby="seo-bottom-title">
       <div className={styles.inner}>
@@ -27,6 +37,15 @@ export default function SeoTextSection() {
             {paragraph}
           </p>
         ))}
+        <h3 className={styles.subheading}>{t('seo.guidesHeading')}</h3>
+        <ul className={styles.links}>
+          {blogLinks.map((post) => (
+            <li key={post.slug}>
+              <Link href={lp(`/blog/${post.slug}`)}>{post.title}</Link>
+            </li>
+          ))}
+        </ul>
+        <h3 className={styles.subheading}>{t('seo.servicesHeading')}</h3>
         <ul className={styles.links}>
           {services.map((service) => (
             <li key={service.slug}>
