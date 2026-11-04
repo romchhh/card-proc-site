@@ -18,8 +18,8 @@ export default function ScrollReveal({ children, delay = 0, className }: ScrollR
     if (!el) return
 
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      setVisible(true)
-      return
+      const show = window.setTimeout(() => setVisible(true), 0)
+      return () => window.clearTimeout(show)
     }
 
     const observer = new IntersectionObserver(

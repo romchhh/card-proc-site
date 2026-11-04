@@ -6,15 +6,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "optimize-images": "bash scripts/optimize-images.sh"
   },
   "dependencies": {
     "i18next": "^26.3.1",
     "lucide-react": "^1.67.0",
-    "next": "14.2.3",
-    "react": "^18",
-    "react-dom": "^18",
+    "next": "16.4.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-i18next": "^17.0.8",
     "react-markdown": "^10.1.0"
   },
@@ -22,8 +22,13 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.3",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.5",
     "typescript": "^5"
+  },
+  "overrides": {
+    "minimatch": "^11.0.4",
+    "nanoid": "^3.3.11",
+    "source-map-js": "^1.2.1"
   }
 }

@@ -239,7 +239,11 @@ export function buildBreadcrumbJsonLd(
 export function buildGraphJsonLd(nodes: Record<string, unknown>[]) {
   return {
     '@context': 'https://schema.org',
-    '@graph': nodes.map(({ '@context': _context, ...node }) => node),
+    '@graph': nodes.map((node) => {
+      const rest = { ...node }
+      delete rest['@context']
+      return rest
+    }),
   }
 }
 
