@@ -1,21 +1,21 @@
 .section {
   background: var(--gray-100);
-  padding: 48px var(--page-padding-x) 56px;
-  border-top: 1px solid rgba(10, 37, 64, 0.06);
+  padding: var(--space-12) var(--page-padding-x) var(--space-12);
+  border-top: 1px solid var(--border-subtle);
 }
 
 .inner {
-  max-width: 820px;
+  max-width: var(--prose-max);
   margin: 0 auto;
 }
 
 .title {
   font-family: var(--font-sans);
-  font-size: clamp(18px, 2.2vw, 22px);
+  font-size: var(--page-h3);
   font-weight: 700;
   line-height: var(--leading-tight);
-  color: var(--gray-700);
-  margin-bottom: 16px;
+  color: var(--gray-900);
+  margin-bottom: var(--space-4);
 }
 
 .text {
@@ -59,6 +59,6 @@
 
 @media (max-width: 768px) {
   .section {
-    padding: 36px var(--page-padding-x) 44px;
+    padding: var(--space-8) var(--page-padding-x) var(--space-10);
   }
 }

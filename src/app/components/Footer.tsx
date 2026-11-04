@@ -7,14 +7,22 @@ import { SERVICE_SLUGS, getServiceBySlug, getServiceView } from '@/lib/services'
 import { getAllPosts, localizePost } from '@/lib/blog'
 import { INDEX_BLOG_SLUGS } from '@/lib/seo-index'
 import { useLocalizedPath } from '@/lib/i18n/use-locale'
+import { resolveLocale } from '@/lib/i18n/resolve-locale'
 import { TelegramIcon, SupportIcon } from './icons/SocialIcons'
 import { useContactModal } from './ContactModalProvider'
-import SectionLink from './SectionLink'
 import styles from './Footer.module.css'
 
 const NAV_LINKS = [
-  { key: 'about', sectionId: 'specialists' },
-  { key: 'clients', sectionId: 'clients' },
+  { key: 'about', path: '/about' },
+  { key: 'clients', path: '/clients' },
+  { key: 'contacts', path: '/contacts' },
+  { key: 'services', path: '/services' },
+  { key: 'compare', path: '/compare/rent-vs-buy' },
+  { key: 'jurisdictions', path: '/jurisdictions' },
+  { key: 'niches', path: '/niches' },
+  { key: 'ukraine', path: '/solutions/stripe-ukraine' },
+  { key: 'issues', path: '/solutions/stripe-account-issues' },
+  { key: 'siteMap', path: '/site-map' },
   { key: 'blog', path: '/blog' },
 ] as const
 
@@ -24,7 +32,7 @@ export default function Footer() {
   const { t, i18n } = useTranslation()
   const { open: openContactModal } = useContactModal()
   const lp = useLocalizedPath()
-  const locale = i18n.language === 'en' ? 'en' : 'ru'
+  const locale = resolveLocale(i18n.language)
   const year = new Date().getFullYear()
 
   const postsBySlug = new Map(getAllPosts().map((post) => [post.slug, post]))
@@ -64,6 +72,11 @@ export default function Footer() {
             <span className={styles.brandRegular}>{t('footer.brandRegular')}</span>
           </a>
           <p className={styles.copyright}>{t('footer.copyright', { year })}</p>
+          <address className={styles.company}>
+            <span className={styles.companyName}>{t('footer.companyName')}</span>
+            <span>{t('footer.companyMeta')}</span>
+            <span>{t('footer.companyAddress')}</span>
+          </address>
           <p className={styles.legal}>{t('footer.legal')}</p>
         </div>
 
@@ -71,17 +84,10 @@ export default function Footer() {
           <h3 className={styles.heading}>{t('footer.infoHeading')}</h3>
           <nav className={styles.nav} aria-label={t('footer.navLabel')}>
             {NAV_LINKS.map((item) => (
-              'path' in item ? (
-                <Link key={item.key} href={lp(item.path)}>
-                  {t(`footer.${item.key}`)}
-                </Link>
-              ) : (
-                <SectionLink key={item.key} sectionId={item.sectionId}>
-                  {t(`footer.${item.key}`)}
-                </SectionLink>
-              )
+              <Link key={item.key} href={lp(item.path)}>
+                {t(`footer.${item.key}`)}
+              </Link>
             ))}
-            <SectionLink sectionId="services">{t('footer.services')}</SectionLink>
           </nav>
         </div>
 
@@ -146,7 +152,10 @@ export default function Footer() {
       </div>
 
       <div className={styles.bottom}>
+        <a href={lp('/site-map')}>{t('footer.siteMap')}</a>
         <a href={lp('/privacy')}>{t('footer.privacy')}</a>
+        <a href={lp('/terms')}>{t('footer.terms')}</a>
+        <a href={lp('/disclaimer')}>{t('footer.disclaimer')}</a>
         <span className={styles.credit}>
           {t('footer.developedBy')}{' '}
           <a href="https://telebots.site/en" target="_blank" rel="noopener noreferrer">

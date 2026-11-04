@@ -15,6 +15,7 @@ export type BlogPost = {
   date: string
   image: string
   ru: BlogLocalePost
+  uk?: BlogLocalePost
   en: BlogLocalePost
 }
 
@@ -24,16 +25,17 @@ export type BlogPostView = BlogLocalePost & {
   image: string
 }
 
-export type BlogLocale = 'ru' | 'en'
+export type BlogLocale = 'ru' | 'uk' | 'en'
 
 const posts = blogData.posts as BlogPost[]
 
 export function localizePost(post: BlogPost, locale: BlogLocale): BlogPostView {
+  const copy = post[locale] ?? post.ru
   return {
     slug: post.slug,
     date: post.date,
     image: post.image,
-    ...post[locale],
+    ...copy,
   }
 }
 
@@ -81,6 +83,27 @@ export function getRelatedServiceSlugs(postSlug: string): ServiceSlug[] {
   return (POST_RELATED_SERVICES[postSlug] ?? []).filter(isValidServiceSlug)
 }
 
+export const SERVICE_LINK_ANCHORS: Record<BlogLocale, Record<ServiceSlug, string>> = {
+  ru: {
+    'stripe-account-rent': 'аренда аккаунта Stripe',
+    'stripe-account-buy': 'покупка аккаунта Stripe',
+    'processing-turnkey': 'процессинг Stripe под ключ',
+    'legal-entity-bank': 'юрлицо и банк для Stripe',
+  },
+  uk: {
+    'stripe-account-rent': 'оренда акаунта Stripe',
+    'stripe-account-buy': 'купівля акаунта Stripe',
+    'processing-turnkey': 'процесинг Stripe під ключ',
+    'legal-entity-bank': 'юрособа і банк для Stripe',
+  },
+  en: {
+    'stripe-account-rent': 'rent a Stripe account',
+    'stripe-account-buy': 'buy a Stripe account',
+    'processing-turnkey': 'turnkey Stripe processing',
+    'legal-entity-bank': 'a company and bank for Stripe',
+  },
+}
+
 export function getAllSlugs(): string[] {
   return posts.map((post) => post.slug)
 }
@@ -88,7 +111,8 @@ export function getAllSlugs(): string[] {
 export function formatBlogDate(date: string, locale: string): string {
   const [year, month, day] = date.split('-').map(Number)
   const parsed = new Date(year, month - 1, day)
-  return parsed.toLocaleDateString(locale === 'en' ? 'en-GB' : 'ru-RU', {
+  const tag = locale === 'en' ? 'en-GB' : locale === 'uk' ? 'uk-UA' : 'ru-RU'
+  return parsed.toLocaleDateString(tag, {
     day: '2-digit',
     month: '2-digit',
     year: 'numeric',

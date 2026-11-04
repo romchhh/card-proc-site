@@ -1,0 +1,63 @@
+.main {
+  max-width: var(--prose-max);
+  margin: 0 auto;
+  padding: var(--page-shell-pad-top) var(--page-padding-x) var(--section-padding-y);
+}
+
+.main h1 {
+  font-family: var(--font-sans);
+  font-weight: 800;
+  font-size: var(--page-h1);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--gray-900);
+  margin: 0 0 var(--space-4);
+  text-wrap: balance;
+}
+
+.lead {
+  font-size: var(--text-lg);
+  line-height: var(--leading-body);
+  color: var(--gray-500);
+  margin: 0 0 var(--space-8);
+}
+
+.main h2 {
+  font-size: var(--page-h3);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--gray-900);
+  margin: var(--space-8) 0 var(--space-3);
+}
+
+.main ul {
+  margin: 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.main li {
+  font-size: var(--text-base);
+  line-height: var(--leading-body);
+  color: var(--gray-500);
+}
+
+.main a {
+  color: var(--stripe-blue-hover);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.main a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: var(--page-shell-pad-top-md) var(--page-padding-x) var(--section-padding-y-md);
+  }
+}
+

@@ -4,15 +4,15 @@
       "slug": "stripe-account-rent",
       "ru": {
         "meta": {
-          "title": "Подключение Stripe для бизнеса — аренда merchant-аккаунта | WayOfProcessing",
-          "description": "Быстрый старт приёма платежей через Stripe: платёжная система, CRM, payment routing, вывод EUR, USD, USDT. Подключение от 3 дней, комиссия от 1.5%.",
+          "title": "Аренда аккаунта Stripe | WayOfProcessing",
+          "description": "Аренда аккаунта Stripe для приёма платежей: CRM, routing, вывод в EUR, USD и USDT. Подключение от 3 дней, комиссия от 1.5%.",
           "keywords": [
-            "подключение stripe",
-            "stripe платежная система",
-            "приём платежей stripe",
+            "аренда stripe",
             "аренда stripe аккаунта",
-            "merchant аккаунт stripe",
-            "международные платежи",
+            "аренда merchant аккаунта",
+            "верифицированный stripe",
+            "готовый stripe аккаунт",
+            "подключение stripe",
             "WayOfProcessing"
           ]
         },
@@ -98,9 +98,17 @@
           {
             "question": "Как быстро можно начать принимать платежи?",
             "answer": "Готовый прогретый аккаунт подключаем в кратчайшие сроки после заявки. Кастом под нишу, сайт и routing — от 3 рабочих дней. Точный срок называем после просмотра ниши и текущего checkout."
+          },
+          {
+            "question": "Какие документы нужны для аренды аккаунта Stripe?",
+            "answer": "Для старта обычно достаточно описания ниши, сайта (или лендинга), ожидаемого оборота и стран клиентов. Паспорт и корпоративный пакет запрашиваем точечно, если схема выплат или KYC банка это требуют. Полный комплект «как при регистрации юрлица с нуля» для аренды не собираем."
+          },
+          {
+            "question": "Что аренда Stripe не гарантирует?",
+            "answer": "Мы не гарантируем, что Stripe никогда не запросит документы, не изменит лимиты и не уйдёт аккаунт на review — это политика платформы, а не провайдера. Гарантируем сопровождение, подбор под нишу и резервный канал при routing, а не отсутствие любых проверок Stripe."
           }
         ],
-        "h1": "Подключение Stripe для бизнеса — аренда merchant-аккаунта",
+        "h1": "Аренда аккаунта Stripe для бизнеса — merchant с CRM и routing",
         "offer": {
           "badge": "Процессинг от 1.5%",
           "highlight": "от 1.5%",
@@ -123,15 +131,14 @@
       },
       "en": {
         "meta": {
-          "title": "Connect Stripe for Business — Merchant Account Rental | WayOfProcessing",
-          "description": "Start accepting payments with Stripe fast: payment system setup, CRM, payment routing, payouts in EUR, USD, USDT. From 3 days, fees from 1.5%.",
+          "title": "Rent a Stripe Account | WayOfProcessing",
+          "description": "Rent a Stripe account to accept payments: CRM, routing, payouts in EUR, USD and USDT. Setup from 3 days, fees from 1.5%.",
           "keywords": [
-            "connect stripe business",
-            "stripe payment system",
-            "accept stripe payments",
             "rent stripe account",
-            "stripe merchant account",
-            "international payments",
+            "stripe account rental",
+            "verified stripe account",
+            "ready-made stripe account",
+            "connect stripe",
             "WayOfProcessing"
           ]
         },
@@ -217,9 +224,17 @@
           {
             "question": "How fast can I start accepting payments?",
             "answer": "A ready warmed account can be connected shortly after the request. A custom niche, site and routing setup takes from 3 business days. We give a firm date after reviewing the niche and current checkout."
+          },
+          {
+            "question": "What documents do I need to rent a Stripe account?",
+            "answer": "Usually a niche description, website or landing page, expected volume and customer countries are enough to start. Passports and a full corporate pack are requested only when payouts or bank KYC require them. You do not assemble a full “register a company from scratch” set for rental."
+          },
+          {
+            "question": "What does Stripe account rental not guarantee?",
+            "answer": "We do not guarantee that Stripe will never request documents, change limits or put an account under review — that is platform policy, not a provider promise. We guarantee support, niche fit and a backup channel when routing is enabled, not the absence of any Stripe checks."
           }
         ],
-        "h1": "Connect Stripe for Business — Merchant Account Rental",
+        "h1": "Rent a Stripe account for business — merchant with CRM and routing",
         "offer": {
           "badge": "Processing from 1.5%",
           "highlight": "from 1.5%",
@@ -239,21 +254,147 @@
           "how-to-choose-payment-system",
           "stripe-payment-routing-uptime"
         ]
+      },
+      "uk": {
+        "meta": {
+          "title": "Оренда акаунта Stripe | WayOfProcessing",
+          "description": "Оренда акаунта Stripe для прийому платежів: CRM, routing, вивід у EUR, USD і USDT. Підключення від 3 днів, комісія від 1.5%.",
+          "keywords": [
+            "оренда stripe",
+            "оренда акаунта stripe",
+            "оренда мерчант-акаунта",
+            "верифікований акаунт stripe",
+            "готовий акаунт stripe",
+            "підключення stripe",
+            "WayOfProcessing"
+          ]
+        },
+        "lead": "Оренда merchant-акаунта — швидкий спосіб підключити Stripe як платіжну систему та почати приймати міжнародні платежі без самостійної реєстрації компанії, банку та верифікації.",
+        "intro": [
+          "Самостійна реєстрація Stripe часто триває тижнями: потрібна юрособа у відповідній країні, розрахунковий рахунок, сайт з офертою та refund policy, коректний MCC та історія, якої в нового акаунта немає. Для пілота чи виходу на новий ринок це занадто довго й дорого.",
+          "Оренда знімає цей клубок із вас. Ви отримуєте доступ до вже верифікованого акаунта з оборотом, CRM для контролю платежів і, за потреби, routing на резервний канал. Юрособа та банк залишаються в інфраструктурі WayOfProcessing — ви платите за користування та процесинг, а не збираєте набір підрядників.",
+          "Цей формат вигідніший за купівлю, якщо обсяг ще не підтверджений: можна перевірити конверсію, chargeback rate та економіку, не фіксуючи капітал в акаунті. Якщо пілот спрацює, оренду можна замінити на купівлю або комплект «юрособа + банк + Stripe».",
+          "Ризики, які закриває оренда: відмова на верифікації, різкий ліміт на свіжому акаунті, пауза в прийомі платежів, якщо єдиний акаунт іде на перевірку, і відсутність живої підтримки за вашою нішею. Ми супроводжуємо запуск і перші тижні роботи в Telegram."
+        ],
+        "sections": [
+          {
+            "title": "Кому підходить оренда акаунта Stripe",
+            "paragraphs": [
+              "Формат розрахований на e-commerce, SaaS, маркетплейси, онлайн-курси, підписки та частину high-risk ніш, де потрібен швидкий старт, а не володіння інфраструктурою. Типові сценарії: тест нової географії, сезонний пік, запуск оферу до реєстрації власної компанії.",
+              "Оренда менш доречна, якщо ви вже впевнені в обороті на місяці вперед і хочете повний контроль над акаунтом. Тоді краще купівля або зв’язка юрособи, банку та Stripe. На консультації порівнюємо обидва варіанти під ваш MCC, країни клієнтів і очікуваний обсяг."
+            ]
+          },
+          {
+            "title": "Що входить і як передаємо доступ",
+            "paragraphs": [
+              "До пакета входять верифікований акаунт з історією транзакцій, CRM зі статусами платежів, вивантаження та спори, налаштування виводу в EUR, USD або USDT і консультація щодо checkout: API, Payment Link або Invoice.",
+              "Передача виглядає так: оцінка ніші та сайту → підбір акаунта з відповідним MCC → доступи та інструкція щодо перших виплат → за потреби routing. Ви не отримуєте «логін у месенджері без контексту»: фіксуємо, хто відповідає за ліміти, спори та резервний канал.",
+              "Якщо основний акаунт іде на перевірку, routing перемикає трафік на резервний. Для клієнта це продовження оплати, а не простій вітрини. Аптайм прийому — 99.9% за ввімкненого failover."
+            ]
+          },
+          {
+            "title": "Як формується вартість",
+            "paragraphs": [
+              "Комісія за процесинг починається від 1.5% і залежить від ніші, обороту, chargeback rate та того, чи потрібен routing. Окремого «вхідного» платежу за консультацію немає: розрахунок робимо за заявкою.",
+              "Фіксованої вітринної ціни на всі ніші немає — forex, SaaS і звичайний e-commerce дають різний ризик для Stripe, тому ставка розраховується індивідуально. У відповідь на заявку ви отримуєте діапазон під ваш обсяг, а не абстрактне «напишіть у Telegram».",
+              "Якщо економіка пілота не сходиться, формат можна зупинити або замінити на купівлю акаунта. Ми заздалегідь проговорюємо, що входить у супровід у перші тижні: ліміти, виплати, спори."
+            ]
+          }
+        ],
+        "benefits": [
+          {
+            "title": "Прогрітий акаунт до $500 000/міс",
+            "description": "Історія транзакцій знижує ймовірність того, що Stripe сприйме запуск як стрибок з нуля. Свіжий акаунт частіше впирається в ліміти та додаткові перевірки саме на зростанні обороту."
+          },
+          {
+            "title": "Підключення від 3 робочих днів",
+            "description": "Не потрібно чекати на реєстрацію компанії та банку з нуля. Термін залежить від готовності сайту та ніші: базовий доступ швидший, кастомний MCC і routing — ближче до нижньої межі «від 3 днів»."
+          },
+          {
+            "title": "Routing і аптайм 99.9%",
+            "description": "Один акаунт — одна точка відмови. Резервний канал продовжує приймати картки, якщо основний іде на review. Це захист виручки, а не маркетингова цифра."
+          },
+          {
+            "title": "Вивід у EUR, USD і USDT",
+            "description": "Виплати на IBAN або в USDT без стелі «як вийде». Цикл стандартно близько 3 днів; схему фіксуємо до запуску, щоб бухгалтерія розуміла строки."
+          },
+          {
+            "title": "Супровід, а не чат-бот",
+            "description": "Питання щодо лімітів, dispute та інтеграцій закриває живий фахівець у Telegram. Це важливо в перші тижні, коли налаштовується checkout і йдуть перші виплати."
+          }
+        ],
+        "faq": [
+          {
+            "question": "Чим оренда акаунта Stripe відрізняється від купівлі?",
+            "answer": "За оренди акаунт і юрособа залишаються в інфраструктурі WayOfProcessing: ви платите за користування та процесинг. За купівлі акаунт оформлюється під ваш контроль. Оренда підходить для пілота, купівля — для довгострокового обороту."
+          },
+          {
+            "question": "Як відбувається передача доступу?",
+            "answer": "Після оцінки ніші підбираємо акаунт, видаємо CRM, інструкцію щодо виплат і за потреби routing. Логіни «одним повідомленням без регламенту» не передаємо: фіксуємо відповідальність за ліміти та спори."
+          },
+          {
+            "question": "Що, якщо акаунт заблокують або він піде на перевірку?",
+            "answer": "За ввімкненого routing платежі перемикаються на резервний акаунт. Паралельно розбираємо причину review: MCC, стрибок обсягу, chargeback. Ви не залишаєтеся сам на сам із тікетом Stripe."
+          },
+          {
+            "question": "Чи є гарантії щодо лімітів і аптайму?",
+            "answer": "Ми підбираємо прогрітий акаунт під заявлений оборот і даємо failover з аптаймом прийому 99.9%. Гарантія «Stripe ніколи не запросить документи» неможлива в жодного провайдера. Гарантуємо супровід і резервний канал, а не відсутність будь-яких перевірок."
+          },
+          {
+            "question": "Які ризики я знімаю, а які залишаються на мені?",
+            "answer": "З вас знімаються реєстрація юрособи, банку та первинна верифікація. На вас залишаються якість трафіку, опис товару, політика повернень і chargeback rate. Високий відсоток спорів може обмежити будь-який акаунт — орендований чи власний."
+          },
+          {
+            "question": "Чи можна пізніше викупити орендований акаунт?",
+            "answer": "Так. Якщо пілот підтвердив економіку, переходимо до купівлі або комплекту юрособа + банк + Stripe. Не обов’язково «викуповувати той самий логін» — важливіше зберегти робочу схему виплат і MCC."
+          },
+          {
+            "question": "Як швидко можна почати приймати платежі?",
+            "answer": "Готовий прогрітий акаунт підключаємо в найкоротші строки після заявки. Кастом під нішу, сайт і routing — від 3 робочих днів. Точний термін називаємо після перегляду ніші та поточного checkout."
+          },
+          {
+            "question": "Які документи потрібні для оренди акаунта Stripe?",
+            "answer": "Для старту зазвичай достатньо опису ніші, сайту (або лендінгу), очікуваного обороту й країн клієнтів. Паспорт і корпоративний пакет запитуємо точково, якщо схема виплат або KYC банку цього вимагають. Повний комплект «як при реєстрації юрособи з нуля» для оренди не збираємо."
+          },
+          {
+            "question": "Що оренда Stripe не гарантує?",
+            "answer": "Ми не гарантуємо, що Stripe ніколи не запросить документи, не змінить ліміти й не відправить акаунт на review — це політика платформи, а не провайдера. Гарантуємо супровід, підбір під нішу й резервний канал при routing, а не відсутність будь-яких перевірок Stripe."
+          }
+        ],
+        "h1": "Оренда акаунта Stripe для бізнесу — merchant з CRM і routing",
+        "offer": {
+          "badge": "Процесинг від 1.5%",
+          "highlight": "від 1.5%",
+          "sub": "Платіжна система Stripe з CRM і routing — від 3 днів"
+        },
+        "card": {
+          "title": "Оренда Stripe для бізнесу",
+          "desc": "Швидке підключення платіжної системи: CRM, routing і вивід коштів без самостійної реєстрації."
+        },
+        "relatedServices": [
+          "stripe-account-buy",
+          "processing-turnkey",
+          "legal-entity-bank"
+        ],
+        "relatedBlogSlugs": [
+          "stripe-for-your-business",
+          "how-to-choose-payment-system",
+          "stripe-payment-routing-uptime"
+        ]
       }
     },
     {
       "slug": "stripe-account-buy",
       "ru": {
         "meta": {
-          "title": "Merchant-аккаунт Stripe для бизнеса — покупка и подключение | WayOfProcessing",
-          "description": "Верифицированный Stripe merchant-аккаунт с документами, оборотом и сопровождением. Когда покупка лучше аренды, сроки подключения платёжной системы и стоимость.",
+          "title": "Купить аккаунт Stripe | WayOfProcessing",
+          "description": "Покупка верифицированного аккаунта Stripe с документами и оборотом. Когда покупка лучше аренды и от чего зависит цена.",
           "keywords": [
-            "merchant аккаунт stripe",
-            "подключение stripe для бизнеса",
-            "stripe платежная система",
-            "верифицированный stripe",
-            "приём платежей stripe",
             "купить stripe аккаунт",
+            "покупка merchant аккаунта",
+            "готовый stripe аккаунт",
+            "верифицированный stripe",
+            "merchant аккаунт stripe",
             "WayOfProcessing"
           ]
         },
@@ -337,9 +478,17 @@
           {
             "question": "Сколько занимает передача?",
             "answer": "От 3 рабочих дней, если документы и сайт в порядке. Срок растёт, если нужно довести комплаенс сайта или собрать кастомную связку юрлица и банка."
+          },
+          {
+            "question": "Какие документы нужны, чтобы купить аккаунт Stripe?",
+            "answer": "Нужны описание бизнеса, сайт с политиками, данные по обороту и странам приёма. В зависимости от юрисдикции и схемы выплат могут понадобиться паспорт бенефициара и корпоративные документы. Точный список даём после оценки ниши — до сделки, а не «после оплаты»."
+          },
+          {
+            "question": "Что покупка аккаунта Stripe не гарантирует?",
+            "answer": "Покупка не гарантирует вечные лимиты и отсутствие review со стороны Stripe. Передаём верифицированный merchant под нишу и сопровождаем запуск; политика платформы, chargeback rate и соответствие сайта остаются факторами риска на любом аккаунте."
           }
         ],
-        "h1": "Merchant-аккаунт Stripe — покупка и подключение для бизнеса",
+        "h1": "Купить аккаунт Stripe для бизнеса — верифицированный merchant",
         "offer": {
           "badge": "Верифицированный merchant под ключ",
           "highlight": "от 3 дней",
@@ -362,15 +511,14 @@
       },
       "en": {
         "meta": {
-          "title": "Stripe Merchant Account for Business — Purchase and Setup | WayOfProcessing",
-          "description": "Verified Stripe merchant account with documents, turnover and support. When buying beats rental, payment system setup timelines and pricing.",
+          "title": "Buy a Stripe Account | WayOfProcessing",
+          "description": "Buy a verified Stripe account with documents, turnover and support. When buying beats rental, and what sets the price.",
           "keywords": [
-            "stripe merchant account",
-            "connect stripe business",
-            "stripe payment system",
             "buy stripe account",
-            "accept stripe payments",
+            "buy merchant account",
+            "ready-made stripe account",
             "verified stripe account",
+            "stripe merchant account",
             "WayOfProcessing"
           ]
         },
@@ -454,9 +602,17 @@
           {
             "question": "How long does handoff take?",
             "answer": "From 3 business days if documents and the site are in order. It takes longer if the site needs compliance work or a custom entity and bank bundle."
+          },
+          {
+            "question": "What documents do I need to buy a Stripe account?",
+            "answer": "You need a business description, a site with policies, volume and acceptance countries. Depending on jurisdiction and payout setup, a beneficiary passport and corporate documents may be required. We share the exact list after niche review — before the deal, not after payment."
+          },
+          {
+            "question": "What does buying a Stripe account not guarantee?",
+            "answer": "Purchase does not guarantee permanent limits or zero Stripe reviews. We transfer a verified merchant fit for the niche and support the launch; platform policy, chargeback rate and site compliance remain risk factors on any account."
           }
         ],
-        "h1": "Stripe Merchant Account — Purchase and Setup for Business",
+        "h1": "Buy a Stripe account for business — verified merchant setup",
         "offer": {
           "badge": "Verified merchant turnkey",
           "highlight": "from 3 days",
@@ -476,22 +632,161 @@
           "stripe-platform-rules",
           "stripe-chargeback-prevention"
         ]
+      },
+      "uk": {
+        "meta": {
+          "title": "Купити акаунт Stripe | WayOfProcessing",
+          "description": "Купівля верифікованого акаунта Stripe з документами та оборотом. Коли купівля краща за оренду і від чого залежить ціна.",
+          "keywords": [
+            "купити акаунт stripe",
+            "купівля мерчант-акаунта",
+            "готовий акаунт stripe",
+            "верифікований акаунт stripe",
+            "мерчант-акаунт stripe",
+            "WayOfProcessing"
+          ]
+        },
+        "lead": "Купівля merchant-акаунта Stripe потрібна бізнесу, якому важливий контроль над платіжною системою та робота на дистанції місяців, а не пілот на кілька тижнів.",
+        "intro": [
+          "Купувати акаунт має сенс, коли оборот уже зрозумілий і ви не хочете залежати від чужої інфраструктури. Ви отримуєте верифікований акаунт з історією, підібраним MCC, зв’язкою з юрособою та рахунком — а не «порожній кабінет», якого Stripe ще не бачив.",
+          "Свіжа реєстрація з нуля майже завжди слабша на старті: немає історії, ліміти вужчі, будь-який стрибок обсягу виглядає підозріло. Прогрітий акаунт проходить цю ділянку спокійніше, якщо ніша, сайт і MCC збігаються.",
+          "Угода не зводиться до передачі логіна. Ми звіряємо діяльність, готуємо документи, налаштовуємо CRM і за потреби routing. Після передачі не зникаємо: перші тижні зазвичай найчутливіші щодо виплат і лімітів.",
+          "Якщо обсяг ще гіпотетичний, спочатку вигідніша оренда. Купівля — крок, коли економіку вже пораховано і ви готові тримати акаунт як власний актив."
+        ],
+        "sections": [
+          {
+            "title": "Що входить у купівлю",
+            "paragraphs": [
+              "Верифікований акаунт з оборотом, документи, MCC під нішу, юрособа та банк у комплекті, доступ до CRM. За запитом — payment routing, щоб прийом не залежав від одного кабінету.",
+              "Перед передачею перевіряємо сайт, опис бізнесу та країни клієнтів. Розбіжність MCC і фактичної діяльності — часта причина review одразу після перших платежів."
+            ]
+          },
+          {
+            "title": "Для яких завдань це краще за оренду",
+            "paragraphs": [
+              "Купівля підходить, якщо ви масштабуєте потік, який уже працює, хочете власний контур доступів і не плануєте змінювати провайдера за місяць. E-commerce, SaaS, forex, gaming, vape, БАДи — нішу називаємо на консультації, не всі запити беремо.",
+              "Оренда залишається розумним першим кроком для тесту. Ми не продаємо «про всяк випадок»: якщо пілот не підтверджений, чесно пропонуємо оренду або процесинг під ключ."
+            ]
+          },
+          {
+            "title": "Як розраховується вартість",
+            "paragraphs": [
+              "Ціна залежить від ніші, обороту, юрисдикції, документів і того, чи потрібен routing. Вітрини «один прайс для всіх» тут вводять в оману: high-risk і звичайний магазин — різні угоди.",
+              "Після заявки безкоштовно розраховуємо діапазон. У розрахунок входять комплектація (лише акаунт або юрособа + банк) і супровід на старті. Комісія процесингу, якщо ви залишаєтеся на нашій інфраструктурі виплат, починається від 1.5%."
+            ]
+          }
+        ],
+        "benefits": [
+          {
+            "title": "Акаунт з документами та оборотом",
+            "description": "Ви купуєте робочу історію, а не порожню реєстрацію. Це знижує ризик упертися в ліміти на перших обсягах."
+          },
+          {
+            "title": "MCC під нішу",
+            "description": "Код діяльності має збігатися із сайтом і виплатами. Неправильний MCC — типовий шлях до блокування через кілька днів обороту."
+          },
+          {
+            "title": "Юрособа та рахунок у комплекті",
+            "description": "Stripe дивиться на зв’язку, а не на кабінет окремо. Комплект зменшує ризик відмови на останньому кроці, коли акаунт уже «майже готовий»."
+          },
+          {
+            "title": "CRM і routing за запитом",
+            "description": "Моніторинг платежів і резервний канал потрібні не всім із першого дня, але зі зростанням обсягу один акаунт стає точкою відмови."
+          },
+          {
+            "title": "Супровід після передачі",
+            "description": "Перші тижні закриваємо питання щодо виплат, лімітів і спорів. Угода не закінчується в момент надсилання доступів."
+          }
+        ],
+        "faq": [
+          {
+            "question": "Скільки коштує купити акаунт Stripe?",
+            "answer": "Вартість залежить від ніші, обороту, юрисдикції та комплектації. Фіксованого прайсу на всі випадки немає — після заявки безкоштовно розраховуємо діапазон."
+          },
+          {
+            "question": "Акаунт прогрітий чи реєструється з нуля?",
+            "answer": "Передаємо акаунти з історією транзакцій і підібраним MCC. Свіжа реєстрація гірше тримає обсяг і частіше йде на додаткові перевірки."
+          },
+          {
+            "question": "Чи можна купити акаунт для high-risk ніші?",
+            "answer": "Частину запитів беремо: forex, gaming, vape, БАДи — після перевірки сайту та chargeback-моделі. Не кожен офер проходить. Якщо ніша не підходить, скажемо про це до угоди."
+          },
+          {
+            "question": "Що буде, якщо після купівлі акаунт піде на перевірку?",
+            "answer": "Розбираємо причину і, якщо підключений routing, перемикаємо трафік на резерв. Повної страховки від запитів Stripe не існує; важливі збіг MCC, прозорий сайт і нормальний dispute rate."
+          },
+          {
+            "question": "Чим купівля відрізняється від оренди за ризиками?",
+            "answer": "За купівлі ви сильніше прив’язані до конкретного акаунта як до активу. За оренди простіше змінити контур. Натомість купівля дає контроль доступів і логіку «це наш канал», а не підписку на чужу інфраструктуру."
+          },
+          {
+            "question": "Що підготувати до угоди?",
+            "answer": "Опис ніші, сайт або лендинг, очікуваний оборот, країни клієнтів і поточний спосіб прийому платежів. За цим набором видно, який MCC і яка юрисдикція взагалі мають сенс."
+          },
+          {
+            "question": "Скільки триває передача?",
+            "answer": "Від 3 робочих днів, якщо документи та сайт у порядку. Строк зростає, якщо потрібно доопрацювати комплаєнс сайту або зібрати кастомну зв’язку юрособи та банку."
+          },
+          {
+            "question": "Які документи потрібні, щоб купити акаунт Stripe?",
+            "answer": "Потрібні опис бізнесу, сайт із політиками, дані щодо обороту й країн прийому. Залежно від юрисдикції та схеми виплат можуть знадобитися паспорт бенефіціара й корпоративні документи. Точний список даємо після оцінки ніші — до угоди, а не «після оплати»."
+          },
+          {
+            "question": "Що купівля акаунта Stripe не гарантує?",
+            "answer": "Купівля не гарантує вічні ліміти й відсутність review з боку Stripe. Передаємо верифікований merchant під нішу й супроводжуємо запуск; політика платформи, chargeback rate і відповідність сайту лишаються факторами ризику на будь-якому акаунті."
+          }
+        ],
+        "h1": "Купити акаунт Stripe для бізнесу — верифікований merchant",
+        "offer": {
+          "badge": "Верифікований merchant під ключ",
+          "highlight": "від 3 днів",
+          "sub": "Документи, оборот і супровід під вашу нішу"
+        },
+        "card": {
+          "title": "Купівля merchant-акаунта Stripe",
+          "desc": "Верифікований merchant з документами та оборотом. Підключення платіжної системи Stripe під ключ."
+        },
+        "relatedServices": [
+          "stripe-account-rent",
+          "processing-turnkey",
+          "legal-entity-bank"
+        ],
+        "relatedBlogSlugs": [
+          "what-is-stripe-scaling-business",
+          "stripe-platform-rules",
+          "stripe-chargeback-prevention"
+        ]
       }
     },
     {
       "slug": "processing-turnkey",
       "ru": {
         "meta": {
-          "title": "Процессинг Stripe под ключ — платёжная система для бизнеса | WayOfProcessing",
-          "description": "Приём платежей через Stripe под ключ: checkout, API, Payment Link, payment routing, CRM, вывод EUR, USD, USDT. Комиссия от 1.5%, аптайм 99.9%.",
+          "title": "Подключение Stripe под ключ | WayOfProcessing",
+          "description": "Процессинг Stripe под ключ: checkout, routing, CRM и вывод в EUR, USD, USDT. Комиссия от 1.5%, аптайм 99.9%.",
           "keywords": [
-            "процессинг stripe",
-            "stripe платежная система",
+            "подключение stripe",
+            "подключить stripe под ключ",
+            "интеграция stripe на сайт",
+            "как подключить stripe",
+            "stripe для интернет-магазина",
+            "stripe payment link",
+            "подключение stripe за 3 дня",
             "процессинг платежей",
-            "приём платежей stripe",
-            "stripe под ключ",
+            "процессинг stripe",
+            "мерчант аккаунт stripe",
+            "эквайринг для бизнеса",
+            "международный эквайринг",
+            "процессинг для e-commerce",
+            "комиссия stripe",
+            "процессинг от 1.5%",
             "payment routing",
-            "интеграция stripe",
+            "резервный платёжный аккаунт",
+            "вывод денег из stripe",
+            "вывод stripe в usdt",
+            "вывод stripe на iban",
+            "crm для платежей",
+            "платёжная оркестрация",
             "WayOfProcessing"
           ]
         },
@@ -575,9 +870,17 @@
           {
             "question": "Сколько занимает запуск?",
             "answer": "Payment Link можно поднять быстрее. API, routing и кастомный MCC — от нескольких рабочих дней после вводных по нише и сайту."
+          },
+          {
+            "question": "Какие документы нужны для подключения?",
+            "answer": "Описание ниши, сайт с офертой и refund policy, ожидаемый оборот и страны клиентов. Для юрлица и банка дополнительно — паспорт бенефициара и корпоративный пакет по юрисдикции. Список фиксируем до старта работ."
+          },
+          {
+            "question": "Что услуга не гарантирует со стороны Stripe?",
+            "answer": "Ни один провайдер не гарантирует, что Stripe не запросит документы повторно или не изменит лимиты. Мы готовим связку под нишу, сопровождаем верификацию и даём резервный канал при routing — без обещания «нулевых проверок навсегда»."
           }
         ],
-        "h1": "Процессинг Stripe под ключ — платёжная система для бизнеса",
+        "h1": "Подключение Stripe под ключ — процессинг и merchant-аккаунт",
         "offer": {
           "badge": "Платёжная система под ключ",
           "highlight": "от 1.5%",
@@ -600,15 +903,30 @@
       },
       "en": {
         "meta": {
-          "title": "Turnkey Stripe Processing — Payment System for Business | WayOfProcessing",
-          "description": "Turnkey Stripe payment acceptance: checkout, API, Payment Link, payment routing, CRM, payouts in EUR, USD, USDT. Fees from 1.5%, 99.9% uptime.",
+          "title": "Connect Stripe turnkey | WayOfProcessing",
+          "description": "Turnkey Stripe processing: checkout, routing, CRM and payouts in EUR, USD and USDT. Fees from 1.5%, 99.9% uptime.",
           "keywords": [
-            "stripe payment system",
-            "stripe payment processing",
-            "turnkey stripe",
-            "accept stripe payments",
-            "payment routing",
             "stripe integration",
+            "connect stripe",
+            "stripe setup service",
+            "integrate stripe into website",
+            "how to set up stripe",
+            "stripe for online store",
+            "stripe payment links",
+            "fast stripe setup",
+            "payment processing",
+            "stripe processing",
+            "stripe merchant account",
+            "merchant acquiring",
+            "international acquiring",
+            "payment processing for ecommerce",
+            "stripe fees",
+            "low-fee payment processing",
+            "payment routing",
+            "backup payment account",
+            "stripe payout",
+            "stripe to usdt",
+            "payment orchestration",
             "WayOfProcessing"
           ]
         },
@@ -692,9 +1010,17 @@
           {
             "question": "How long does launch take?",
             "answer": "Payment Link can go live faster. API, routing and a custom MCC take several business days after we have niche and site inputs."
+          },
+          {
+            "question": "What documents are required for setup?",
+            "answer": "A niche description, a site with terms and refund policy, expected volume and customer countries. For entity and bank work we also need a beneficiary passport and the corporate pack for the jurisdiction. We lock the list before work starts."
+          },
+          {
+            "question": "What does the service not guarantee from Stripe?",
+            "answer": "No provider can guarantee Stripe will never re-request documents or change limits. We prepare a niche-fit setup, support verification and add a backup channel when routing is on — without promising “zero reviews forever”."
           }
         ],
-        "h1": "Turnkey Stripe Processing — Payment System for Business",
+        "h1": "Connect Stripe turnkey — processing and merchant account",
         "offer": {
           "badge": "Payment system turnkey",
           "highlight": "from 1.5%",
@@ -714,21 +1040,167 @@
           "stripe-payment-routing-uptime",
           "stripe-webhooks-guide"
         ]
+      },
+      "uk": {
+        "meta": {
+          "title": "Підключення Stripe під ключ | WayOfProcessing",
+          "description": "Процесинг Stripe під ключ: checkout, routing, CRM і вивід у EUR, USD, USDT. Комісія від 1.5%, аптайм 99.9%.",
+          "keywords": [
+            "підключення stripe",
+            "підключення stripe під ключ",
+            "інтеграція stripe на сайт",
+            "як підключити stripe",
+            "stripe для інтернет-магазину",
+            "stripe payment link",
+            "підключення stripe за кілька днів",
+            "процесинг платежів",
+            "процесинг stripe",
+            "мерчант-акаунт stripe",
+            "еквайринг для бізнесу",
+            "міжнародний еквайринг",
+            "процесинг для e-commerce",
+            "комісія stripe",
+            "процесинг від 1.5%",
+            "payment routing",
+            "резервний платіжний акаунт",
+            "виведення коштів зі stripe",
+            "виведення stripe в usdt",
+            "crm для платежів",
+            "платіжна оркестрація",
+            "WayOfProcessing"
+          ]
+        },
+        "lead": "Процесинг під ключ — це не «кнопка Stripe на сайті», а повноцінна платіжна система: merchant-акаунт, checkout, моніторинг, виплати та резервний канал.",
+        "intro": [
+          "Прямий Stripe зручний, якщо у вас уже є юрособа, банк, комплаєнс сайту та команда, яка живе у webhooks. У більшості запусків цього немає: інтеграцію роблять частково, акаунт один, і будь-який review зупиняє продажі.",
+          "Під ключ ми збираємо контур цілком. Checkout може бути API, Payment Element, Payment Link або Invoice — без вимоги «спочатку найміть розробників на місяць». CRM показує статуси, спори та вивантаження без ручних запитів.",
+          "Ключова відмінність від «просто акаунта» — routing. Один кабінет Stripe — точка відмови. Якщо він іде на перевірку, трафік має переїхати на резерв, інакше вітрина мовчить. Для бізнесу це різниця між паузою та продовженням прийому карток.",
+          "Комісія від 1.5% без окремого вступного платежу за розмову. Ставка залежить від ніші та обсягу: ми розраховуємо її після заявки, а не ховаємо за «напишіть менеджеру»."
+        ],
+        "sections": [
+          {
+            "title": "Що входить у контур",
+            "paragraphs": [
+              "Акаунт або оренда/купівля за завданням, інтеграція checkout, CRM, виплати, за потреби routing між кількома акаунтами. Підписки, Payment Link та Invoice підключаємо, якщо моделі це потрібно, а не «бо так у презентації».",
+              "Webhooks і статуси платежів налаштовуємо так, щоб магазин або SaaS бачили оплачено / спір / повернення без ручної звірки виписок."
+            ]
+          },
+          {
+            "title": "Як працює routing",
+            "paragraphs": [
+              "Трафік розподіляється та перемикається, якщо основний акаунт недоступний або пішов на review. Клієнт на сайті цього не помічає: форма оплати залишається тією самою.",
+              "Routing не скасовує якість трафіку. Високий chargeback завалить і основний, і резервний канал. Ми підключаємо failover як захист від інфраструктурного збою, а не як спосіб обійти політику Stripe."
+            ]
+          },
+          {
+            "title": "Вартість і для кого це",
+            "paragraphs": [
+              "Комісія від 1.5%. На неї впливають ніша, середній чек, частка гаманців, спірність вертикалі та потреба в multi-account routing. Після заявки даємо орієнтир під ваш оборот, а не абстрактний мінімум із сайту.",
+              "Формат підходить магазинам, SaaS, маркетплейсам, підпискам і частині high-risk, де простий checkout дорожчий за комісію. Якщо потрібен лише «логін Stripe» без інтеграції — дивіться оренду або купівлю акаунта."
+            ]
+          }
+        ],
+        "benefits": [
+          {
+            "title": "Комісія від 1.5%",
+            "description": "Без окремого платежу «за те, щоб поговорити». Точна ставка розраховується за нішею та обсягом після заявки."
+          },
+          {
+            "title": "API, Payment Link, Invoice",
+            "description": "Можна стартувати без власної розробки та пізніше перейти на API. Не змушуємо одразу будувати кастомний checkout."
+          },
+          {
+            "title": "Failover 99.9%",
+            "description": "Резервний акаунт продовжує прийом, якщо основний на перевірці. Це про виручку в моменті, а не про гарний SLA в презентації."
+          },
+          {
+            "title": "CRM за транзакціями",
+            "description": "Статуси, спори та вивантаження без листування «скиньте, будь ласка, Excel». Фінанси бачать картину самі."
+          },
+          {
+            "title": "Вивід EUR / USD / USDT",
+            "description": "Схему виплат фіксуємо до запуску. Бухгалтерія має знати цикл заздалегідь, а не дізнаватися його після першого успішного тижня."
+          }
+        ],
+        "faq": [
+          {
+            "question": "Чим це відрізняється від прямого Stripe?",
+            "answer": "Прямий Stripe — це ваш акаунт і ваша відповідальність за верифікацію, ліміти та простій. Під ключ ми надаємо інфраструктуру: акаунти, routing, CRM, виплати та супровід за нішею."
+          },
+          {
+            "question": "Чи потрібна власна розробка?",
+            "answer": "Ні, якщо вистачає Payment Link або Invoice. Якщо потрібен власний checkout — підключаємо API та webhooks. Рішення залежить від стека, а не від шаблону."
+          },
+          {
+            "question": "Що відбувається під час перевірки акаунта?",
+            "answer": "За routing платежі йдуть на резерв. Покупці продовжують платити, поки основний канал проходить review."
+          },
+          {
+            "question": "Яка комісія на моєму обсязі?",
+            "answer": "Від 1.5%, далі залежно від ніші та ризику. Після заявки розраховуємо орієнтир. Прихованої «іншої ставки після підключення» в договорі консультації немає — цифру називаємо до старту."
+          },
+          {
+            "question": "Чи це заміна оренді та купівлі акаунта?",
+            "answer": "Ні. Оренда та купівля — про доступ до акаунта. Процесинг під ключ — про весь контур прийому та виплат. Часто це наступний шар поверх акаунта."
+          },
+          {
+            "question": "Які ніші ви не беретеся обслуговувати?",
+            "answer": "Офери з заздалегідь токсичним dispute, заборонені категорії Stripe та схеми, де сайт не відповідає платежам. Якщо не береться — кажемо до інтеграції, а не після перших чарджбеків."
+          },
+          {
+            "question": "Скільки триває запуск?",
+            "answer": "Payment Link можна підняти швидше. API, routing і кастомний MCC — від кількох робочих днів після вступних даних щодо ніші та сайту."
+          },
+          {
+            "question": "Які документи потрібні для підключення?",
+            "answer": "Опис ніші, сайт з офертою та refund policy, очікуваний оборот і країни клієнтів. Для юрособи й банку додатково — паспорт бенефіціара та корпоративний пакет за юрисдикцією. Список фіксуємо до старту робіт."
+          },
+          {
+            "question": "Що послуга не гарантує з боку Stripe?",
+            "answer": "Жоден провайдер не гарантує, що Stripe не запросить документи повторно або не змінить ліміти. Ми готуємо зв’язку під нішу, супроводжуємо верифікацію й даємо резервний канал при routing — без обіцянки «нульових перевірок назавжди»."
+          }
+        ],
+        "h1": "Підключення Stripe під ключ — процесинг і merchant-акаунт",
+        "offer": {
+          "badge": "Платіжна система під ключ",
+          "highlight": "від 1.5%",
+          "sub": "Checkout, routing, CRM і вивід у EUR, USD, USDT"
+        },
+        "card": {
+          "title": "Процесинг Stripe під ключ",
+          "desc": "Платіжна система під ключ: checkout, API, routing, CRM. Комісія від 1.5%, аптайм 99.9%."
+        },
+        "relatedServices": [
+          "stripe-account-rent",
+          "stripe-account-buy",
+          "legal-entity-bank"
+        ],
+        "relatedBlogSlugs": [
+          "how-to-choose-payment-system",
+          "stripe-payment-routing-uptime",
+          "stripe-webhooks-guide"
+        ]
       }
     },
     {
       "slug": "legal-entity-bank",
       "ru": {
         "meta": {
-          "title": "Подключение Stripe: юрлицо, банк и merchant-аккаунт | WayOfProcessing",
-          "description": "Регистрация компании, расчётный счёт и Stripe одним комплектом для приёма международных платежей. Юрисдикции GB, HK, CY, PL, EE, CZ. Подключение платёжной системы от 3 дней.",
+          "title": "Юрлицо и банк для Stripe | WayOfProcessing",
+          "description": "Компания, расчётный счёт и Stripe одним комплектом. Юрисдикции GB, HK, CY, PL, EE, CZ. Запуск от 3 дней.",
           "keywords": [
-            "подключение stripe",
-            "юрлицо для stripe",
-            "stripe платежная система",
-            "регистрация компании за рубежом",
-            "merchant аккаунт stripe",
-            "международные платежи",
+            "открыть компанию для stripe",
+            "зарубежное юрлицо и счёт",
+            "банковский счёт для stripe",
+            "необанк для бизнеса",
+            "регистрация компании в польше для stripe",
+            "e-residency эстония бизнес",
+            "stripe в польше",
+            "stripe в эстонии",
+            "stripe чехия",
+            "stripe кипр",
+            "stripe великобритания",
+            "stripe гонконг",
             "WayOfProcessing"
           ]
         },
@@ -750,7 +1222,7 @@
           {
             "title": "Почему нельзя собрать это по отдельности",
             "paragraphs": [
-              "Ошибка в описании деятельности, счёте не в той стране или сайте без refund policy ломает всю цепочку. Мы 7 лет видим, какие связки проходят для магазинов, SaaS, forex и gaming, и какие разваливаются на KYC банка.",
+              "Ошибка в описании деятельности, счёте не в той стране или сайте без refund policy ломает всю цепочку. Мы знаем, какие связки проходят для магазинов, SaaS, forex и gaming, и какие разваливаются на KYC банка.",
               "Если позже вырастет оборот, на этой же инфраструктуре можно добавить routing и резервные аккаунты — не переезжая в новую юрисдикцию с нуля без причины."
             ]
           },
@@ -812,9 +1284,17 @@
           {
             "question": "Под какие ниши комплект не собираете?",
             "answer": "Запрещённые категории Stripe и модели, где сайт нельзя привести в соответствие платежам. Если связка заведомо не пройдёт — говорим до оплаты регистрации."
+          },
+          {
+            "question": "Какие документы нужны для подключения?",
+            "answer": "Описание ниши, сайт с офертой и refund policy, ожидаемый оборот и страны клиентов. Для юрлица и банка дополнительно — паспорт бенефициара и корпоративный пакет по юрисдикции. Список фиксируем до старта работ."
+          },
+          {
+            "question": "Что услуга не гарантирует со стороны Stripe?",
+            "answer": "Ни один провайдер не гарантирует, что Stripe не запросит документы повторно или не изменит лимиты. Мы готовим связку под нишу, сопровождаем верификацию и даём резервный канал при routing — без обещания «нулевых проверок навсегда»."
           }
         ],
-        "h1": "Подключение Stripe: юрлицо, банк и merchant-аккаунт",
+        "h1": "Юрлицо, банк и Stripe — открыть компанию для Stripe",
         "offer": {
           "badge": "Юрлицо + банк + Stripe",
           "highlight": "от 3 дней",
@@ -837,15 +1317,21 @@
       },
       "en": {
         "meta": {
-          "title": "Connect Stripe: Legal Entity, Bank and Merchant Account | WayOfProcessing",
-          "description": "Company registration, bank account and Stripe in one package for international payments. Jurisdictions GB, HK, CY, PL, EE, CZ. Payment system setup from 3 days.",
+          "title": "Company and bank for Stripe | WayOfProcessing",
+          "description": "Company, bank account and Stripe in one package. Jurisdictions GB, HK, CY, PL, EE, CZ. Setup from 3 days.",
           "keywords": [
-            "connect stripe business",
-            "stripe payment system",
-            "legal entity for stripe",
-            "stripe merchant account",
-            "international payments",
-            "company setup stripe",
+            "company formation for stripe",
+            "foreign company with bank account",
+            "business bank account for stripe",
+            "neobank for business",
+            "register company in poland for stripe",
+            "estonia e-residency business",
+            "stripe poland",
+            "stripe estonia",
+            "stripe czech republic",
+            "stripe cyprus",
+            "stripe uk company",
+            "stripe hong kong",
             "WayOfProcessing"
           ]
         },
@@ -867,7 +1353,7 @@
           {
             "title": "Why you should not assemble this piecemeal",
             "paragraphs": [
-              "A wrong activity description, an account in the wrong country or a site with no refund policy breaks the chain. In 7 years we have seen which bundles pass for stores, SaaS, forex and gaming, and which fall apart at bank KYC.",
+              "A wrong activity description, an account in the wrong country or a site with no refund policy breaks the chain. We know which bundles pass for stores, SaaS, forex and gaming, and which fall apart at bank KYC.",
               "If volume grows later, we can add routing and backup accounts on the same infrastructure instead of moving jurisdiction from scratch without a reason."
             ]
           },
@@ -929,9 +1415,17 @@
           {
             "question": "Which niches do you not package?",
             "answer": "Stripe-prohibited categories and models where the site cannot be aligned with the charges. If the bundle will not pass, we say so before you pay for registration."
+          },
+          {
+            "question": "What documents are required for setup?",
+            "answer": "A niche description, a site with terms and refund policy, expected volume and customer countries. For entity and bank work we also need a beneficiary passport and the corporate pack for the jurisdiction. We lock the list before work starts."
+          },
+          {
+            "question": "What does the service not guarantee from Stripe?",
+            "answer": "No provider can guarantee Stripe will never re-request documents or change limits. We prepare a niche-fit setup, support verification and add a backup channel when routing is on — without promising “zero reviews forever”."
           }
         ],
-        "h1": "Connect Stripe: Legal Entity, Bank and Merchant Account",
+        "h1": "Company, bank and Stripe — company formation for Stripe",
         "offer": {
           "badge": "Entity + bank + Stripe",
           "highlight": "from 3 days",
@@ -940,6 +1434,137 @@
         "card": {
           "title": "Legal Entity, Bank & Stripe",
           "desc": "Company registration, bank account and Stripe payment system setup. Jurisdictions GB, HK, CY, PL, EE, CZ."
+        },
+        "relatedServices": [
+          "stripe-account-buy",
+          "stripe-account-rent",
+          "processing-turnkey"
+        ],
+        "relatedBlogSlugs": [
+          "stripe-international-payments-integration",
+          "international-payments-for-business",
+          "what-is-stripe-scaling-business"
+        ]
+      },
+      "uk": {
+        "meta": {
+          "title": "Юрособа і банк для Stripe | WayOfProcessing",
+          "description": "Компанія, розрахунковий рахунок і Stripe одним комплектом. Юрисдикції GB, HK, CY, PL, EE, CZ. Запуск від 3 днів.",
+          "keywords": [
+            "відкрити компанію для stripe",
+            "закордонна юрособа та рахунок",
+            "банківський рахунок для stripe",
+            "необанк для бізнесу",
+            "реєстрація компанії в польщі для stripe",
+            "e-Residency Естонія бізнес",
+            "stripe у польщі",
+            "stripe в естонії",
+            "stripe чехія",
+            "stripe кіпр",
+            "stripe велика британія",
+            "stripe гонконг",
+            "WayOfProcessing"
+          ]
+        },
+        "lead": "Щоб підключити Stripe як платіжну систему, потрібна зв’язка: компанія, банк і опис бізнесу. Комплект збирає ці три частини так, щоб вони збіглися з першого разу.",
+        "intro": [
+          "Відкрити фірму «де дешевше», а потім окремо шукати банк і Stripe — частий шлях до відмови на останньому кроці. Банк дивиться на діяльність, Stripe — на юрособу та рахунок, сайт має казати те саме, що й MCC. Якщо ланки від різних підрядників, розбіжності спливають пізно.",
+          "Ми підбираємо юрисдикцію під нішу та модель, а не під мінімальний прайс реєстрації. Для e-commerce, SaaS і high-risk потрібні різні документи та коди. Після запуску звітність юрособи не розповзається по трьох чатах.",
+          "Строк базової зв’язки — від 3 робочих днів за готових вхідних даних. Довше, якщо сайту потрібен комплаєнс або ніша вимагає окремої перевірки. Це все одно швидше, ніж вести три незалежні треки та стикувати їх вручну.",
+          "Комплект має сенс, якщо ви будуєте власний контур на місяці. Якщо потрібен лише прийом карток на пілот — швидша оренда акаунта. Юрособа для галочки без Stripe зазвичай не економить час."
+        ],
+        "sections": [
+          {
+            "title": "Які юрисдикції та чому вибір важливий",
+            "paragraphs": [
+              "Працюємо з GB, HK, CY, PL, EE, CZ. Країну обираємо за нішею, ринками клієнтів і податковою моделлю — так, щоб банк і Stripe пройшли верифікацію, а не за каталогом «офшор за вихідні».",
+              "До пакета входять реєстрація, рахунок, Stripe, документи та супровід на верифікації. Після запуску ведемо звітність: ви не збираєте дедлайни в різних агентів."
+            ]
+          },
+          {
+            "title": "Чому не можна зібрати це окремо",
+            "paragraphs": [
+              "Помилка в описі діяльності, рахунок не в тій країні або сайт без refund policy ламають увесь ланцюжок. Ми знаємо, які зв’язки проходять для магазинів, SaaS, forex і gaming, а які розвалюються на KYC банку.",
+              "Якщо згодом оборот виросте, на цій самій інфраструктурі можна додати routing і резервні акаунти — не переїжджаючи без причини в нову юрисдикцію з нуля."
+            ]
+          },
+          {
+            "title": "Строки та з чого складається ціна",
+            "paragraphs": [
+              "Базовий комплект — від 3 робочих днів. Ціна залежить від юрисдикції, ніші, обсягу документів і того, чи потрібен доопрацьований сайт під комплаєнс. Після заявки даємо оцінку за вашою моделлю, а не одну цифру «для всіх країн».",
+              "Окремо продавати «лише компанію без Stripe» можна, але банк і Stripe все одно дивляться на одну зв’язку. Комплект дешевший за ризиком відмови, навіть якщо здається дорожчим за одну реєстрацію."
+            ]
+          }
+        ],
+        "benefits": [
+          {
+            "title": "GB, HK, CY, PL, EE, CZ",
+            "description": "Не список для галочки, а набір, у якому ми вміємо стикувати банк і Stripe під різні ніші. Юрисдикцію пропонуємо під завдання, а не навпаки."
+          },
+          {
+            "title": "Три ланки одразу",
+            "description": "Компанія, рахунок і Stripe узгоджені між собою. Менше шансів отримати відмову, коли «фірма вже є, а кабінет не проходить»."
+          },
+          {
+            "title": "Звітність на нашому боці",
+            "description": "Дедлайни та податковий контур не перетворюються на окремий проєкт після запуску платежів."
+          },
+          {
+            "title": "Підбір під нішу",
+            "description": "MCC, сайт і юрисдикція мають казати одне й те саме. Інакше верифікація перетворюється на листування на тижні."
+          },
+          {
+            "title": "Запуск від 3 робочих днів",
+            "description": "За готових документів. Якщо ніша складна або сайт сирий — строк чесно зсуваємо до готовності, а не обіцяємо неможливе."
+          }
+        ],
+        "faq": [
+          {
+            "question": "Яку юрисдикцію обрати для Stripe?",
+            "answer": "Залежить від ніші, країн клієнтів і податків. Ми безкоштовно порівнюємо GB, HK, CY, PL, EE, CZ під ваш проєкт, а не продаємо одну «універсальну» країну."
+          },
+          {
+            "question": "Чи потрібно самому вести звітність?",
+            "answer": "Ні, за комплектом звітність і податкові зобов’язання беремо на себе. Це частина пакета, а не окрема опція «потім якось»."
+          },
+          {
+            "question": "Чи можна відкрити лише компанію без Stripe?",
+            "answer": "Можна, але зазвичай це гірше: банк і Stripe оцінюють одну зв’язку. Відмова часто приходить на останньому кроці, коли фірму вже зареєстровано."
+          },
+          {
+            "question": "Скільки триває повний запуск?",
+            "answer": "Від 3 робочих днів за готових документів. Довше, якщо потрібен комплаєнс сайту або ніша вимагає додаткової перевірки."
+          },
+          {
+            "question": "Чи це замінює оренду акаунта?",
+            "answer": "Ні. Оренда — швидкий прийом без власної компанії. Комплект — власний контур на довгу дистанцію. Іноді починають з оренди й переходять сюди після пілота."
+          },
+          {
+            "question": "Що, якщо банк або Stripe запросять додаткові документи?",
+            "answer": "Супроводжуємо запит: це нормальний етап KYC, не обов’язково відмова. Ми заздалегідь закладаємо типовий пакет, щоб таких кіл було менше."
+          },
+          {
+            "question": "Під які ніші комплект не збираєте?",
+            "answer": "Заборонені категорії Stripe та моделі, де сайт неможливо привести у відповідність до платежів. Якщо зв’язка заздалегідь не пройде — кажемо до оплати реєстрації."
+          },
+          {
+            "question": "Які документи потрібні для підключення?",
+            "answer": "Опис ніші, сайт з офертою та refund policy, очікуваний оборот і країни клієнтів. Для юрособи й банку додатково — паспорт бенефіціара та корпоративний пакет за юрисдикцією. Список фіксуємо до старту робіт."
+          },
+          {
+            "question": "Що послуга не гарантує з боку Stripe?",
+            "answer": "Жоден провайдер не гарантує, що Stripe не запросить документи повторно або не змінить ліміти. Ми готуємо зв’язку під нішу, супроводжуємо верифікацію й даємо резервний канал при routing — без обіцянки «нульових перевірок назавжди»."
+          }
+        ],
+        "h1": "Юрособа, банк і Stripe — відкрити компанію для Stripe",
+        "offer": {
+          "badge": "Юрособа + банк + Stripe",
+          "highlight": "від 3 днів",
+          "sub": "GB, HK, CY, PL, EE, CZ — платіжна система одним комплектом"
+        },
+        "card": {
+          "title": "Юрособа, банк і Stripe",
+          "desc": "Реєстрація компанії, рахунок і підключення Stripe як платіжної системи. Юрисдикції GB, HK, CY, PL, EE, CZ."
         },
         "relatedServices": [
           "stripe-account-buy",

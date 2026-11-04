@@ -4,44 +4,62 @@ import PrivacyPage from '../../components/PrivacyPage'
 import Footer from '../../components/Footer'
 import Breadcrumbs from '../../components/seo/Breadcrumbs'
 import JsonLdScript from '../../components/seo/JsonLdScript'
-import { isValidLocale, localePath, type Locale } from '@/lib/i18n/config'
+import { isValidLocale, localePath, pickLocaleCopy, type Locale } from '@/lib/i18n/config'
+import { labelPrivacy } from '@/lib/i18n/labels'
 import { buildBreadcrumbJsonLd, buildGraphJsonLd, buildPageMetadata, buildWebPageJsonLd } from '@/lib/seo'
 import { siteConfig } from '@/lib/site'
 
 type Props = { params: Promise<{ locale: string }> }
 
+function privacyCopy(locale: Locale) {
+  return {
+    title: pickLocaleCopy(locale, {
+      ru: siteConfig.pages.privacy.title,
+      uk: siteConfig.pages.privacy.titleUk,
+      en: siteConfig.pages.privacy.titleEn,
+    }),
+    description: pickLocaleCopy(locale, {
+      ru: siteConfig.pages.privacy.description,
+      uk: siteConfig.pages.privacy.descriptionUk,
+      en: siteConfig.pages.privacy.descriptionEn,
+    }),
+  }
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale: rawLocale } = await params
   const locale = (isValidLocale(rawLocale) ? rawLocale : 'ru') as Locale
-  const isEn = locale === 'en'
+  const copy = privacyCopy(locale)
 
   return buildPageMetadata({
-    title: isEn ? siteConfig.pages.privacy.titleEn : siteConfig.pages.privacy.title,
-    description: isEn ? siteConfig.pages.privacy.descriptionEn : siteConfig.pages.privacy.description,
+    title: copy.title,
+    description: copy.description,
     path: '/privacy',
     locale,
-    keywords: isEn
-      ? [`${siteConfig.name} privacy policy`, 'personal data', 'Stripe processing privacy']
-      : [`политика конфиденциальности ${siteConfig.name}`, 'обработка персональных данных', 'privacy policy'],
+    keywords: pickLocaleCopy(locale, {
+      ru: [`политика конфиденциальности ${siteConfig.name}`, 'обработка персональных данных', 'privacy policy'],
+      uk: [`політика конфіденційності ${siteConfig.name}`, 'обробка персональних даних', 'privacy policy'],
+      en: [`${siteConfig.name} privacy policy`, 'personal data', 'Stripe processing privacy'],
+    }),
   })
 }
 
 export default async function Privacy({ params }: Props) {
   const { locale: rawLocale } = await params
   const locale = (isValidLocale(rawLocale) ? rawLocale : 'ru') as Locale
-  const isEn = locale === 'en'
+  const copy = privacyCopy(locale)
 
   const breadcrumb = buildBreadcrumbJsonLd(
     [
       { name: siteConfig.name, path: '/' },
-      { name: isEn ? 'Privacy Policy' : 'Политика конфиденциальности', path: '/privacy' },
+      { name: labelPrivacy(locale), path: '/privacy' },
     ],
     locale,
   )
 
   const webPage = buildWebPageJsonLd({
-    title: isEn ? siteConfig.pages.privacy.titleEn : siteConfig.pages.privacy.title,
-    description: isEn ? siteConfig.pages.privacy.descriptionEn : siteConfig.pages.privacy.description,
+    title: copy.title,
+    description: copy.description,
     path: '/privacy',
     locale,
     pageType: 'PrivacyPolicy',
@@ -54,7 +72,7 @@ export default async function Privacy({ params }: Props) {
       <Breadcrumbs
         items={[
           { name: siteConfig.name, path: localePath('/', locale) },
-          { name: isEn ? 'Privacy Policy' : 'Политика конфиденциальности', path: localePath('/privacy', locale) },
+          { name: labelPrivacy(locale), path: localePath('/privacy', locale) },
         ]}
       />
       <main>

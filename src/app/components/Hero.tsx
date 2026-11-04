@@ -1,13 +1,16 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
+import { useLocalizedPath } from '@/lib/i18n/use-locale'
 import { useContactModal } from './ContactModalProvider'
 import styles from './Hero.module.css'
 
 export default function Hero() {
   const { t } = useTranslation()
   const { open: openContactModal } = useContactModal()
+  const lp = useLocalizedPath()
 
   return (
     <section className={styles.hero}>
@@ -41,6 +44,15 @@ export default function Hero() {
             </div>
 
             <p className={styles.description}>{t('hero.description')}</p>
+
+            <nav className={styles.offerLinks} aria-label={t('seo.servicesHeading')}>
+              <Link href={lp('/services/stripe-account-rent')} className={styles.offerLink}>
+                {t('hero.offerRent')}
+              </Link>
+              <Link href={lp('/services/stripe-account-buy')} className={styles.offerLink}>
+                {t('hero.offerBuy')}
+              </Link>
+            </nav>
           </div>
 
           <button type="button" className={styles.card} onClick={openContactModal}>

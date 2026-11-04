@@ -7,22 +7,25 @@ import { SERVICE_IMAGES, type ServiceSlug } from '@/lib/services'
 import styles from './ServiceCard.module.css'
 
 type Props = {
-  slug: ServiceSlug
+  slug?: ServiceSlug
+  image?: string
   title: string
   description: string
   href: string
   titleAs?: 'h2' | 'h3'
 }
 
-export default function ServiceCard({ slug, title, description, href, titleAs: TitleTag = 'h3' }: Props) {
+export default function ServiceCard({ slug, image, title, description, href, titleAs: TitleTag = 'h3' }: Props) {
   const { t } = useTranslation()
+  const src = image ?? (slug ? SERVICE_IMAGES[slug] : undefined)
+  if (!src) return null
 
   return (
     <article className={styles.card}>
       <Link href={href} className={styles.cardLink}>
         <div className={styles.cardMedia}>
           <Image
-            src={SERVICE_IMAGES[slug]}
+            src={src}
             alt={title}
             fill
             sizes="(max-width: 900px) 100vw, 50vw"

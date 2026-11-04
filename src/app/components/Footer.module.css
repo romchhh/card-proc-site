@@ -50,11 +50,28 @@
   line-height: 1.5;
 }
 
+.company {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.62);
+  max-width: 280px;
+}
+
+.companyName {
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.88);
+  letter-spacing: 0.01em;
+}
+
 .legal {
   font-size: 13px;
   color: rgba(255, 255, 255, 0.58);
   line-height: 1.65;
-  max-width: 260px;
+  max-width: 280px;
 }
 
 .heading {
@@ -186,7 +203,7 @@
 
 @media (max-width: 768px) {
   .footer {
-    padding: 24px var(--page-padding-x-md) 0;
+    padding: 24px var(--page-padding-x) 0;
   }
 
   .grid {
@@ -216,6 +233,7 @@
     text-align: center;
   }
 
+  .company,
   .legal,
   .aboutText {
     max-width: none;
@@ -230,6 +248,6 @@
 
 @media (max-width: 480px) {
   .footer {
-    padding: 20px var(--page-padding-x-sm) 0;
+    padding: 20px var(--page-padding-x) 0;
   }
 }

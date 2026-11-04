@@ -75,7 +75,7 @@
   }
 
   .section {
-    padding: var(--section-padding-y-md) var(--page-padding-x-md);
+    padding-block: var(--section-padding-y-md);
   }
 }
 
@@ -86,11 +86,6 @@
 }
 
 @media (max-width: 480px) {
-  .section {
-    padding-left: var(--page-padding-x-sm);
-    padding-right: var(--page-padding-x-sm);
-  }
-
   .right {
     padding: 24px;
   }

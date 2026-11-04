@@ -1,4 +1,4 @@
-export const locales = ['ru', 'en'] as const
+export const locales = ['ru', 'uk', 'en'] as const
 export type Locale = (typeof locales)[number]
 export const defaultLocale: Locale = 'ru'
 
@@ -39,5 +39,27 @@ export function switchLocalePath(pathname: string, locale: Locale): string {
 }
 
 export function localeOgLocale(locale: Locale): string {
-  return locale === 'en' ? 'en_US' : 'ru_RU'
+  if (locale === 'en') return 'en_US'
+  if (locale === 'uk') return 'uk_UA'
+  return 'ru_RU'
+}
+
+export function localeHtmlLang(locale: Locale): string {
+  return locale
+}
+
+export function localeDateTag(locale: Locale): string {
+  if (locale === 'en') return 'en-GB'
+  if (locale === 'uk') return 'uk-UA'
+  return 'ru-RU'
+}
+
+/** Prefer explicit locale copy; fall back RU → UK → EN. */
+export function pickLocaleCopy<T>(
+  locale: Locale,
+  copies: { ru: T; uk?: T; en: T },
+): T {
+  if (locale === 'en') return copies.en
+  if (locale === 'uk') return copies.uk ?? copies.ru
+  return copies.ru
 }

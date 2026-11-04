@@ -1,43 +1,43 @@
 {
   "seo": {
     "heroImageAlt": "WayOfProcessing — Stripe payment system setup for business",
-    "bottomTitle": "Stripe as a payment system for international business",
-    "bottomText": "Stripe is an international payment system for cards, wallets and subscriptions online. WayOfProcessing helps teams in the EU, UK, US and CIS connect processing: merchant account, checkout, payment routing, CRM and payouts in EUR, USD or USDT.\n\nA typical path: niche review → jurisdiction (GB, HK, CY, PL, EE, CZ) or rental/purchase format → go-live from 3 days. Below: guides on Stripe as a payment system and our setup services.",
+    "bottomTitle": "Rent, buy and Stripe processing for business",
+    "bottomText": "WayOfProcessing: rent or buy a Stripe account, turnkey processing, or a company plus bank package. Fees from 1.5%, basic launch from 3 days, payouts in EUR, USD or USDT. Below: setup services and guides on Stripe as a payment system.\n\nTypical path: niche review → rental, purchase or jurisdiction (GB, HK, CY, PL, EE, CZ) → checkout and payouts. Stripe may request documents or restrict an account — we state that before launch.",
     "guidesHeading": "Guides on Stripe and payment systems",
     "servicesHeading": "Stripe setup services",
-    "faqHeading": "FAQ about Stripe and payment systems",
+    "faqHeading": "FAQ on renting, buying and Stripe processing",
     "faq": [
       {
-        "question": "What is Stripe as a payment system?",
-        "answer": "Stripe is an international payment system and platform for accepting cards, digital wallets and subscriptions online. Businesses use it for website checkout, API integrations, invoicing and bank payouts."
+        "question": "How much does Stripe processing cost?",
+        "answer": "Fees start from 1.5%. The exact rate depends on niche, volume and format (rental, purchase or turnkey processing). We quote after reviewing the site."
+      },
+      {
+        "question": "How fast can I start accepting payments?",
+        "answer": "Basic setup from 3 business days with a ready site and agreed niche. Timing grows if you need a custom MCC, routing or a company plus bank package."
+      },
+      {
+        "question": "Rent or buy a Stripe account — which to choose?",
+        "answer": "Rent for a pilot and a fast start. Buy when volume is predictable and you need your own access. Compare options on the rent vs buy page."
+      },
+      {
+        "question": "Do you guarantee Stripe will not block the account?",
+        "answer": "No. Stripe decides verification, limits and reviews. We match the setup to the niche and can add routing, but we do not promise approval or a life without checks."
+      },
+      {
+        "question": "Do I need a company and a bank?",
+        "answer": "For a long-term stack — yes: company, bank account and Stripe. For a pilot, rental is often enough. Jurisdictions: GB, HK, CY, PL, EE, CZ."
       },
       {
         "question": "What is WayOfProcessing?",
-        "answer": "WayOfProcessing helps connect international processing via Stripe: merchant account, checkout, payment routing, CRM, niche consulting and launch support."
+        "answer": "A Stripe setup service: account rental or purchase, processing, CRM and support. Operated by MSM Financial Consultancy Limited, United Kingdom."
       },
       {
-        "question": "How much does Stripe processing cost with WayOfProcessing?",
-        "answer": "Processing fees start from 1.5%. The exact rate depends on your niche, payment volume and chosen solution. A free consultation helps find the right plan."
+        "question": "What is payment routing?",
+        "answer": "Switching transactions to a backup channel if the primary account is under review. It reduces storefront downtime but does not remove Stripe’s risk of restrictions."
       },
       {
-        "question": "Which niches can connect Stripe processing?",
-        "answer": "We work with e-commerce, SaaS, marketplaces, subscriptions, online courses and some high-risk verticals after reviewing the site and dispute model."
-      },
-      {
-        "question": "Rent or buy a merchant account — which to choose?",
-        "answer": "Rent fits pilots and a fast go-live. Buy when volume is predictable and you need your own access perimeter. On a call we compare both for your niche."
-      },
-      {
-        "question": "How fast can I start accepting Stripe payments?",
-        "answer": "Basic setup from 3 business days with a ready site and agreed niche. Timing depends on format (Payment Link, API, routing) and entity bundle."
-      },
-      {
-        "question": "What is payment routing and why does it matter?",
-        "answer": "Payment routing switches transactions to a backup channel if the primary Stripe account is unavailable or under review — so checkout keeps working."
-      },
-      {
-        "question": "How do I contact WayOfProcessing?",
-        "answer": "Submit a request on the website, email hello@wayofprocessing.com or message @wayofprocessing on Telegram. The team replies on Telegram and offers free consultations."
+        "question": "How do I get in touch?",
+        "answer": "Use the site form, hello@wayofprocessing.com or Telegram @wayofprocessing. A person replies; we quote rate and timing after the niche review."
       }
     ]
   },
@@ -55,10 +55,12 @@
     "openContact": "Leave a request"
   },
   "hero": {
-    "headline": "Accept payments from anywhere in the world with",
-    "stripe": "Stripe",
-    "badge": "Processing for any niche from 1.5%",
-    "description": "We connect Stripe as your payment system: online cards, checkout, routing and payouts in EUR, USD or USDT — from 3 days.",
+    "headline": "Buy or rent a",
+    "stripe": "Stripe account",
+    "badge": "Processing from 1.5% · launch from 3 days",
+    "description": "Account rental or purchase, turnkey processing and payouts in EUR, USD or USDT after a niche review.",
+    "offerRent": "Rent a Stripe account",
+    "offerBuy": "Buy a Stripe account",
     "cardLabel": "Leave a request",
     "cardHighlight": "from 1.5%",
     "cardSub": "Free consultation on Stripe setup for your niche"
@@ -71,23 +73,23 @@
     "cta": "Get a free consultation",
     "lead": "We will take care of:",
     "item1": "Opening, closing and all legal entity reporting. You run the business — we handle all the paperwork",
-    "item2Prefix": "Account registration and any issues — you are ",
-    "item2Bold": "guaranteed to receive a working account",
+    "item2Prefix": "Account registration and support — you ",
+    "item2Bold": "get access after a niche review, with no promise that Stripe will approve it",
     "item3": "Connecting your personal neobank account to the Stripe account for withdrawals"
   },
   "stats": {
     "heading": "We know our business:",
     "stat1": {
-      "value": "1100+",
-      "desc": "accounts created for our clients. We know solutions to all possible problems"
+      "value": "from 1.5%",
+      "desc": "processing fee. The exact rate is calculated from the niche after you apply"
     },
     "stat2": {
-      "value": "7 years",
-      "desc": "working with Stripe. We know the system inside out"
+      "value": "from 3 days",
+      "desc": "basic setup, once the site and activity description are ready"
     },
     "stat3": {
-      "value": "$53M",
-      "desc": "total client payment volume"
+      "value": "04820256",
+      "desc": "MSM Financial Consultancy Limited number in the UK Companies House register"
     },
     "cta": "Learn more about WayOfProcessing"
   },
@@ -147,11 +149,11 @@
     },
     "step2": {
       "title": "Stripe expertise A to Z",
-      "desc": "7 years with Stripe and 1100+ accounts created. We know every nuance of the system and how to solve common issues."
+      "desc": "Before launch we review the niche, MCC and payout scheme. Limits, reviews and chargebacks are discussed up front — we do not promise Stripe will accept every project."
     },
     "step3": {
       "title": "Reporting and taxes covered",
-      "desc": "We handle all entity reporting and tax obligations. Accounts are registered in tax-free jurisdictions."
+      "desc": "We prepare entity reporting in the country we register. Tax treatment follows that country's law. We do not promise zero tax."
     },
     "step4": {
       "title": "Real human support",
@@ -169,8 +171,8 @@
       "desc": "We hand over verified accounts with real turnover — they handle limits more smoothly than freshly registered ones. Up to $500,000 per month."
     },
     "tax": {
-      "title": "Jurisdictions without extra tax drag",
-      "desc": "We pick a registration country for your model — so you don't overpay tax or drown in compliance paperwork."
+      "title": "A jurisdiction that fits the bank",
+      "desc": "We choose the country of registration so the bank and Stripe can complete verification. Tax consequences are for your own adviser. This is not a zero-tax scheme."
     },
     "crm": {
       "title": "See every payment in real time",
@@ -243,7 +245,8 @@
     "ctaTitle": "Ready to connect Stripe?",
     "ctaText": "Submit a request — we'll discuss rates, timelines and find the right solution for your niche. Free expert consultation.",
     "ctaButton": "Leave a request",
-    "relatedServices": "Related services"
+    "relatedServices": "Related services",
+    "inlineServicesLead": "For this task, see:"
   },
   "contact": {
     "heading": "Request a connection",
@@ -396,29 +399,82 @@
     "ctaHeading": "Ready to get started?",
     "ctaDescription": "Get a free consultation and personalized offer for your business",
     "relatedServices": "Other services",
-    "relatedBlog": "Related articles"
+    "relatedBlog": "Related articles",
+    "tocHeading": "Contents",
+    "tocOverview": "Overview",
+    "tocDetails": "Sections",
+    "tocMore": "More",
+    "tocFaq": "FAQ",
+    "specialistsToc": "What we handle",
+
+
+    "processHeading": "How setup works",
+    "processLead": "Clear steps with no promise to bypass Stripe rules: assessment first, then format and paperwork.",
+    "exploreHeading": "See also",
+    "exploreLead": "Compare formats, pick a country or niche, and jump to related services.",
+    "detailsHeading": "Service details",
+    "process": [
+      {
+        "title": "Niche and site review",
+        "description": "We map the model, customer geo and public offer before any paperwork."
+      },
+      {
+        "title": "Choose the format",
+        "description": "Rent, buy, turnkey processing, or company + bank — matched to timeline and risk."
+      },
+      {
+        "title": "Documents and launch",
+        "description": "We prepare the stack, bank/account and checkout. Timelines depend on Stripe and bank review."
+      },
+      {
+        "title": "Ongoing support",
+        "description": "Help with payouts, review requests and next steps after go-live."
+      }
+    ],
+    "explore": {
+      "services": "All Stripe services",
+      "compare": "Rent vs buy",
+      "jurisdictions": "Stripe by country",
+      "niches": "Stripe niches",
+      "ukraine": "Stripe for Ukraine",
+      "issues": "Blocks and review"
+    }
   },
+
   "footer": {
     "navLabel": "Navigation",
     "brandBold": "WAYOF",
     "brandRegular": "PROCESSING",
     "copyright": "All rights reserved ©{{year}} WayOfProcessing",
     "legal": "Stripe payment system setup for business: processing, merchant account, routing and 24/7 support. WayOfProcessing is an independent service, not affiliated with Stripe, Inc.",
+    "companyName": "MSM FINANCIAL CONSULTANCY LIMITED",
+    "companyMeta": "United Kingdom · Company number 04820256",
+    "companyAddress": "45 Avion Gardens, Kings Hill, West Malling, England, ME19 4RH",
     "infoHeading": "Information",
     "servicesHeading": "Services",
     "guidesHeading": "Stripe & payments",
     "allGuides": "All blog articles",
     "about": "About company",
     "services": "All services",
+    "compare": "Rent or buy",
+    "jurisdictions": "Stripe by country",
+    "niches": "Stripe niches",
+    "ukraine": "Stripe for Ukraine",
+    "issues": "Stripe blocks",
+    "siteMap": "Sitemap",
     "clients": "Our clients",
+    "contacts": "Contacts",
     "blog": "Blog",
     "contactHeading": "Contact us",
     "telegramChannel": "Telegram channel",
     "telegramOperator": "Telegram operator",
     "support247": "24/7 support",
     "aboutHeading": "WayOfProcessing",
-    "aboutText": "WayOfProcessing helps connect Stripe as a payment system: merchant account, checkout, payment routing, offshore company registration and free expert consultations.",
+    "aboutText": "WayOfProcessing helps connect Stripe as a payment system: merchant account, checkout, payment routing, a company with a bank account, and a free consultation. The service is not affiliated with Stripe, Inc.",
+    "siteMap": "Site map",
     "privacy": "Privacy policy",
+    "terms": "Terms",
+    "disclaimer": "Disclaimer",
     "developedBy": "Developed by"
   }
 }

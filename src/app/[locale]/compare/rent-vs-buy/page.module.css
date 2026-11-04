@@ -1,0 +1,124 @@
+.page {
+  min-height: 100vh;
+  background: var(--white);
+  padding: var(--page-shell-pad-top) var(--page-padding-x) var(--section-padding-y);
+}
+
+.inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+}
+
+.header {
+  max-width: var(--prose-max);
+  margin-bottom: var(--space-10);
+}
+
+.title {
+  font-family: var(--font-sans);
+  font-weight: 800;
+  font-size: var(--page-h1);
+  line-height: var(--leading-tight);
+  color: var(--gray-900);
+  letter-spacing: var(--tracking-tight);
+  margin: 0 0 var(--space-4);
+  text-wrap: balance;
+}
+
+.lead {
+  font-size: var(--text-lg);
+  line-height: var(--leading-body);
+  color: var(--gray-500);
+  margin: 0;
+  max-width: 65ch;
+}
+
+.tableWrap {
+  overflow-x: auto;
+  margin-bottom: var(--space-10);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 640px;
+}
+
+.table th,
+.table td {
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 14px 12px;
+  text-align: left;
+  vertical-align: top;
+  font-size: var(--text-sm);
+  line-height: var(--leading-body);
+  color: var(--gray-500);
+}
+
+.table thead th {
+  font-weight: 700;
+  color: var(--gray-900);
+}
+
+.table tbody th {
+  font-weight: 700;
+  color: var(--gray-900);
+  width: 18%;
+}
+
+.ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  margin-bottom: var(--space-12);
+}
+
+.cta {
+  font-weight: 600;
+  color: var(--stripe-blue-hover);
+  text-decoration: none;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.cta:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.faqTitle {
+  font-size: var(--page-h2);
+  font-weight: 800;
+  color: var(--gray-900);
+  margin: 0 0 var(--space-5);
+  letter-spacing: -0.02em;
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  max-width: var(--prose-max);
+}
+
+.faqItem dt {
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 6px;
+  font-size: var(--text-base);
+}
+
+.faqItem dd {
+  margin: 0;
+  color: var(--gray-500);
+  line-height: var(--leading-body);
+  font-size: var(--text-base);
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: var(--page-shell-pad-top-md) var(--page-padding-x) var(--section-padding-y-md);
+  }
+}
+

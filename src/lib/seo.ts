@@ -26,6 +26,7 @@ type ArticleMetaInput = {
   category: string
   keywords?: string[]
   ogTitle?: string
+  noIndex?: boolean
 }
 
 const googleBot = {
@@ -42,10 +43,12 @@ export function absoluteUrl(path: string) {
 
 export function buildHreflangLanguages(path: string) {
   const ruUrl = absoluteUrl(localePath(path, 'ru'))
+  const ukUrl = absoluteUrl(localePath(path, 'uk'))
   const enUrl = absoluteUrl(localePath(path, 'en'))
 
   return {
     ru: ruUrl,
+    uk: ukUrl,
     en: enUrl,
     'x-default': ruUrl,
   }
@@ -86,7 +89,8 @@ function buildSharedMeta({
   const localizedPath = localePath(path, locale)
   const url = absoluteUrl(localizedPath)
   const ogLocale = localeOgLocale(locale)
-  const alternateOgLocale = localeOgLocale(locale === 'ru' ? 'en' : 'ru')
+  const alternateOgLocale =
+    locale === 'en' ? localeOgLocale('uk') : locale === 'uk' ? localeOgLocale('ru') : localeOgLocale('en')
   const imagePath = ogImage ?? siteConfig.ogImage
   const imageUrl = imagePath.startsWith('http') ? imagePath : absoluteUrl(imagePath)
 
@@ -96,7 +100,7 @@ function buildSharedMeta({
     ...(keywords?.length ? { keywords } : {}),
     alternates: noIndex ? undefined : buildHreflang(path, locale),
     robots: noIndex
-      ? { index: false, follow: false }
+      ? { index: false, follow: true }
       : { index: true, follow: true, googleBot },
     other: {
       'content-language': localeOgLocale(locale).replace('_', '-'),
@@ -170,6 +174,7 @@ export function buildArticleMetadata({
   category,
   keywords,
   ogTitle,
+  noIndex = false,
 }: ArticleMetaInput): Metadata {
   const pageTitle = `${title} | ${siteConfig.name}`
   const shared = buildSharedMeta({
@@ -179,6 +184,7 @@ export function buildArticleMetadata({
     path,
     locale,
     keywords,
+    noIndex,
   })
   const ogImageUrl = image.startsWith('http') ? image : absoluteUrl(image)
 
@@ -251,7 +257,7 @@ export function buildWebPageJsonLd({
   path: string
   locale: Locale
   dateModified?: string
-  pageType?: 'WebPage' | 'PrivacyPolicy' | 'CollectionPage'
+  pageType?: 'WebPage' | 'PrivacyPolicy' | 'CollectionPage' | 'AboutPage'
   aboutId?: string
 }) {
   const localizedPath = localePath(path, locale)

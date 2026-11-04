@@ -1,0 +1,125 @@
+.page {
+  min-height: 100vh;
+  background: var(--white);
+  padding: var(--page-shell-pad-top) var(--page-padding-x) var(--section-padding-y);
+}
+
+.header {
+  width: 100%;
+  max-width: var(--prose-max);
+  margin: 0 auto var(--space-12);
+}
+
+.title {
+  font-family: var(--font-sans);
+  font-weight: 800;
+  font-size: var(--page-h1);
+  line-height: var(--leading-tight);
+  color: var(--gray-900);
+  letter-spacing: var(--tracking-tight);
+  margin: 0 0 var(--space-4);
+  text-wrap: balance;
+}
+
+.lead {
+  font-size: var(--text-lg);
+  line-height: var(--leading-body);
+  color: var(--gray-500);
+  margin: 0 0 var(--space-5);
+  max-width: 65ch;
+}
+
+.links {
+  list-style: none;
+  margin: var(--space-5) 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--stripe-blue-hover);
+  text-decoration: none;
+  line-height: 1.35;
+}
+
+.links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.links a span {
+  color: var(--stripe-blue);
+  transition: transform 0.2s var(--ease-out);
+}
+
+.links a:hover span {
+  transform: translateX(3px);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-6);
+  width: 100%;
+  max-width: var(--content-max);
+  margin: 0 auto var(--space-12);
+}
+
+.faq {
+  width: 100%;
+  max-width: var(--prose-max);
+  margin: 0 auto;
+}
+
+.faqTitle {
+  font-size: var(--page-h2);
+  font-weight: 800;
+  color: var(--gray-900);
+  margin: 0 0 var(--space-5);
+  letter-spacing: -0.02em;
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.faqItem dt {
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 6px;
+  font-size: var(--text-base);
+}
+
+.faqItem dd {
+  margin: 0;
+  color: var(--gray-500);
+  line-height: var(--leading-body);
+  font-size: var(--text-base);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: var(--page-shell-pad-top-md) var(--page-padding-x) var(--section-padding-y-md);
+  }
+
+  .header {
+    margin-bottom: var(--space-10);
+  }
+}
+

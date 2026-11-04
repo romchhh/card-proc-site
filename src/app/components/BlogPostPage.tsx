@@ -4,8 +4,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
 import type { BlogPost } from '@/lib/blog'
-import { formatBlogDate, getRelatedServiceSlugs, localizePost } from '@/lib/blog'
+import { formatBlogDate, getRelatedServiceSlugs, localizePost, SERVICE_LINK_ANCHORS } from '@/lib/blog'
 import { getServiceBySlug, getServiceView } from '@/lib/services'
+import { labelAnd } from '@/lib/i18n/labels'
 import { useLocale, useLocalizedPath } from '@/lib/i18n/use-locale'
 import { useContactModal } from './ContactModalProvider'
 import BlogPostContent from './BlogPostContent'
@@ -87,6 +88,21 @@ export default function BlogPostPage({
         </header>
 
         <BlogPostContent body={view.body} />
+
+        {relatedServices.length > 0 && (
+          <p className={styles.paragraph}>
+            {t('blog.inlineServicesLead')}{' '}
+            {relatedServices.map((item, index) => (
+              <span key={item.slug}>
+                {index > 0 ? (index === relatedServices.length - 1 ? labelAnd(locale) : ', ') : null}
+                <Link href={lp(`/services/${item.slug}`)} className={styles.inlineLink}>
+                  {SERVICE_LINK_ANCHORS[locale][item.slug as keyof (typeof SERVICE_LINK_ANCHORS)['ru']]}
+                </Link>
+              </span>
+            ))}
+            .
+          </p>
+        )}
 
         {relatedServices.length > 0 && (
           <nav className={styles.serviceLinks} aria-label={t('blog.relatedServices')}>

@@ -31,14 +31,25 @@ function ItemIcon({ type }: { type: typeof ITEMS[number] }) {
   return <span className={styles.iconBox} aria-hidden="true">{icons[type]}</span>
 }
 
-export default function SpecialistsSection() {
+type Props = {
+  /** Slightly smaller heading — for service pages */
+  compact?: boolean
+}
+
+export default function SpecialistsSection({ compact = false }: Props) {
   const { t } = useTranslation()
   const { open: openContactModal } = useContactModal()
 
   return (
-    <section id="specialists" className={styles.section}>
+    <section
+      id="specialists"
+      className={`${styles.section} ${compact ? styles.sectionCompact : ''}`}
+    >
       <div className={styles.inner}>
-        <h2 className={styles.heading}>{t('specialists.heading')}</h2>
+        <h2 className={`${styles.heading} ${compact ? styles.headingCompact : ''}`}>
+          {t('specialists.heading')}
+        </h2>
+
 
         <p className={styles.description}>
           {t('specialists.descriptionPrefix')}

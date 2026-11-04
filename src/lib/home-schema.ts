@@ -1,21 +1,22 @@
 import en from '@/locales/en.json'
 import ru from '@/locales/ru.json'
+import uk from '@/locales/uk.json'
 import { getAllPosts, localizePost } from './blog'
 import { buildFaqPageJsonLd } from './service-seo'
 import { INDEX_BLOG_SLUGS } from './seo-index'
 import { SERVICE_SLUGS, getServiceBySlug, getServiceView } from './services'
-import { localePath, type Locale } from './i18n/config'
+import { localePath, pickLocaleCopy, type Locale } from './i18n/config'
 import { absoluteUrl } from './seo'
-import { siteConfig } from './site'
+import { siteConfig, siteDescription, siteTitle } from './site'
 
 const HOW_WE_WORK_STEPS = ['step1', 'step2', 'step3', 'step4'] as const
 
 export function buildHomeJsonLd(locale: Locale) {
-  const copy = locale === 'en' ? en : ru
+  const copy = pickLocaleCopy(locale, { ru, uk, en })
   const faqItems = copy.seo.faq
   const homePath = localePath('/', locale)
-  const title = locale === 'en' ? siteConfig.titleEn : siteConfig.titleRu
-  const description = locale === 'en' ? siteConfig.descriptionEn : siteConfig.descriptionRu
+  const title = siteTitle(locale)
+  const description = siteDescription(locale)
 
   return {
     '@context': 'https://schema.org',
@@ -24,12 +25,29 @@ export function buildHomeJsonLd(locale: Locale) {
         '@type': 'Organization',
         '@id': `${siteConfig.url}/#organization`,
         name: siteConfig.name,
-        legalName: siteConfig.name,
+        legalName: 'MSM FINANCIAL CONSULTANCY LIMITED',
+        alternateName: 'WayOfProcessing',
         url: siteConfig.url,
-        slogan: siteConfig.seo.slogan,
+        slogan: pickLocaleCopy(locale, {
+          ru: siteConfig.seo.slogan,
+          uk: siteConfig.seo.sloganUk,
+          en: siteConfig.seo.slogan,
+        }),
         email: siteConfig.email,
         description,
         knowsAbout: siteConfig.seo.knowsAbout,
+        identifier: {
+          '@type': 'PropertyValue',
+          name: 'Company Number',
+          value: '04820256',
+        },
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '45 Avion Gardens, Kings Hill',
+          addressLocality: 'West Malling',
+          postalCode: 'ME19 4RH',
+          addressCountry: 'GB',
+        },
         logo: {
           '@type': 'ImageObject',
           url: absoluteUrl('/icon.svg'),
@@ -42,11 +60,15 @@ export function buildHomeJsonLd(locale: Locale) {
             contactType: 'customer support',
             email: siteConfig.email,
             url: siteConfig.telegramOperatorUrl,
-            availableLanguage: ['Russian', 'English'],
+            availableLanguage: ['Russian', 'Ukrainian', 'English'],
             areaServed: siteConfig.seo.areaServed,
           },
         ],
-        sameAs: [siteConfig.telegramChannelUrl, siteConfig.telegramOperatorUrl],
+        sameAs: [
+          siteConfig.telegramChannelUrl,
+          siteConfig.telegramOperatorUrl,
+          'https://find-and-update.company-information.service.gov.uk/company/04820256',
+        ],
       },
       {
         '@type': 'WebSite',
@@ -55,27 +77,36 @@ export function buildHomeJsonLd(locale: Locale) {
         url: siteConfig.url,
         description,
         publisher: { '@id': `${siteConfig.url}/#organization` },
-        inLanguage: ['ru', 'en'],
+        inLanguage: ['ru', 'uk', 'en'],
         potentialAction: [
           {
             '@type': 'CommunicateAction',
             target: absoluteUrl(`${homePath}#kontakt`),
-            name: locale === 'en' ? 'Submit a request' : 'Оставить заявку',
+            name: pickLocaleCopy(locale, {
+              ru: 'Оставить заявку',
+              uk: 'Залишити заявку',
+              en: 'Submit a request',
+            }),
           },
           {
             '@type': 'ReadAction',
             target: absoluteUrl(localePath('/blog', locale)),
-            name: locale === 'en' ? `Read ${siteConfig.name} blog` : `Читать блог ${siteConfig.name}`,
+            name: pickLocaleCopy(locale, {
+              ru: `Читать блог ${siteConfig.name}`,
+              uk: `Читати блог ${siteConfig.name}`,
+              en: `Read ${siteConfig.name} blog`,
+            }),
           },
         ],
       },
       {
         '@type': 'FinancialService',
         '@id': `${siteConfig.url}/#service`,
-        name:
-          locale === 'en'
-            ? `${siteConfig.name} — Stripe payment system & processing`
-            : `${siteConfig.name} — платёжная система Stripe и процессинг`,
+        name: pickLocaleCopy(locale, {
+          ru: `${siteConfig.name} — платёжная система Stripe и процессинг`,
+          uk: `${siteConfig.name} — платіжна система Stripe і процесинг`,
+          en: `${siteConfig.name} — Stripe payment system & processing`,
+        }),
         description,
         url: absoluteUrl(homePath),
         provider: { '@id': `${siteConfig.url}/#organization` },
@@ -91,16 +122,24 @@ export function buildHomeJsonLd(locale: Locale) {
           'International payment acceptance',
           'Merchant account setup',
         ],
-        termsOfService: absoluteUrl(localePath('/privacy', locale)),
+        termsOfService: absoluteUrl(localePath('/terms', locale)),
         offers: {
           '@type': 'Offer',
-          name: locale === 'en' ? 'Stripe processing from 1.5%' : 'Процессинг Stripe от 1.5%',
-          description,
+          name: pickLocaleCopy(locale, {
+            ru: 'Процессинг Stripe — комиссия от 1.5%',
+            uk: 'Процесинг Stripe — комісія від 1.5%',
+            en: 'Stripe processing — commission from 1.5%',
+          }),
+          description: pickLocaleCopy(locale, {
+            ru: 'Ориентир комиссии от 1.5% в зависимости от ниши, оборота и routing. Не фиксированная гарантированная ставка.',
+            uk: 'Орієнтир комісії від 1.5% залежно від ніші, обороту й routing. Не фіксована гарантована ставка.',
+            en: 'Indicative commission from 1.5% depending on niche, volume and routing. Not a fixed guaranteed rate.',
+          }),
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '1.5',
+            minPrice: '1.5',
             priceCurrency: 'USD',
-            unitText: 'percent commission',
+            unitText: 'percent commission from',
           },
           availability: 'https://schema.org/InStock',
           url: absoluteUrl(`${homePath}#kontakt`),
@@ -128,10 +167,11 @@ export function buildHomeJsonLd(locale: Locale) {
       {
         '@type': 'ItemList',
         '@id': `${absoluteUrl(homePath)}#guides-list`,
-        name:
-          locale === 'en'
-            ? 'Stripe payment system guides'
-            : 'Материалы о Stripe как платёжной системе',
+        name: pickLocaleCopy(locale, {
+          ru: 'Материалы о Stripe как платёжной системе',
+          uk: 'Матеріали про Stripe як платіжну систему',
+          en: 'Stripe payment system guides',
+        }),
         itemListElement: INDEX_BLOG_SLUGS.map((slug, index) => {
           const post = getAllPosts().find((item) => item.slug === slug)
           if (!post) return null
@@ -147,7 +187,11 @@ export function buildHomeJsonLd(locale: Locale) {
       {
         '@type': 'ItemList',
         '@id': `${absoluteUrl(homePath)}#services-list`,
-        name: locale === 'en' ? `${siteConfig.name} services` : `Услуги ${siteConfig.name}`,
+        name: pickLocaleCopy(locale, {
+          ru: `Услуги ${siteConfig.name}`,
+          uk: `Послуги ${siteConfig.name}`,
+          en: `${siteConfig.name} services`,
+        }),
         itemListElement: SERVICE_SLUGS.map((slug, index) => {
           const service = getServiceBySlug(slug)
           if (!service) return null
@@ -164,10 +208,11 @@ export function buildHomeJsonLd(locale: Locale) {
         '@type': 'HowTo',
         '@id': `${absoluteUrl(homePath)}#how-to`,
         name: copy.howWeWork.heading,
-        description:
-          locale === 'en'
-            ? `How ${siteConfig.name} connects Stripe: entity, bank, account, reporting and expert support.`
-            : `Как ${siteConfig.name} подключает Stripe: юрлицо, банк, аккаунт, отчётность и поддержка экспертов.`,
+        description: pickLocaleCopy(locale, {
+          ru: `Как ${siteConfig.name} подключает Stripe: юрлицо, банк, аккаунт, отчётность и поддержка экспертов.`,
+          uk: `Як ${siteConfig.name} підключає Stripe: юрособа, банк, акаунт, звітність і підтримка експертів.`,
+          en: `How ${siteConfig.name} connects Stripe: entity, bank, account, reporting and expert support.`,
+        }),
         totalTime: 'P3D',
         step: HOW_WE_WORK_STEPS.map((key, index) => ({
           '@type': 'HowToStep',

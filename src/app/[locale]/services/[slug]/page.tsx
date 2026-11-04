@@ -12,8 +12,9 @@ import {
   SERVICE_IMAGES,
   type ServiceSlug,
 } from '@/lib/services'
-import { buildServiceJsonLd } from '@/lib/service-seo'
+import { buildServiceJsonLd, getDefaultServiceProcess } from '@/lib/service-seo'
 import { isValidLocale, localeHashPath, localePath, locales, type Locale } from '@/lib/i18n/config'
+import { labelServices } from '@/lib/i18n/labels'
 import { buildPageMetadata } from '@/lib/seo'
 import { siteConfig } from '@/lib/site'
 
@@ -54,13 +55,12 @@ export default async function ServiceRoute({ params }: Props) {
   if (!service) notFound()
 
   const view = getServiceView(service, locale)
-  const isEn = locale === 'en'
   const servicePath = localePath(`/services/${slug}`, locale)
-  const servicesLabel = isEn ? 'Services' : 'Услуги'
+  const servicesLabel = labelServices(locale)
 
   return (
     <>
-      <JsonLdScript data={buildServiceJsonLd({ view, slug, locale })} />
+      <JsonLdScript data={buildServiceJsonLd({ view, slug, locale, processSteps: getDefaultServiceProcess(locale) })} />
       <Navbar transparent />
       <main>
         <ServicePage

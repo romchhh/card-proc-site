@@ -110,7 +110,7 @@
 
 @media (max-width: 768px) {
   .section {
-    padding: var(--section-padding-y-md) var(--page-padding-x-md);
+    padding-block: var(--section-padding-y-md);
   }
 
   .heading {
@@ -127,9 +127,3 @@
   }
 }
 
-@media (max-width: 390px) {
-  .section {
-    padding-left: var(--page-padding-x-sm);
-    padding-right: var(--page-padding-x-sm);
-  }
-}

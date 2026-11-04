@@ -10,6 +10,7 @@ import styles from './LangSwitcher.module.css'
 
 const LANGUAGES = [
   { code: 'ru' as const, label: 'Русский' },
+  { code: 'uk' as const, label: 'Українська' },
   { code: 'en' as const, label: 'English' },
 ]
 

@@ -5,6 +5,10 @@
   padding: var(--section-padding-y) var(--page-padding-x);
 }
 
+.section .inner {
+  max-width: var(--content-max);
+}
+
 .section::before {
   content: '';
   position: absolute;
@@ -34,6 +38,31 @@
   max-width: 820px;
   margin-left: auto;
   margin-right: auto;
+  text-wrap: balance;
+}
+
+.sectionCompact {
+  padding: clamp(48px, 7vw, 72px) var(--page-padding-x);
+}
+
+.headingCompact {
+  font-size: var(--page-h2);
+  margin-bottom: var(--space-5);
+  max-width: 720px;
+}
+
+.sectionCompact .description {
+  font-size: clamp(16px, 1.6vw, 19px);
+  margin-bottom: 24px;
+}
+
+.sectionCompact .lead {
+  margin-bottom: 28px;
+  font-size: var(--text-base);
+}
+
+.sectionCompact .cta {
+  margin-top: 36px;
 }
 
 .description {
@@ -161,7 +190,15 @@
 
 @media (max-width: 768px) {
   .section {
-    padding: var(--section-padding-y-md) var(--page-padding-x-md);
+    padding-block: var(--section-padding-y-md);
+  }
+
+  .sectionCompact {
+    padding: 40px var(--page-padding-x);
+  }
+
+  .headingCompact {
+    font-size: var(--page-h2);
   }
 
   .cta {
@@ -177,9 +214,3 @@
   }
 }
 
-@media (max-width: 390px) {
-  .section {
-    padding-left: var(--page-padding-x-sm);
-    padding-right: var(--page-padding-x-sm);
-  }
-}

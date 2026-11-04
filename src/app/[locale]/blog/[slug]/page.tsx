@@ -5,11 +5,14 @@ import BlogPostPage from '../../../components/BlogPostPage'
 import Footer from '../../../components/Footer'
 import ScrollReveal from '../../../components/ScrollReveal'
 import Breadcrumbs from '../../../components/seo/Breadcrumbs'
+import PriorityLinks from '../../../components/seo/PriorityLinks'
 import JsonLdScript from '../../../components/seo/JsonLdScript'
 import { buildBlogPostingJsonLd, getPostKeywords } from '@/lib/blog-seo'
-import { getAllSlugs, getPostBySlug, getRelatedPosts } from '@/lib/blog'
+import { getAllSlugs, getPostBySlug, getRelatedPosts, localizePost } from '@/lib/blog'
 import { isValidLocale, localePath, locales, type Locale } from '@/lib/i18n/config'
+import { labelBlog, labelReadAlso } from '@/lib/i18n/labels'
 import { absoluteUrl, buildArticleMetadata, buildBreadcrumbJsonLd, buildGraphJsonLd, buildWebPageJsonLd } from '@/lib/seo'
+import { isIndexBlogSlug } from '@/lib/seo-index'
 import { siteConfig } from '@/lib/site'
 
 type Props = { params: Promise<{ locale: string; slug: string }> }
@@ -26,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!post) return {}
 
   const locale = (isValidLocale(rawLocale) ? rawLocale : 'ru') as Locale
-  const view = post[locale]
+  const view = localizePost(post, locale)
 
   return buildArticleMetadata({
     title: view.title,
@@ -39,6 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     category: view.category,
     keywords: getPostKeywords(post, locale),
     ogTitle: view.title,
+    noIndex: !isIndexBlogSlug(post.slug),
   })
 }
 
@@ -48,15 +52,14 @@ export default async function BlogPost({ params }: Props) {
   if (!post) notFound()
 
   const locale = (isValidLocale(rawLocale) ? rawLocale : 'ru') as Locale
-  const view = post[locale]
+  const view = localizePost(post, locale)
   const related = getRelatedPosts(slug)
   const postPath = localePath(`/blog/${post.slug}`, locale)
-  const isEn = locale === 'en'
 
   const breadcrumb = buildBreadcrumbJsonLd(
     [
       { name: siteConfig.name, path: '/' },
-      { name: isEn ? 'Blog' : 'Блог', path: '/blog' },
+      { name: labelBlog(locale), path: '/blog' },
       { name: view.title, path: `/blog/${post.slug}` },
     ],
     locale,
@@ -74,11 +77,11 @@ export default async function BlogPost({ params }: Props) {
   const relatedList = related.length > 0
     ? {
         '@type': 'ItemList',
-        name: isEn ? 'Read also' : 'Читайте также',
+        name: labelReadAlso(locale),
         itemListElement: related.map((item, index) => ({
           '@type': 'ListItem',
           position: index + 1,
-          name: item[locale].title,
+          name: localizePost(item, locale).title,
           url: absoluteUrl(localePath(`/blog/${item.slug}`, locale)),
         })),
       }
@@ -95,7 +98,7 @@ export default async function BlogPost({ params }: Props) {
       <Breadcrumbs
         items={[
           { name: siteConfig.name, path: localePath('/', locale) },
-          { name: isEn ? 'Blog' : 'Блог', path: localePath('/blog', locale) },
+          { name: labelBlog(locale), path: localePath('/blog', locale) },
           { name: view.title, path: postPath },
         ]}
       />
@@ -104,6 +107,7 @@ export default async function BlogPost({ params }: Props) {
           <BlogPostPage post={post} related={related} />
         </ScrollReveal>
       </main>
+      <PriorityLinks locale={locale} />
       <Footer />
     </>
   )

@@ -1,28 +1,31 @@
+/* Legal / contacts text pages — shares ContentPage tokens */
+
 .page {
   min-height: 100vh;
   background: var(--white);
-  padding: 140px var(--page-padding-x) var(--section-padding-y);
+  padding: var(--page-shell-pad-top) var(--page-padding-x) var(--section-padding-y);
 }
 
 .inner {
-  max-width: 760px;
+  max-width: var(--prose-max);
   margin: 0 auto;
 }
 
 .header {
-  margin-bottom: 40px;
-  padding-bottom: 32px;
-  border-bottom: 1px solid rgba(10, 37, 64, 0.08);
+  margin-bottom: var(--space-8);
+  padding-bottom: var(--space-7);
+  border-bottom: 1px solid var(--border-subtle);
 }
 
 .title {
   font-family: var(--font-sans);
   font-weight: 800;
-  font-size: var(--section-heading);
+  font-size: var(--page-h1);
   line-height: var(--leading-tight);
   color: var(--gray-900);
   letter-spacing: var(--tracking-tight);
-  margin-bottom: 12px;
+  margin: 0 0 var(--space-3);
+  text-wrap: balance;
 }
 
 .updated {
@@ -34,31 +37,32 @@
   font-size: var(--text-lg);
   line-height: var(--leading-body);
   color: var(--gray-500);
-  margin-bottom: 48px;
+  margin: 0 0 var(--space-12);
 }
 
 .sections {
   display: flex;
   flex-direction: column;
-  gap: 36px;
+  gap: var(--space-10);
 }
 
 .section {
-  scroll-margin-top: 120px;
+  scroll-margin-top: 96px;
 }
 
 .sectionTitle {
-  font-size: clamp(20px, 2.2vw, 24px);
-  font-weight: 700;
+  font-size: var(--page-h2);
+  font-weight: 800;
   color: var(--gray-900);
-  margin-bottom: 14px;
+  margin: 0 0 var(--space-4);
   letter-spacing: -0.02em;
+  text-wrap: balance;
 }
 
 .paragraphs {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: var(--space-3);
 }
 
 .paragraphs p,
@@ -77,25 +81,24 @@
 }
 
 .contactLink {
-  color: var(--stripe-blue);
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  color: var(--stripe-blue-hover);
+  font-weight: 600;
+  text-decoration: none;
   transition: color 0.2s;
 }
 
 .contactLink:hover {
-  color: var(--stripe-blue-hover);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 @media (max-width: 768px) {
   .page {
-    padding: 120px var(--page-padding-x-md) var(--section-padding-y-md);
+    padding: var(--page-shell-pad-top-md) var(--page-padding-x) var(--section-padding-y-md);
+  }
+
+  .intro {
+    margin-bottom: var(--space-10);
   }
 }
 
-@media (max-width: 390px) {
-  .page {
-    padding-left: var(--page-padding-x-sm);
-    padding-right: var(--page-padding-x-sm);
-  }
-}

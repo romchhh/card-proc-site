@@ -1,9 +1,10 @@
 import type { BlogLocale, BlogPost } from './blog'
-import { localePath } from './i18n/config'
+import { localizePost } from './blog'
+import { localePath, pickLocaleCopy } from './i18n/config'
 import { absoluteUrl } from './seo'
 import { siteConfig } from './site'
 
-const postKeywords: Record<string, { ru: string[]; en: string[] }> = {
+const postKeywords: Record<string, { ru: string[]; uk?: string[]; en: string[] }> = {
   'stripe-for-your-business': {
     ru: ['stripe платежная система', 'платёжная система stripe', 'stripe для бизнеса', 'подключение stripe', 'приём платежей stripe', 'международные платежи'],
     en: ['stripe payment system', 'stripe for business', 'accept stripe payments', 'stripe integration', 'international payments'],
@@ -71,9 +72,15 @@ const postKeywords: Record<string, { ru: string[]; en: string[] }> = {
 }
 
 export function getPostKeywords(post: BlogPost, locale: BlogLocale): string[] {
-  const custom = postKeywords[post.slug]?.[locale]
-  if (custom) return custom
-  const view = post[locale]
+  const custom = postKeywords[post.slug]
+  if (custom) {
+    return pickLocaleCopy(locale, {
+      ru: custom.ru,
+      uk: custom.uk ?? custom.ru,
+      en: custom.en,
+    })
+  }
+  const view = localizePost(post, locale)
   return [view.title, view.category, 'Stripe', siteConfig.name]
 }
 
@@ -91,7 +98,7 @@ function excerptArticleBody(body: string, maxLength = 500): string {
 }
 
 export function buildBlogPostingJsonLd(post: BlogPost, locale: BlogLocale = 'ru') {
-  const view = post[locale]
+  const view = localizePost(post, locale)
   const path = `/blog/${post.slug}`
   const localizedPath = localePath(path, locale)
   const url = absoluteUrl(localizedPath)
@@ -125,7 +132,7 @@ export function buildBlogPostingJsonLd(post: BlogPost, locale: BlogLocale = 'ru'
       '@type': 'Thing',
       name,
     })),
-    inLanguage: locale === 'en' ? 'en-US' : 'ru-RU',
+    inLanguage: locale === 'en' ? 'en-US' : locale === 'uk' ? 'uk-UA' : 'ru-RU',
     isAccessibleForFree: true,
     isPartOf: { '@id': `${absoluteUrl(blogPath)}#blog` },
     url,
@@ -137,12 +144,16 @@ export function buildBlogItemListJsonLd(posts: BlogPost[], locale: BlogLocale = 
   return {
     '@type': 'ItemList',
     '@id': `${absoluteUrl(blogPath)}#itemlist`,
-    name: locale === 'en' ? `${siteConfig.name} Blog Articles` : `Статьи блога ${siteConfig.name}`,
+    name: pickLocaleCopy(locale, {
+      ru: `Статьи блога ${siteConfig.name}`,
+      uk: `Статті блогу ${siteConfig.name}`,
+      en: `${siteConfig.name} Blog Articles`,
+    }),
     numberOfItems: posts.length,
     itemListElement: posts.map((post, index) => ({
       '@type': 'ListItem',
       position: index + 1,
-      name: post[locale].title,
+      name: localizePost(post, locale).title,
       url: absoluteUrl(localePath(`/blog/${post.slug}`, locale)),
     })),
   }

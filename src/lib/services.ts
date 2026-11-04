@@ -77,6 +77,7 @@ export type ServiceView = {
 export type Service = {
   slug: ServiceSlug
   ru: ServiceView
+  uk?: ServiceView
   en: ServiceView
 }
 
@@ -95,7 +96,7 @@ export function getServiceBySlug(slug: string): Service | undefined {
 }
 
 export function getServiceView(service: Service, locale: Locale): ServiceView {
-  return service[locale]
+  return service[locale] ?? service.ru
 }
 
 export function servicePath(slug: ServiceSlug): string {

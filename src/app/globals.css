@@ -13,7 +13,10 @@
 
   /* typography */
   --font-sans: var(--font-montserrat), 'Helvetica Neue', sans-serif;
-  --section-heading:   clamp(40px, 4.5vw, 56px);
+  --section-heading:   clamp(36px, 4.2vw, 52px);
+  --page-h1:           clamp(32px, 4vw, 44px);
+  --page-h2:           clamp(22px, 2.4vw, 28px);
+  --page-h3:           clamp(18px, 2vw, 22px);
   --text-xl:           clamp(18px, 1.8vw, 20px);
   --text-lg:           clamp(17px, 1.6vw, 19px);
   --text-base:         17px;
@@ -24,16 +27,29 @@
   --leading-body:      1.65;
   --tracking-tight:    -0.025em;
 
-  /* layout */
+  /* spacing scale */
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+
+  /* layout — один горизонтальний відступ для всіх сторінок */
   --page-padding-x:    48px;
   --page-padding-x-md: 24px;
   --page-padding-x-sm: 20px;
-  --hero-header-padding-x:    80px;
-  --hero-header-padding-x-md: 32px;
-  --hero-header-padding-x-sm: 28px;
+  --hero-header-padding-x: var(--page-padding-x);
+  /* clears fixed navbar + breathing room */
+  --page-shell-pad-top: 120px;
+  --page-shell-pad-top-md: 108px;
   --content-max:       1200px;
-  --section-padding-y: 52px;
-  --section-padding-y-md: 38px;
+  --prose-max:         760px;
+  --section-padding-y: 64px;
+  --section-padding-y-md: 48px;
+  --border-subtle:     rgba(10, 37, 64, 0.08);
 
   /* effects */
   --radius-md:  16px;
@@ -102,13 +118,13 @@ main {
 
 @media (max-width: 1100px) {
   :root {
-    --hero-header-padding-x: var(--hero-header-padding-x-md);
+    --page-padding-x: var(--page-padding-x-md);
   }
 }
 
 @media (max-width: 768px) {
   :root {
-    --hero-header-padding-x: 16px;
+    --page-padding-x: var(--page-padding-x-sm);
   }
 
   html {

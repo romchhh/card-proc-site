@@ -424,10 +424,10 @@
 @media (max-width: 768px) {
   .nav {
     column-gap: 8px;
-    padding: 18px 16px;
+    padding: 18px var(--hero-header-padding-x);
   }
 
-  .solid { padding: 14px 16px; }
+  .solid { padding: 14px var(--hero-header-padding-x); }
   .actions { gap: 6px; }
 
   .brandBold,
@@ -455,10 +455,10 @@
 @media (max-width: 390px) {
   .nav {
     column-gap: 6px;
-    padding: 16px 12px;
+    padding: 16px var(--hero-header-padding-x);
   }
 
-  .solid { padding: 12px 12px; }
+  .solid { padding: 12px var(--hero-header-padding-x); }
   .actions { gap: 4px; }
 
   .brandBold,

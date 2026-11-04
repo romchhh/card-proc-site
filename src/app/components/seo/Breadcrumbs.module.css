@@ -1,8 +1,16 @@
 .nav {
   max-width: var(--content-max);
   margin: 0 auto;
-  padding: 24px var(--page-padding-x) 0;
+  padding: var(--space-6) var(--page-padding-x) 0;
 }
+
+@media (max-width: 768px) {
+  .nav:not(.navDark) {
+    padding: var(--space-5) var(--page-padding-x) 0;
+  }
+}
+
+
 
 .navDark {
   padding: 0;
@@ -73,7 +81,7 @@
 
 @media (max-width: 768px) {
   .nav {
-    padding: 20px var(--page-padding-x-md) 0;
+    padding: 20px var(--page-padding-x) 0;
   }
 
   .navDark .current {
@@ -81,9 +89,3 @@
   }
 }
 
-@media (max-width: 390px) {
-  .nav {
-    padding-left: var(--page-padding-x-sm);
-    padding-right: var(--page-padding-x-sm);
-  }
-}

@@ -1,14 +1,20 @@
+import type { Locale } from './i18n/config'
+import { pickLocaleCopy } from './i18n/config'
+
 export const siteConfig = {
   name: 'WayOfProcessing',
   title: 'WayOfProcessing — Stripe Payment Processing',
-  titleRu: 'Stripe как платёжная система для бизнеса — подключение и процессинг | WayOfProcessing',
-  titleEn: 'Stripe payment system for business — setup and processing | WayOfProcessing',
+  titleRu: 'Купить или арендовать аккаунт Stripe — WayOfProcessing',
+  titleUk: 'Купити або орендувати акаунт Stripe — WayOfProcessing',
+  titleEn: 'Buy or rent a Stripe account — WayOfProcessing',
   description:
     'Stripe payment processing for any niche from 1.5%. Warmed-up accounts, 99.9% uptime, CRM access and unlimited withdrawals in EUR, USD and USDT.',
   descriptionRu:
-    'Stripe — международная платёжная система для приёма карт онлайн. Подключение, процессинг, payment routing и вывод в EUR, USD, USDT. Комиссия от 1.5%. Консультация и сопровождение WayOfProcessing.',
+    'Аренда или покупка аккаунта Stripe для приёма оплаты из-за рубежа. Процессинг от 1.5%, routing, вывод в EUR, USD и USDT.',
+  descriptionUk:
+    'Оренда або купівля акаунта Stripe для прийому оплати з-за кордону. Процесинг від 1.5%, routing, вивід у EUR, USD і USDT.',
   descriptionEn:
-    'Stripe is an international payment system for online card acceptance. Setup, processing, payment routing and payouts in EUR, USD, USDT. Fees from 1.5%. Consultation and support from WayOfProcessing.',
+    'Rent or buy a Stripe account to accept payments from abroad. Processing from 1.5%, routing, payouts in EUR, USD and USDT.',
   url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://wayofprocessing.com',
   email: 'hello@wayofprocessing.com',
   telegram: '@wayofprocessing',
@@ -17,38 +23,69 @@ export const siteConfig = {
   locale: 'ru_RU',
   alternateLocale: 'en_US',
   ogImage: '/images/hero-stripe.webp',
-  ogImageAlt: 'WayOfProcessing — подключение Stripe как платёжной системы для бизнеса',
+  ogImageAlt: 'Купить или арендовать аккаунт Stripe — WayOfProcessing',
   themeColor: '#635BFF',
   keywordsRu: [
+    'купить stripe аккаунт',
+    'арендовать аккаунт stripe',
     'stripe платежная система',
     'платёжная система stripe',
     'stripe для бизнеса',
+    'что такое stripe',
+    'прием платежей stripe',
+    'прием карт онлайн',
+    'международные платежи для бизнеса',
+    'как работает stripe',
+    'stripe checkout',
     'подключение stripe',
-    'приём платежей stripe',
-    'международные платежи',
     'процессинг stripe',
     'процессинг платежей',
     'payment routing stripe',
     'интеграция stripe',
-    'stripe checkout',
     'merchant аккаунт stripe',
     'аренда stripe аккаунта',
     'подключение stripe под ключ',
     'WayOfProcessing',
   ],
+  keywordsUk: [
+    'купити stripe акаунт',
+    'орендувати акаунт stripe',
+    'stripe платіжна система',
+    'платіжна система stripe',
+    'stripe для бізнесу',
+    'що таке stripe',
+    'прийом платежів stripe',
+    'приймання карток онлайн',
+    'міжнародні платежі для бізнесу',
+    'як працює stripe',
+    'stripe checkout',
+    'підключення stripe',
+    'процесинг stripe',
+    'процесинг платежів',
+    'payment routing stripe',
+    'інтеграція stripe',
+    'merchant акаунт stripe',
+    'оренда stripe акаунта',
+    'підключення stripe під ключ',
+    'WayOfProcessing',
+  ],
   keywordsEn: [
+    'buy stripe account',
+    'rent stripe account',
     'stripe payment system',
     'stripe for business',
+    'what is stripe',
+    'accept payments with stripe',
+    'online card payments',
+    'international payments for business',
+    'how does stripe work',
+    'stripe checkout',
     'stripe payment processing',
-    'accept stripe payments',
-    'international payments stripe',
     'stripe integration',
     'payment routing stripe',
-    'stripe checkout',
     'stripe merchant account',
     'connect stripe business',
     'stripe account setup',
-    'rent stripe account',
     'WayOfProcessing',
   ],
   keywords: [
@@ -59,12 +96,15 @@ export const siteConfig = {
     'WayOfProcessing',
   ],
   seo: {
-    slogan: 'Подключение Stripe как платёжной системы — от 1.5%',
+    slogan: 'Аренда или покупка аккаунта Stripe — от 1.5%',
+    sloganUk: 'Оренда або купівля акаунта Stripe — від 1.5%',
     disclaimer:
       'WayOfProcessing — независимый сервис и не является аффилированным лицом, партнёром или дочерней компанией Stripe, Inc.',
+    disclaimerUk:
+      'WayOfProcessing — незалежний сервіс і не є афілійованою особою, партнером чи дочірньою компанією Stripe, Inc.',
     disclaimerEn:
       'WayOfProcessing is an independent service and is not affiliated with, endorsed by, or a subsidiary of Stripe, Inc.',
-    contentLanguages: 'ru, en',
+    contentLanguages: 'ru, uk, en',
     knowsAbout: [
       'Stripe payment system',
       'International payment acceptance',
@@ -80,9 +120,6 @@ export const siteConfig = {
       'SaaS billing',
     ],
     stats: {
-      accountsCreated: 1100,
-      yearsExperience: 7,
-      clientVolume: '$53M+',
       uptime: '99.9%',
       commissionFrom: '1.5%',
     },
@@ -90,20 +127,50 @@ export const siteConfig = {
   },
   pages: {
     blog: {
-      title: 'Блог WayOfProcessing — Stripe, платёжные системы и интеграции',
-      titleEn: 'WayOfProcessing Blog — Stripe, payment systems and integrations',
+      title: 'Блог о Stripe для бизнеса | WayOfProcessing',
+      titleUk: 'Блог про Stripe для бізнесу | WayOfProcessing',
+      titleEn: 'Stripe for business blog | WayOfProcessing',
       description:
-        'Статьи о Stripe как платёжной системе: подключение, приём международных платежей, webhooks, checkout, payment routing и процессинг для бизнеса.',
+        'Stripe как платёжная система: подключение, checkout, webhooks, routing и приём платежей из-за рубежа.',
+      descriptionUk:
+        'Stripe як платіжна система: підключення, checkout, webhooks, routing і прийом платежів з-за кордону.',
       descriptionEn:
-        'Articles on Stripe as a payment system: setup, international payments, webhooks, checkout, payment routing and processing for business.',
+        'Stripe as a payment system: setup, checkout, webhooks, routing and accepting payments from abroad.',
     },
     privacy: {
       title: 'Политика конфиденциальности WayOfProcessing',
+      titleUk: 'Політика конфіденційності WayOfProcessing',
       titleEn: 'WayOfProcessing Privacy Policy',
       description:
         'Как WayOfProcessing собирает, использует и защищает персональные данные при использовании сайта и отправке заявок.',
+      descriptionUk:
+        'Як WayOfProcessing збирає, використовує та захищає персональні дані під час користування сайтом і надсилання заявок.',
       descriptionEn:
         'How WayOfProcessing collects, uses and protects personal data when you use our website and contact forms.',
     },
   },
+}
+
+export function siteTitle(locale: Locale) {
+  return pickLocaleCopy(locale, {
+    ru: siteConfig.titleRu,
+    uk: siteConfig.titleUk,
+    en: siteConfig.titleEn,
+  })
+}
+
+export function siteDescription(locale: Locale) {
+  return pickLocaleCopy(locale, {
+    ru: siteConfig.descriptionRu,
+    uk: siteConfig.descriptionUk,
+    en: siteConfig.descriptionEn,
+  })
+}
+
+export function siteKeywords(locale: Locale) {
+  return pickLocaleCopy(locale, {
+    ru: siteConfig.keywordsRu,
+    uk: siteConfig.keywordsUk,
+    en: siteConfig.keywordsEn,
+  })
 }

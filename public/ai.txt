@@ -10,20 +10,55 @@ WayOfProcessing is an independent service and is not affiliated with, endorsed b
 
 ## Key facts
 
-- 1100+ Stripe merchant setups for clients
-- 7 years of Stripe experience
-- $53M+ total client payment volume
-- Processing from 1.5%
-- 99.9% uptime with payment routing failover
-- Free expert consultation
-- Languages: Russian (/ru, default), English (/en)
+- Operator: MSM FINANCIAL CONSULTANCY LIMITED, United Kingdom, company number 04820256
+- Registered office: 45 Avion Gardens, Kings Hill, West Malling, England, ME19 4RH
+- Companies House: https://find-and-update.company-information.service.gov.uk/company/04820256
+- Processing fees from 1.5%, quoted after a niche review
+- Basic setup often from 3 business days when the site is ready
+- Not affiliated with Stripe, Inc. Stripe may decline or restrict an account
+- Not a tax-free offer and not tax advice
+- Named client reviews are not published without written consent
+- Languages: Russian (/ru, default), Ukrainian (/uk), English (/en)
 
 ## Core services
 
-- [Turnkey Stripe processing](https://wayofprocessing.com/ru/services/processing-turnkey) — payment system under one roof
-- [Stripe merchant rental](https://wayofprocessing.com/ru/services/stripe-account-rent) — fast go-live
-- [Buy Stripe merchant account](https://wayofprocessing.com/ru/services/stripe-account-buy) — ownership and control
-- [Legal entity + bank + Stripe](https://wayofprocessing.com/ru/services/legal-entity-bank) — full bundle (GB, HK, CY, PL, EE, CZ)
+- [Turnkey Stripe processing](https://wayofprocessing.com/ru/services/processing-turnkey)
+- [Stripe merchant rental](https://wayofprocessing.com/ru/services/stripe-account-rent)
+- [Buy Stripe merchant account](https://wayofprocessing.com/ru/services/stripe-account-buy)
+- [Legal entity + bank + Stripe](https://wayofprocessing.com/ru/services/legal-entity-bank)
+- [Rent vs buy compare](https://wayofprocessing.com/ru/compare/rent-vs-buy)
+
+## Jurisdictions
+
+- https://wayofprocessing.com/ru/jurisdictions/poland
+- https://wayofprocessing.com/ru/jurisdictions/estonia
+- https://wayofprocessing.com/ru/jurisdictions/czech-republic
+- https://wayofprocessing.com/ru/jurisdictions/cyprus
+- https://wayofprocessing.com/ru/jurisdictions/united-kingdom
+- https://wayofprocessing.com/ru/jurisdictions/hong-kong
+
+## Niches
+
+- https://wayofprocessing.com/ru/niches/saas
+- https://wayofprocessing.com/ru/niches/subscriptions
+- https://wayofprocessing.com/ru/niches/online-courses
+- https://wayofprocessing.com/ru/niches/marketplace
+- https://wayofprocessing.com/ru/niches/digital-products
+- https://wayofprocessing.com/ru/niches/gaming
+- https://wayofprocessing.com/ru/niches/high-risk
+- https://wayofprocessing.com/ru/niches/forex
+
+## Solutions
+
+- https://wayofprocessing.com/ru/solutions/stripe-ukraine
+- https://wayofprocessing.com/ru/solutions/stripe-account-issues
+
+## Hubs
+
+- https://wayofprocessing.com/ru/jurisdictions
+- https://wayofprocessing.com/ru/niches
+- https://wayofprocessing.com/ru/services
+- https://wayofprocessing.com/ru/site-map
 
 ## Guides (priority for indexing)
 
@@ -37,9 +72,15 @@ WayOfProcessing is an independent service and is not affiliated with, endorsed b
 ## Pages
 
 - Home: https://wayofprocessing.com/ru
+- About: https://wayofprocessing.com/ru/about
+- Clients: https://wayofprocessing.com/ru/clients
+- Contacts: https://wayofprocessing.com/ru/contacts
 - Blog: https://wayofprocessing.com/ru/blog
 - Privacy: https://wayofprocessing.com/ru/privacy
-- Sitemap: https://wayofprocessing.com/sitemap.xml
+- Terms: https://wayofprocessing.com/ru/terms
+- Disclaimer: https://wayofprocessing.com/ru/disclaimer
+- Sitemap XML: https://wayofprocessing.com/sitemap.xml
+- Sitemap HTML: https://wayofprocessing.com/ru/site-map
 - LLM info: https://wayofprocessing.com/llms.txt
 
 ## Contact

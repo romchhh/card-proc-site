@@ -10,7 +10,6 @@ import { useBodyScrollLock } from '@/lib/body-scroll-lock'
 import { useContactModal } from './ContactModalProvider'
 import { TelegramIcon } from './icons/SocialIcons'
 import LangSwitcher from './LangSwitcher'
-import SectionLink from './SectionLink'
 import styles from './Navbar.module.css'
 
 export default function Navbar({ transparent = false }: { transparent?: boolean }) {
@@ -60,9 +59,9 @@ export default function Navbar({ transparent = false }: { transparent?: boolean 
           </button>
 
           <div className={styles.center}>
-            <SectionLink sectionId="specialists">{t('nav.about')}</SectionLink>
-            <SectionLink sectionId="services">{t('nav.services')}</SectionLink>
-            <SectionLink sectionId="clients">{t('nav.clients')}</SectionLink>
+            <a href={lp('/about')}>{t('nav.about')}</a>
+            <a href={lp('/services')}>{t('nav.services')}</a>
+            <a href={lp('/clients')}>{t('nav.clients')}</a>
             <a href={blogPath} className={isBlogActive ? styles.activeLink : ''}>{t('nav.blog')}</a>
           </div>
         </div>
@@ -123,15 +122,9 @@ export default function Navbar({ transparent = false }: { transparent?: boolean 
           </svg>
         </button>
 
-        <SectionLink sectionId="specialists" onNavigate={() => setMenuOpen(false)}>
-          {t('nav.about')}
-        </SectionLink>
-        <SectionLink sectionId="services" onNavigate={() => setMenuOpen(false)}>
-          {t('nav.services')}
-        </SectionLink>
-        <SectionLink sectionId="clients" onNavigate={() => setMenuOpen(false)}>
-          {t('nav.clients')}
-        </SectionLink>
+        <a href={lp('/about')} onClick={() => setMenuOpen(false)}>{t('nav.about')}</a>
+        <a href={lp('/services')} onClick={() => setMenuOpen(false)}>{t('nav.services')}</a>
+        <a href={lp('/clients')} onClick={() => setMenuOpen(false)}>{t('nav.clients')}</a>
         <a href={blogPath} onClick={() => setMenuOpen(false)}>{t('nav.blog')}</a>
         <button
           type="button"

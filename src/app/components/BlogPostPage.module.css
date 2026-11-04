@@ -1,11 +1,11 @@
 .page {
   min-height: 100vh;
   background: linear-gradient(180deg, var(--white) 0%, var(--gray-100) 100%);
-  padding: 120px var(--page-padding-x) var(--section-padding-y);
+  padding: var(--page-shell-pad-top) var(--page-padding-x) var(--section-padding-y);
 }
 
 .inner {
-  max-width: 760px;
+  max-width: var(--prose-max);
   margin: 0 auto;
 }
 
@@ -441,7 +441,7 @@
 
 @media (max-width: 768px) {
   .page {
-    padding: 108px var(--page-padding-x-md) var(--section-padding-y-md);
+    padding: var(--page-shell-pad-top-md) var(--page-padding-x) var(--section-padding-y-md);
   }
 
   .meta {
@@ -461,9 +461,3 @@
   }
 }
 
-@media (max-width: 390px) {
-  .page {
-    padding-left: var(--page-padding-x-sm);
-    padding-right: var(--page-padding-x-sm);
-  }
-}
