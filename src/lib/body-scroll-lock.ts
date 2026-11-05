@@ -1,25 +1,22 @@
 import { useEffect } from 'react'
 
 let lockCount = 0
-let scrollY = 0
+let scrollbarCompensation = ''
 
 export function lockBodyScroll() {
   lockCount += 1
   if (lockCount > 1) return
 
-  scrollY = window.scrollY
   const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth
+  scrollbarCompensation = scrollbarWidth > 0 ? `${scrollbarWidth}px` : ''
 
   document.documentElement.style.overflow = 'hidden'
   document.body.style.overflow = 'hidden'
-  document.body.style.position = 'fixed'
-  document.body.style.top = `-${scrollY}px`
-  document.body.style.left = '0'
-  document.body.style.right = '0'
-  document.body.style.width = '100%'
+  document.body.style.touchAction = 'none'
+  document.documentElement.style.overscrollBehavior = 'none'
 
-  if (scrollbarWidth > 0) {
-    document.body.style.paddingRight = `${scrollbarWidth}px`
+  if (scrollbarCompensation) {
+    document.body.style.paddingRight = scrollbarCompensation
   }
 }
 
@@ -31,14 +28,10 @@ export function unlockBodyScroll() {
 
   document.documentElement.style.overflow = ''
   document.body.style.overflow = ''
-  document.body.style.position = ''
-  document.body.style.top = ''
-  document.body.style.left = ''
-  document.body.style.right = ''
-  document.body.style.width = ''
+  document.body.style.touchAction = ''
+  document.documentElement.style.overscrollBehavior = ''
   document.body.style.paddingRight = ''
-
-  window.scrollTo(0, scrollY)
+  scrollbarCompensation = ''
 }
 
 export function useBodyScrollLock(locked: boolean) {

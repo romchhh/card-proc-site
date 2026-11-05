@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useId, useState } from 'react'
+import { useEffect, useId } from 'react'
 import { ChevronDown } from 'lucide-react'
 import styles from './FaqAccordion.module.css'
 
@@ -13,17 +13,17 @@ type Props = {
 
 export default function FaqAccordion({ items, heading }: Props) {
   const baseId = useId()
-  const [open, setOpen] = useState<Record<number, boolean>>({ 0: true })
 
   useEffect(() => {
     const applyHash = () => {
       const match = window.location.hash.match(/^#faq-(\d+)$/)
       if (!match) return
       const index = Number(match[1]) - 1
-      if (index >= 0 && index < items.length) {
-        setOpen((prev) => ({ ...prev, [index]: true }))
-        document.getElementById(`faq-${index + 1}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-      }
+      if (index < 0 || index >= items.length) return
+      const el = document.getElementById(`faq-${index + 1}`) as HTMLDetailsElement | null
+      if (!el) return
+      el.open = true
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
     applyHash()
     window.addEventListener('hashchange', applyHash)
@@ -36,37 +36,22 @@ export default function FaqAccordion({ items, heading }: Props) {
         {heading}
       </h2>
       <div className={styles.list}>
-        {items.map((item, index) => {
-          const panelId = `${baseId}-panel-${index}`
-          const buttonId = `${baseId}-btn-${index}`
-          const isOpen = Boolean(open[index])
-          return (
-            <div key={item.question} className={styles.item} id={`faq-${index + 1}`}>
-              <h3 className={styles.question}>
-                <button
-                  type="button"
-                  id={buttonId}
-                  className={styles.trigger}
-                  aria-expanded={isOpen}
-                  aria-controls={panelId}
-                  onClick={() => setOpen((prev) => ({ ...prev, [index]: !prev[index] }))}
-                >
-                  <span>{item.question}</span>
-                  <ChevronDown className={isOpen ? styles.chevronOpen : styles.chevron} aria-hidden size={20} strokeWidth={1.5} />
-                </button>
-              </h3>
-              <div
-                id={panelId}
-                role="region"
-                aria-labelledby={buttonId}
-                className={isOpen ? styles.panelOpen : styles.panel}
-                hidden={!isOpen}
-              >
-                <p className={styles.answer}>{item.answer}</p>
-              </div>
+        {items.map((item, index) => (
+          <details
+            key={item.question}
+            className={styles.item}
+            id={`faq-${index + 1}`}
+            open={index === 0}
+          >
+            <summary className={styles.trigger}>
+              <span>{item.question}</span>
+              <ChevronDown className={styles.chevron} aria-hidden size={20} strokeWidth={1.5} />
+            </summary>
+            <div className={styles.panelOpen}>
+              <p className={styles.answer}>{item.answer}</p>
             </div>
-          )
-        })}
+          </details>
+        ))}
       </div>
     </section>
   )

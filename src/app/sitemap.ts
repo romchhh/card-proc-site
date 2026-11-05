@@ -14,6 +14,7 @@ const staticPaths = [
   '/clients',
   '/contacts',
   '/services',
+  '/solutions',
   '/compare/rent-vs-buy',
   '/jurisdictions',
   '/niches',
@@ -24,36 +25,14 @@ const staticPaths = [
   '/disclaimer',
 ] as const
 
-const STATIC_PRIORITY: Record<(typeof staticPaths)[number], number> = {
-  '/': 1,
-  '/about': 0.7,
-  '/clients': 0.66,
-  '/contacts': 0.6,
-  '/services': 0.9,
-  '/compare/rent-vs-buy': 0.85,
-  '/jurisdictions': 0.86,
-  '/niches': 0.83,
-  '/blog': 0.65,
-  '/site-map': 0.45,
-  '/privacy': 0.3,
-  '/terms': 0.3,
-  '/disclaimer': 0.3,
-}
-
 function localizedSitemapEntry(
   path: string,
   locale: Locale,
-  options: {
-    lastModified: Date
-    changeFrequency: 'weekly' | 'monthly' | 'yearly'
-    priority: number
-  },
+  lastModified: Date,
 ) {
   return {
     url: `${siteConfig.url}${localePath(path, locale)}`,
-    lastModified: options.lastModified,
-    changeFrequency: options.changeFrequency,
-    priority: options.priority,
+    lastModified,
     alternates: {
       languages: buildHreflangLanguages(path),
     },
@@ -65,44 +44,38 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const latestPostDate = posts[0] ? new Date(posts[0].date) : new Date()
   const landingsUpdated = new Date(LANDINGS_UPDATED)
   const servicesUpdated = new Date(SERVICES_UPDATED)
+  const homeUpdated = new Date(HOME_UPDATED)
+  const privacyUpdated = new Date(PRIVACY_UPDATED)
 
   const staticEntries = locales.flatMap((locale) =>
-    staticPaths.map((path) =>
-      localizedSitemapEntry(path, locale, {
-        lastModified:
-          path === '/blog'
-            ? latestPostDate
-            : path === '/privacy' || path === '/terms' || path === '/disclaimer'
-              ? new Date(PRIVACY_UPDATED)
-              : path === '/jurisdictions' || path === '/niches' || path === '/site-map'
-                ? landingsUpdated
-                : path === '/services' || path === '/compare/rent-vs-buy'
-                  ? servicesUpdated
-                  : new Date(HOME_UPDATED),
-        changeFrequency:
-          path === '/privacy' || path === '/terms' || path === '/disclaimer' ? 'yearly' : 'weekly',
-        priority: STATIC_PRIORITY[path],
-      }),
-    ),
+    staticPaths.map((path) => {
+      const lastModified =
+        path === '/blog'
+          ? latestPostDate
+          : path === '/privacy' || path === '/terms' || path === '/disclaimer'
+            ? privacyUpdated
+            : path === '/jurisdictions' ||
+                path === '/niches' ||
+                path === '/solutions' ||
+                path === '/site-map'
+              ? landingsUpdated
+              : path === '/services' || path === '/compare/rent-vs-buy'
+                ? servicesUpdated
+                : homeUpdated
+
+      return localizedSitemapEntry(path, locale, lastModified)
+    }),
   )
 
   const serviceEntries = locales.flatMap((locale) =>
     SERVICE_SLUGS.map((slug) =>
-      localizedSitemapEntry(`/services/${slug}`, locale, {
-        lastModified: servicesUpdated,
-        changeFrequency: 'weekly',
-        priority: slug === 'processing-turnkey' ? 0.92 : 0.88,
-      }),
+      localizedSitemapEntry(`/services/${slug}`, locale, servicesUpdated),
     ),
   )
 
   const landingEntries = locales.flatMap((locale) =>
     getAllLandings().map((landing) =>
-      localizedSitemapEntry(landing.path, locale, {
-        lastModified: landingsUpdated,
-        changeFrequency: 'weekly',
-        priority: landing.priority,
-      }),
+      localizedSitemapEntry(landing.path, locale, landingsUpdated),
     ),
   )
 
@@ -110,11 +83,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     posts
       .filter((post) => isIndexBlogSlug(post.slug))
       .map((post) =>
-        localizedSitemapEntry(`/blog/${post.slug}`, locale, {
-          lastModified: new Date(post.date),
-          changeFrequency: 'monthly',
-          priority: 0.62,
-        }),
+        localizedSitemapEntry(`/blog/${post.slug}`, locale, new Date(post.date)),
       ),
   )
 

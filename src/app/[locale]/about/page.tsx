@@ -21,14 +21,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return buildPageMetadata({
     title: pickLocaleCopy(locale, {
-      ru: 'О компании | WayOfProcessing',
-      uk: 'Про компанію | WayOfProcessing',
-      en: 'About the company | WayOfProcessing',
+      ru: 'О компании WayOfProcessing | Stripe-процессинг',
+      uk: 'Про компанію WayOfProcessing | Stripe-процесинг',
+      en: 'About WayOfProcessing | Stripe Processing',
     }),
     description: pickLocaleCopy(locale, {
-      ru: 'WayOfProcessing ведёт MSM Financial Consultancy Limited, компания Великобритании 04820256. Аренда, покупка и процессинг Stripe после проверки ниши.',
-      uk: 'WayOfProcessing веде MSM Financial Consultancy Limited, компанія Великої Британії 04820256. Оренда, купівля і процесинг Stripe після перевірки ніші.',
-      en: 'WayOfProcessing is operated by MSM Financial Consultancy Limited, UK company 04820256. Stripe rental, purchase and processing after a niche review.',
+      ru: 'Кто мы, как работаем и где зарегистрирована компания: № 04820256 (Companies House), Kings Hill, West Malling.',
+      uk: 'Хто ми, як працюємо і де зареєстрована компанія: № 04820256 (Companies House), Kings Hill, West Malling.',
+      en: 'Who we are, how we work and where the company is registered: no. 04820256 (Companies House), Kings Hill, West Malling.',
     }),
     path: '/about',
     locale,

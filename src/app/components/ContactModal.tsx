@@ -19,7 +19,7 @@ export default function ContactModal() {
     }
 
     document.addEventListener('keydown', onKeyDown)
-    dialogRef.current?.focus()
+    dialogRef.current?.focus({ preventScroll: true })
 
     return () => document.removeEventListener('keydown', onKeyDown)
   }, [isOpen, close])

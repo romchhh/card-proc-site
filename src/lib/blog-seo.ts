@@ -66,8 +66,8 @@ const postKeywords: Record<string, { ru: string[]; uk?: string[]; en: string[] }
     en: ['international payments', 'stripe for business', 'stripe payment system', 'cross-border payments', 'payment processing'],
   },
   'stripe-payment-routing-uptime': {
-    ru: ['payment routing stripe', 'платёжная система stripe', 'аптайм 99.9%', 'резервный канал платежей', 'приём платежей без простоев'],
-    en: ['stripe payment routing', 'stripe payment system', '99.9% uptime', 'payment failover', 'checkout without downtime'],
+    ru: ['payment routing stripe', 'платёжная система stripe', 'payment routing stripe', 'резервный канал платежей', 'приём платежей без простоев'],
+    en: ['stripe payment routing', 'stripe payment system', 'payment failover', 'payment failover', 'checkout without downtime'],
   },
 }
 

@@ -6,15 +6,15 @@ export const siteConfig = {
   title: 'WayOfProcessing — Stripe Payment Processing',
   titleRu: 'Подключение Stripe для бизнеса | WayOfProcessing',
   titleUk: 'Підключення Stripe для бізнесу | WayOfProcessing',
-  titleEn: 'Stripe setup for business | WayOfProcessing',
+  titleEn: 'Stripe Setup for Business | WayOfProcessing',
   description:
     'Stripe payment processing for business: account setup, routing and payouts. Honest limits, no false guarantees.',
   descriptionRu:
-    'Подключение Stripe для бизнеса: процессынг, merchant-аккаунт, routing и выплаты. Честные ограничения без ложных гарантий.',
+    'Помогаем принимать оплату из-за рубежа через Stripe: аренда и покупка аккаунта, процессинг под ключ, вывод в EUR, USD и USDT. Комиссия от 1.5%.',
   descriptionUk:
-    'Підключення Stripe для бізнесу: процесинг, merchant-акаунт, routing і виплати. Чесні обмеження без хибних гарантій.',
+    'Допомагаємо приймати оплату з-під кордону через Stripe: оренда та покупка акаунта, процесинг під ключ, виведення в EUR, USD і USDT. Комісія від 1.5%.',
   descriptionEn:
-    'Stripe setup for business: processing, merchant account, routing and payouts. Honest limits without false guarantees.',
+    'We help businesses accept payments from abroad with Stripe: account rental and purchase, turnkey processing, payouts in EUR, USD and USDT. Fees from 1.5%.',
   url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://wayofprocessing.com',
   email: 'hello@wayofprocessing.com',
   telegram: '@wayofprocessing',
@@ -23,7 +23,15 @@ export const siteConfig = {
   locale: 'ru_RU',
   alternateLocale: 'en_US',
   ogImage: '/images/hero-stripe.webp',
-  ogImageAlt: 'WayOfProcessing — подключение Stripe для бизнеса',
+  ogImageAlt: 'Аренда и покупка аккаунта Stripe — WayOfProcessing',
+  ogImageAltUk: 'Оренда та покупка акаунта Stripe — WayOfProcessing',
+  ogImageAltEn: 'Stripe account rental and purchase — WayOfProcessing',
+  company: {
+    legalName: 'MSM FINANCIAL CONSULTANCY LIMITED',
+    number: '04820256',
+    address: '45 Avion Gardens, Kings Hill, West Malling, England, ME19 4RH',
+    registryUrl: 'https://find-and-update.company-information.service.gov.uk/company/04820256',
+  },
   themeColor: '#635BFF',
   keywordsRu: [
     'купить stripe аккаунт',
@@ -120,22 +128,21 @@ export const siteConfig = {
       'SaaS billing',
     ],
     stats: {
-      uptime: '99.9%',
       commissionFrom: '1.5%',
     },
     areaServed: ['Worldwide', 'European Union', 'United Kingdom', 'United States', 'CIS'],
   },
   pages: {
     blog: {
-      title: 'Блог о Stripe для бизнеса | WayOfProcessing',
-      titleUk: 'Блог про Stripe для бізнесу | WayOfProcessing',
-      titleEn: 'Stripe for business blog | WayOfProcessing',
+      title: 'Блог о Stripe и международных платежах | WayOfProcessing',
+      titleUk: 'Блог про Stripe і міжнародні платежі | WayOfProcessing',
+      titleEn: 'Stripe and International Payments Blog | WayOfProcessing',
       description:
-        'Stripe как платёжная система: подключение, checkout, webhooks, routing и приём платежей из-за рубежа.',
+        'Практические материалы по Stripe: интеграция, webhooks, подписки, чарджбэки, правила платформы. Обновляем по мере изменений.',
       descriptionUk:
-        'Stripe як платіжна система: підключення, checkout, webhooks, routing і прийом платежів з-за кордону.',
+        'Практичні матеріали по Stripe: інтеграція, webhooks, підписки, чарджбеки, правила платформи. Оновлюємо за мірою змін.',
       descriptionEn:
-        'Stripe as a payment system: setup, checkout, webhooks, routing and accepting payments from abroad.',
+        'Practical Stripe guides: integration, webhooks, subscriptions, chargebacks and platform rules. Updated as things change.',
     },
     privacy: {
       title: 'Политика конфиденциальности WayOfProcessing',
@@ -172,5 +179,13 @@ export function siteKeywords(locale: Locale) {
     ru: siteConfig.keywordsRu,
     uk: siteConfig.keywordsUk,
     en: siteConfig.keywordsEn,
+  })
+}
+
+export function companyMetaLine(locale: Locale) {
+  return pickLocaleCopy(locale, {
+    ru: `Компания зарегистрирована в Англии и Уэльсе, № ${siteConfig.company.number}. Адрес: ${siteConfig.company.address}.`,
+    uk: `Компанія зареєстрована в Англії та Вельсі, № ${siteConfig.company.number}. Адреса: ${siteConfig.company.address}.`,
+    en: `Registered in England and Wales, company no. ${siteConfig.company.number}. Address: ${siteConfig.company.address}.`,
   })
 }

@@ -58,14 +58,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return buildPageMetadata({
     title: pickLocaleCopy(locale, {
-      ru: 'Услуги подключения Stripe | WayOfProcessing',
-      uk: 'Послуги підключення Stripe | WayOfProcessing',
-      en: 'Stripe setup services | WayOfProcessing',
+      ru: 'Услуги по подключению Stripe | WayOfProcessing',
+      uk: 'Послуги з підключення Stripe | WayOfProcessing',
+      en: 'Stripe Setup Services | WayOfProcessing',
     }),
     description: pickLocaleCopy(locale, {
-      ru: 'Аренда и покупка аккаунта Stripe, процессинг под ключ, юрлицо и банк. Комиссия от 1.5%, запуск от 3 дней.',
-      uk: 'Оренда і купівля акаунта Stripe, процесинг під ключ, юрособа і банк. Комісія від 1.5%, запуск від 3 днів.',
-      en: 'Rent or buy a Stripe account, turnkey processing, company and bank. Fees from 1.5%, launch from 3 days.',
+      ru: 'Четыре формата: аренда и покупка аккаунта Stripe, процессинг под ключ, юрлицо и банк. Сравните условия и выберите подходящий.',
+      uk: 'Чотири формати: оренда та покупка акаунта Stripe, процесинг під ключ, юрособа та банк. Порівняйте умови й оберіть підходящий.',
+      en: 'Four formats: Stripe account rental and purchase, turnkey processing, legal entity and bank account. Compare terms and choose the one that fits.',
     }),
     path: '/services',
     locale,

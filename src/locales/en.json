@@ -55,10 +55,10 @@
     "openContact": "Leave a request"
   },
   "hero": {
-    "headline": "Buy or rent a",
-    "stripe": "Stripe account",
-    "badge": "Processing from 1.5% · launch from 3 days",
-    "description": "Account rental or purchase, turnkey processing and payouts in EUR, USD or USDT after a niche review.",
+    "headline": "Stripe setup",
+    "stripe": "for business",
+    "badge": "Fees from 1.5% · launch from 3 business days",
+    "description": "Rental, purchase or turnkey processing. We match the format to your niche and jurisdiction — payouts in EUR, USD or USDT.",
     "offerRent": "Rent a Stripe account",
     "offerBuy": "Buy a Stripe account",
     "cardLabel": "Leave a request",
@@ -67,9 +67,9 @@
   },
   "specialists": {
     "heading": "What we handle for Stripe setup",
-    "descriptionPrefix": "We help with merchant account, checkout and routing. A basic launch ",
-    "descriptionBold": "from 3 business days",
-    "descriptionSuffix": " — after niche review, with no promise to bypass Stripe rules.",
+    "descriptionPrefix": "We help with merchant account, checkout and routing. Launch ",
+    "descriptionBold": "from 3 business days after a full document pack",
+    "descriptionSuffix": ". Timing depends on the jurisdiction and Stripe review.",
     "cta": "Get a free consultation",
     "lead": "In a typical stack:",
     "item1": "Entity and bank paperwork when a Stripe-ready package is needed",
@@ -85,11 +85,11 @@
     },
     "stat2": {
       "value": "from 3 days",
-      "desc": "basic setup, once the site and activity description are ready"
+      "desc": "after a full document pack; timing depends on the jurisdiction and Stripe review"
     },
     "stat3": {
-      "value": "99.9%",
-      "desc": "processing uptime under a typical SLA"
+      "value": "UK Ltd",
+      "desc": "company registered in the UK, no. 04820256 — verifiable on Companies House"
     },
     "cta": "Learn more about WayOfProcessing"
   },
@@ -135,7 +135,7 @@
     "lead": "Take an account under management or get one registered for yourself. We match the setup to your niche, volume and country.",
     "desc": "Every case is handled by a specialist: we assess risk, prepare infrastructure and connect in days, not months.",
     "galleryHeading": "Accounts in operation",
-    "imageAlt": "Stripe account screenshot {{number}}",
+    "imageAlt": "Stripe interface: payments, balance and payouts — example {{number}}",
     "prev": "Previous slide",
     "next": "Next slide",
     "dotsLabel": "Slide navigation",
@@ -164,7 +164,7 @@
     "heading": "Benefits of working with WayOfProcessing",
     "uptime": {
       "title": "Payments don't stop when something breaks",
-      "desc": "If one Stripe account goes under review, transactions switch to a backup. 99.9% acceptance uptime — revenue doesn't depend on a single point of failure."
+      "desc": "If one Stripe account goes under review, transactions switch to a backup channel — revenue does not depend on a single point of failure."
     },
     "accounts": {
       "title": "Accounts with history, not blank slates",
@@ -180,7 +180,7 @@
     },
     "niches": {
       "title": "We work where others say no",
-      "desc": "E-commerce, SaaS, subscriptions, forex, gaming — with a controlled chargeback rate we'll find a setup for your niche."
+      "desc": "E-commerce, SaaS, subscriptions, gaming — with a controlled chargeback rate we'll find a setup. We do not connect Forex or brokers: Stripe does not accept them."
     },
     "withdrawals": {
       "title": "Withdraw in fiat or USDT",
@@ -246,7 +246,9 @@
     "ctaText": "Submit a request — we'll discuss rates, timelines and find the right solution for your niche. Free expert consultation.",
     "ctaButton": "Leave a request",
     "relatedServices": "Related services",
-    "inlineServicesLead": "For this task, see:"
+    "inlineServicesLead": "For this task, see:",
+    "authorByline": "Author: WayOfProcessing editorial team, processing consultants. Published: {{published}}. Updated: {{updated}}. Reviewed against Stripe docs: {{reviewed}}.",
+    "authorPolicy": "Editorial policy"
   },
   "contact": {
     "heading": "Request a connection",
@@ -398,7 +400,7 @@
     "introCta": "Get a free consultation",
     "benefitsHeading": "Key Benefits",
     "factsHeading": "What matters here",
-    "faqHeadingFor": "FAQ: {{topic}}",
+    "faqHeadingFor": "Frequently asked questions about Stripe: {{topic}}",
     "ctaHeading": "Ready to get started?",
     "ctaDescription": "Get a free consultation and personalized offer for your business",
     "relatedServices": "Other services",
@@ -471,6 +473,7 @@
     "compare": "Rent or buy",
     "jurisdictions": "Stripe by country",
     "niches": "Stripe niches",
+    "solutions": "Stripe solutions",
     "ukraine": "Stripe for Ukraine",
     "issues": "Stripe blocks",
     "siteMap": "Sitemap",

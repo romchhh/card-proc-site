@@ -13,7 +13,7 @@ import {
   type ServiceSlug,
 } from '@/lib/services'
 import { buildServiceJsonLd, getDefaultServiceProcess } from '@/lib/service-seo'
-import { isValidLocale, localeHashPath, localePath, locales, type Locale } from '@/lib/i18n/config'
+import { isValidLocale, localePath, locales, type Locale } from '@/lib/i18n/config'
 import { labelServices } from '@/lib/i18n/labels'
 import { buildPageMetadata } from '@/lib/seo'
 import { siteConfig } from '@/lib/site'
@@ -66,7 +66,7 @@ export default async function ServiceRoute({ params }: Props) {
           slug={slug}
           breadcrumbs={[
             { name: siteConfig.name, path: localePath('/', locale) },
-            { name: servicesLabel, path: localeHashPath('services', locale) },
+            { name: servicesLabel, path: localePath('/services', locale) },
             { name: view.card.title, path: servicePath },
           ]}
         />

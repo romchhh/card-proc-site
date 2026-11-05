@@ -2,10 +2,7 @@
 
 import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
-import { siteConfig } from '@/lib/site'
-import { SERVICE_SLUGS, getServiceBySlug, getServiceView } from '@/lib/services'
-import { getAllPosts, localizePost } from '@/lib/blog'
-import { INDEX_BLOG_SLUGS } from '@/lib/seo-index'
+import { companyMetaLine, siteConfig } from '@/lib/site'
 import { useLocalizedPath } from '@/lib/i18n/use-locale'
 import { resolveLocale } from '@/lib/i18n/resolve-locale'
 import { TelegramIcon, SupportIcon } from './icons/SocialIcons'
@@ -13,20 +10,16 @@ import { useContactModal } from './ContactModalProvider'
 import styles from './Footer.module.css'
 
 const NAV_LINKS = [
+  { key: 'services', path: '/services' },
+  { key: 'niches', path: '/niches' },
+  { key: 'jurisdictions', path: '/jurisdictions' },
+  { key: 'solutions', path: '/solutions' },
+  { key: 'compare', path: '/compare/rent-vs-buy' },
+  { key: 'blog', path: '/blog' },
   { key: 'about', path: '/about' },
   { key: 'clients', path: '/clients' },
   { key: 'contacts', path: '/contacts' },
-  { key: 'services', path: '/services' },
-  { key: 'compare', path: '/compare/rent-vs-buy' },
-  { key: 'jurisdictions', path: '/jurisdictions' },
-  { key: 'niches', path: '/niches' },
-  { key: 'ukraine', path: '/solutions/stripe-ukraine' },
-  { key: 'issues', path: '/solutions/stripe-account-issues' },
-  { key: 'siteMap', path: '/site-map' },
-  { key: 'blog', path: '/blog' },
 ] as const
-
-const FOOTER_GUIDE_SLUGS = INDEX_BLOG_SLUGS.slice(0, 4)
 
 export default function Footer() {
   const { t, i18n } = useTranslation()
@@ -34,13 +27,6 @@ export default function Footer() {
   const lp = useLocalizedPath()
   const locale = resolveLocale(i18n.language)
   const year = new Date().getFullYear()
-
-  const postsBySlug = new Map(getAllPosts().map((post) => [post.slug, post]))
-  const guideLinks = FOOTER_GUIDE_SLUGS.map((slug) => {
-    const post = postsBySlug.get(slug)
-    if (!post) return null
-    return { slug, title: localizePost(post, locale).title }
-  }).filter(Boolean) as { slug: string; title: string }[]
 
   const contactItems = [
     {
@@ -73,9 +59,8 @@ export default function Footer() {
           </a>
           <p className={styles.copyright}>{t('footer.copyright', { year })}</p>
           <address className={styles.company}>
-            <span className={styles.companyName}>{t('footer.companyName')}</span>
-            <span>{t('footer.companyMeta')}</span>
-            <span>{t('footer.companyAddress')}</span>
+            <span className={styles.companyName}>{siteConfig.company.legalName}</span>
+            <span>{companyMetaLine(locale)}</span>
           </address>
           <p className={styles.legal}>{t('footer.legal')}</p>
         </div>
@@ -88,35 +73,6 @@ export default function Footer() {
                 {t(`footer.${item.key}`)}
               </Link>
             ))}
-          </nav>
-        </div>
-
-        <div className={styles.col}>
-          <h3 className={styles.heading}>{t('footer.servicesHeading')}</h3>
-          <nav className={styles.nav} aria-label={t('footer.servicesHeading')}>
-            {SERVICE_SLUGS.map((slug) => {
-              const service = getServiceBySlug(slug)
-              if (!service) return null
-              const view = getServiceView(service, locale)
-
-              return (
-                <Link key={slug} href={lp(`/services/${slug}`)}>
-                  {view.card.title}
-                </Link>
-              )
-            })}
-          </nav>
-        </div>
-
-        <div className={styles.col}>
-          <h3 className={styles.heading}>{t('footer.guidesHeading')}</h3>
-          <nav className={styles.nav} aria-label={t('footer.guidesHeading')}>
-            {guideLinks.map((post) => (
-              <Link key={post.slug} href={lp(`/blog/${post.slug}`)}>
-                {post.title}
-              </Link>
-            ))}
-            <Link href={lp('/blog')}>{t('footer.allGuides')}</Link>
           </nav>
         </div>
 

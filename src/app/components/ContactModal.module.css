@@ -8,6 +8,7 @@
   padding: 5vh 24px;
   background: rgba(10, 37, 64, 0.55);
   backdrop-filter: blur(6px);
+  overscroll-behavior: contain;
   animation: fadeIn 0.25s var(--ease-out);
 }
 

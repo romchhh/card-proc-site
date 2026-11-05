@@ -4,8 +4,8 @@
       "slug": "stripe-account-rent",
       "ru": {
         "meta": {
-          "title": "Аренда аккаунта Stripe | WayOfProcessing",
-          "description": "Аренда аккаунта Stripe для приёма платежей: CRM, routing, вывод в EUR, USD и USDT. Подключение от 3 дней, комиссия от 1.5%.",
+          "title": "Аренда аккаунта Stripe для бизнеса | WayOfProcessing",
+          "description": "Аренда аккаунта Stripe для приёма платежей: CRM, routing, вывод в EUR, USD и USDT. Подключение от 3 рабочих дней, комиссия от 1.5%.",
           "keywords": [
             "аренда stripe",
             "аренда stripe аккаунта",
@@ -36,21 +36,21 @@
             "paragraphs": [
               "В пакет входят верифицированный аккаунт с историей транзакций, CRM со статусами платежей, выгрузки и споры, настройка вывода в EUR, USD или USDT и консультация по checkout: API, Payment Link или Invoice.",
               "Передача выглядит так: оценка ниши и сайта → подбор аккаунта с подходящим MCC → доступы и инструкция по первым выплатам → при необходимости routing. Вы не получаете «логин в мессенджере без контекста»: фиксируем, кто отвечает за лимиты, споры и резервный канал.",
-              "Если основной аккаунт уходит на проверку, routing переключает трафик на резервный. Для клиента это продолжение оплаты, а не простой витрины. Аптайм приёма — 99.9% при включённом failover."
+              "Если основной аккаунт уходит на проверку, routing переключает трафик на резервный. Для клиента это продолжение оплаты, а не простой витрины. При включённом failover оплата продолжается через резервный канал."
             ]
           },
           {
             "title": "Как устроена стоимость",
             "paragraphs": [
               "Комиссия за процессинг начинается от 1.5% и зависит от ниши, оборота, chargeback rate и того, нужен ли routing. Отдельного «входного» платежа за консультацию нет: расчёт делаем по заявке.",
-              "Фиксированной витринной цены на все ниши нет — forex, SaaS и обычный e-commerce дают разный риск для Stripe, поэтому ставка считается индивидуально. В ответ на заявку вы получаете диапазон под ваш объём, а не абстрактное «напишите в Telegram».",
+              "Фиксированной витринной цены на все ниши нет — SaaS и обычный e-commerce дают разный риск для Stripe, поэтому ставка считается индивидуально. В ответ на заявку вы получаете диапазон под ваш объём, а не абстрактное «напишите в Telegram».",
               "Если экономика пилота не сходится, формат можно остановить или сменить на покупку аккаунта. Мы заранее проговариваем, что входит в сопровождение в первые недели: лимиты, выплаты, споры."
             ]
           }
         ],
         "benefits": [
           {
-            "title": "Прогретый аккаунт до $500 000/мес",
+            "title": "Прогретый аккаунт под заявленный оборот",
             "description": "История транзакций снижает шанс, что Stripe воспримет запуск как скачок с нуля. Свежий аккаунт чаще упирается в лимиты и дополнительные проверки именно на росте оборота."
           },
           {
@@ -58,7 +58,7 @@
             "description": "Не нужно ждать регистрацию компании и банка с нуля. Срок зависит от готовности сайта и ниши: базовый доступ быстрее, кастомный MCC и routing — ближе к нижней границе «от 3 дней»."
           },
           {
-            "title": "Routing и аптайм 99.9%",
+            "title": "Routing и резервный канал",
             "description": "Один аккаунт — одна точка отказа. Резервный канал продолжает принимать карты, если основной уходит на review. Это защита выручки, а не маркетинговая цифра."
           },
           {
@@ -85,7 +85,7 @@
           },
           {
             "question": "Есть ли гарантии по лимитам и аптайму?",
-            "answer": "Мы подбираем прогретый аккаунт под заявленный оборот и даём failover с аптаймом приёма 99.9%. Гарантия «Stripe никогда не запросит документы» невозможна у любого провайдера. Гарантируем сопровождение и резервный канал, а не отсутствие любых проверок."
+            "answer": "Мы подбираем прогретый аккаунт под заявленный оборот и даём failover на резервный канал. Гарантия «Stripe никогда не запросит документы» невозможна у любого провайдера. Гарантируем сопровождение и резервный канал, а не отсутствие любых проверок."
           },
           {
             "question": "Какие риски я снимаю, а какие остаются на мне?",
@@ -131,8 +131,8 @@
       },
       "en": {
         "meta": {
-          "title": "Rent a Stripe Account | WayOfProcessing",
-          "description": "Rent a Stripe account to accept payments: CRM, routing, payouts in EUR, USD and USDT. Setup from 3 days, fees from 1.5%.",
+          "title": "Stripe Account Rental for Business | WayOfProcessing",
+          "description": "Rent a Stripe account to accept payments: CRM, routing, payouts in EUR, USD and USDT. Setup from 3 business days, fees from 1.5%.",
           "keywords": [
             "rent stripe account",
             "stripe account rental",
@@ -162,21 +162,21 @@
             "paragraphs": [
               "The package includes a verified account with transaction history, CRM with statuses, exports and disputes, payouts in EUR, USD or USDT, and checkout advice: API, Payment Link or Invoice.",
               "Handoff looks like this: niche and site review → account with a matching MCC → access plus a first-payouts guide → routing if needed. You do not get “a login in chat with no context”: we define who owns limits, disputes and the backup channel.",
-              "If the primary account goes under review, routing switches traffic to a backup. Shoppers keep paying instead of hitting a dead checkout. Acceptance uptime is 99.9% with failover on."
+              "If the primary account goes under review, routing switches traffic to a backup. Shoppers keep paying instead of hitting a dead checkout. routing switches traffic to a backup channel if the primary account is under review."
             ]
           },
           {
             "title": "How pricing works",
             "paragraphs": [
               "Processing fees start from 1.5% and depend on niche, volume, chargeback rate and whether you need routing. There is no paid “entry consultation”: we quote after the request.",
-              "There is no single storefront price for every niche — forex, SaaS and standard e-commerce carry different Stripe risk, so the rate is calculated per case. You get a range for your volume, not a vague “message us on Telegram”.",
+              "There is no single storefront price for every niche — SaaS and standard e-commerce carry different Stripe risk, so the rate is calculated per case. You get a range for your volume, not a vague “message us on Telegram”.",
               "If the pilot economics do not work, you can stop or switch to buying an account. We agree upfront what support covers in the first weeks: limits, payouts, disputes."
             ]
           }
         ],
         "benefits": [
           {
-            "title": "Warmed account up to $500,000/month",
+            "title": "Warmed account matched to stated volume",
             "description": "Transaction history makes Stripe less likely to treat launch as a spike from zero. Fresh accounts more often hit extra reviews exactly when volume grows."
           },
           {
@@ -184,7 +184,7 @@
             "description": "You do not wait for a company and bank to be created from scratch. Timing depends on the site and niche: basic access is faster, custom MCC and routing sit closer to the “from 3 days” floor."
           },
           {
-            "title": "Routing and 99.9% uptime",
+            "title": "Routing and backup channel",
             "description": "One account is one point of failure. A backup channel keeps accepting cards if the primary goes under review. That protects revenue, not a marketing metric."
           },
           {
@@ -211,7 +211,7 @@
           },
           {
             "question": "Are there guarantees on limits and uptime?",
-            "answer": "We match a warmed account to the stated volume and provide failover with 99.9% acceptance uptime. No provider can promise Stripe will never ask for documents. We guarantee support and a backup channel, not zero reviews."
+            "answer": "We match a warmed account to the stated volume and provide failover to a backup channel. No provider can promise Stripe will never ask for documents. We guarantee support and a backup channel, not zero reviews."
           },
           {
             "question": "Which risks move off me, and which stay?",
@@ -257,8 +257,8 @@
       },
       "uk": {
         "meta": {
-          "title": "Оренда акаунта Stripe | WayOfProcessing",
-          "description": "Оренда акаунта Stripe для прийому платежів: CRM, routing, вивід у EUR, USD і USDT. Підключення від 3 днів, комісія від 1.5%.",
+          "title": "Оренда акаунта Stripe для бізнесу | WayOfProcessing",
+          "description": "Оренда акаунта Stripe для прийому платежів: CRM, routing, виведення в EUR, USD і USDT. Підключення від 3 робочих днів, комісія від 1.5%.",
           "keywords": [
             "оренда stripe",
             "оренда акаунта stripe",
@@ -289,21 +289,21 @@
             "paragraphs": [
               "До пакета входять верифікований акаунт з історією транзакцій, CRM зі статусами платежів, вивантаження та спори, налаштування виводу в EUR, USD або USDT і консультація щодо checkout: API, Payment Link або Invoice.",
               "Передача виглядає так: оцінка ніші та сайту → підбір акаунта з відповідним MCC → доступи та інструкція щодо перших виплат → за потреби routing. Ви не отримуєте «логін у месенджері без контексту»: фіксуємо, хто відповідає за ліміти, спори та резервний канал.",
-              "Якщо основний акаунт іде на перевірку, routing перемикає трафік на резервний. Для клієнта це продовження оплати, а не простій вітрини. Аптайм прийому — 99.9% за ввімкненого failover."
+              "Якщо основний акаунт іде на перевірку, routing перемикає трафік на резервний. Для клієнта це продовження оплати, а не простій вітрини. За ввімкненого failover оплата триває через резервний канал."
             ]
           },
           {
             "title": "Як формується вартість",
             "paragraphs": [
               "Комісія за процесинг починається від 1.5% і залежить від ніші, обороту, chargeback rate та того, чи потрібен routing. Окремого «вхідного» платежу за консультацію немає: розрахунок робимо за заявкою.",
-              "Фіксованої вітринної ціни на всі ніші немає — forex, SaaS і звичайний e-commerce дають різний ризик для Stripe, тому ставка розраховується індивідуально. У відповідь на заявку ви отримуєте діапазон під ваш обсяг, а не абстрактне «напишіть у Telegram».",
+              "Фіксованої вітринної ціни на всі ніші немає — SaaS і звичайний e-commerce дають різний ризик для Stripe, тому ставка розраховується індивідуально. У відповідь на заявку ви отримуєте діапазон під ваш обсяг, а не абстрактне «напишіть у Telegram».",
               "Якщо економіка пілота не сходиться, формат можна зупинити або замінити на купівлю акаунта. Ми заздалегідь проговорюємо, що входить у супровід у перші тижні: ліміти, виплати, спори."
             ]
           }
         ],
         "benefits": [
           {
-            "title": "Прогрітий акаунт до $500 000/міс",
+            "title": "Прогрітий акаунт під заявлений оборот",
             "description": "Історія транзакцій знижує ймовірність того, що Stripe сприйме запуск як стрибок з нуля. Свіжий акаунт частіше впирається в ліміти та додаткові перевірки саме на зростанні обороту."
           },
           {
@@ -311,7 +311,7 @@
             "description": "Не потрібно чекати на реєстрацію компанії та банку з нуля. Термін залежить від готовності сайту та ніші: базовий доступ швидший, кастомний MCC і routing — ближче до нижньої межі «від 3 днів»."
           },
           {
-            "title": "Routing і аптайм 99.9%",
+            "title": "Routing і резервний канал",
             "description": "Один акаунт — одна точка відмови. Резервний канал продовжує приймати картки, якщо основний іде на review. Це захист виручки, а не маркетингова цифра."
           },
           {
@@ -338,7 +338,7 @@
           },
           {
             "question": "Чи є гарантії щодо лімітів і аптайму?",
-            "answer": "Ми підбираємо прогрітий акаунт під заявлений оборот і даємо failover з аптаймом прийому 99.9%. Гарантія «Stripe ніколи не запросить документи» неможлива в жодного провайдера. Гарантуємо супровід і резервний канал, а не відсутність будь-яких перевірок."
+            "answer": "Ми підбираємо прогрітий акаунт під заявлений оборот і даємо failover на резервний канал. Гарантія «Stripe ніколи не запросить документи» неможлива в жодного провайдера. Гарантуємо супровід і резервний канал, а не відсутність будь-яких перевірок."
           },
           {
             "question": "Які ризики я знімаю, а які залишаються на мені?",
@@ -387,8 +387,8 @@
       "slug": "stripe-account-buy",
       "ru": {
         "meta": {
-          "title": "Купить аккаунт Stripe | WayOfProcessing",
-          "description": "Покупка верифицированного аккаунта Stripe с документами и оборотом. Когда покупка лучше аренды и от чего зависит цена.",
+          "title": "Купить аккаунт Stripe: условия и риски | WayOfProcessing",
+          "description": "Что входит в покупку аккаунта Stripe, как проходит передача и чем она отличается от аренды. Сроки, стоимость и ограничения по нишам.",
           "keywords": [
             "купить stripe аккаунт",
             "покупка merchant аккаунта",
@@ -416,7 +416,7 @@
           {
             "title": "Для каких задач это лучше аренды",
             "paragraphs": [
-              "Покупка подходит, если вы масштабируете уже работающий поток, хотите свой контур доступов и не планируете менять провайдера через месяц. E-commerce, SaaS, forex, gaming, vape, БАДы — нишу называем на консультации, не все запросы берём.",
+              "Покупка подходит, если вы масштабируете уже работающий поток, хотите свой контур доступов и не планируете менять провайдера через месяц. E-commerce, SaaS, gaming, vape, БАДы — нишу называем на консультации, не все запросы берём.",
               "Аренда остаётся разумным первым шагом для теста. Мы не продаём «на всякий случай»: если пилот не подтверждён, честно предлагаем аренду или процессинг под ключ."
             ]
           },
@@ -461,7 +461,7 @@
           },
           {
             "question": "Можно ли купить аккаунт для high-risk ниши?",
-            "answer": "Часть запросов берём: forex, gaming, vape, БАДы — после проверки сайта и chargeback-модели. Не каждый оффер проходит. Если ниша не подходит, скажем об этом до сделки."
+            "answer": "Forex и брокерские услуги мы не подключаем: их не принимает Stripe. Часть других high-risk запросов берём после проверки сайта. Не каждый оффер проходит. Если ниша не подходит, скажем об этом до сделки."
           },
           {
             "question": "Что будет, если после покупки аккаунт уйдёт на проверку?",
@@ -511,8 +511,8 @@
       },
       "en": {
         "meta": {
-          "title": "Buy a Stripe Account | WayOfProcessing",
-          "description": "Buy a verified Stripe account with documents, turnover and support. When buying beats rental, and what sets the price.",
+          "title": "Buy a Stripe Account: Terms and Risks | WayOfProcessing",
+          "description": "What a Stripe account purchase includes, how the handover works and how it differs from renting. Timelines, cost and niche restrictions.",
           "keywords": [
             "buy stripe account",
             "buy merchant account",
@@ -540,7 +540,7 @@
           {
             "title": "When buying is better than renting",
             "paragraphs": [
-              "Buy if you are scaling a live flow, want your own access perimeter and do not plan to switch providers in a month. E-commerce, SaaS, forex, gaming, vape, supplements — we name the niche on the call; not every request is accepted.",
+              "Buy if you are scaling a live flow, want your own access perimeter and do not plan to switch providers in a month. E-commerce, SaaS, gaming, vape, supplements — we name the niche on the call; not every request is accepted.",
               "Rental remains a sane first step for a test. We do not sell “just in case”: if the pilot is unproven, we recommend rental or turnkey processing instead."
             ]
           },
@@ -585,7 +585,7 @@
           },
           {
             "question": "Can I buy an account for a high-risk niche?",
-            "answer": "Some requests yes: forex, gaming, vape, supplements — after reviewing the site and chargeback model. Not every offer qualifies. If the niche is a poor fit, we say so before the deal."
+            "answer": "Forex and brokerage we do not connect — Stripe does not accept them. Some other high-risk requests we take after reviewing the site. Not every offer qualifies. If the niche is a poor fit, we say so before the deal."
           },
           {
             "question": "What if the account goes under review after purchase?",
@@ -635,8 +635,8 @@
       },
       "uk": {
         "meta": {
-          "title": "Купити акаунт Stripe | WayOfProcessing",
-          "description": "Купівля верифікованого акаунта Stripe з документами та оборотом. Коли купівля краща за оренду і від чого залежить ціна.",
+          "title": "Купити акаунт Stripe: умови та ризики | WayOfProcessing",
+          "description": "Що входить у покупку акаунта Stripe, як відбувається передача та чим вона відрізняється від оренди. Терміни, вартість та обмеження для ніш.",
           "keywords": [
             "купити акаунт stripe",
             "купівля мерчант-акаунта",
@@ -664,7 +664,7 @@
           {
             "title": "Для яких завдань це краще за оренду",
             "paragraphs": [
-              "Купівля підходить, якщо ви масштабуєте потік, який уже працює, хочете власний контур доступів і не плануєте змінювати провайдера за місяць. E-commerce, SaaS, forex, gaming, vape, БАДи — нішу називаємо на консультації, не всі запити беремо.",
+              "Купівля підходить, якщо ви масштабуєте потік, який уже працює, хочете власний контур доступів і не плануєте змінювати провайдера за місяць. E-commerce, SaaS, gaming, vape, БАДи — нішу називаємо на консультації, не всі запити беремо.",
               "Оренда залишається розумним першим кроком для тесту. Ми не продаємо «про всяк випадок»: якщо пілот не підтверджений, чесно пропонуємо оренду або процесинг під ключ."
             ]
           },
@@ -709,7 +709,7 @@
           },
           {
             "question": "Чи можна купити акаунт для high-risk ніші?",
-            "answer": "Частину запитів беремо: forex, gaming, vape, БАДи — після перевірки сайту та chargeback-моделі. Не кожен офер проходить. Якщо ніша не підходить, скажемо про це до угоди."
+            "answer": "Forex і брокерські послуги не підключаємо: їх не приймає Stripe. Частину інших high-risk запитів беремо після перевірки сайту. Не кожен офер проходить. Якщо ніша не підходить, скажемо про це до угоди."
           },
           {
             "question": "Що буде, якщо після купівлі акаунт піде на перевірку?",
@@ -762,8 +762,8 @@
       "slug": "processing-turnkey",
       "ru": {
         "meta": {
-          "title": "Подключение Stripe под ключ | WayOfProcessing",
-          "description": "Процессинг Stripe под ключ: checkout, routing, CRM и вывод в EUR, USD, USDT. Комиссия от 1.5%, аптайм 99.9%.",
+          "title": "Процессинг Stripe под ключ | WayOfProcessing",
+          "description": "Процессинг под ключ: merchant-аккаунт, checkout, routing, CRM и вывод в EUR, USD, USDT. Комиссия от 1.5%, запуск от 3 рабочих дней.",
           "keywords": [
             "подключение stripe",
             "подключить stripe под ключ",
@@ -830,7 +830,7 @@
             "description": "Можно стартовать без своей разработки и позже перейти на API. Не заставляем сразу строить кастомный checkout."
           },
           {
-            "title": "Failover 99.9%",
+            "title": "Failover routing",
             "description": "Резервный аккаунт продолжает приём, если основной на проверке. Это про выручку в моменте, а не про красивый SLA в презентации."
           },
           {
@@ -888,7 +888,7 @@
         },
         "card": {
           "title": "Процессинг Stripe под ключ",
-          "desc": "Платёжная система под ключ: checkout, API, routing, CRM. Комиссия от 1.5%, аптайм 99.9%."
+          "desc": "Платёжная система под ключ: checkout, API, routing, CRM. Комиссия от 1.5%."
         },
         "relatedServices": [
           "stripe-account-rent",
@@ -903,8 +903,8 @@
       },
       "en": {
         "meta": {
-          "title": "Connect Stripe turnkey | WayOfProcessing",
-          "description": "Turnkey Stripe processing: checkout, routing, CRM and payouts in EUR, USD and USDT. Fees from 1.5%, 99.9% uptime.",
+          "title": "Turnkey Stripe Processing | WayOfProcessing",
+          "description": "Turnkey processing: merchant account, checkout, routing, CRM and payouts in EUR, USD, USDT. Fees from 1.5%, launch from 3 business days.",
           "keywords": [
             "stripe integration",
             "connect stripe",
@@ -970,7 +970,7 @@
             "description": "You can start without in-house development and move to API later. We do not force a custom checkout on day one."
           },
           {
-            "title": "99.9% failover",
+            "title": "Failover routing",
             "description": "A backup account keeps accepting if the primary is under review. That is about revenue in the moment, not a pretty SLA slide."
           },
           {
@@ -1028,7 +1028,7 @@
         },
         "card": {
           "title": "Turnkey Stripe Processing",
-          "desc": "Payment system turnkey: checkout, API, routing, CRM. Fees from 1.5%, 99.9% uptime."
+          "desc": "Payment system turnkey: checkout, API, routing, CRM. Fees from 1.5%."
         },
         "relatedServices": [
           "stripe-account-rent",
@@ -1043,8 +1043,8 @@
       },
       "uk": {
         "meta": {
-          "title": "Підключення Stripe під ключ | WayOfProcessing",
-          "description": "Процесинг Stripe під ключ: checkout, routing, CRM і вивід у EUR, USD, USDT. Комісія від 1.5%, аптайм 99.9%.",
+          "title": "Процесинг Stripe під ключ | WayOfProcessing",
+          "description": "Процесинг під ключ: merchant-акаунт, checkout, routing, CRM і виведення в EUR, USD, USDT. Комісія від 1.5%, запуск від 3 робочих днів.",
           "keywords": [
             "підключення stripe",
             "підключення stripe під ключ",
@@ -1110,7 +1110,7 @@
             "description": "Можна стартувати без власної розробки та пізніше перейти на API. Не змушуємо одразу будувати кастомний checkout."
           },
           {
-            "title": "Failover 99.9%",
+            "title": "Failover routing",
             "description": "Резервний акаунт продовжує прийом, якщо основний на перевірці. Це про виручку в моменті, а не про гарний SLA в презентації."
           },
           {
@@ -1168,7 +1168,7 @@
         },
         "card": {
           "title": "Процесинг Stripe під ключ",
-          "desc": "Платіжна система під ключ: checkout, API, routing, CRM. Комісія від 1.5%, аптайм 99.9%."
+          "desc": "Платіжна система під ключ: checkout, API, routing, CRM. Комісія від 1.5%."
         },
         "relatedServices": [
           "stripe-account-rent",
@@ -1186,8 +1186,8 @@
       "slug": "legal-entity-bank",
       "ru": {
         "meta": {
-          "title": "Юрлицо и банк для Stripe | WayOfProcessing",
-          "description": "Компания, расчётный счёт и Stripe одним комплектом. Юрисдикции GB, HK, CY, PL, EE, CZ. Запуск от 3 дней.",
+          "title": "Юрлицо и банковский счёт для Stripe | WayOfProcessing",
+          "description": "Регистрация юрлица и банковский счёт под приём платежей через Stripe. Юрисдикции, сроки и стоимость, что нужно от вас.",
           "keywords": [
             "открыть компанию для stripe",
             "зарубежное юрлицо и счёт",
@@ -1222,7 +1222,7 @@
           {
             "title": "Почему нельзя собрать это по отдельности",
             "paragraphs": [
-              "Ошибка в описании деятельности, счёте не в той стране или сайте без refund policy ломает всю цепочку. Мы знаем, какие связки проходят для магазинов, SaaS, forex и gaming, и какие разваливаются на KYC банка.",
+              "Ошибка в описании деятельности, счёте не в той стране или сайте без refund policy ломает всю цепочку. Мы знаем, какие связки проходят для магазинов, SaaS и gaming, и какие разваливаются на KYC банка.",
               "Если позже вырастет оборот, на этой же инфраструктуре можно добавить routing и резервные аккаунты — не переезжая в новую юрисдикцию с нуля без причины."
             ]
           },
@@ -1317,8 +1317,8 @@
       },
       "en": {
         "meta": {
-          "title": "Company and bank for Stripe | WayOfProcessing",
-          "description": "Company, bank account and Stripe in one package. Jurisdictions GB, HK, CY, PL, EE, CZ. Setup from 3 days.",
+          "title": "Legal Entity and Bank Account for Stripe | WayOfProcessing",
+          "description": "Company formation and a bank account for accepting payments via Stripe. Jurisdictions, timelines, costs and what we need from you.",
           "keywords": [
             "company formation for stripe",
             "foreign company with bank account",
@@ -1353,7 +1353,7 @@
           {
             "title": "Why you should not assemble this piecemeal",
             "paragraphs": [
-              "A wrong activity description, an account in the wrong country or a site with no refund policy breaks the chain. We know which bundles pass for stores, SaaS, forex and gaming, and which fall apart at bank KYC.",
+              "A wrong activity description, an account in the wrong country or a site with no refund policy breaks the chain. We know which bundles pass for stores, SaaS and gaming, and which fall apart at bank KYC.",
               "If volume grows later, we can add routing and backup accounts on the same infrastructure instead of moving jurisdiction from scratch without a reason."
             ]
           },
@@ -1448,8 +1448,8 @@
       },
       "uk": {
         "meta": {
-          "title": "Юрособа і банк для Stripe | WayOfProcessing",
-          "description": "Компанія, розрахунковий рахунок і Stripe одним комплектом. Юрисдикції GB, HK, CY, PL, EE, CZ. Запуск від 3 днів.",
+          "title": "Юрособа та банківський рахунок для Stripe | WayOfProcessing",
+          "description": "Реєстрація юрособи та банківський рахунок під прийом платежів через Stripe. Юрисдикції, строки і вартість, що потрібно від вас.",
           "keywords": [
             "відкрити компанію для stripe",
             "закордонна юрособа та рахунок",
@@ -1484,7 +1484,7 @@
           {
             "title": "Чому не можна зібрати це окремо",
             "paragraphs": [
-              "Помилка в описі діяльності, рахунок не в тій країні або сайт без refund policy ламають увесь ланцюжок. Ми знаємо, які зв’язки проходять для магазинів, SaaS, forex і gaming, а які розвалюються на KYC банку.",
+              "Помилка в описі діяльності, рахунок не в тій країні або сайт без refund policy ламають увесь ланцюжок. Ми знаємо, які зв’язки проходять для магазинів, SaaS і gaming, а які розвалюються на KYC банку.",
               "Якщо згодом оборот виросте, на цій самій інфраструктурі можна додати routing і резервні акаунти — не переїжджаючи без причини в нову юрисдикцію з нуля."
             ]
           },

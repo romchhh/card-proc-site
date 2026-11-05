@@ -39,22 +39,7 @@ export function localizePost(post: BlogPost, locale: BlogLocale): BlogPostView {
   }
 }
 
-/** Merged into stronger posts via 301 — hide from listings */
-export const REDIRECTED_BLOG_SLUGS = new Set([
-  'business-categories-stripe',
-  'fast-payment-system',
-  'stripe-for-your-business',
-  'international-payments-for-business',
-])
-
 export function getAllPosts(): BlogPost[] {
-  return [...posts]
-    .filter((post) => !REDIRECTED_BLOG_SLUGS.has(post.slug))
-    .sort((a, b) => b.date.localeCompare(a.date))
-}
-
-/** All posts including redirected (for generateStaticParams / redirects). */
-export function getAllPostsIncludingRedirected(): BlogPost[] {
   return [...posts].sort((a, b) => b.date.localeCompare(a.date))
 }
 
@@ -92,6 +77,10 @@ const POST_RELATED_SERVICES: Record<string, ServiceSlug[]> = {
   'stripe-international-payments-integration': ['processing-turnkey', 'legal-entity-bank'],
   'international-payments-for-business': ['processing-turnkey', 'legal-entity-bank'],
   'stripe-payment-routing-uptime': ['processing-turnkey', 'stripe-account-rent'],
+  'stripe-account-rental-high-risk': ['stripe-account-rent', 'processing-turnkey'],
+  'stripe-chargeback-dispute-prevention': ['processing-turnkey', 'stripe-account-buy'],
+  'smart-payment-routing-stripe-uptime': ['processing-turnkey', 'stripe-account-rent'],
+  'stripe-international-payment-integration': ['processing-turnkey', 'legal-entity-bank'],
 }
 
 export function getRelatedServiceSlugs(postSlug: string): ServiceSlug[] {
@@ -120,7 +109,7 @@ export const SERVICE_LINK_ANCHORS: Record<BlogLocale, Record<ServiceSlug, string
 }
 
 export function getAllSlugs(): string[] {
-  return posts.filter((post) => !REDIRECTED_BLOG_SLUGS.has(post.slug)).map((post) => post.slug)
+  return posts.map((post) => post.slug)
 }
 
 export function formatBlogDate(date: string, locale: string): string {

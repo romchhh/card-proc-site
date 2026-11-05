@@ -3,8 +3,8 @@
     "jurisdictions": {
       "ru": {
         "meta": {
-          "title": "Юрисдикции для Stripe: как выбрать страну и компанию",
-          "description": "Как выбрать страну для Stripe: Польша, Эстония, Чехия, Кипр, Великобритания, Гонконг. Юрлицо, банк, налоги и ограничения без громких обещаний.",
+          "title": "Юрисдикции для Stripe: где открыть компанию | WayOfProcessing",
+          "description": "Кипр, Чехия, Эстония, Гонконг, Польша и Великобритания: сроки, требования и ограничения для подключения Stripe.",
           "keywords": [
             "юрисдикции для stripe",
             "страны stripe",
@@ -101,8 +101,8 @@
       },
       "uk": {
         "meta": {
-          "title": "Юрисдикції для Stripe: як обрати країну та компанію",
-          "description": "Як обрати країну для Stripe: Польща, Естонія, Чехія, Кіпр, Британія, Гонконг. Юрособа, банк, податки й обмеження без гучних обіцянок.",
+          "title": "Юрисдикції для Stripe: де відкрити компанію | WayOfProcessing",
+          "description": "Кіпр, Чехія, Естонія, Гонконг, Польща і Велика Британія: строки, вимоги та обмеження для підключення Stripe.",
           "keywords": [
             "юрисдикції для stripe",
             "країни stripe",
@@ -199,8 +199,8 @@
       },
       "en": {
         "meta": {
-          "title": "Stripe jurisdictions: how to choose a country and company",
-          "description": "How to choose a country for Stripe: Poland, Estonia, Czechia, Cyprus, the UK, Hong Kong. Company, bank, taxes and limits, with no inflated promises.",
+          "title": "Jurisdictions for Stripe: Where to Register | WayOfProcessing",
+          "description": "Cyprus, Czech Republic, Estonia, Hong Kong, Poland and the UK: timelines, requirements and limits for connecting Stripe.",
           "keywords": [
             "stripe jurisdictions",
             "stripe supported countries",
@@ -299,8 +299,8 @@
     "niches": {
       "ru": {
         "meta": {
-          "title": "Ниши для Stripe: что подходит и где нужна проверка",
-          "description": "Какие бизнесы подходят для Stripe: SaaS, подписки, курсы, маркетплейсы, цифровые товары, gaming, high-risk и forex. Честный разбор рисков.",
+          "title": "Ниши для Stripe: что принимается, что нет | WayOfProcessing",
+          "description": "Digital-продукты, SaaS, подписки, курсы, маркетплейсы, гейминг и high-risk. Какие ниши Stripe принимает и на каких условиях.",
           "keywords": [
             "ниши для stripe",
             "stripe для бизнеса",
@@ -385,8 +385,8 @@
       },
       "uk": {
         "meta": {
-          "title": "Ніші для Stripe: що підходить і де потрібна перевірка",
-          "description": "Які бізнеси підходять для Stripe: SaaS, підписки, курси, маркетплейси, цифрові товари, gaming, high-risk і forex. Чесний розбір ризиків.",
+          "title": "Ніші для Stripe: що приймається, що ні | WayOfProcessing",
+          "description": "Digital-продукти, SaaS, підписки, курси, маркетплейси, геймінг і high-risk. Які ніші Stripe приймає і на яких умовах.",
           "keywords": [
             "ніші для stripe",
             "stripe для бізнесу",
@@ -471,8 +471,8 @@
       },
       "en": {
         "meta": {
-          "title": "Stripe niches: what fits and where extra review applies",
-          "description": "Which businesses suit Stripe: SaaS, subscriptions, courses, marketplaces, digital goods, gaming, high-risk and forex. An honest look at the risks.",
+          "title": "Stripe by Niche: What Works, What Doesn't | WayOfProcessing",
+          "description": "Digital products, SaaS, subscriptions, courses, marketplaces, gaming and high-risk. Which niches Stripe accepts and under what conditions.",
           "keywords": [
             "stripe niches",
             "stripe for business",
@@ -565,8 +565,8 @@
       "priority": 0.84,
       "ru": {
         "meta": {
-          "title": "Stripe в Польше: компания и счёт | WayOfProcessing",
-          "description": "Как подключить Stripe через польскую компанию: sp. z o.o., KRS и NIP, НДС, банковский счёт, сроки и ограничения. Консультация WayOfProcessing.",
+          "title": "Stripe в Польше: открытие и подключение | WayOfProcessing",
+          "description": "Как подключить Stripe через польскую компанию: документы, сроки, налоги и банк. Для каких бизнесов подходит эта юрисдикция.",
           "keywords": [
             "stripe в польше",
             "stripe польша",
@@ -684,8 +684,8 @@
       },
       "uk": {
         "meta": {
-          "title": "Stripe у Польщі: компанія, рахунок і підключення",
-          "description": "Як підключити Stripe через польську компанію: sp. z o.o., KRS і NIP, ПДВ, банківський рахунок, строки та обмеження. Консультація WayOfProcessing.",
+          "title": "Stripe у Польщі: відкриття та підключення | WayOfProcessing",
+          "description": "Як підключити Stripe через польську компанію: документи, строки, податки і банк. Для яких бізнесів підходить ця юрисдикція.",
           "keywords": [
             "stripe у польщі",
             "stripe польща",
@@ -803,8 +803,8 @@
       },
       "en": {
         "meta": {
-          "title": "Stripe in Poland: company, bank account and setup",
-          "description": "How to connect Stripe through a Polish company: sp. z o.o., KRS and NIP, VAT, a bank account, timelines and limits. Consultation by WayOfProcessing.",
+          "title": "Stripe in Poland: Setup and Requirements | WayOfProcessing",
+          "description": "How to connect Stripe through a Polish company: documents, timelines, taxes and banking. Which businesses this jurisdiction suits.",
           "keywords": [
             "stripe poland",
             "stripe for polish company",
@@ -4690,8 +4690,8 @@
       "priority": 0.8,
       "ru": {
         "meta": {
-          "title": "Forex и Stripe: жёсткие ограничения и честная оценка",
-          "description": "Подходит ли Stripe для forex: почему брокерские модели обычно не проходят, что можно, а что нет, и какие есть альтернативы. Без обещаний.",
+          "title": "Stripe и Forex: возможно ли подключение | WayOfProcessing",
+          "description": "Forex и брокерские услуги обычно не подходят для Stripe. Что говорят правила платформы и какие есть альтернативы.",
           "keywords": [
             "процессинг для форекс",
             "forex payment processing",
@@ -4782,8 +4782,8 @@
       },
       "uk": {
         "meta": {
-          "title": "Forex і Stripe: жорсткі обмеження та чесна оцінка",
-          "description": "Чи підходить Stripe для forex: чому брокерські моделі зазвичай не проходять, що можна, а що ні, і які є альтернативи. Без обіцянок.",
+          "title": "Stripe і Forex: чи можливе підключення | WayOfProcessing",
+          "description": "Forex і брокерські послуги зазвичай не підходять для Stripe. Що кажуть правила платформи і які є альтернативи.",
           "keywords": [
             "процесинг для форекс",
             "forex payment processing",
@@ -4874,8 +4874,8 @@
       },
       "en": {
         "meta": {
-          "title": "Forex and Stripe: strict limits and an honest assessment",
-          "description": "Is Stripe suitable for forex: why brokerage models usually fail review, what is possible, what is not, and the alternatives. No promises.",
+          "title": "Stripe and Forex: Is It Possible? | WayOfProcessing",
+          "description": "Forex and brokerage services are usually not accepted by Stripe. What the platform rules say and what the alternatives are.",
           "keywords": [
             "forex payment processing",
             "stripe forex",
@@ -4971,8 +4971,8 @@
       "priority": 0.88,
       "ru": {
         "meta": {
-          "title": "Stripe для Украины: ФОП, оплата из-за границы, варианты",
-          "description": "Можно ли использовать Stripe в Украине: почему ФОП не подходит напрямую, какие есть варианты через иностранную компанию и альтернативы.",
+          "title": "Stripe для украинского бизнеса | WayOfProcessing",
+          "description": "Как принимать международные платежи через Stripe украинскому бизнесу: схема, документы, сроки и вывод средств.",
           "keywords": [
             "stripe для украинского бизнеса",
             "stripe в украине",
@@ -5064,8 +5064,8 @@
       },
       "uk": {
         "meta": {
-          "title": "Stripe для України: ФОП, оплата з-за кордону, варіанти",
-          "description": "Чи можна використовувати Stripe в Україні: чому ФОП не підходить напряму, які є варіанти через іноземну компанію та альтернативи.",
+          "title": "Stripe для українського бізнесу | WayOfProcessing",
+          "description": "Як приймати міжнародні платежі через Stripe українському бізнесу: схема, документи, терміни та виведення коштів.",
           "keywords": [
             "stripe для українського бізнесу",
             "stripe в україні",
@@ -5157,8 +5157,8 @@
       },
       "en": {
         "meta": {
-          "title": "Stripe for Ukraine: sole traders, foreign payments, options",
-          "description": "Can you use Stripe in Ukraine: why a sole trader cannot connect directly, the options through a foreign company, and alternatives.",
+          "title": "Stripe for Ukrainian Business | WayOfProcessing",
+          "description": "How a Ukrainian business can accept international payments via Stripe: structure, documents, timelines and withdrawing funds.",
           "keywords": [
             "stripe for ukrainian business",
             "stripe in ukraine",
@@ -5255,8 +5255,8 @@
       "priority": 0.82,
       "ru": {
         "meta": {
-          "title": "Проблемы с аккаунтом Stripe: блок, review, hold, KYC",
-          "description": "Что делать, если Stripe заблокировал аккаунт, заморозил выплаты или запросил документы: причины, порядок действий и чего не стоит делать.",
+          "title": "Блокировка и лимиты Stripe: что делать | WayOfProcessing",
+          "description": "Заморозка выплат, лимиты и закрытие аккаунта Stripe. Причины, порядок действий и как снизить риск повторения.",
           "keywords": [
             "stripe заблокировал аккаунт",
             "stripe review что делать",
@@ -5352,8 +5352,8 @@
       },
       "uk": {
         "meta": {
-          "title": "Проблеми з акаунтом Stripe: блок, review, hold, KYC",
-          "description": "Що робити, якщо Stripe заблокував акаунт, заморозив виплати або запросив документи: причини, порядок дій і чого не варто робити.",
+          "title": "Блокування та ліміти Stripe: що робити | WayOfProcessing",
+          "description": "Замороження виплат, ліміти й закриття акаунта Stripe. Причини, порядок дій і як знизити ризик повторення.",
           "keywords": [
             "stripe заблокував акаунт",
             "stripe review що робити",
@@ -5449,8 +5449,8 @@
       },
       "en": {
         "meta": {
-          "title": "Stripe account issues: suspension, review, hold, KYC",
-          "description": "What to do if Stripe suspended your account, froze payouts or asked for documents: causes, a plan of action and what not to do.",
+          "title": "Stripe Account Limits and Holds: What to Do | WayOfProcessing",
+          "description": "Payout holds, limits and account closures on Stripe. Causes, action plan and how to reduce the risk of a repeat.",
           "keywords": [
             "stripe account suspended",
             "stripe account under review",

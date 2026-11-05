@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, type ReactNode } from 'react'
+import { type ReactNode } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
@@ -83,7 +83,6 @@ export default function ServicePage({ slug, view: viewProp, image, breadcrumbs, 
   const lp = useLocalizedPath()
   const { open: openContactModal } = useContactModal()
   const locale = resolveLocale(i18n.language)
-  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null)
 
   const service = slug ? getServiceBySlug(slug) : undefined
   const view = viewProp ?? (service ? getServiceView(service, locale) : null)
@@ -380,39 +379,26 @@ export default function ServicePage({ slug, view: viewProp, image, breadcrumbs, 
                 {faqHeading}
               </h2>
               <div className={styles.faqList}>
-                {view.faq.map((item, index) => {
-                  const isOpen = openFaqIndex === index
-
-                  return (
-                    <article
-                      key={item.question}
-                      className={`${styles.faqItem} ${isOpen ? styles.faqItemOpen : ''}`}
-                    >
-                      <h3>
-                        <button
-                          type="button"
-                          className={styles.faqQuestion}
-                          aria-expanded={isOpen}
-                          onClick={() => setOpenFaqIndex(isOpen ? null : index)}
-                        >
-                          <span>{item.question}</span>
-                          <svg className={styles.faqIcon} width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                            <polyline points="6 9 10 13 14 9" />
-                          </svg>
-                        </button>
-                      </h3>
-                      <div
-                        className={styles.faqAnswerWrap}
-                        aria-hidden={!isOpen}
-                        data-open={isOpen}
-                      >
-                        <div className={styles.faqAnswerInner}>
-                          <p className={styles.faqAnswer}>{item.answer}</p>
-                        </div>
+                {view.faq.map((item, index) => (
+                  <details
+                    key={item.question}
+                    className={styles.faqItem}
+                    id={`faq-${index + 1}`}
+                    open={index === 0}
+                  >
+                    <summary className={styles.faqQuestion}>
+                      <span>{item.question}</span>
+                      <svg className={styles.faqIcon} width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                        <polyline points="6 9 10 13 14 9" />
+                      </svg>
+                    </summary>
+                    <div className={styles.faqAnswerWrap} data-open="true">
+                      <div className={styles.faqAnswerInner}>
+                        <p className={styles.faqAnswer}>{item.answer}</p>
                       </div>
-                    </article>
-                  )
-                })}
+                    </div>
+                  </details>
+                ))}
               </div>
             </section>
           )}

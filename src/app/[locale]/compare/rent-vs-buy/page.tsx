@@ -241,8 +241,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const copy = COPY[locale]
 
   return buildPageMetadata({
-    title: `${copy.title} | WayOfProcessing`,
-    description: copy.description,
+    title: pickLocaleCopy(locale, {
+      ru: 'Аренда или покупка аккаунта Stripe: сравнение | WayOfProcessing',
+      uk: 'Оренда чи купівля акаунта Stripe: порівняння | WayOfProcessing',
+      en: 'Rent vs Buy a Stripe Account: Comparison | WayOfProcessing',
+    }),
+    description: pickLocaleCopy(locale, {
+      ru: 'Сравнение аренды и покупки аккаунта Stripe по стоимости, срокам, контролю и рискам. Таблица и рекомендации по типу бизнеса.',
+      uk: 'Порівняння оренди та купівлі акаунта Stripe за вартістю, строками, контролем і ризиками. Таблиця та рекомендації за типом бізнесу.',
+      en: 'Renting and buying a Stripe account compared by cost, timeline, control and risk. A table and recommendations by business type.',
+    }),
     path: '/compare/rent-vs-buy',
     locale,
   })

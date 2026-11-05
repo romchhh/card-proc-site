@@ -84,6 +84,16 @@ export default function BlogPostPage({
             </div>
           </div>
           <h1 className={styles.title}>{view.title}</h1>
+          <p className={styles.byline}>
+            {t('blog.authorByline', {
+              published: formatBlogDate(view.date, locale),
+              updated: formatBlogDate(view.date, locale),
+              reviewed: formatBlogDate(view.date, locale),
+            })}{' '}
+            <Link href={lp('/about')} className={styles.inlineLink}>
+              {t('blog.authorPolicy')}
+            </Link>
+          </p>
           <p className={styles.lead}>{view.excerpt}</p>
         </header>
 

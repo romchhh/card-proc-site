@@ -88,10 +88,17 @@ function buildSharedMeta({
   const localizedPath = localePath(path, locale)
   const url = absoluteUrl(localizedPath)
   const ogLocale = localeOgLocale(locale)
-  const alternateOgLocale =
-    locale === 'en' ? localeOgLocale('uk') : locale === 'uk' ? localeOgLocale('ru') : localeOgLocale('en')
+  const alternateOgLocales = (['ru', 'uk', 'en'] as Locale[])
+    .filter((item) => item !== locale)
+    .map((item) => localeOgLocale(item))
   const imagePath = ogImage ?? siteConfig.ogImage
   const imageUrl = imagePath.startsWith('http') ? imagePath : absoluteUrl(imagePath)
+  const defaultOgAlt =
+    locale === 'en'
+      ? siteConfig.ogImageAltEn
+      : locale === 'uk'
+        ? siteConfig.ogImageAltUk
+        : siteConfig.ogImageAlt
 
   return {
     title: { absolute: title },
@@ -106,7 +113,7 @@ function buildSharedMeta({
     },
     openGraph: {
       locale: ogLocale,
-      alternateLocale: [alternateOgLocale],
+      alternateLocale: alternateOgLocales,
       url,
       siteName: siteConfig.name,
       title: ogTitle ?? title,
@@ -116,7 +123,7 @@ function buildSharedMeta({
           url: imageUrl,
           width: 1200,
           height: 630,
-          alt: ogImageAlt ?? siteConfig.ogImageAlt,
+          alt: ogImageAlt ?? defaultOgAlt,
         },
       ],
     },
