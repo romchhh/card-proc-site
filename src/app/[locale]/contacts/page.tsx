@@ -25,11 +25,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }),
     path: '/contacts',
     locale,
-    keywords: pickLocaleCopy(locale, {
-      ru: ['контакты wayofprocessing', 'подключение stripe', 'заявка stripe'],
-      uk: ['контакти wayofprocessing', 'підключення stripe', 'заявка stripe'],
-      en: ['wayofprocessing contacts', 'connect stripe', 'stripe setup request'],
-    }),
   })
 }
 

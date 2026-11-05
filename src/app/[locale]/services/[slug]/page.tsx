@@ -39,7 +39,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: view.meta.description,
     path: `/services/${service.slug}`,
     locale,
-    keywords: view.meta.keywords,
     ogTitle: view.h1,
     ogImage: SERVICE_IMAGES[service.slug as ServiceSlug],
     ogImageAlt: view.h1,

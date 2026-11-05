@@ -6,7 +6,7 @@
 
 .header {
   width: 100%;
-  max-width: var(--prose-max);
+  max-width: var(--content-max);
   margin: 0 auto var(--space-12);
 }
 
@@ -26,7 +26,68 @@
   line-height: var(--leading-body);
   color: var(--gray-500);
   margin: 0 0 var(--space-5);
-  max-width: 65ch;
+  max-width: none;
+}
+
+.intro {
+  width: 100%;
+  max-width: var(--content-max);
+  margin: 0 auto var(--space-10);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.intro p {
+  margin: 0;
+  font-size: var(--text-base);
+  line-height: var(--leading-body);
+  color: var(--gray-500);
+}
+
+.sections {
+  width: 100%;
+  max-width: var(--content-max);
+  margin: 0 auto var(--space-12);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.sectionTitle {
+  font-size: var(--page-h2);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--gray-900);
+  margin: 0 0 var(--space-4);
+  text-wrap: balance;
+}
+
+.sectionBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.sectionBody p {
+  margin: 0;
+  font-size: var(--text-base);
+  line-height: var(--leading-body);
+  color: var(--gray-500);
+}
+
+.sectionBody ul {
+  margin: 0;
+  padding-left: 1.2em;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sectionBody li {
+  font-size: var(--text-base);
+  line-height: var(--leading-body);
+  color: var(--gray-500);
 }
 
 .links {
@@ -64,6 +125,15 @@
   transform: translateX(3px);
 }
 
+.guideTables {
+  width: 100%;
+  max-width: var(--content-max);
+  margin: 0 auto var(--space-12);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -75,7 +145,7 @@
 
 .faq {
   width: 100%;
-  max-width: var(--prose-max);
+  max-width: var(--content-max);
   margin: 0 auto;
 }
 

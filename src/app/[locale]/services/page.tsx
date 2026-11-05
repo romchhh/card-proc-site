@@ -6,8 +6,10 @@ import ServiceCard from '../../components/ServiceCard'
 import Breadcrumbs from '../../components/seo/Breadcrumbs'
 import FaqAccordion from '../../components/seo/FaqAccordion'
 import JsonLdScript from '../../components/seo/JsonLdScript'
+import ContentTable from '../../components/ContentTable'
 import PriorityLinks from '../../components/seo/PriorityLinks'
 import { isValidLocale, localePath, pickLocaleCopy, type Locale } from '@/lib/i18n/config'
+import { getHubTables } from '@/lib/guide-tables'
 import { labelServices } from '@/lib/i18n/labels'
 import { absoluteUrl, buildBreadcrumbJsonLd, buildGraphJsonLd, buildPageMetadata, buildWebPageJsonLd } from '@/lib/seo'
 import { buildFaqPageJsonLd } from '@/lib/service-seo'
@@ -194,6 +196,12 @@ export default async function ServicesHubPage({ params }: Props) {
               href={localePath(`/services/${item.slug}`, locale)}
               titleAs="h2"
             />
+          ))}
+        </div>
+
+        <div className={styles.guideTables}>
+          {getHubTables('services', locale).map((table) => (
+            <ContentTable key={table.id} table={table} locale={locale} />
           ))}
         </div>
 

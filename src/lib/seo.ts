@@ -74,7 +74,6 @@ function buildSharedMeta({
   path,
   locale,
   noIndex = false,
-  keywords,
 }: {
   title: string
   description: string
@@ -97,7 +96,7 @@ function buildSharedMeta({
   return {
     title: { absolute: title },
     description,
-    ...(keywords?.length ? { keywords } : {}),
+    // meta keywords ignored by modern search engines; do not emit
     alternates: noIndex ? undefined : buildHreflang(path, locale),
     robots: noIndex
       ? { index: false, follow: true }

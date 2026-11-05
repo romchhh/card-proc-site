@@ -219,6 +219,15 @@ export default async function SiteMapPage({ params }: Props) {
             </Link>
           </li>
           <li>
+            <Link href={localePath('/solutions', locale)}>
+              {pickLocaleCopy(locale, {
+                ru: 'Решения для Stripe — хаб',
+                uk: 'Рішення для Stripe — хаб',
+                en: 'Stripe solutions — hub',
+              })}
+            </Link>
+          </li>
+          <li>
             <Link href={localePath('/blog', locale)}>{labelBlog(locale)}</Link>
           </li>
           <li>
@@ -279,6 +288,15 @@ export default async function SiteMapPage({ params }: Props) {
           })}
         </h2>
         <ul>
+          <li>
+            <Link href={localePath('/solutions', locale)}>
+              {pickLocaleCopy(locale, {
+                ru: 'Решения для Stripe — обзор',
+                uk: 'Рішення для Stripe — огляд',
+                en: 'Stripe solutions — overview',
+              })}
+            </Link>
+          </li>
           {solutions.map((landing) => (
             <li key={landing.path}>
               <Link href={localePath(landing.path, locale)}>{landing.title}</Link>

@@ -18,8 +18,11 @@ import { useContactModal } from './ContactModalProvider'
 import Breadcrumbs from './seo/Breadcrumbs'
 import PriorityLinks from './seo/PriorityLinks'
 import BlogCard from './BlogCard'
+import ContentTable from './ContentTable'
 import ServiceCard from './ServiceCard'
 import SpecialistsSection from './SpecialistsSection'
+import { getChecklistTable, getLandingGuideTables, getSetupPathTable } from '@/lib/guide-tables'
+import type { LandingGroup } from '@/lib/landings'
 import styles from './ServicePage.module.css'
 
 type BreadcrumbItem = {
@@ -39,6 +42,8 @@ type Props = {
   view?: ServiceView
   image?: string
   breadcrumbs?: BreadcrumbItem[]
+  /** Show comparison / checklist tables on SEO landings */
+  guideGroup?: LandingGroup
 }
 
 function sectionId(index: number) {
@@ -73,7 +78,7 @@ function renderParagraphs(paragraphs: string[]) {
   return blocks
 }
 
-export default function ServicePage({ slug, view: viewProp, image, breadcrumbs }: Props) {
+export default function ServicePage({ slug, view: viewProp, image, breadcrumbs, guideGroup }: Props) {
   const { t, i18n } = useTranslation()
   const lp = useLocalizedPath()
   const { open: openContactModal } = useContactModal()
@@ -86,15 +91,31 @@ export default function ServicePage({ slug, view: viewProp, image, breadcrumbs }
 
   if (!view || !heroImage) return null
 
-  const processSteps = (t('servicePages.process', { returnObjects: true }) as ProcessStep[]) || []
-  const explore = {
-    services: { href: lp('/services'), label: t('servicePages.explore.services') },
-    compare: { href: lp('/compare/rent-vs-buy'), label: t('servicePages.explore.compare') },
-    jurisdictions: { href: lp('/jurisdictions'), label: t('servicePages.explore.jurisdictions') },
-    niches: { href: lp('/niches'), label: t('servicePages.explore.niches') },
-    ukraine: { href: lp('/solutions/stripe-ukraine'), label: t('servicePages.explore.ukraine') },
-    issues: { href: lp('/solutions/stripe-account-issues'), label: t('servicePages.explore.issues') },
-  }
+  const isLanding = Boolean(viewProp)
+  const guideTables = guideGroup
+    ? getLandingGuideTables(guideGroup, locale)
+    : slug
+      ? [getSetupPathTable(locale), getChecklistTable(locale)]
+      : []
+  const processSteps = isLanding
+    ? []
+    : ((t('servicePages.process', { returnObjects: true }) as ProcessStep[]) || [])
+  const exploreItems = [
+    { href: lp('/services'), label: t('servicePages.explore.services') },
+    { href: lp('/compare/rent-vs-buy'), label: t('servicePages.explore.compare') },
+    { href: lp('/jurisdictions'), label: t('servicePages.explore.jurisdictions') },
+    { href: lp('/niches'), label: t('servicePages.explore.niches') },
+    { href: lp('/solutions'), label: t('servicePages.explore.solutions') },
+    { href: lp('/solutions/stripe-ukraine'), label: t('servicePages.explore.ukraine') },
+    { href: lp('/solutions/stripe-account-issues'), label: t('servicePages.explore.issues') },
+  ].filter((item) => {
+    const current = breadcrumbs?.[breadcrumbs.length - 1]?.path
+    return !current || item.href !== current
+  })
+
+  const faqHeading = isLanding
+    ? t('servicePages.faqHeadingFor', { topic: view.card.title || view.h1 })
+    : t('seo.faqHeading')
 
   const relatedServices = view.relatedServices
     .map((relatedSlug) => {
@@ -159,7 +180,7 @@ export default function ServicePage({ slug, view: viewProp, image, breadcrumbs }
       <section id="about" className={styles.intro} aria-labelledby="service-intro-heading">
         <div className={styles.introInner}>
           <h2 id="service-intro-heading" className={styles.introHeading}>
-            {t('servicePages.aboutService')}
+            {isLanding ? t('servicePages.aboutTopic') : t('servicePages.aboutService')}
           </h2>
           <div className={styles.introCopy}>
             {(view.intro?.length ? view.intro : [view.lead]).map((paragraph) => (
@@ -179,24 +200,42 @@ export default function ServicePage({ slug, view: viewProp, image, breadcrumbs }
 
       <div className={styles.layout}>
         <article className={styles.inner}>
-          <div id="benefits" className={styles.benefitsBlock}>
-            <h2 className={styles.benefitsTitle}>{t('servicePages.benefitsHeading')}</h2>
-            <ul className={styles.benefits}>
-              {view.benefits.map((benefit) => (
-                <li key={benefit.title} className={styles.benefitItem}>
-                  <div className={styles.benefitIcon} aria-hidden="true">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                      <polyline points="20 6 9 17 4 12" />
-                    </svg>
-                  </div>
-                  <div className={styles.benefitCopy}>
-                    <strong className={styles.benefitName}>{benefit.title}</strong>
-                    <p className={styles.benefitDesc}>{benefit.description}</p>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {view.benefits.length > 0 && (
+            <div
+              id="benefits"
+              className={isLanding ? styles.factsBlock : styles.benefitsBlock}
+            >
+              <h2 className={isLanding ? styles.factsTitle : styles.benefitsTitle}>
+                {isLanding ? t('servicePages.factsHeading') : t('servicePages.benefitsHeading')}
+              </h2>
+              {isLanding ? (
+                <dl className={styles.factsGrid}>
+                  {view.benefits.map((benefit) => (
+                    <div key={benefit.title} className={styles.factCard}>
+                      <dt className={styles.factLabel}>{benefit.title}</dt>
+                      <dd className={styles.factValue}>{benefit.description}</dd>
+                    </div>
+                  ))}
+                </dl>
+              ) : (
+                <ul className={styles.benefits}>
+                  {view.benefits.map((benefit) => (
+                    <li key={benefit.title} className={styles.benefitItem}>
+                      <div className={styles.benefitIcon} aria-hidden="true">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                          <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                      </div>
+                      <div className={styles.benefitCopy}>
+                        <strong className={styles.benefitName}>{benefit.title}</strong>
+                        <p className={styles.benefitDesc}>{benefit.description}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          )}
 
           {processSteps.length > 0 && (
             <section id="process" className={styles.processBlock} aria-labelledby="service-process-heading">
@@ -221,32 +260,48 @@ export default function ServicePage({ slug, view: viewProp, image, breadcrumbs }
           )}
 
           <div className={styles.sections}>
-            <h2 className={styles.detailsHeading}>{t('servicePages.detailsHeading')}</h2>
+            {!isLanding && <h2 className={styles.detailsHeading}>{t('servicePages.detailsHeading')}</h2>}
             {view.sections.map((section, idx) => (
               <section key={section.title} id={sectionId(idx)} className={styles.section}>
                 <div className={styles.sectionHeader}>
-                  <span className={styles.sectionNumber}>{String(idx + 1).padStart(2, '0')}</span>
-                  <h3 className={styles.sectionTitle}>{section.title}</h3>
+                  {!isLanding && (
+                    <span className={styles.sectionNumber}>{String(idx + 1).padStart(2, '0')}</span>
+                  )}
+                  {isLanding ? (
+                    <h2 className={styles.sectionTitle}>{section.title}</h2>
+                  ) : (
+                    <h3 className={styles.sectionTitle}>{section.title}</h3>
+                  )}
                 </div>
                 <div className={styles.paragraphs}>{renderParagraphs(section.paragraphs)}</div>
               </section>
             ))}
           </div>
 
-          <div className={styles.ctaBlock}>
-            <div className={styles.ctaCard}>
-              <div className={styles.ctaContent}>
-                <h3 className={styles.ctaTitle}>{t('servicePages.ctaHeading')}</h3>
-                <p className={styles.ctaDescription}>{t('servicePages.ctaDescription')}</p>
-              </div>
-              <button type="button" className={styles.ctaButton} onClick={openContactModal}>
-                <span>{t('nav.cta')}</span>
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M2 14 L14 2 M6 2 H14 V10" />
-                </svg>
-              </button>
+          {guideTables.length > 0 && (
+            <div className={styles.guideTables}>
+              {guideTables.map((table) => (
+                <ContentTable key={table.id} table={table} locale={locale} narrow={false} />
+              ))}
             </div>
-          </div>
+          )}
+
+          {!isLanding && (
+            <div className={styles.ctaBlock}>
+              <div className={styles.ctaCard}>
+                <div className={styles.ctaContent}>
+                  <h3 className={styles.ctaTitle}>{t('servicePages.ctaHeading')}</h3>
+                  <p className={styles.ctaDescription}>{t('servicePages.ctaDescription')}</p>
+                </div>
+                <button type="button" className={styles.ctaButton} onClick={openContactModal}>
+                  <span>{t('nav.cta')}</span>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M2 14 L14 2 M6 2 H14 V10" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          )}
 
           <nav id="explore" className={styles.exploreSection} aria-labelledby="service-explore-heading">
             <h2 id="service-explore-heading" className={styles.relatedTitle}>
@@ -254,7 +309,7 @@ export default function ServicePage({ slug, view: viewProp, image, breadcrumbs }
             </h2>
             <p className={styles.exploreLead}>{t('servicePages.exploreLead')}</p>
             <ul className={styles.exploreList}>
-              {Object.values(explore).map((item) => (
+              {exploreItems.map((item) => (
                 <li key={item.href}>
                   <Link href={item.href} className={styles.exploreLink}>
                     {item.label}
@@ -264,6 +319,22 @@ export default function ServicePage({ slug, view: viewProp, image, breadcrumbs }
               ))}
             </ul>
           </nav>
+
+          {view.relatedLandings && view.relatedLandings.length > 0 && (
+            <nav className={styles.relatedSection} aria-label={view.relatedLandingsHeading}>
+              <h2 className={styles.relatedTitle}>{view.relatedLandingsHeading}</h2>
+              <ul className={styles.exploreList}>
+                {view.relatedLandings.map((item) => (
+                  <li key={item.path}>
+                    <Link href={lp(item.path)} className={styles.exploreLink}>
+                      {item.title}
+                      <span aria-hidden="true">→</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          )}
 
           {relatedServices.length > 0 && (
             <nav className={styles.relatedSection} aria-label={t('servicePages.relatedServices')}>
@@ -306,7 +377,7 @@ export default function ServicePage({ slug, view: viewProp, image, breadcrumbs }
           {view.faq.length > 0 && (
             <section id="faq" className={styles.faqSection} aria-labelledby="service-faq-heading">
               <h2 id="service-faq-heading" className={styles.faqSectionTitle}>
-                {t('seo.faqHeading')}
+                {faqHeading}
               </h2>
               <div className={styles.faqList}>
                 {view.faq.map((item, index) => {
@@ -349,7 +420,7 @@ export default function ServicePage({ slug, view: viewProp, image, breadcrumbs }
         </article>
       </div>
 
-      <SpecialistsSection compact />
+      {!isLanding && <SpecialistsSection compact />}
       <PriorityLinks locale={locale} />
     </div>
   )

@@ -118,7 +118,7 @@ export function getRelatedLandings(landing: Landing, locale: Locale): { path: st
   const related: { path: string; title: string; lead: string }[] = []
 
   if (landing.group === 'jurisdictions') {
-    const peers = getLandingsByGroup('jurisdictions').filter((item) => item.slug !== landing.slug).slice(0, 2)
+    const peers = getLandingsByGroup('jurisdictions').filter((item) => item.slug !== landing.slug)
     for (const peer of peers) {
       const peerView = getLandingView(peer, locale)
       related.push({ path: peer.path, title: peerView.h1, lead: peerView.lead })
@@ -127,13 +127,6 @@ export function getRelatedLandings(landing: Landing, locale: Locale): { path: st
       path: '/services/legal-entity-bank',
       title: locale === 'uk' ? 'Юрособа, банк і Stripe' : locale === 'en' ? 'Entity, bank and Stripe' : 'Юрлицо, банк и Stripe',
       lead: view.ctas[0]?.label ?? '',
-    })
-    related.push({
-      path: '/solutions/stripe-ukraine',
-      title: locale === 'uk' ? 'Stripe для України' : locale === 'en' ? 'Stripe for Ukraine' : 'Stripe для Украины',
-      lead: getLandingByGroupSlug('solutions', 'stripe-ukraine')
-        ? getLandingView(getLandingByGroupSlug('solutions', 'stripe-ukraine')!, locale).lead
-        : '',
     })
   }
 
@@ -183,7 +176,7 @@ export function getRelatedLandings(landing: Landing, locale: Locale): { path: st
     }
   }
 
-  return related.slice(0, 4)
+  return related.slice(0, landing.group === 'jurisdictions' ? 6 : 4)
 }
 
 export function groupEyebrow(group: LandingGroup, locale: Locale): string {

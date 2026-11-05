@@ -25,7 +25,7 @@ const CLIENT_ICONS: Record<typeof CLIENTS[number] | typeof HIGH_RISK[number], st
   forex: '/images/clients-icons/forex.svg',
   gaming: '/images/clients-icons/gaming.svg',
   vape: '/images/clients-icons/vape.svg',
-  steroids: '/images/clients-icons/steroids.svg',
+  steroids: '/images/clients-icons/sports-supplements.svg',
 }
 
 function ClientIcon({

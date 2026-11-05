@@ -5,9 +5,12 @@ import Footer from '../../components/Footer'
 import ServiceCard from '../../components/ServiceCard'
 import Breadcrumbs from '../../components/seo/Breadcrumbs'
 import FaqAccordion from '../../components/seo/FaqAccordion'
+import HubRichBody from '../../components/seo/HubRichBody'
 import JsonLdScript from '../../components/seo/JsonLdScript'
+import ContentTable from '../../components/ContentTable'
 import PriorityLinks from '../../components/seo/PriorityLinks'
 import { isValidLocale, localePath, pickLocaleCopy, type Locale } from '@/lib/i18n/config'
+import { getHubTables } from '@/lib/guide-tables'
 import { getHubView, getLandingView, getLandingsByGroup } from '@/lib/landings'
 import { getLandingServiceImage } from '@/lib/landing-as-service'
 import { buildFaqPageJsonLd } from '@/lib/service-seo'
@@ -28,6 +31,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     path: '/niches',
     locale,
     ogTitle: view.h1,
+    ogImage: '/images/landings/niches-hero.webp',
+    ogImageAlt: view.h1,
   })
 }
 
@@ -110,8 +115,26 @@ export default async function NichesHubPage({ params }: Props) {
                 <span aria-hidden="true">→</span>
               </Link>
             </li>
+            <li>
+              <Link href={localePath('/solutions', locale)}>
+                {pickLocaleCopy(locale, {
+                  ru: 'Решения для Stripe',
+                  uk: 'Рішення для Stripe',
+                  en: 'Stripe solutions',
+                })}
+                <span aria-hidden="true">→</span>
+              </Link>
+            </li>
           </ul>
         </header>
+
+        <HubRichBody intro={view.intro} sections={view.sections} />
+
+        <div className={styles.guideTables}>
+          {getHubTables('niches', locale).map((table) => (
+            <ContentTable key={table.id} table={table} locale={locale} />
+          ))}
+        </div>
 
         <div className={styles.grid}>
           {items.map((item) => (
@@ -130,7 +153,11 @@ export default async function NichesHubPage({ params }: Props) {
           <div className={styles.faq}>
             <FaqAccordion
               items={view.faq}
-              heading={pickLocaleCopy(locale, { ru: 'Короткий FAQ', uk: 'Короткий FAQ', en: 'Quick FAQ' })}
+              heading={pickLocaleCopy(locale, {
+                ru: 'Вопросы о нишах для Stripe',
+                uk: 'Питання про ніші для Stripe',
+                en: 'Questions about Stripe niches',
+              })}
             />
           </div>
         )}

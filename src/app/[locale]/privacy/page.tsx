@@ -36,11 +36,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: copy.description,
     path: '/privacy',
     locale,
-    keywords: pickLocaleCopy(locale, {
-      ru: [`политика конфиденциальности ${siteConfig.name}`, 'обработка персональных данных', 'privacy policy'],
-      uk: [`політика конфіденційності ${siteConfig.name}`, 'обробка персональних даних', 'privacy policy'],
-      en: [`${siteConfig.name} privacy policy`, 'personal data', 'Stripe processing privacy'],
-    }),
   })
 }
 

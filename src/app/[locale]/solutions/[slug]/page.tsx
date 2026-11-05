@@ -35,7 +35,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: view.meta.description,
     path: landing.path,
     locale,
-    keywords: view.meta.keywords,
     ogTitle: view.h1,
     ogImage: getLandingServiceImage(landing),
     ogImageAlt: view.h1,
@@ -76,6 +75,7 @@ export default async function SolutionPage({ params }: Props) {
         <ServicePage
           view={view}
           image={getLandingServiceImage(landing)}
+          guideGroup="solutions"
           breadcrumbs={[
             { name: siteConfig.name, path: localePath('/', locale) },
             { name: hubTitle, path: localePath('/solutions', locale) },

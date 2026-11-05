@@ -10,7 +10,7 @@ import { getAllPosts, localizePost } from '@/lib/blog'
 import { isValidLocale, localePath, pickLocaleCopy, type Locale } from '@/lib/i18n/config'
 import { labelBlog } from '@/lib/i18n/labels'
 import { absoluteUrl, buildBreadcrumbJsonLd, buildGraphJsonLd, buildPageAlternates, buildPageMetadata, buildWebPageJsonLd } from '@/lib/seo'
-import { siteConfig, siteKeywords } from '@/lib/site'
+import { siteConfig } from '@/lib/site'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -40,7 +40,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: copy.description,
       path: '/blog',
       locale,
-      keywords: siteKeywords(locale),
     }),
     alternates: {
       ...buildPageAlternates('/blog', locale),

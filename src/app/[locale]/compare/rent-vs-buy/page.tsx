@@ -5,8 +5,10 @@ import Footer from '../../../components/Footer'
 import Breadcrumbs from '../../../components/seo/Breadcrumbs'
 import FaqAccordion from '../../../components/seo/FaqAccordion'
 import JsonLdScript from '../../../components/seo/JsonLdScript'
+import ContentTable from '../../../components/ContentTable'
 import PriorityLinks from '../../../components/seo/PriorityLinks'
 import { isValidLocale, localePath, pickLocaleCopy, type Locale } from '@/lib/i18n/config'
+import { getChecklistTable, getSetupPathTable } from '@/lib/guide-tables'
 import { absoluteUrl, buildBreadcrumbJsonLd, buildGraphJsonLd, buildPageMetadata, buildWebPageJsonLd } from '@/lib/seo'
 import { buildFaqPageJsonLd } from '@/lib/service-seo'
 import { siteConfig } from '@/lib/site'
@@ -40,10 +42,34 @@ const COPY = {
         legal: 'Юрлицо и банк на вашей стороне связки',
       },
       {
+        label: 'Документы от вас',
+        rent: 'Сайт, оферта, описание продукта',
+        buy: 'Сайт + пакет для передачи доступов',
+        legal: 'Паспорт, структура владения, KYC банка',
+      },
+      {
+        label: 'Выплаты',
+        rent: 'По схеме аренды (фиксируем в договоре)',
+        buy: 'На ваш банк после передачи',
+        legal: 'На счёт компании после верификации',
+      },
+      {
+        label: 'Когда менять формат',
+        rent: 'После подтверждения экономики пилота',
+        buy: 'Когда нужен свой perimeter и история',
+        legal: 'Когда строите постоянный EU/UK/HK контур',
+      },
+      {
         label: 'Риски Stripe',
         rent: 'Review и лимиты остаются; routing снижает простой',
         buy: 'Те же правила платформы, свой MCC и оборот',
         legal: 'Верификация компании и банка до запуска',
+      },
+      {
+        label: 'Что не обещаем',
+        rent: 'Одобрение любой ниши или снятие hold',
+        buy: '«Вечный» аккаунт без запросов платформы',
+        legal: 'Гарантированное открытие банка или Stripe',
       },
     ],
     faq: [
@@ -88,10 +114,34 @@ const COPY = {
         legal: 'Юрособа і банк на вашому боці зв’язки',
       },
       {
+        label: 'Документи від вас',
+        rent: 'Сайт, оферта, опис продукту',
+        buy: 'Сайт + пакет для передачі доступів',
+        legal: 'Паспорт, структура власності, KYC банку',
+      },
+      {
+        label: 'Виплати',
+        rent: 'За схемою оренди (фіксуємо в договорі)',
+        buy: 'На ваш банк після передачі',
+        legal: 'На рахунок компанії після верифікації',
+      },
+      {
+        label: 'Коли змінювати формат',
+        rent: 'Після підтвердження економіки пілоту',
+        buy: 'Коли потрібен свій perimeter і історія',
+        legal: 'Коли будуєте постійний EU/UK/HK контур',
+      },
+      {
         label: 'Ризики Stripe',
         rent: 'Review і ліміти лишаються; routing зменшує простій',
         buy: 'Ті самі правила платформи, свій MCC і обіг',
         legal: 'Верифікація компанії і банку до запуску',
+      },
+      {
+        label: 'Чого не обіцяємо',
+        rent: 'Схвалення будь-якої ніші або зняття hold',
+        buy: '«Вічний» акаунт без запитів платформи',
+        legal: 'Гарантоване відкриття банку або Stripe',
       },
     ],
     faq: [
@@ -136,10 +186,34 @@ const COPY = {
         legal: 'Entity and bank on your side of the bundle',
       },
       {
+        label: 'Documents from you',
+        rent: 'Site, terms, product description',
+        buy: 'Site + handoff document pack',
+        legal: 'ID, ownership structure, bank KYC',
+      },
+      {
+        label: 'Payouts',
+        rent: 'Per rental scheme (fixed in the agreement)',
+        buy: 'To your bank after handoff',
+        legal: 'To the company account after verification',
+      },
+      {
+        label: 'When to switch',
+        rent: 'After the pilot proves unit economics',
+        buy: 'When you need your own perimeter and history',
+        legal: 'When you build a lasting EU/UK/HK stack',
+      },
+      {
         label: 'Stripe risk',
         rent: 'Reviews and limits remain; routing cuts downtime',
         buy: 'Same platform rules, your MCC and volume',
         legal: 'Company and bank verification before launch',
+      },
+      {
+        label: 'What we never promise',
+        rent: 'Approval of any niche or lifting a hold',
+        buy: 'A “forever” account with no platform requests',
+        legal: 'Guaranteed bank or Stripe approval',
       },
     ],
     faq: [
@@ -250,6 +324,11 @@ export default async function RentVsBuyPage({ params }: Props) {
               {copy.ctaLegal}
             </Link>
           </nav>
+
+          <div className={styles.extraTables}>
+            <ContentTable table={getSetupPathTable(locale)} locale={locale} narrow={false} />
+            <ContentTable table={getChecklistTable(locale)} locale={locale} narrow={false} />
+          </div>
 
           <div className={styles.faq}>
             <FaqAccordion

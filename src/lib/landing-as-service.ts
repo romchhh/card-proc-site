@@ -2,6 +2,7 @@ import {
   getLandingByGroupSlug,
   getLandingsByGroup,
   getLandingView,
+  getRelatedLandings,
   type Landing,
   type LandingView,
 } from './landings'
@@ -18,23 +19,32 @@ const CORE_RELATED: ServiceSlug[] = [
 
 const BLOG_BY_GROUP: Record<Landing['group'], string[]> = {
   jurisdictions: ['stripe-for-your-business', 'how-to-choose-payment-system', 'stripe-platform-rules'],
-  niches: ['stripe-for-your-business', 'fast-payment-system', 'stripe-international-payments-integration'],
-  solutions: ['stripe-platform-rules', 'what-is-stripe-scaling-business', 'international-payments-for-business'],
+  niches: ['stripe-restricted-business-categories', 'fast-payment-system-ecommerce', 'stripe-international-payments-integration'],
+  solutions: ['stripe-platform-rules', 'what-is-stripe-scaling-business', 'stripe-international-payments-integration'],
 }
 
-function offerFrom(view: LandingView, locale: Locale, group: Landing['group']): ServiceOffer {
-  if (group === 'jurisdictions') {
+const HIGH_RISK_NICHES = new Set(['forex', 'gaming', 'high-risk', 'vape', 'adult'])
+
+function offerFrom(view: LandingView, locale: Locale, landing: Landing): ServiceOffer {
+  if (landing.group === 'jurisdictions') {
     return {
       badge: locale === 'en' ? 'Entity + bank + Stripe' : locale === 'uk' ? 'Юрособа + банк + Stripe' : 'Юрлицо + банк + Stripe',
-      highlight: locale === 'en' ? 'from 1.5%' : locale === 'uk' ? 'від 1.5%' : 'от 1.5%',
+      highlight: locale === 'en' ? 'free consult' : locale === 'uk' ? 'безкоштовна консультація' : 'бесплатная консультация',
       sub: locale === 'en' ? 'Jurisdiction match after niche review' : locale === 'uk' ? 'Підбір юрисдикції після оцінки ніші' : 'Подбор юрисдикции после оценки ниши',
     }
   }
-  if (group === 'niches') {
+  if (landing.group === 'niches') {
+    if (HIGH_RISK_NICHES.has(landing.slug)) {
+      return {
+        badge: locale === 'en' ? 'Restricted niche' : locale === 'uk' ? 'Обмежена ніша' : 'Ограниченная ниша',
+        highlight: locale === 'en' ? 'screening first' : locale === 'uk' ? 'спочатку скринінг' : 'сначала скрининг',
+        sub: locale === 'en' ? 'No connection guarantee' : locale === 'uk' ? 'Без гарантії підключення' : 'Без гарантии подключения',
+      }
+    }
     return {
       badge: locale === 'en' ? 'Niche processing' : locale === 'uk' ? 'Процесинг під нішу' : 'Процессинг под нишу',
-      highlight: locale === 'en' ? 'from 1.5%' : locale === 'uk' ? 'від 1.5%' : 'от 1.5%',
-      sub: locale === 'en' ? 'Honest screening before setup' : locale === 'uk' ? 'Чесний скринінг до підключення' : 'Честный скрининг до подключения',
+      highlight: locale === 'en' ? 'honest review' : locale === 'uk' ? 'чесна оцінка' : 'честная оценка',
+      sub: locale === 'en' ? 'Format after screening' : locale === 'uk' ? 'Формат після скринінгу' : 'Формат после скрининга',
     }
   }
   return {
@@ -44,7 +54,7 @@ function offerFrom(view: LandingView, locale: Locale, group: Landing['group']): 
   }
 }
 
-function benefitsFrom(view: LandingView, locale: Locale): ServiceBenefit[] {
+function benefitsFrom(view: LandingView, locale: Locale, landing: Landing): ServiceBenefit[] {
   if (view.facts?.length) {
     return view.facts.map((fact) => ({
       title: fact.label,
@@ -52,29 +62,7 @@ function benefitsFrom(view: LandingView, locale: Locale): ServiceBenefit[] {
     }))
   }
 
-  const defaults =
-    locale === 'en'
-      ? [
-          { title: 'Clear scope', description: 'We map the stack to your niche before any paperwork.' },
-          { title: 'Honest limits', description: 'No promise to bypass Stripe rules or guarantee approval.' },
-          { title: 'Working formats', description: 'Entity + bank, turnkey processing, rental or purchase.' },
-          { title: 'Support after launch', description: 'Help with payouts, review requests and next steps.' },
-        ]
-      : locale === 'uk'
-        ? [
-            { title: 'Зрозумілий обсяг', description: 'Спочатку звіряємо стек із нішею, потім документи.' },
-            { title: 'Чесні обмеження', description: 'Без обіцянок обійти правила Stripe чи гарантувати схвалення.' },
-            { title: 'Робочі формати', description: 'Юрособа + банк, процесинг під ключ, оренда або купівля.' },
-            { title: 'Супровід після старту', description: 'Допомога з виплатами, review і наступними кроками.' },
-          ]
-        : [
-            { title: 'Понятный объём', description: 'Сначала сверяем стек с нишей, потом документы.' },
-            { title: 'Честные ограничения', description: 'Без обещаний обойти правила Stripe или гарантировать одобрение.' },
-            { title: 'Рабочие форматы', description: 'Юрлицо + банк, процессинг под ключ, аренда или покупка.' },
-            { title: 'Сопровождение после старта', description: 'Помощь с выплатами, review и следующими шагами.' },
-          ]
-
-  // Prefer first section bullets as benefits when present
+  // Prefer titled bullets from content
   const listItems = view.sections
     .flatMap((section) => section.paragraphs)
     .filter((p) => p.trim().startsWith('- '))
@@ -85,28 +73,64 @@ function benefitsFrom(view: LandingView, locale: Locale): ServiceBenefit[] {
       if (rest.length) {
         return { title: title.trim(), description: rest.join(':').trim() }
       }
-      return { title: text.slice(0, 48), description: text }
+      return { title: text.slice(0, 56), description: text }
     })
 
-  return listItems.length >= 3 ? listItems : defaults
+  if (listItems.length >= 3) return listItems
+
+  // Use section titles + first prose paragraph as page-specific facts
+  const fromSections = view.sections.slice(0, 4).map((section) => {
+    const prose = section.paragraphs.find((p) => !p.trim().startsWith('- ')) ?? section.paragraphs[0] ?? ''
+    return {
+      title: section.title,
+      description: prose.length > 160 ? `${prose.slice(0, 157)}…` : prose,
+    }
+  })
+  if (fromSections.length >= 2) return fromSections
+
+  if (landing.group === 'niches' && HIGH_RISK_NICHES.has(landing.slug)) {
+    return locale === 'en'
+      ? [
+          { title: 'Honest screening', description: 'We check the site and model before promising any format.' },
+          { title: 'Stripe may refuse', description: 'Restricted niches often fail standard onboarding — we say so upfront.' },
+          { title: 'No fake guarantees', description: 'No promise of approval, rent or purchase until the review is done.' },
+        ]
+      : locale === 'uk'
+        ? [
+            { title: 'Чесний скринінг', description: 'Перевіряємо сайт і модель до будь-якої обіцянки формату.' },
+            { title: 'Stripe може відмовити', description: 'Обмежені ніші часто не проходять стандартне підключення — кажемо це одразу.' },
+            { title: 'Без фейкових гарантій', description: 'Без обіцянок схвалення, оренди чи купівлі до завершення оцінки.' },
+          ]
+        : [
+            { title: 'Честный скрининг', description: 'Проверяем сайт и модель до любых обещаний по формату.' },
+            { title: 'Stripe может отказать', description: 'Ограниченные ниши часто не проходят стандартное подключение — говорим об этом сразу.' },
+            { title: 'Без фейковых гарантий', description: 'Без обещаний одобрения, аренды или покупки до завершения оценки.' },
+          ]
+  }
+
+  return []
 }
 
 function relatedCore(group: Landing['group']): ServiceSlug[] {
   if (group === 'jurisdictions') return ['legal-entity-bank', 'processing-turnkey', 'stripe-account-buy']
-  if (group === 'niches') return ['processing-turnkey', 'stripe-account-rent', 'legal-entity-bank']
+  if (group === 'niches') return ['processing-turnkey', 'legal-entity-bank', 'stripe-account-buy']
   return ['legal-entity-bank', 'processing-turnkey', 'stripe-account-rent']
 }
 
 export function landingToServiceView(landing: Landing, locale: Locale): ServiceView {
   const view = getLandingView(landing, locale)
+  const relatedLandings = getRelatedLandings(landing, locale).filter((item) =>
+    item.path.startsWith(`/${landing.group}/`) || (landing.group === 'jurisdictions' && item.path.startsWith('/jurisdictions/')),
+  )
+
   return {
     meta: view.meta,
     h1: view.h1,
     lead: view.lead,
     intro: view.intro,
-    offer: offerFrom(view, locale, landing.group),
+    offer: offerFrom(view, locale, landing),
     sections: view.sections,
-    benefits: benefitsFrom(view, locale),
+    benefits: benefitsFrom(view, locale, landing),
     faq: view.faq,
     card: {
       title: view.h1,
@@ -114,6 +138,25 @@ export function landingToServiceView(landing: Landing, locale: Locale): ServiceV
     },
     relatedServices: relatedCore(landing.group).filter((slug) => CORE_RELATED.includes(slug)),
     relatedBlogSlugs: BLOG_BY_GROUP[landing.group],
+    relatedLandings,
+    relatedLandingsHeading:
+      landing.group === 'jurisdictions'
+        ? locale === 'en'
+          ? 'Other countries'
+          : locale === 'uk'
+            ? 'Інші країни'
+            : 'Другие страны'
+        : landing.group === 'niches'
+          ? locale === 'en'
+            ? 'Other niches'
+            : locale === 'uk'
+              ? 'Інші ніші'
+              : 'Другие ниши'
+          : locale === 'en'
+            ? 'Related pages'
+            : locale === 'uk'
+              ? 'Схожі сторінки'
+              : 'Похожие страницы',
   }
 }
 

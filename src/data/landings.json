@@ -3584,7 +3584,8 @@
         "lead": "«Маркетплейс» бывает разным. Если вы продаёте сами, подойдёт обычный аккаунт. Если собираете деньги за других продавцов, нужна другая схема.",
         "intro": [
           "Перед подключением важно понять, чем вы являетесь: магазином, который продаёт товары из своего каталога, или платформой, через которую платят независимым продавцам.",
-          "От этого зависит продукт Stripe, документы и срок проверки."
+          "От этого зависит продукт Stripe, документы и срок проверки.",
+          "Отдельно проверяем, нужен ли Stripe Connect или достаточно обычного merchant-аккаунта: от этого зависят договоры с продавцами, схема выплат и объём compliance."
         ],
         "sections": [
           {
@@ -3675,7 +3676,8 @@
         "lead": "«Маркетплейс» буває різним. Якщо ви продаєте самі, підійде звичайний акаунт. Якщо збираєте гроші за інших продавців, потрібна інша схема.",
         "intro": [
           "Перед підключенням важливо зрозуміти, ким ви є: магазином, що продає товари зі свого каталогу, чи платформою, через яку платять незалежним продавцям.",
-          "Від цього залежить продукт Stripe, документи та строк перевірки."
+          "Від цього залежить продукт Stripe, документи та строк перевірки.",
+          "Окремо перевіряємо, чи потрібен Stripe Connect, чи достатньо звичайного merchant-акаунта: від цього залежать договори з продавцями, схема виплат і обсяг compliance."
         ],
         "sections": [
           {
@@ -3765,7 +3767,8 @@
         "lead": "“Marketplace” can mean different things. If you sell the goods yourself, a regular account works. If you collect money on behalf of other sellers, you need a different setup.",
         "intro": [
           "Before connecting, it is important to know what you are: a store selling goods from its own catalogue, or a platform where customers pay independent sellers.",
-          "That determines the Stripe product, the documents and the review time."
+          "That determines the Stripe product, the documents and the review time.",
+          "We separately check whether Stripe Connect is required or a standard merchant account is enough: that drives seller contracts, payouts and the compliance load."
         ],
         "sections": [
           {
@@ -3862,7 +3865,8 @@
         "lead": "Цифровые товары продаются быстро, но и возвраты, и мошенничество в этой нише приходят быстро. Помогаем настроить платежи так, чтобы доля споров не росла.",
         "intro": [
           "Электронные книги, шаблоны, лицензии, приложения и загружаемые файлы — привычный формат для Stripe. Товар доставляется мгновенно, и платёж подтверждается сразу.",
-          "Именно мгновенность делает нишу уязвимой: проще украсть карту, оформить возврат и получить товар."
+          "Именно мгновенность делает нишу уязвимой: проще украсть карту, оформить возврат и получить товар.",
+          "Для цифровых товаров критичны мгновенная доставка, понятная политика возвратов и описание лицензии на сайте — именно здесь чаще всего возникают споры и запросы Stripe Risk."
         ],
         "sections": [
           {
@@ -3952,7 +3956,8 @@
         "lead": "Цифрові товари продаються швидко, але й повернення та шахрайство в цій ніші приходять швидко. Допомагаємо налаштувати платежі так, щоб частка спорів не зростала.",
         "intro": [
           "Електронні книги, шаблони, ліцензії, застосунки та файли для завантаження — звичний формат для Stripe. Товар доставляється миттєво, і платіж підтверджується одразу.",
-          "Саме миттєвість робить нішу вразливою: простіше вкрасти картку, оформити повернення й отримати товар."
+          "Саме миттєвість робить нішу вразливою: простіше вкрасти картку, оформити повернення й отримати товар.",
+          "Для цифрових товарів критичні миттєва доставка, зрозуміла політика повернень і опис ліцензії на сайті — саме тут найчастіше виникають спори та запити Stripe Risk."
         ],
         "sections": [
           {
@@ -4041,7 +4046,8 @@
         "lead": "Digital products sell fast, and refunds and fraud in this niche arrive just as fast. We help set up payments so the dispute rate does not climb.",
         "intro": [
           "E-books, templates, licences, apps and downloadable files are a familiar format for Stripe. The product is delivered instantly and the payment is confirmed at once.",
-          "That instant delivery is what makes the niche vulnerable: it is easier to steal a card, request a refund and keep the product."
+          "That instant delivery is what makes the niche vulnerable: it is easier to steal a card, request a refund and keep the product.",
+          "For digital goods, instant delivery, a clear refund policy and license wording on the site matter most — that is where disputes and Stripe Risk reviews usually start."
         ],
         "sections": [
           {
@@ -4137,7 +4143,8 @@
         "lead": "Игровые проекты принимают платежи через Stripe, но только в рамках правил. Игры на деньги и азартные модели обычно запрещены или требуют отдельного одобрения.",
         "intro": [
           "Gaming — широкая категория. Внутриигровые покупки, подписки и продажа цифровых товаров могут подходить для Stripe, а ставки, казино и игры с денежными призами, как правило, нет.",
-          "Поэтому первым шагом всегда идёт оценка вашей модели."
+          "Поэтому первым шагом всегда идёт оценка вашей модели.",
+          "Игровые проекты смотрим через призму внутриигровых покупок, подписок и гео игроков: часть механик Stripe ограничивает, поэтому до запуска честно фиксируем, что можно принимать, а что нет."
         ],
         "sections": [
           {
@@ -4228,7 +4235,8 @@
         "lead": "Ігрові проєкти приймають платежі через Stripe, але лише в межах правил. Ігри на гроші та азартні моделі зазвичай заборонені або потребують окремого схвалення.",
         "intro": [
           "Gaming — широка категорія. Внутрішньоігрові покупки, підписки та продаж цифрових товарів можуть підходити для Stripe, а ставки, казино й ігри з грошовими призами, як правило, ні.",
-          "Тому першим кроком завжди є оцінка вашої моделі."
+          "Тому першим кроком завжди є оцінка вашої моделі.",
+          "Ігрові проєкти дивимося через призму внутрішньоігрових покупок, підписок і гео гравців: частину механік Stripe обмежує, тому до запуску чесно фіксуємо, що можна приймати, а що ні."
         ],
         "sections": [
           {
@@ -4318,7 +4326,8 @@
         "lead": "Game projects can take payments through Stripe, but only within the rules. Real-money games and gambling models are usually prohibited or need separate approval.",
         "intro": [
           "Gaming is a broad category. In-game purchases, subscriptions and digital goods can suit Stripe, while betting, casinos and games with cash prizes generally do not.",
-          "So the first step is always an assessment of your model."
+          "So the first step is always an assessment of your model.",
+          "Gaming projects are reviewed through in-game purchases, subscriptions and player geo: Stripe limits some mechanics, so before launch we state clearly what can and cannot be accepted."
         ],
         "sections": [
           {
@@ -4696,7 +4705,8 @@
         "lead": "Forex относится к одной из самых ограниченных категорий. Если вы брокер и принимаете депозиты клиентов, Stripe, как правило, не подходит.",
         "intro": [
           "Финансовые услуги регулируются, и платёжные системы относятся к ним осторожно. Для forex это особенно заметно: у Stripe есть ограничения на такие модели.",
-          "Мы начинаем со скрининга. Если вам не подойдёт Stripe, мы скажем об этом сразу."
+          "Мы начинаем со скрининга. Если вам не подойдёт Stripe, мы скажем об этом сразу.",
+          "Брокерским и схожим финмоделям Stripe обычно не подходит. На консультации сначала сверяем лицензию, оферту и поток средств — и можем отказать, если риск блокировки слишком высок."
         ],
         "sections": [
           {
@@ -4787,7 +4797,8 @@
         "lead": "Forex належить до однієї з найбільш обмежених категорій. Якщо ви брокер і приймаєте депозити клієнтів, Stripe, як правило, не підходить.",
         "intro": [
           "Фінансові послуги регулюються, і платіжні системи ставляться до них обережно. Для forex це особливо помітно: у Stripe є обмеження на такі моделі.",
-          "Ми починаємо зі скринінгу. Якщо Stripe вам не підійде, ми скажемо про це одразу."
+          "Ми починаємо зі скринінгу. Якщо Stripe вам не підійде, ми скажемо про це одразу.",
+          "Брокерським і схожим фінмоделям Stripe зазвичай не підходить. На консультації спочатку звіряємо ліцензію, оферту і потік коштів — і можемо відмовити, якщо ризик блокування занадто високий."
         ],
         "sections": [
           {
@@ -4877,7 +4888,8 @@
         "lead": "Forex falls into one of the most restricted categories. If you are a broker taking client deposits, Stripe is generally not a fit.",
         "intro": [
           "Financial services are regulated, and payment platforms treat them carefully. For forex this is especially visible: Stripe has restrictions on such models.",
-          "We begin with a screening. If Stripe will not work for you, we say so straight away."
+          "We begin with a screening. If Stripe will not work for you, we say so straight away.",
+          "Broker and similar finance models are usually a poor fit for Stripe. On the call we first check license, offer and money flow — and may refuse if the block risk is too high."
         ],
         "sections": [
           {

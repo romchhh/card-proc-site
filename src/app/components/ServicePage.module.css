@@ -119,6 +119,7 @@
 
 .intro,
 .benefitsBlock,
+.factsBlock,
 .processBlock,
 .exploreSection,
 .faqSection,
@@ -381,6 +382,85 @@
   justify-content: center;
 }
 
+/* Landing facts: label / value cards */
+.factsBlock {
+  margin-bottom: var(--space-12);
+  padding: clamp(28px, 4vw, 44px);
+  background:
+    linear-gradient(160deg, rgba(246, 249, 252, 0.95) 0%, rgba(255, 255, 255, 0.9) 48%, rgba(99, 91, 255, 0.04) 100%),
+    var(--gray-100);
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(10, 37, 64, 0.07);
+  box-shadow: var(--shadow-sm);
+}
+
+.factsTitle {
+  font-size: var(--page-h2);
+  font-weight: 800;
+  color: var(--gray-900);
+  margin: 0 0 var(--space-6);
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.factsGrid {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.factCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 118px;
+  padding: 20px 20px 22px;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(10, 37, 64, 0.06);
+  box-shadow: 0 1px 0 rgba(10, 37, 64, 0.03);
+  overflow: hidden;
+  transition: transform 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out), border-color 0.25s var(--ease-out);
+}
+
+.factCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--stripe-blue) 0%, rgba(99, 91, 255, 0.25) 100%);
+  opacity: 0.85;
+}
+
+.factCard:hover {
+  transform: translateY(-3px);
+  border-color: rgba(99, 91, 255, 0.18);
+  box-shadow: var(--shadow-md);
+}
+
+.factLabel {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+}
+
+.factValue {
+  margin: 0;
+  font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+  line-height: 1.35;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--gray-900);
+  text-wrap: balance;
+}
+
 /* Process */
 .processBlock {
   margin-bottom: var(--space-12);
@@ -465,6 +545,13 @@
   flex-direction: column;
   gap: 0;
   margin-bottom: 56px;
+}
+
+.guideTables {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+  margin: 0 0 56px;
 }
 
 .detailsHeading {
@@ -866,12 +953,17 @@
     padding: var(--section-padding-y-md) var(--page-padding-x);
   }
 
-  .benefitsBlock {
+  .benefitsBlock,
+  .factsBlock {
     padding: 32px 28px;
   }
 
   .benefits {
     grid-template-columns: 1fr;
+  }
+
+  .factsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .processBlock {
@@ -958,9 +1050,20 @@
     padding: var(--section-padding-y-md) var(--page-padding-x);
   }
 
-  .benefitsBlock {
+  .benefitsBlock,
+  .factsBlock {
     padding: 24px 20px;
     margin-bottom: 40px;
+  }
+
+  .factsGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .factCard {
+    min-height: 0;
+    padding: 18px;
   }
 
   .benefitItem {

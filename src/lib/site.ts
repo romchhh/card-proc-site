@@ -4,17 +4,17 @@ import { pickLocaleCopy } from './i18n/config'
 export const siteConfig = {
   name: 'WayOfProcessing',
   title: 'WayOfProcessing — Stripe Payment Processing',
-  titleRu: 'Купить или арендовать аккаунт Stripe — WayOfProcessing',
-  titleUk: 'Купити або орендувати акаунт Stripe — WayOfProcessing',
-  titleEn: 'Buy or rent a Stripe account — WayOfProcessing',
+  titleRu: 'Подключение Stripe для бизнеса | WayOfProcessing',
+  titleUk: 'Підключення Stripe для бізнесу | WayOfProcessing',
+  titleEn: 'Stripe setup for business | WayOfProcessing',
   description:
-    'Stripe payment processing for any niche from 1.5%. Warmed-up accounts, 99.9% uptime, CRM access and unlimited withdrawals in EUR, USD and USDT.',
+    'Stripe payment processing for business: account setup, routing and payouts. Honest limits, no false guarantees.',
   descriptionRu:
-    'Аренда или покупка аккаунта Stripe для приёма оплаты из-за рубежа. Процессинг от 1.5%, routing, вывод в EUR, USD и USDT.',
+    'Подключение Stripe для бизнеса: процессынг, merchant-аккаунт, routing и выплаты. Честные ограничения без ложных гарантий.',
   descriptionUk:
-    'Оренда або купівля акаунта Stripe для прийому оплати з-за кордону. Процесинг від 1.5%, routing, вивід у EUR, USD і USDT.',
+    'Підключення Stripe для бізнесу: процесинг, merchant-акаунт, routing і виплати. Чесні обмеження без хибних гарантій.',
   descriptionEn:
-    'Rent or buy a Stripe account to accept payments from abroad. Processing from 1.5%, routing, payouts in EUR, USD and USDT.',
+    'Stripe setup for business: processing, merchant account, routing and payouts. Honest limits without false guarantees.',
   url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://wayofprocessing.com',
   email: 'hello@wayofprocessing.com',
   telegram: '@wayofprocessing',
@@ -23,7 +23,7 @@ export const siteConfig = {
   locale: 'ru_RU',
   alternateLocale: 'en_US',
   ogImage: '/images/hero-stripe.webp',
-  ogImageAlt: 'Купить или арендовать аккаунт Stripe — WayOfProcessing',
+  ogImageAlt: 'WayOfProcessing — подключение Stripe для бизнеса',
   themeColor: '#635BFF',
   keywordsRu: [
     'купить stripe аккаунт',

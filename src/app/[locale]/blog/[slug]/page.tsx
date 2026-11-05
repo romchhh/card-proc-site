@@ -40,7 +40,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     imageAlt: view.imageAlt,
     publishedTime: post.date,
     category: view.category,
-    keywords: getPostKeywords(post, locale),
     ogTitle: view.title,
     noIndex: !isIndexBlogSlug(post.slug),
   })

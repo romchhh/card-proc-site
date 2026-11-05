@@ -72,6 +72,8 @@ export type ServiceView = {
   }
   relatedServices: ServiceSlug[]
   relatedBlogSlugs: string[]
+  relatedLandings?: { path: string; title: string; lead: string }[]
+  relatedLandingsHeading?: string
 }
 
 export type Service = {

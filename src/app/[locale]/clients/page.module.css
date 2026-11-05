@@ -10,7 +10,7 @@
 }
 
 .header {
-  max-width: var(--prose-max);
+  max-width: none;
   margin: 0 0 var(--space-4);
 }
 
@@ -26,7 +26,7 @@
 }
 
 .intro {
-  max-width: var(--prose-max);
+  max-width: none;
   font-size: var(--text-lg);
   line-height: var(--leading-body);
   color: var(--gray-500);
@@ -165,7 +165,7 @@
 }
 
 .services {
-  max-width: var(--prose-max);
+  max-width: none;
 }
 
 .servicesTitle {

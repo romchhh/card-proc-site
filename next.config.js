@@ -23,6 +23,16 @@ function collectImageHostnames() {
   }))
 }
 
+const LOCALES = ['ru', 'uk', 'en']
+
+/** Weaker duplicate posts → stronger canonical articles */
+const BLOG_MERGES = [
+  ['business-categories-stripe', 'stripe-restricted-business-categories'],
+  ['fast-payment-system', 'fast-payment-system-ecommerce'],
+  ['stripe-for-your-business', 'what-is-stripe-scaling-business'],
+  ['international-payments-for-business', 'stripe-international-payments-integration'],
+]
+
 const nextConfig = {
   trailingSlash: false,
   images: {
@@ -34,6 +44,16 @@ const nextConfig = {
   },
   compress: true,
   poweredByHeader: false,
+  async redirects() {
+    const blogRedirects = BLOG_MERGES.flatMap(([from, to]) =>
+      LOCALES.map((locale) => ({
+        source: `/${locale}/blog/${from}`,
+        destination: `/${locale}/blog/${to}`,
+        permanent: true,
+      })),
+    )
+    return blogRedirects
+  },
   async headers() {
     return [
       {

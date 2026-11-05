@@ -66,16 +66,16 @@
     "cardSub": "Free consultation on Stripe setup for your niche"
   },
   "specialists": {
-    "heading": "Connect Stripe as a payment system with WayOfProcessing experts",
-    "descriptionPrefix": "We help you launch international card acceptance: merchant account, checkout and routing. Setup ",
+    "heading": "What we handle for Stripe setup",
+    "descriptionPrefix": "We help with merchant account, checkout and routing. A basic launch ",
     "descriptionBold": "from 3 business days",
-    "descriptionSuffix": " — with CRM, payouts in EUR, USD or USDT and launch support.",
+    "descriptionSuffix": " — after niche review, with no promise to bypass Stripe rules.",
     "cta": "Get a free consultation",
-    "lead": "We will take care of:",
-    "item1": "Opening, closing and all legal entity reporting. You run the business — we handle all the paperwork",
-    "item2Prefix": "Account registration and support — you ",
-    "item2Bold": "get access after a niche review, with no promise that Stripe will approve it",
-    "item3": "Connecting your personal neobank account to the Stripe account for withdrawals"
+    "lead": "In a typical stack:",
+    "item1": "Entity and bank paperwork when a Stripe-ready package is needed",
+    "item2Prefix": "Format selection and account support — ",
+    "item2Bold": "after niche review, with no Stripe approval guarantee",
+    "item3": "Payout and CRM access setup under the agreed scheme"
   },
   "stats": {
     "heading": "We know our business:",
@@ -88,8 +88,8 @@
       "desc": "basic setup, once the site and activity description are ready"
     },
     "stat3": {
-      "value": "04820256",
-      "desc": "MSM Financial Consultancy Limited number in the UK Companies House register"
+      "value": "99.9%",
+      "desc": "processing uptime under a typical SLA"
     },
     "cta": "Learn more about WayOfProcessing"
   },
@@ -214,23 +214,23 @@
       "desc": "For educational platforms and training programs."
     },
     "highRiskHeading": "High-risk niches",
-    "highRiskNote": "We work with ultra-low Chargeback Rate and after business review. Terms are discussed individually.",
+    "highRiskNote": "Stripe restricts or declines some niches. We screen the site and model first — and may refuse before a deal.",
     "highRisk": {
       "forex": {
-        "title": "Forex brokers",
-        "desc": "Processing for brokerage platforms and financial services."
+        "title": "Forex and finance",
+        "desc": "Brokers are usually a poor fit for Stripe. Honest limits first."
       },
       "gaming": {
-        "title": "Gaming industry",
-        "desc": "Payment acceptance for gaming projects and digital services."
+        "title": "Gaming",
+        "desc": "In-game purchases and subscriptions — after model and dispute-rate review."
       },
       "vape": {
-        "title": "Vape shops",
-        "desc": "Solutions for online and offline vape retail."
+        "title": "Vape retail",
+        "desc": "Restricted category: no connection guarantee, screening first."
       },
       "steroids": {
-        "title": "Sports nutrition",
-        "desc": "Processing for sports supplements and wellness product niches."
+        "title": "Sports supplements",
+        "desc": "Wellness and supplements are high-risk for Stripe; we review claims and ingredients."
       }
     }
   },
@@ -394,8 +394,11 @@
   },
   "servicePages": {
     "aboutService": "About this service",
+    "aboutTopic": "Topic overview",
     "introCta": "Get a free consultation",
     "benefitsHeading": "Key Benefits",
+    "factsHeading": "What matters here",
+    "faqHeadingFor": "FAQ: {{topic}}",
     "ctaHeading": "Ready to get started?",
     "ctaDescription": "Get a free consultation and personalized offer for your business",
     "relatedServices": "Other services",
@@ -436,9 +439,18 @@
       "compare": "Rent vs buy",
       "jurisdictions": "Stripe by country",
       "niches": "Stripe niches",
+      "solutions": "Stripe solutions",
       "ukraine": "Stripe for Ukraine",
       "issues": "Blocks and review"
     }
+  },
+
+  "cookieConsent": {
+    "title": "We use cookies",
+    "text": "They keep the site working (language, session). We do not turn on advertising cookies. Details are in the",
+    "policy": "privacy policy",
+    "necessary": "Necessary only",
+    "accept": "Accept"
   },
 
   "footer": {

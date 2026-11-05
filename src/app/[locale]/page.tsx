@@ -11,7 +11,7 @@ import ScrollReveal from '../components/ScrollReveal'
 import JsonLd from '../components/JsonLd'
 import { isValidLocale, type Locale } from '@/lib/i18n/config'
 import { buildPageMetadata } from '@/lib/seo'
-import { siteDescription, siteKeywords, siteTitle } from '@/lib/site'
+import { siteDescription, siteTitle } from '@/lib/site'
 
 const AccountsSection = dynamic(() => import('../components/AccountsSection'))
 const SpecialistsSection = dynamic(() => import('../components/SpecialistsSection'))
@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     path: '/',
     locale,
     ogTitle: siteTitle(locale),
-    keywords: siteKeywords(locale),
+    ogImageAlt: siteTitle(locale),
   })
 }
 
