@@ -43,7 +43,17 @@ export default function LangSwitcher({ variant = 'header', light = false }: Lang
       return
     }
     setI18nLocale(lang)
-    router.push(switchLocalePath(pathname, lang))
+    // Locale swap keeps the same layout shell, so Next often preserves scrollY.
+    // On shorter translations that lands near the footer — force top and drop hash
+    // so FAQ / HashScrollHandler do not jump to mid/bottom sections.
+    const nextPath = switchLocalePath(pathname, lang).split('#')[0]
+    if (window.location.hash) {
+      window.history.replaceState(null, '', `${window.location.pathname}${window.location.search}`)
+    }
+    router.push(nextPath, { scroll: true })
+    window.requestAnimationFrame(() => {
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+    })
     setOpen(false)
   }
 
