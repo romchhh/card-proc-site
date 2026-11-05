@@ -39,31 +39,37 @@ function isExternalHref(href: string) {
 
 type IconTone = 'ok' | 'bad' | 'warn' | 'accent'
 
-const EMOJI_ICONS: Array<{ match: RegExp; Icon: LucideIcon; tone: IconTone }> = [
-  { match: /📊/u, Icon: BarChart3, tone: 'accent' },
-  { match: /📈/u, Icon: TrendingUp, tone: 'accent' },
-  { match: /🛠\uFE0F?/u, Icon: Wrench, tone: 'accent' },
-  { match: /📋/u, Icon: ClipboardList, tone: 'accent' },
-  { match: /⚙\uFE0F?/u, Icon: Settings, tone: 'accent' },
-  { match: /🚀/u, Icon: Rocket, tone: 'accent' },
-  { match: /🎯/u, Icon: Target, tone: 'accent' },
-  { match: /💡/u, Icon: Lightbulb, tone: 'warn' },
-  { match: /⚠\uFE0F?/u, Icon: AlertTriangle, tone: 'warn' },
-  { match: /🔥/u, Icon: Flame, tone: 'warn' },
-  { match: /🌐/u, Icon: Globe, tone: 'accent' },
-  { match: /⚡/u, Icon: Zap, tone: 'accent' },
-  { match: /✅|✔\uFE0F?/u, Icon: CheckCircle2, tone: 'ok' },
-  { match: /🛑/u, Icon: XCircle, tone: 'bad' },
-  { match: /🔴/u, Icon: Circle, tone: 'bad' },
-  { match: /🟢/u, Icon: Circle, tone: 'ok' },
-  { match: /❌|✖/u, Icon: XCircle, tone: 'bad' },
-  { match: /☑\uFE0F?/u, Icon: ListChecks, tone: 'ok' },
+type EmojiIconEntry = { tokens: string[]; Icon: LucideIcon; tone: IconTone }
+
+const EMOJI_ICONS: EmojiIconEntry[] = [
+  { tokens: ['📊'], Icon: BarChart3, tone: 'accent' },
+  { tokens: ['📈'], Icon: TrendingUp, tone: 'accent' },
+  { tokens: ['🛠️', '🛠'], Icon: Wrench, tone: 'accent' },
+  { tokens: ['📋'], Icon: ClipboardList, tone: 'accent' },
+  { tokens: ['⚙️', '⚙'], Icon: Settings, tone: 'accent' },
+  { tokens: ['🚀'], Icon: Rocket, tone: 'accent' },
+  { tokens: ['🎯'], Icon: Target, tone: 'accent' },
+  { tokens: ['💡'], Icon: Lightbulb, tone: 'warn' },
+  { tokens: ['⚠️', '⚠'], Icon: AlertTriangle, tone: 'warn' },
+  { tokens: ['🔥'], Icon: Flame, tone: 'warn' },
+  { tokens: ['🌐'], Icon: Globe, tone: 'accent' },
+  { tokens: ['⚡'], Icon: Zap, tone: 'accent' },
+  { tokens: ['✅', '✔️', '✔'], Icon: CheckCircle2, tone: 'ok' },
+  { tokens: ['🛑'], Icon: XCircle, tone: 'bad' },
+  { tokens: ['🔴'], Icon: Circle, tone: 'bad' },
+  { tokens: ['🟢'], Icon: Circle, tone: 'ok' },
+  { tokens: ['❌', '✖'], Icon: XCircle, tone: 'bad' },
+  { tokens: ['☑️', '☑'], Icon: ListChecks, tone: 'ok' },
 ]
 
-const EMOJI_SPLIT = new RegExp(
-  `(${EMOJI_ICONS.map(({ match }) => match.source).join('|')})`,
-  'u',
-)
+const EMOJI_TOKEN_MAP = new Map<string, EmojiIconEntry>()
+for (const entry of EMOJI_ICONS) {
+  for (const token of entry.tokens) {
+    EMOJI_TOKEN_MAP.set(token, entry)
+  }
+}
+
+const EMOJI_TOKENS = Array.from(EMOJI_TOKEN_MAP.keys()).sort((a, b) => b.length - a.length)
 
 function toneClass(tone: IconTone) {
   if (tone === 'ok') return styles.iconOk
@@ -72,10 +78,7 @@ function toneClass(tone: IconTone) {
   return styles.iconAccent
 }
 
-function renderEmojiIcon(emoji: string, key: string) {
-  const entry = EMOJI_ICONS.find(({ match }) => match.test(emoji))
-  if (!entry) return <Fragment key={key}>{emoji}</Fragment>
-
+function renderEmojiIcon(entry: EmojiIconEntry, key: string) {
   const { Icon, tone } = entry
   return (
     <Icon
@@ -89,13 +92,41 @@ function renderEmojiIcon(emoji: string, key: string) {
 }
 
 function replaceEmojisInText(text: string, keyPrefix: string): ReactNode[] {
-  return text.split(EMOJI_SPLIT).flatMap((part, index) => {
-    if (!part) return []
-    if (EMOJI_ICONS.some(({ match }) => match.test(part))) {
-      return [renderEmojiIcon(part, `${keyPrefix}-${index}`)]
+  const nodes: ReactNode[] = []
+  let i = 0
+  let plain = ''
+  let key = 0
+
+  const flushPlain = () => {
+    if (!plain) return
+    nodes.push(<Fragment key={`${keyPrefix}-t-${key++}`}>{plain}</Fragment>)
+    plain = ''
+  }
+
+  while (i < text.length) {
+    let matched: string | null = null
+    for (const token of EMOJI_TOKENS) {
+      if (text.startsWith(token, i)) {
+        matched = token
+        break
+      }
     }
-    return [<Fragment key={`${keyPrefix}-t-${index}`}>{part}</Fragment>]
-  })
+
+    if (matched) {
+      flushPlain()
+      nodes.push(renderEmojiIcon(EMOJI_TOKEN_MAP.get(matched)!, `${keyPrefix}-i-${key++}`))
+      i += matched.length
+      continue
+    }
+
+    const codePoint = text.codePointAt(i)
+    if (codePoint === undefined) break
+    plain += String.fromCodePoint(codePoint)
+    i += codePoint > 0xffff ? 2 : 1
+  }
+
+  flushPlain()
+  return nodes
 }
 
 function withIcons(children: ReactNode, keyPrefix = 'n'): ReactNode {
