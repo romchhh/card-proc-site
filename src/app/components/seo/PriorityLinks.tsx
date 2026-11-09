@@ -47,6 +47,14 @@ export default function PriorityLinks({ locale }: Props) {
       }),
     },
     {
+      href: localePath('/compare/stripe-alternatives', locale),
+      label: pickLocaleCopy(locale, {
+        ru: 'Альтернативы Stripe — Paddle, Lemon Squeezy, Adyen, Mollie',
+        uk: 'Альтернативи Stripe — Paddle, Lemon Squeezy, Adyen, Mollie',
+        en: 'Stripe alternatives — Paddle, Lemon Squeezy, Adyen, Mollie',
+      }),
+    },
+    {
       href: localePath('/jurisdictions', locale),
       label: pickLocaleCopy(locale, {
         ru: 'Stripe по странам — юрлицо и банк',

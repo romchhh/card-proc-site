@@ -7,6 +7,7 @@ import Breadcrumbs from '../../components/seo/Breadcrumbs'
 import FaqAccordion from '../../components/seo/FaqAccordion'
 import JsonLdScript from '../../components/seo/JsonLdScript'
 import ContentTable from '../../components/ContentTable'
+import HubRichBody from '../../components/seo/HubRichBody'
 import PriorityLinks from '../../components/seo/PriorityLinks'
 import { isValidLocale, localePath, pickLocaleCopy, type Locale } from '@/lib/i18n/config'
 import { getHubTables } from '@/lib/guide-tables'
@@ -30,6 +31,36 @@ const HUB = {
       'Эти страницы не дублируют услуги аренды или покупки. Они отвечают на конкретные запросы: «как принимать оплату из-за границы для украинского проекта» и «аккаунт на review / hold / KYC».',
       'Формат подключения зависит от ниши, юрлица и схемы выплат. Stripe может отказать или запросить дополнительные документы — это фиксируем до старта.',
     ],
+    sections: [
+      {
+        title: 'Когда открывать страницу «Stripe для Украины»',
+        paragraphs: [
+          'Если команда или клиенты связаны с Украиной, а прямое подключение Stripe на ФОП недоступно — нужен foreign entity, банк и понятная схема выплат.',
+          'На пилоте допустимы аренда или routing, пока готовится юрлицо. После стабильного оборота переходим на свой perimeter.',
+        ],
+      },
+      {
+        title: 'Когда разбирать проблемы с аккаунтом',
+        paragraphs: [
+          'Review, hold, reserve, Restricted или повторный KYC — сначала документы и Evidence за 48 часов, без хаотичной смены оффера.',
+          'Если категория запрещена или сайт не соответствует платежам, апелляции редко помогают: честнее план B (другой контур или модель).',
+        ],
+      },
+      {
+        title: 'Как это стыкуется с услугами',
+        paragraphs: [
+          'Решения отвечают на ситуацию; услуги — на формат: аренда, покупка, процессинг под ключ, юрлицо + банк.',
+          'Сравнение аренды и покупки и альтернативы Stripe (Paddle, Lemon, Adyen, Mollie) — на отдельных страницах compare.',
+        ],
+      },
+      {
+        title: 'Что принести на консультацию',
+        paragraphs: [
+          'Ссылку на сайт, страны клиентов, оборот, текущий способ оплаты и переписку со Stripe или банком при отказе.',
+          'Без этого нельзя честно сказать, какой формат уместен и где высок риск отказа.',
+        ],
+      },
+    ],
     faq: [
       {
         question: 'Чем решения отличаются от услуг?',
@@ -41,8 +72,23 @@ const HUB = {
         answer:
           'Нет. Мы помогаем собрать ответы и документы под запрос Stripe, но решение принимает Stripe. Если шансов мало, скажем об этом на консультации.',
       },
+      {
+        question: 'Нужна ли сразу иностранная компания для Украины?',
+        answer:
+          'Не всегда в первый день. Часто начинают с аренды или routing, параллельно готовят Ltd + банк. Долгий стек без «чужого» кабинета — это юрлицо + свой Stripe.',
+      },
+      {
+        question: 'Что делать в первые 48 часов при hold?',
+        answer:
+          'Сохранить письма Stripe, скрины Dashboard, выписки, оферту и reason codes по спорам. Не менять продукт и рекламу хаотично до разбора причины.',
+      },
     ],
     faqHeading: 'Вопросы о решениях для Stripe',
+    ctas: [
+      { label: 'Stripe для Украины', path: '/solutions/stripe-ukraine' },
+      { label: 'Проблемы с аккаунтом', path: '/solutions/stripe-account-issues' },
+      { label: 'Все услуги', path: '/services' },
+    ],
   },
   uk: {
     h1: 'Рішення для Stripe',
@@ -53,6 +99,36 @@ const HUB = {
     intro: [
       'Ці сторінки не дублюють послуги оренди чи купівлі. Вони відповідають на конкретні запити: «як приймати оплату з-за кордону для українського проєкту» і «акаунт на review / hold / KYC».',
       'Формат підключення залежить від ніші, юрособи та схеми виплат. Stripe може відмовити або запросити додаткові документи — це фіксуємо до старту.',
+    ],
+    sections: [
+      {
+        title: 'Коли відкривати сторінку «Stripe для України»',
+        paragraphs: [
+          'Якщо команда або клієнти пов’язані з Україною, а пряме підключення Stripe на ФОП недоступне — потрібен foreign entity, банк і зрозуміла схема виплат.',
+          'На пілоті допустимі оренда або routing, поки готується юрособа. Після стабільного обігу переходимо на свій perimeter.',
+        ],
+      },
+      {
+        title: 'Коли розбирати проблеми з акаунтом',
+        paragraphs: [
+          'Review, hold, reserve, Restricted або повторний KYC — спочатку документи й Evidence за 48 годин, без хаотичної зміни оферу.',
+          'Якщо категорія заборонена або сайт не відповідає платежам, апеляції рідко допомагають: чесніше план B (інший контур або модель).',
+        ],
+      },
+      {
+        title: 'Як це стикується з послугами',
+        paragraphs: [
+          'Рішення відповідають на ситуацію; послуги — на формат: оренда, купівля, процесинг під ключ, юрособа + банк.',
+          'Порівняння оренди й купівлі та альтернативи Stripe (Paddle, Lemon, Adyen, Mollie) — на окремих сторінках compare.',
+        ],
+      },
+      {
+        title: 'Що принести на консультацію',
+        paragraphs: [
+          'Посилання на сайт, країни клієнтів, обіг, поточний спосіб оплати й листування зі Stripe або банком за відмови.',
+          'Без цього не можна чесно сказати, який формат доречний і де високий ризик відмови.',
+        ],
+      },
     ],
     faq: [
       {
@@ -65,8 +141,23 @@ const HUB = {
         answer:
           'Ні. Ми допомагаємо зібрати відповіді й документи під запит Stripe, але рішення ухвалює Stripe. Якщо шансів мало, скажемо про це на консультації.',
       },
+      {
+        question: 'Чи потрібна одразу іноземна компанія для України?',
+        answer:
+          'Не завжди в перший день. Часто починають з оренди або routing, паралельно готують Ltd + банк. Довгий стек без «чужого» кабінету — це юрособа + свій Stripe.',
+      },
+      {
+        question: 'Що робити в перші 48 годин при hold?',
+        answer:
+          'Зберегти листи Stripe, скріни Dashboard, виписки, оферту й reason codes за спорами. Не міняти продукт і рекламу хаотично до розбору причини.',
+      },
     ],
     faqHeading: 'Питання про рішення для Stripe',
+    ctas: [
+      { label: 'Stripe для України', path: '/solutions/stripe-ukraine' },
+      { label: 'Проблеми з акаунтом', path: '/solutions/stripe-account-issues' },
+      { label: 'Усі послуги', path: '/services' },
+    ],
   },
   en: {
     h1: 'Stripe solutions',
@@ -77,6 +168,36 @@ const HUB = {
     intro: [
       'These pages do not duplicate rental or purchase services. They answer concrete requests: “how to accept payments abroad for a Ukraine-linked project” and “account under review / hold / KYC”.',
       'The setup format depends on niche, legal entity and payout scheme. Stripe may refuse or ask for more documents — we state that before launch.',
+    ],
+    sections: [
+      {
+        title: 'When to open “Stripe for Ukraine”',
+        paragraphs: [
+          'If the team or customers are linked to Ukraine and a sole trader cannot connect Stripe directly, you need a foreign entity, a bank and a clear payout scheme.',
+          'Rental or routing can cover the pilot while the company is prepared. After stable volume, move to your own perimeter.',
+        ],
+      },
+      {
+        title: 'When to work through account issues',
+        paragraphs: [
+          'Review, hold, reserve, Restricted or repeat KYC — gather documents and Evidence in 48 hours first; do not change the offer chaotically.',
+          'If the category is prohibited or the site mismatches payments, appeals rarely help: plan B (another stack or model) is more honest.',
+        ],
+      },
+      {
+        title: 'How this maps to services',
+        paragraphs: [
+          'Solutions answer a situation; services answer a format: rent, buy, turnkey processing, entity + bank.',
+          'Rent vs buy and Stripe alternatives (Paddle, Lemon, Adyen, Mollie) live on separate compare pages.',
+        ],
+      },
+      {
+        title: 'What to bring to a consultation',
+        paragraphs: [
+          'Site URL, customer countries, volume, current payment method and any Stripe or bank decline emails.',
+          'Without that we cannot honestly say which format fits and where refusal risk is high.',
+        ],
+      },
     ],
     faq: [
       {
@@ -89,8 +210,23 @@ const HUB = {
         answer:
           'No. We help prepare answers and documents for Stripe’s request, but Stripe decides. If chances are low, we say so on the consultation.',
       },
+      {
+        question: 'Do Ukraine projects need a foreign company on day one?',
+        answer:
+          'Not always. Teams often start with rental or routing while Ltd + bank are prepared. A lasting stack without a shared cabinet is entity + your own Stripe.',
+      },
+      {
+        question: 'What should I do in the first 48 hours of a hold?',
+        answer:
+          'Keep Stripe emails, Dashboard screenshots, statements, terms and dispute reason codes. Do not change product or ads chaotically before the root cause is clear.',
+      },
     ],
     faqHeading: 'Questions about Stripe solutions',
+    ctas: [
+      { label: 'Stripe for Ukraine', path: '/solutions/stripe-ukraine' },
+      { label: 'Account issues', path: '/solutions/stripe-account-issues' },
+      { label: 'All services', path: '/services' },
+    ],
   },
 } as const
 
@@ -202,11 +338,15 @@ export default async function SolutionsHubPage({ params }: Props) {
           </ul>
         </header>
 
-        <div className={styles.intro}>
-          {copy.intro.map((paragraph) => (
-            <p key={paragraph.slice(0, 48)}>{paragraph}</p>
-          ))}
-        </div>
+        <HubRichBody
+          intro={[...copy.intro]}
+          sections={copy.sections.map((section) => ({
+            title: section.title,
+            paragraphs: [...section.paragraphs],
+          }))}
+          ctas={[...copy.ctas]}
+          locale={locale}
+        />
 
         <div className={styles.guideTables}>
           {getHubTables('solutions', locale).map((table) => (

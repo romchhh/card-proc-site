@@ -1,3 +1,5 @@
+import Link from 'next/link'
+import { localePath, type Locale } from '@/lib/i18n/config'
 import styles from '../../[locale]/services/hub.module.css'
 
 type Section = {
@@ -5,9 +7,16 @@ type Section = {
   paragraphs: string[]
 }
 
+type Cta = {
+  label: string
+  path: string
+}
+
 type Props = {
   intro: string[]
   sections: Section[]
+  ctas?: Cta[]
+  locale?: Locale
 }
 
 function renderParagraphs(paragraphs: string[]) {
@@ -38,7 +47,7 @@ function renderParagraphs(paragraphs: string[]) {
   return blocks
 }
 
-export default function HubRichBody({ intro, sections }: Props) {
+export default function HubRichBody({ intro, sections, ctas, locale = 'ru' }: Props) {
   return (
     <>
       {intro.length > 0 && (
@@ -58,6 +67,19 @@ export default function HubRichBody({ intro, sections }: Props) {
             </section>
           ))}
         </div>
+      )}
+
+      {ctas && ctas.length > 0 && (
+        <ul className={styles.links}>
+          {ctas.slice(0, 3).map((cta) => (
+            <li key={cta.path}>
+              <Link href={localePath(cta.path, locale)}>
+                {cta.label}
+                <span aria-hidden="true">→</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
       )}
     </>
   )

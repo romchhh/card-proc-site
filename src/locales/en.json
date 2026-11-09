@@ -4,6 +4,7 @@
     "bottomTitle": "Rent, buy and Stripe processing for business",
     "bottomText": "WayOfProcessing: rent or buy a Stripe account, turnkey processing, or a company plus bank package. Fees from 1.5%, basic launch from 3 days, payouts in EUR, USD or USDT. Below: setup services and guides on Stripe as a payment system.\n\nTypical path: niche review → rental, purchase or jurisdiction (GB, HK, CY, PL, EE, CZ) → checkout and payouts. Stripe may request documents or restrict an account — we state that before launch.",
     "guidesHeading": "Guides on Stripe and payment systems",
+    "hubsHeading": "Directories: countries, niches, solutions",
     "servicesHeading": "Stripe setup services",
     "faqHeading": "FAQ on renting, buying and Stripe processing",
     "faq": [
@@ -42,10 +43,14 @@
     ]
   },
   "nav": {
-    "services": "All services",
-    "clients": "Our clients",
+    "services": "Services",
+    "clients": "Clients",
     "about": "About",
     "blog": "Blog",
+    "niches": "Niches",
+    "jurisdictions": "Countries",
+    "solutions": "Solutions",
+    "compare": "Rent or buy",
     "cta": "Contact us",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
@@ -55,10 +60,10 @@
     "openContact": "Leave a request"
   },
   "hero": {
-    "headline": "Stripe setup",
-    "stripe": "for business",
+    "headline": "Rent and buy",
+    "stripe": "a Stripe account",
     "badge": "Fees from 1.5% · launch from 3 business days",
-    "description": "Rental, purchase or turnkey processing. We match the format to your niche and jurisdiction — payouts in EUR, USD or USDT.",
+    "description": "Turnkey setup, company and bank. We match the format to your niche and jurisdiction — payouts in EUR, USD or USDT.",
     "offerRent": "Rent a Stripe account",
     "offerBuy": "Buy a Stripe account",
     "cardLabel": "Leave a request",
@@ -144,20 +149,20 @@
   "howWeWork": {
     "heading": "How we work",
     "step1": {
-      "title": "Foreign entities for Stripe",
-      "desc": "We provide turnkey infrastructure: a foreign legal entity, bank account, and Stripe account — without registering a company abroad on your own."
+      "title": "Niche and site audit",
+      "desc": "1–2 business days: offer, card geos, Terms/Refund, MCC and CB risk. We state what Stripe may request or reject — no “any project approved” promise."
     },
     "step2": {
-      "title": "Stripe expertise A to Z",
-      "desc": "Before launch we review the niche, MCC and payout scheme. Limits, reviews and chargebacks are discussed up front — we do not promise Stripe will accept every project."
+      "title": "Format and documents",
+      "desc": "Rental, purchase, turnkey processing or company + bank. We agree the docs pack, descriptor, payout currency and who owns which step."
     },
     "step3": {
-      "title": "Reporting and taxes covered",
-      "desc": "We prepare entity reporting in the country we register. Tax treatment follows that country's law. We do not promise zero tax."
+      "title": "Integration and live tests",
+      "desc": "From 3 business days with a ready site: Checkout/API, 3DS rules, 10–20 live payments, payout path and statement check."
     },
     "step4": {
-      "title": "Real human support",
-      "desc": "The WayOfProcessing team is available on Telegram — a person answers your questions, not a bot. Free consultation at every stage."
+      "title": "Launch and support",
+      "desc": "Decline/CB monitoring, Telegram support, routing and a backup channel when needed. Reviews and limits stay with Stripe."
     }
   },
   "advantages": {
@@ -276,6 +281,22 @@
       "warming": "Account warming",
       "consultation": "Consultation",
       "other": "Other"
+    },
+    "telegram": "Telegram",
+    "telegramPlaceholder": "@username or +380…",
+    "telegramHint": "Username (@username) or phone number",
+    "whatsapp": "WhatsApp",
+    "whatsappPlaceholder": "+380 XX XXX XX XX",
+    "whatsappHint": "Number with country code",
+    "email": "Email",
+    "emailPlaceholder": "name@company.com",
+    "emailHint": "Optional — alternative contact method",
+    "optional": "optional",
+    "errors": {
+      "name": "Please enter your name",
+      "telegram": "Enter @username (5+ characters) or a phone number",
+      "whatsapp": "Enter a WhatsApp number with country code",
+      "email": "Check the email format"
     }
   },
   "privacy": {
@@ -297,7 +318,7 @@
         ],
         "list": [
           "name;",
-          "phone number or Telegram contact;",
+          "Telegram, WhatsApp and email if provided;",
           "comment text or description of your request;",
           "technical data: IP address, browser type, interface language, date and time of submission (automatically via server logs)."
         ]
@@ -411,8 +432,6 @@
     "tocMore": "More",
     "tocFaq": "FAQ",
     "specialistsToc": "What we handle",
-
-
     "processHeading": "How setup works",
     "processLead": "Clear steps with no promise to bypass Stripe rules: assessment first, then format and paperwork.",
     "exploreHeading": "See also",
@@ -446,7 +465,6 @@
       "issues": "Blocks and review"
     }
   },
-
   "cookieConsent": {
     "title": "We use cookies",
     "text": "They keep the site working (language, session). We do not turn on advertising cookies. Details are in the",
@@ -454,7 +472,6 @@
     "necessary": "Necessary only",
     "accept": "Accept"
   },
-
   "footer": {
     "navLabel": "Navigation",
     "brandBold": "WAYOF",
@@ -464,6 +481,7 @@
     "companyName": "MSM FINANCIAL CONSULTANCY LIMITED",
     "companyMeta": "United Kingdom · Company number 04820256",
     "companyAddress": "45 Avion Gardens, Kings Hill, West Malling, England, ME19 4RH",
+    "companiesHouse": "Companies House no. {{number}}",
     "infoHeading": "Information",
     "servicesHeading": "Services",
     "guidesHeading": "Stripe & payments",
@@ -476,7 +494,7 @@
     "solutions": "Stripe solutions",
     "ukraine": "Stripe for Ukraine",
     "issues": "Stripe blocks",
-    "siteMap": "Sitemap",
+    "siteMap": "Site map",
     "clients": "Our clients",
     "contacts": "Contacts",
     "blog": "Blog",
@@ -486,10 +504,27 @@
     "support247": "24/7 support",
     "aboutHeading": "WayOfProcessing",
     "aboutText": "WayOfProcessing helps connect Stripe as a payment system: merchant account, checkout, payment routing, a company with a bank account, and a free consultation. The service is not affiliated with Stripe, Inc.",
-    "siteMap": "Site map",
     "privacy": "Privacy policy",
     "terms": "Terms",
     "disclaimer": "Disclaimer",
     "developedBy": "Developed by"
+  },
+  "homeDirectories": {
+    "heading": "Stripe by country, niche and solution",
+    "lead": "Dedicated pages for company jurisdictions, business verticals and common situations — with requirements, timelines and risks, not a template country swap.",
+    "countriesTitle": "Company countries",
+    "nichesTitle": "Niches",
+    "solutionsTitle": "Solutions",
+    "seeAll": "See all"
+  },
+  "trustStrip": {
+    "heading": "Transparent company",
+    "lead": "A UK Ltd with a public Companies House record. We are an independent service and not affiliated with Stripe, Inc.",
+    "legal": "Legal entity",
+    "registry": "Registry",
+    "companiesHouse": "Companies House no. {{number}}",
+    "address": "Address",
+    "team": "Team",
+    "aboutLink": "About and contacts"
   }
 }

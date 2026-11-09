@@ -19,6 +19,9 @@ const ClientsSection = dynamic(() => import('../components/ClientsSection'))
 const FaqSection = dynamic(() => import('../components/FaqSection'))
 const ContactSection = dynamic(() => import('../components/ContactSection'))
 const SeoTextSection = dynamic(() => import('../components/SeoTextSection'))
+const HomeDirectoriesSection = dynamic(() => import('../components/HomeDirectoriesSection'))
+const TrustStrip = dynamic(() => import('../components/TrustStrip'))
+const HomePricingSection = dynamic(() => import('../components/HomePricingSection'))
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -48,8 +51,11 @@ export default async function Home({ params }: Props) {
         <Hero />
         <StatsSection />
         <ServicesSection />
+        <HomePricingSection />
+        <HomeDirectoriesSection />
         <AdvantagesSection />
         <HowWeWorkSection />
+        <TrustStrip />
         <AccountsSection />
         <ScrollReveal><SpecialistsSection /></ScrollReveal>
         <ScrollReveal delay={40}><ClientsSection /></ScrollReveal>

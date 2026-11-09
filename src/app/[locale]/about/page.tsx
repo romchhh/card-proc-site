@@ -77,6 +77,15 @@ export default async function AboutPage({ params }: Props) {
       image: '/images/landings/saas-hero.webp',
     },
     {
+      href: '/solutions',
+      title: pickLocaleCopy(locale, {
+        ru: 'Решения для Stripe',
+        uk: 'Рішення для Stripe',
+        en: 'Stripe solutions',
+      }),
+      image: '/images/landings/ukraine-hero.webp',
+    },
+    {
       href: '/solutions/stripe-ukraine',
       title: pickLocaleCopy(locale, {
         ru: 'Stripe для Украины',
@@ -84,6 +93,15 @@ export default async function AboutPage({ params }: Props) {
         en: 'Stripe for Ukraine',
       }),
       image: '/images/landings/ukraine-hero.webp',
+    },
+    {
+      href: '/solutions/stripe-account-issues',
+      title: pickLocaleCopy(locale, {
+        ru: 'Блокировки и hold Stripe',
+        uk: 'Блокування і hold Stripe',
+        en: 'Stripe blocks and holds',
+      }),
+      image: '/images/landings/issues-hero.webp',
     },
     {
       href: '/clients',

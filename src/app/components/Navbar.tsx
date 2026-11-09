@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
 import { useTranslation } from 'react-i18next'
-import { siteConfig } from '@/lib/site'
+import { telegramDeepLink } from '@/lib/site'
 import { stripLocalePrefix } from '@/lib/i18n/config'
 import { useLocalizedPath } from '@/lib/i18n/use-locale'
 import { useBodyScrollLock } from '@/lib/body-scroll-lock'
@@ -12,6 +12,17 @@ import { TelegramIcon } from './icons/SocialIcons'
 import LangSwitcher from './LangSwitcher'
 import styles from './Navbar.module.css'
 
+const NAV_LINKS = [
+  { key: 'about', path: '/about' },
+  { key: 'services', path: '/services' },
+  { key: 'niches', path: '/niches' },
+  { key: 'jurisdictions', path: '/jurisdictions' },
+  { key: 'solutions', path: '/solutions' },
+  { key: 'compare', path: '/compare/rent-vs-buy' },
+  { key: 'clients', path: '/clients' },
+  { key: 'blog', path: '/blog' },
+] as const
+
 export default function Navbar({ transparent = false }: { transparent?: boolean }) {
   const { t } = useTranslation()
   const { open: openContactModal } = useContactModal()
@@ -19,7 +30,7 @@ export default function Navbar({ transparent = false }: { transparent?: boolean 
   const lp = useLocalizedPath()
   const [menuOpen, setMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const blogPath = lp('/blog')
+  const pathOnly = stripLocalePrefix(pathname)
 
   useEffect(() => {
     let frame = 0
@@ -41,7 +52,18 @@ export default function Navbar({ transparent = false }: { transparent?: boolean 
   useBodyScrollLock(menuOpen)
 
   const isDark = !transparent || scrolled
-  const isBlogActive = stripLocalePrefix(pathname) === '/blog' || pathname.includes('/blog/')
+
+  const isActive = (path: string) => {
+    if (path === '/blog') return pathOnly === '/blog' || pathOnly.startsWith('/blog/')
+    if (path === '/services') return pathOnly === '/services' || pathOnly.startsWith('/services/')
+    if (path === '/niches') return pathOnly === '/niches' || pathOnly.startsWith('/niches/')
+    if (path === '/jurisdictions') {
+      return pathOnly === '/jurisdictions' || pathOnly.startsWith('/jurisdictions/')
+    }
+    if (path === '/solutions') return pathOnly === '/solutions' || pathOnly.startsWith('/solutions/')
+    if (path === '/compare/rent-vs-buy') return pathOnly.startsWith('/compare/')
+    return pathOnly === path
+  }
 
   return (
     <>
@@ -55,14 +77,19 @@ export default function Navbar({ transparent = false }: { transparent?: boolean 
             aria-expanded={menuOpen}
             aria-controls="site-nav-drawer"
           >
-            <span/><span/><span/>
+            <span /><span /><span />
           </button>
 
           <div className={styles.center}>
-            <a href={lp('/about')}>{t('nav.about')}</a>
-            <a href={lp('/services')}>{t('nav.services')}</a>
-            <a href={lp('/clients')}>{t('nav.clients')}</a>
-            <a href={blogPath} className={isBlogActive ? styles.activeLink : ''}>{t('nav.blog')}</a>
+            {NAV_LINKS.map((item) => (
+              <a
+                key={item.key}
+                href={lp(item.path)}
+                className={isActive(item.path) ? styles.activeLink : undefined}
+              >
+                {t(`nav.${item.key}`)}
+              </a>
+            ))}
           </div>
         </div>
 
@@ -73,7 +100,7 @@ export default function Navbar({ transparent = false }: { transparent?: boolean 
 
         <div className={styles.actions}>
           <a
-            href={siteConfig.telegramOperatorUrl}
+            href={telegramDeepLink('nav')}
             target="_blank"
             rel="noopener noreferrer"
             className={styles.telegramBtn}
@@ -118,14 +145,15 @@ export default function Navbar({ transparent = false }: { transparent?: boolean 
       >
         <button className={styles.drawerClose} onClick={() => setMenuOpen(false)} aria-label={t('nav.closeMenu')}>
           <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round">
-            <path d="M4 4 L24 24 M24 4 L4 24"/>
+            <path d="M4 4 L24 24 M24 4 L4 24" />
           </svg>
         </button>
 
-        <a href={lp('/about')} onClick={() => setMenuOpen(false)}>{t('nav.about')}</a>
-        <a href={lp('/services')} onClick={() => setMenuOpen(false)}>{t('nav.services')}</a>
-        <a href={lp('/clients')} onClick={() => setMenuOpen(false)}>{t('nav.clients')}</a>
-        <a href={blogPath} onClick={() => setMenuOpen(false)}>{t('nav.blog')}</a>
+        {NAV_LINKS.map((item) => (
+          <a key={item.key} href={lp(item.path)} onClick={() => setMenuOpen(false)}>
+            {t(`nav.${item.key}`)}
+          </a>
+        ))}
         <button
           type="button"
           className={styles.drawerCta}

@@ -46,6 +46,14 @@
               "Фиксированной витринной цены на все ниши нет — SaaS и обычный e-commerce дают разный риск для Stripe, поэтому ставка считается индивидуально. В ответ на заявку вы получаете диапазон под ваш объём, а не абстрактное «напишите в Telegram».",
               "Если экономика пилота не сходится, формат можно остановить или сменить на покупку аккаунта. Мы заранее проговариваем, что входит в сопровождение в первые недели: лимиты, выплаты, споры."
             ]
+          },
+          {
+            "title": "Риски и ограничения",
+            "paragraphs": [
+              "Stripe может запросить документы, изменить лимиты или увести аккаунт в review — это политика платформы, а не «сбой» интеграции.",
+              "Мы не гарантируем одобрение любой ниши, снятие hold или отсутствие chargeback. Обещаем честную оценку до старта, сопровождение и резервный канал при routing.",
+              "High-risk и restricted категории требуют отдельного скрининга; часть вертикалей (например, forex/брокеры) мы не подключаем."
+            ]
           }
         ],
         "benefits": [
@@ -171,6 +179,14 @@
               "Processing fees start from 1.5% and depend on niche, volume, chargeback rate and whether you need routing. There is no paid “entry consultation”: we quote after the request.",
               "There is no single storefront price for every niche — SaaS and standard e-commerce carry different Stripe risk, so the rate is calculated per case. You get a range for your volume, not a vague “message us on Telegram”.",
               "If the pilot economics do not work, you can stop or switch to buying an account. We agree upfront what support covers in the first weeks: limits, payouts, disputes."
+            ]
+          },
+          {
+            "title": "Risks and limits",
+            "paragraphs": [
+              "Stripe may request documents, change limits or send an account into review — that is platform policy, not an integration failure.",
+              "We do not guarantee approval of every niche, hold removal or zero chargebacks. We promise an honest pre-launch assessment, support and a backup channel when routing is used.",
+              "High-risk and restricted categories need separate screening; some verticals (e.g. forex/brokers) we do not connect."
             ]
           }
         ],
@@ -299,6 +315,14 @@
               "Фіксованої вітринної ціни на всі ніші немає — SaaS і звичайний e-commerce дають різний ризик для Stripe, тому ставка розраховується індивідуально. У відповідь на заявку ви отримуєте діапазон під ваш обсяг, а не абстрактне «напишіть у Telegram».",
               "Якщо економіка пілота не сходиться, формат можна зупинити або замінити на купівлю акаунта. Ми заздалегідь проговорюємо, що входить у супровід у перші тижні: ліміти, виплати, спори."
             ]
+          },
+          {
+            "title": "Ризики та обмеження",
+            "paragraphs": [
+              "Stripe може запросити документи, змінити ліміти або відправити акаунт у review — це політика платформи, а не «збій» інтеграції.",
+              "Ми не гарантуємо схвалення будь-якої ніші, зняття hold або відсутність chargeback. Обіцяємо чесну оцінку до старту, супровід і резервний канал при routing.",
+              "High-risk і restricted категорії потребують окремого скринінгу; частину вертикалей (наприклад, forex/брокери) ми не підключаємо."
+            ]
           }
         ],
         "benefits": [
@@ -426,6 +450,14 @@
               "Цена зависит от ниши, оборота, юрисдикции, документов и того, нужен ли routing. Витрины «один прайс для всех» здесь вводят в заблуждение: high-risk и обычный магазин — разные сделки.",
               "После заявки считаем диапазон бесплатно. В расчёт входят комплектация (только аккаунт или юрлицо + банк) и сопровождение на старте. Комиссия процессинга, если остаётесь на нашей инфраструктуре выплат, начинается от 1.5%."
             ]
+          },
+          {
+            "title": "Риски и ограничения",
+            "paragraphs": [
+              "Stripe может запросить документы, изменить лимиты или увести аккаунт в review — это политика платформы, а не «сбой» интеграции.",
+              "Мы не гарантируем одобрение любой ниши, снятие hold или отсутствие chargeback. Обещаем честную оценку до старта, сопровождение и резервный канал при routing.",
+              "High-risk и restricted категории требуют отдельного скрининга; часть вертикалей (например, forex/брокеры) мы не подключаем."
+            ]
           }
         ],
         "benefits": [
@@ -550,6 +582,14 @@
               "Price depends on niche, volume, jurisdiction, documents and whether you need routing. A single storefront price for every case is misleading: high-risk and a standard store are different deals.",
               "After the request we calculate a range for free. The quote includes the package (account only vs entity + bank) and onboarding support. If payouts stay on our stack, processing fees start from 1.5%."
             ]
+          },
+          {
+            "title": "Risks and limits",
+            "paragraphs": [
+              "Stripe may request documents, change limits or send an account into review — that is platform policy, not an integration failure.",
+              "We do not guarantee approval of every niche, hold removal or zero chargebacks. We promise an honest pre-launch assessment, support and a backup channel when routing is used.",
+              "High-risk and restricted categories need separate screening; some verticals (e.g. forex/brokers) we do not connect."
+            ]
           }
         ],
         "benefits": [
@@ -673,6 +713,14 @@
             "paragraphs": [
               "Ціна залежить від ніші, обороту, юрисдикції, документів і того, чи потрібен routing. Вітрини «один прайс для всіх» тут вводять в оману: high-risk і звичайний магазин — різні угоди.",
               "Після заявки безкоштовно розраховуємо діапазон. У розрахунок входять комплектація (лише акаунт або юрособа + банк) і супровід на старті. Комісія процесингу, якщо ви залишаєтеся на нашій інфраструктурі виплат, починається від 1.5%."
+            ]
+          },
+          {
+            "title": "Ризики та обмеження",
+            "paragraphs": [
+              "Stripe може запросити документи, змінити ліміти або відправити акаунт у review — це політика платформи, а не «збій» інтеграції.",
+              "Ми не гарантуємо схвалення будь-якої ніші, зняття hold або відсутність chargeback. Обіцяємо чесну оцінку до старту, супровід і резервний канал при routing.",
+              "High-risk і restricted категорії потребують окремого скринінгу; частину вертикалей (наприклад, forex/брокери) ми не підключаємо."
             ]
           }
         ],
@@ -818,6 +866,14 @@
               "Комиссия от 1.5%. На неё влияют ниша, средний чек, доля кошельков, спорность вертикали и нужен ли multi-account routing. После заявки даём ориентир под ваш оборот, а не абстрактный минимум с сайта.",
               "Формат подходит магазинам, SaaS, маркетплейсам, подпискам и части high-risk, где простой checkout дороже комиссии. Если нужен только «логин Stripe» без интеграции — смотрите аренду или покупку аккаунта."
             ]
+          },
+          {
+            "title": "Риски и ограничения",
+            "paragraphs": [
+              "Stripe может запросить документы, изменить лимиты или увести аккаунт в review — это политика платформы, а не «сбой» интеграции.",
+              "Мы не гарантируем одобрение любой ниши, снятие hold или отсутствие chargeback. Обещаем честную оценку до старта, сопровождение и резервный канал при routing.",
+              "High-risk и restricted категории требуют отдельного скрининга; часть вертикалей (например, forex/брокеры) мы не подключаем."
+            ]
           }
         ],
         "benefits": [
@@ -957,6 +1013,14 @@
             "paragraphs": [
               "Fees from 1.5%. Niche, average ticket, wallet share, vertical risk and multi-account routing all move the rate. After the request we give a range for your volume, not only the homepage minimum.",
               "The format fits stores, SaaS, marketplaces, subscriptions and some high-risk cases where checkout downtime costs more than the fee. If you only need a Stripe login with no integration, see account rental or purchase."
+            ]
+          },
+          {
+            "title": "Risks and limits",
+            "paragraphs": [
+              "Stripe may request documents, change limits or send an account into review — that is platform policy, not an integration failure.",
+              "We do not guarantee approval of every niche, hold removal or zero chargebacks. We promise an honest pre-launch assessment, support and a backup channel when routing is used.",
+              "High-risk and restricted categories need separate screening; some verticals (e.g. forex/brokers) we do not connect."
             ]
           }
         ],
@@ -1098,6 +1162,14 @@
               "Комісія від 1.5%. На неї впливають ніша, середній чек, частка гаманців, спірність вертикалі та потреба в multi-account routing. Після заявки даємо орієнтир під ваш оборот, а не абстрактний мінімум із сайту.",
               "Формат підходить магазинам, SaaS, маркетплейсам, підпискам і частині high-risk, де простий checkout дорожчий за комісію. Якщо потрібен лише «логін Stripe» без інтеграції — дивіться оренду або купівлю акаунта."
             ]
+          },
+          {
+            "title": "Ризики та обмеження",
+            "paragraphs": [
+              "Stripe може запросити документи, змінити ліміти або відправити акаунт у review — це політика платформи, а не «збій» інтеграції.",
+              "Ми не гарантуємо схвалення будь-якої ніші, зняття hold або відсутність chargeback. Обіцяємо чесну оцінку до старту, супровід і резервний канал при routing.",
+              "High-risk і restricted категорії потребують окремого скринінгу; частину вертикалей (наприклад, forex/брокери) ми не підключаємо."
+            ]
           }
         ],
         "benefits": [
@@ -1232,6 +1304,14 @@
               "Базовый комплект — от 3 рабочих дней. Цена зависит от юрисдикции, ниши, объёма документов и того, нужен ли доработанный сайт под комплаенс. После заявки даём оценку по вашей модели, а не одну цифру «для всех стран».",
               "Отдельно продавать «только компанию без Stripe» можно, но банк и Stripe всё равно смотрят на одну связку. Комплект дешевле по риску отказа, даже если кажется дороже одной регистрации."
             ]
+          },
+          {
+            "title": "Риски и ограничения",
+            "paragraphs": [
+              "Stripe может запросить документы, изменить лимиты или увести аккаунт в review — это политика платформы, а не «сбой» интеграции.",
+              "Мы не гарантируем одобрение любой ниши, снятие hold или отсутствие chargeback. Обещаем честную оценку до старта, сопровождение и резервный канал при routing.",
+              "High-risk и restricted категории требуют отдельного скрининга; часть вертикалей (например, forex/брокеры) мы не подключаем."
+            ]
           }
         ],
         "benefits": [
@@ -1363,6 +1443,14 @@
               "A basic package takes from 3 business days. Price depends on jurisdiction, niche, document volume and whether the site needs compliance work. After the request we quote your model, not one number “for every country”.",
               "Selling “company only, no Stripe” is possible, but the bank and Stripe still judge one bundle. The package is cheaper on rejection risk even if a standalone registration looks cheaper."
             ]
+          },
+          {
+            "title": "Risks and limits",
+            "paragraphs": [
+              "Stripe may request documents, change limits or send an account into review — that is platform policy, not an integration failure.",
+              "We do not guarantee approval of every niche, hold removal or zero chargebacks. We promise an honest pre-launch assessment, support and a backup channel when routing is used.",
+              "High-risk and restricted categories need separate screening; some verticals (e.g. forex/brokers) we do not connect."
+            ]
           }
         ],
         "benefits": [
@@ -1493,6 +1581,14 @@
             "paragraphs": [
               "Базовий комплект — від 3 робочих днів. Ціна залежить від юрисдикції, ніші, обсягу документів і того, чи потрібен доопрацьований сайт під комплаєнс. Після заявки даємо оцінку за вашою моделлю, а не одну цифру «для всіх країн».",
               "Окремо продавати «лише компанію без Stripe» можна, але банк і Stripe все одно дивляться на одну зв’язку. Комплект дешевший за ризиком відмови, навіть якщо здається дорожчим за одну реєстрацію."
+            ]
+          },
+          {
+            "title": "Ризики та обмеження",
+            "paragraphs": [
+              "Stripe може запросити документи, змінити ліміти або відправити акаунт у review — це політика платформи, а не «збій» інтеграції.",
+              "Ми не гарантуємо схвалення будь-якої ніші, зняття hold або відсутність chargeback. Обіцяємо чесну оцінку до старту, супровід і резервний канал при routing.",
+              "High-risk і restricted категорії потребують окремого скринінгу; частину вертикалей (наприклад, forex/брокери) ми не підключаємо."
             ]
           }
         ],

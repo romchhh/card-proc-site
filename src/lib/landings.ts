@@ -66,6 +66,7 @@ export const NICHE_ICON: Record<string, string> = {
   marketplace: '/images/clients-icons/marketplaces.svg',
   'digital-products': '/images/clients-icons/ecommerce.svg',
   gaming: '/images/clients-icons/gaming.svg',
+  'high-risk': '/images/clients-icons/forex.svg',
   forex: '/images/clients-icons/forex.svg',
 }
 
@@ -131,7 +132,7 @@ export function getRelatedLandings(landing: Landing, locale: Locale): { path: st
   }
 
   if (landing.group === 'niches') {
-    const peers = getLandingsByGroup('niches').filter((item) => item.slug !== landing.slug).slice(0, 2)
+    const peers = getLandingsByGroup('niches').filter((item) => item.slug !== landing.slug).slice(0, 4)
     for (const peer of peers) {
       const peerView = getLandingView(peer, locale)
       related.push({ path: peer.path, title: peerView.h1, lead: peerView.lead })
@@ -176,7 +177,7 @@ export function getRelatedLandings(landing: Landing, locale: Locale): { path: st
     }
   }
 
-  return related.slice(0, landing.group === 'jurisdictions' ? 6 : 4)
+  return related.slice(0, landing.group === 'jurisdictions' ? 6 : landing.group === 'niches' ? 6 : 4)
 }
 
 export function groupEyebrow(group: LandingGroup, locale: Locale): string {

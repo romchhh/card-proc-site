@@ -119,9 +119,7 @@ function relatedCore(group: Landing['group']): ServiceSlug[] {
 
 export function landingToServiceView(landing: Landing, locale: Locale): ServiceView {
   const view = getLandingView(landing, locale)
-  const relatedLandings = getRelatedLandings(landing, locale).filter((item) =>
-    item.path.startsWith(`/${landing.group}/`) || (landing.group === 'jurisdictions' && item.path.startsWith('/jurisdictions/')),
-  )
+  const relatedLandings = getRelatedLandings(landing, locale)
 
   return {
     meta: view.meta,
@@ -157,6 +155,7 @@ export function landingToServiceView(landing: Landing, locale: Locale): ServiceV
             : locale === 'uk'
               ? 'Схожі сторінки'
               : 'Похожие страницы',
+    ctas: view.ctas?.slice(0, 3),
   }
 }
 

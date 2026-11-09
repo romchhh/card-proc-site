@@ -4,6 +4,7 @@ import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import Breadcrumbs from '../../components/seo/Breadcrumbs'
 import JsonLdScript from '../../components/seo/JsonLdScript'
+import PriorityLinks from '../../components/seo/PriorityLinks'
 import { isValidLocale, localePath, pickLocaleCopy, type Locale } from '@/lib/i18n/config'
 import { labelAbout, labelContacts, labelPrivacy, labelTerms } from '@/lib/i18n/labels'
 import { buildBreadcrumbJsonLd, buildGraphJsonLd, buildPageMetadata, buildWebPageJsonLd } from '@/lib/seo'
@@ -126,6 +127,33 @@ export default async function ContactsPage({ params }: Props) {
               </h2>
               <ul className={styles.list}>
                 <li>
+                  <Link href={localePath('/services', locale)} className={styles.contactLink}>
+                    {pickLocaleCopy(locale, {
+                      ru: 'Услуги подключения Stripe',
+                      uk: 'Послуги підключення Stripe',
+                      en: 'Stripe setup services',
+                    })}
+                  </Link>
+                </li>
+                <li>
+                  <Link href={localePath('/compare/rent-vs-buy', locale)} className={styles.contactLink}>
+                    {pickLocaleCopy(locale, {
+                      ru: 'Аренда или покупка',
+                      uk: 'Оренда чи купівля',
+                      en: 'Rent or buy',
+                    })}
+                  </Link>
+                </li>
+                <li>
+                  <Link href={localePath('/solutions', locale)} className={styles.contactLink}>
+                    {pickLocaleCopy(locale, {
+                      ru: 'Решения для Stripe',
+                      uk: 'Рішення для Stripe',
+                      en: 'Stripe solutions',
+                    })}
+                  </Link>
+                </li>
+                <li>
                   <Link href={localePath('/about', locale)} className={styles.contactLink}>
                     {labelAbout(locale)}
                   </Link>
@@ -145,6 +173,7 @@ export default async function ContactsPage({ params }: Props) {
           </div>
         </article>
       </main>
+      <PriorityLinks locale={locale} />
       <Footer />
     </>
   )

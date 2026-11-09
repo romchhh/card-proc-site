@@ -196,6 +196,36 @@
   transform: rotate(45deg);
 }
 
+.landingCtas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  margin-top: clamp(20px, 2.5vw, 28px);
+}
+
+.landingCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--stripe-blue);
+  text-decoration: none;
+}
+
+.landingCta:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.landingCta span {
+  transition: transform 0.2s var(--ease-out);
+}
+
+.landingCta:hover span {
+  transform: translateX(3px);
+}
+
 .heroCard {
   display: flex;
   align-items: center;

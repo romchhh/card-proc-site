@@ -72,6 +72,25 @@ const COPY = {
         legal: 'Гарантированное открытие банка или Stripe',
       },
     ],
+    scenariosTitle: 'Сценарии выбора',
+    scenarios: [
+      {
+        title: 'Нужно принять первые платежи на этой неделе',
+        text: 'Стартуйте с аренды при готовом сайте и понятной нише. После пилота решайте: покупка или свой юрлицо + банк.',
+      },
+      {
+        title: 'Оборот стабильный, нужен свой perimeter',
+        text: 'Смотрите покупку аккаунта или сразу комплект компания + банк в нужной юрисдикции.',
+      },
+      {
+        title: 'Multi-geo и пики рекламы',
+        text: 'Процессинг под ключ с routing и резервным каналом. Один аккаунт без запаса на review — риск простоя.',
+      },
+      {
+        title: 'Долгий стек без «чужого» кабинета',
+        text: 'Юрлицо + банк + ваш Stripe. Дольше по сроку, но прозрачнее для комплаенса и выплат.',
+      },
+    ],
     faq: [
       {
         question: 'Можно ли начать с аренды и потом купить?',
@@ -85,6 +104,7 @@ const COPY = {
     ctaRent: 'Аренда аккаунта Stripe',
     ctaBuy: 'Купить аккаунт Stripe',
     ctaLegal: 'Юрлицо и банк для Stripe',
+    ctaAlt: 'Альтернативы Stripe',
     colRent: 'Аренда',
     colBuy: 'Покупка',
     colLegal: 'Юрлицо + банк',
@@ -144,6 +164,25 @@ const COPY = {
         legal: 'Гарантоване відкриття банку або Stripe',
       },
     ],
+    scenariosTitle: 'Сценарії вибору',
+    scenarios: [
+      {
+        title: 'Потрібно прийняти перші платежі цього тижня',
+        text: 'Стартуйте з оренди за готового сайту і зрозумілої ніші. Після пілоту вирішуйте: купівля або своя юрособа + банк.',
+      },
+      {
+        title: 'Обіг стабільний, потрібен свій perimeter',
+        text: 'Дивіться купівлю акаунта або одразу комплект компанія + банк у потрібній юрисдикції.',
+      },
+      {
+        title: 'Multi-geo і піки реклами',
+        text: 'Процесинг під ключ із routing і резервним каналом. Один акаунт без запасу на review — ризик простою.',
+      },
+      {
+        title: 'Довгий стек без «чужого» кабінету',
+        text: 'Юрособа + банк + ваш Stripe. Довше за строком, але прозоріше для комплаєнсу і виплат.',
+      },
+    ],
     faq: [
       {
         question: 'Чи можна почати з оренди і потім купити?',
@@ -157,6 +196,7 @@ const COPY = {
     ctaRent: 'Оренда акаунта Stripe',
     ctaBuy: 'Купити акаунт Stripe',
     ctaLegal: 'Юрособа і банк для Stripe',
+    ctaAlt: 'Альтернативи Stripe',
     colRent: 'Оренда',
     colBuy: 'Купівля',
     colLegal: 'Юрособа + банк',
@@ -216,6 +256,25 @@ const COPY = {
         legal: 'Guaranteed bank or Stripe approval',
       },
     ],
+    scenariosTitle: 'Decision scenarios',
+    scenarios: [
+      {
+        title: 'Need first payments this week',
+        text: 'Start with rental if the site is ready and the niche is clear. After the pilot, decide: purchase or your own company + bank.',
+      },
+      {
+        title: 'Stable volume, own perimeter',
+        text: 'Look at buying an account or go straight to company + bank in the right jurisdiction.',
+      },
+      {
+        title: 'Multi-geo and ad spikes',
+        text: 'Turnkey processing with routing and a backup channel. One account with no review headroom risks downtime.',
+      },
+      {
+        title: 'Long-term stack without a shared cabinet',
+        text: 'Company + bank + your Stripe. Longer timeline, clearer compliance and payouts.',
+      },
+    ],
     faq: [
       {
         question: 'Can I start with rental and buy later?',
@@ -229,6 +288,7 @@ const COPY = {
     ctaRent: 'Rent a Stripe account',
     ctaBuy: 'Buy a Stripe account',
     ctaLegal: 'Company and bank for Stripe',
+    ctaAlt: 'Stripe alternatives',
     colRent: 'Rental',
     colBuy: 'Purchase',
     colLegal: 'Entity + bank',
@@ -321,6 +381,20 @@ export default async function RentVsBuyPage({ params }: Props) {
             </table>
           </div>
 
+          <section className={styles.scenarios} aria-labelledby="rent-scenarios-heading">
+            <h2 id="rent-scenarios-heading" className={styles.scenariosTitle}>
+              {copy.scenariosTitle}
+            </h2>
+            <ul className={styles.scenarioList}>
+              {copy.scenarios.map((item) => (
+                <li key={item.title}>
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                </li>
+              ))}
+            </ul>
+          </section>
+
           <nav className={styles.ctas} aria-label={copy.title}>
             <Link href={localePath('/services/stripe-account-rent', locale)} className={styles.cta}>
               {copy.ctaRent}
@@ -330,6 +404,9 @@ export default async function RentVsBuyPage({ params }: Props) {
             </Link>
             <Link href={localePath('/services/legal-entity-bank', locale)} className={styles.cta}>
               {copy.ctaLegal}
+            </Link>
+            <Link href={localePath('/compare/stripe-alternatives', locale)} className={styles.cta}>
+              {copy.ctaAlt}
             </Link>
           </nav>
 

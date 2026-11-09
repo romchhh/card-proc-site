@@ -4,17 +4,17 @@ import { pickLocaleCopy } from './i18n/config'
 export const siteConfig = {
   name: 'WayOfProcessing',
   title: 'WayOfProcessing — Stripe Payment Processing',
-  titleRu: 'Подключение Stripe для бизнеса | WayOfProcessing',
-  titleUk: 'Підключення Stripe для бізнесу | WayOfProcessing',
-  titleEn: 'Stripe Setup for Business | WayOfProcessing',
+  titleRu: 'Аренда и покупка аккаунта Stripe, подключение под ключ | WayOfProcessing',
+  titleUk: 'Оренда і купівля акаунта Stripe, підключення під ключ | WayOfProcessing',
+  titleEn: 'Rent or Buy a Stripe Account, Turnkey Setup | WayOfProcessing',
   description:
     'Stripe payment processing for business: account setup, routing and payouts. Honest limits, no false guarantees.',
   descriptionRu:
-    'Помогаем принимать оплату из-за рубежа через Stripe: аренда и покупка аккаунта, процессинг под ключ, вывод в EUR, USD и USDT. Комиссия от 1.5%.',
+    'Аренда и покупка аккаунта Stripe, процессинг под ключ, юрлицо и банк. Выплаты в EUR, USD и USDT. Комиссия от 1.5%.',
   descriptionUk:
-    'Допомагаємо приймати оплату з-під кордону через Stripe: оренда та покупка акаунта, процесинг під ключ, виведення в EUR, USD і USDT. Комісія від 1.5%.',
+    'Оренда і купівля акаунта Stripe, процесинг під ключ, юрособа і банк. Виплати в EUR, USD і USDT. Комісія від 1.5%.',
   descriptionEn:
-    'We help businesses accept payments from abroad with Stripe: account rental and purchase, turnkey processing, payouts in EUR, USD and USDT. Fees from 1.5%.',
+    'Rent or buy a Stripe account, turnkey processing, company and bank. Payouts in EUR, USD and USDT. Fees from 1.5%.',
   url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://wayofprocessing.com',
   email: 'hello@wayofprocessing.com',
   telegram: '@wayofprocessing',
@@ -188,4 +188,19 @@ export function companyMetaLine(locale: Locale) {
     uk: `Компанія зареєстрована в Англії та Вельсі, № ${siteConfig.company.number}. Адреса: ${siteConfig.company.address}.`,
     en: `Registered in England and Wales, company no. ${siteConfig.company.number}. Address: ${siteConfig.company.address}.`,
   })
+}
+
+/** Deep-link into Telegram with a trackable start payload (A–Z, 0–9, _). */
+export function telegramDeepLink(start?: string): string {
+  const base = siteConfig.telegramOperatorUrl
+  if (!start) return base
+  const payload = start.replace(/[^a-zA-Z0-9_]/g, '_').slice(0, 64)
+  return `${base}?start=${encodeURIComponent(payload)}`
+}
+
+export function telegramChannelDeepLink(start?: string): string {
+  const base = siteConfig.telegramChannelUrl
+  if (!start) return base
+  const payload = start.replace(/[^a-zA-Z0-9_]/g, '_').slice(0, 64)
+  return `${base}?start=${encodeURIComponent(payload)}`
 }

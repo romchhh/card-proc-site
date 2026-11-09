@@ -194,6 +194,16 @@ export default function ServicePage({ slug, view: viewProp, image, breadcrumbs, 
               <path d="M2 14 L14 2 M6 2 H14 V10" />
             </svg>
           </button>
+          {view.ctas && view.ctas.length > 0 && (
+            <nav className={styles.landingCtas} aria-label={view.h1}>
+              {view.ctas.map((cta) => (
+                <Link key={cta.path} href={lp(cta.path)} className={styles.landingCta}>
+                  {cta.label}
+                  <span aria-hidden="true">→</span>
+                </Link>
+              ))}
+            </nav>
+          )}
         </div>
       </section>
 

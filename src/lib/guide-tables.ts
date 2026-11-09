@@ -258,11 +258,118 @@ export function getChecklistTable(locale: Locale): ContentTableModel {
   })
 }
 
+export function getFormatsPricingTable(locale: Locale): ContentTableModel {
+  return pick(locale, {
+    ru: {
+      id: 'formats-pricing',
+      heading: 'Формат подключения: для кого и от чего зависит ставка',
+      lead: '«От 1.5%» — ориентир по процессингу. Итоговая ставка зависит от ниши, гео, оборота и формата (аренда, покупка или свой контур).',
+      columns: ['Формат', 'Для кого', 'Что входит', 'От чего зависит ставка'],
+      rowHeaders: false,
+      rows: [
+        [
+          'Аренда аккаунта',
+          'Пилот, тест воронки, быстрый старт без своей компании',
+          'Доступ к checkout, сопровождение, схема выплат',
+          'Ниша, CB-риск, гео карт, объём',
+        ],
+        [
+          'Покупка аккаунта',
+          'Предсказуемый оборот и нужен свой perimeter доступов',
+          'Передача merchant, запуск, первичный мониторинг',
+          'История аккаунта, MCC, нагрузка',
+        ],
+        [
+          'Процессинг под ключ',
+          'Рост, multi-geo, нужен routing и запасной канал',
+          'Интеграция, антифрод-база, мониторинг, backup',
+          'Сложность routing, пики, число каналов',
+        ],
+        [
+          'Юрлицо + банк',
+          'Долгий стек на своей компании в UK/EU/HK',
+          'Регистрация, счёт, заявка в Stripe, пакет документов',
+          'Юрисдикция, банк, полнота KYC',
+        ],
+      ],
+      note: 'Точную ставку считаем после аудита сайта и ниши. Stripe может запросить документы или ограничить приём — это не «гарантия одобрения».',
+    },
+    uk: {
+      id: 'formats-pricing',
+      heading: 'Формат підключення: для кого і від чого залежить ставка',
+      lead: '«Від 1.5%» — орієнтир по процесингу. Підсумкова ставка залежить від ніші, гео, обороту і формату (оренда, купівля або власний контур).',
+      columns: ['Формат', 'Для кого', 'Що входить', 'Від чого залежить ставка'],
+      rowHeaders: false,
+      rows: [
+        [
+          'Оренда акаунта',
+          'Пілот, тест воронки, швидкий старт без своєї компанії',
+          'Доступ до checkout, супровід, схема виплат',
+          'Ніша, CB-ризик, гео карток, обсяг',
+        ],
+        [
+          'Купівля акаунта',
+          'Передбачуваний оборот і потрібен свій perimeter доступів',
+          'Передача merchant, запуск, первинний моніторинг',
+          'Історія акаунта, MCC, навантаження',
+        ],
+        [
+          'Процесинг під ключ',
+          'Ріст, multi-geo, потрібен routing і запасний канал',
+          'Інтеграція, антифрод-база, моніторинг, backup',
+          'Складність routing, піки, кількість каналів',
+        ],
+        [
+          'Юрособа + банк',
+          'Довгий стек на своїй компанії в UK/EU/HK',
+          'Реєстрація, рахунок, заявка в Stripe, пакет документів',
+          'Юрисдикція, банк, повнота KYC',
+        ],
+      ],
+      note: 'Точну ставку рахуємо після аудиту сайту і ніші. Stripe може запросити документи або обмежити прийом — це не «гарантія схвалення».',
+    },
+    en: {
+      id: 'formats-pricing',
+      heading: 'Setup format: who it fits and what drives the rate',
+      lead: '“From 1.5%” is a processing guide. The final rate depends on niche, geo, volume and format (rental, purchase or owned stack).',
+      columns: ['Format', 'Best for', 'What is included', 'What drives the rate'],
+      rowHeaders: false,
+      rows: [
+        [
+          'Account rental',
+          'Pilot, funnel test, fast start without your own company',
+          'Checkout access, support, payout scheme',
+          'Niche, CB risk, card geos, volume',
+        ],
+        [
+          'Account purchase',
+          'Predictable volume and your own access perimeter',
+          'Merchant handoff, launch, initial monitoring',
+          'Account history, MCC, load',
+        ],
+        [
+          'Turnkey processing',
+          'Growth, multi-geo, routing and a backup channel',
+          'Integration, fraud baseline, monitoring, backup',
+          'Routing complexity, peaks, channel count',
+        ],
+        [
+          'Company + bank',
+          'Long-term stack on your UK/EU/HK entity',
+          'Incorporation, account, Stripe application, docs pack',
+          'Jurisdiction, bank, KYC completeness',
+        ],
+      ],
+      note: 'We quote after a site and niche audit. Stripe may request documents or limit acceptance — this is not an approval guarantee.',
+    },
+  })
+}
+
 export function getHubTables(hub: 'jurisdictions' | 'niches' | 'solutions' | 'services', locale: Locale): ContentTableModel[] {
   if (hub === 'jurisdictions') return [getJurisdictionsCompareTable(locale), getJurisdictionTimelineTable(locale), getChecklistTable(locale)]
   if (hub === 'niches') return [getNichesRiskTable(locale), getChecklistTable(locale)]
   if (hub === 'solutions') return [getSetupPathTable(locale), getChecklistTable(locale)]
-  return [getSetupPathTable(locale), getChecklistTable(locale)]
+  return [getFormatsPricingTable(locale), getSetupPathTable(locale), getChecklistTable(locale)]
 }
 
 export function getLandingGuideTables(

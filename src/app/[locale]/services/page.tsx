@@ -144,6 +144,16 @@ export default async function ServicesHubPage({ params }: Props) {
               </Link>
             </li>
             <li>
+              <Link href={localePath('/compare/stripe-alternatives', locale)}>
+                {pickLocaleCopy(locale, {
+                  ru: 'Альтернативы Stripe',
+                  uk: 'Альтернативи Stripe',
+                  en: 'Stripe alternatives',
+                })}
+                <span aria-hidden="true">→</span>
+              </Link>
+            </li>
+            <li>
               <Link href={localePath('/jurisdictions', locale)}>
                 {pickLocaleCopy(locale, {
                   ru: 'Stripe по странам',

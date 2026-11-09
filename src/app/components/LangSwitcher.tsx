@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next'
 import { setI18nLocale } from '@/lib/i18n/client'
 import { switchLocalePath, type Locale } from '@/lib/i18n/config'
 import { useLocale } from '@/lib/i18n/use-locale'
+import { forceWindowScrollTop, markLocaleSwitchScrollTop } from '@/lib/locale-navigation'
 import styles from './LangSwitcher.module.css'
 
 const LANGUAGES = [
@@ -43,17 +44,14 @@ export default function LangSwitcher({ variant = 'header', light = false }: Lang
       return
     }
     setI18nLocale(lang)
-    // Locale swap keeps the same layout shell, so Next often preserves scrollY.
-    // On shorter translations that lands near the footer — force top and drop hash
-    // so FAQ / HashScrollHandler do not jump to mid/bottom sections.
     const nextPath = switchLocalePath(pathname, lang).split('#')[0]
     if (window.location.hash) {
       window.history.replaceState(null, '', `${window.location.pathname}${window.location.search}`)
     }
+    // Mark before navigation; LocaleScrollReset scrolls after the new locale path mounts.
+    markLocaleSwitchScrollTop()
+    forceWindowScrollTop()
     router.push(nextPath, { scroll: true })
-    window.requestAnimationFrame(() => {
-      window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
-    })
     setOpen(false)
   }
 

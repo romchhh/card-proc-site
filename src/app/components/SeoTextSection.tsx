@@ -19,7 +19,8 @@ export default function SeoTextSection() {
   })
 
   const postsBySlug = new Map(getAllPosts().map((post) => [post.slug, post]))
-  const blogLinks = INDEX_BLOG_SLUGS.map((slug) => {
+  // Keep homepage SEO block focused: 6 strongest indexed guides only.
+  const blogLinks = INDEX_BLOG_SLUGS.slice(0, 6).map((slug) => {
     const post = postsBySlug.get(slug)
     if (!post) return null
     const view = localizePost(post, locale)
@@ -37,6 +38,18 @@ export default function SeoTextSection() {
             {paragraph}
           </p>
         ))}
+        <h3 className={styles.subheading}>{t('seo.hubsHeading')}</h3>
+        <ul className={styles.links}>
+          <li>
+            <Link href={lp('/jurisdictions')}>{t('homeDirectories.countriesTitle')}</Link>
+          </li>
+          <li>
+            <Link href={lp('/niches')}>{t('homeDirectories.nichesTitle')}</Link>
+          </li>
+          <li>
+            <Link href={lp('/solutions')}>{t('homeDirectories.solutionsTitle')}</Link>
+          </li>
+        </ul>
         <h3 className={styles.subheading}>{t('seo.guidesHeading')}</h3>
         <ul className={styles.links}>
           {blogLinks.map((post) => (

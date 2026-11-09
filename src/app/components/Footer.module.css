@@ -67,6 +67,26 @@
   letter-spacing: 0.01em;
 }
 
+.companyLink {
+  color: rgba(196, 192, 255, 0.95);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+}
+
+.companyLink:hover {
+  color: #fff;
+}
+
+.companyMeta {
+  opacity: 0.85;
+}
+
+.langWrap {
+  margin-top: 8px;
+  align-self: flex-start;
+}
+
 .legal {
   font-size: 13px;
   color: rgba(255, 255, 255, 0.58);

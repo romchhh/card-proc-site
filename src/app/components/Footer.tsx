@@ -2,11 +2,11 @@
 
 import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
-import { companyMetaLine, siteConfig } from '@/lib/site'
+import { siteConfig, telegramChannelDeepLink, telegramDeepLink } from '@/lib/site'
 import { useLocalizedPath } from '@/lib/i18n/use-locale'
-import { resolveLocale } from '@/lib/i18n/resolve-locale'
 import { TelegramIcon, SupportIcon } from './icons/SocialIcons'
 import { useContactModal } from './ContactModalProvider'
+import LangSwitcher from './LangSwitcher'
 import styles from './Footer.module.css'
 
 const NAV_LINKS = [
@@ -22,22 +22,21 @@ const NAV_LINKS = [
 ] as const
 
 export default function Footer() {
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
   const { open: openContactModal } = useContactModal()
   const lp = useLocalizedPath()
-  const locale = resolveLocale(i18n.language)
   const year = new Date().getFullYear()
 
   const contactItems = [
     {
       key: 'telegramChannel' as const,
-      href: siteConfig.telegramChannelUrl,
+      href: telegramChannelDeepLink('footer_channel'),
       icon: <TelegramIcon size={20} />,
       iconClass: styles.contactIconTelegram,
     },
     {
       key: 'telegramOperator' as const,
-      href: siteConfig.telegramOperatorUrl,
+      href: telegramDeepLink('footer'),
       icon: <TelegramIcon size={20} />,
       iconClass: styles.contactIconTelegram,
     },
@@ -60,9 +59,20 @@ export default function Footer() {
           <p className={styles.copyright}>{t('footer.copyright', { year })}</p>
           <address className={styles.company}>
             <span className={styles.companyName}>{siteConfig.company.legalName}</span>
-            <span>{companyMetaLine(locale)}</span>
+            <a
+              href={siteConfig.company.registryUrl}
+              className={styles.companyLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {t('footer.companiesHouse', { number: siteConfig.company.number })}
+            </a>
+            <span>{siteConfig.company.address}</span>
           </address>
           <p className={styles.legal}>{t('footer.legal')}</p>
+          <div className={styles.langWrap}>
+            <LangSwitcher variant="drawer" />
+          </div>
         </div>
 
         <div className={styles.col}>
@@ -114,7 +124,7 @@ export default function Footer() {
         <a href={lp('/disclaimer')}>{t('footer.disclaimer')}</a>
         <span className={styles.credit}>
           {t('footer.developedBy')}{' '}
-          <a href="https://telebots.site/en" target="_blank" rel="noopener noreferrer">
+          <a href="https://telebots.site/en" target="_blank" rel="noopener noreferrer nofollow">
             TeleBots
           </a>
         </span>

@@ -15,7 +15,7 @@ export default function FaqAccordion({ items, heading }: Props) {
   const baseId = useId()
 
   useEffect(() => {
-    const applyHash = () => {
+    const applyHash = (shouldScroll: boolean) => {
       const match = window.location.hash.match(/^#faq-(\d+)$/)
       if (!match) return
       const index = Number(match[1]) - 1
@@ -23,11 +23,15 @@ export default function FaqAccordion({ items, heading }: Props) {
       const el = document.getElementById(`faq-${index + 1}`) as HTMLDetailsElement | null
       if (!el) return
       el.open = true
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      // Only scroll on real hashchange — not on remount after locale switch.
+      if (shouldScroll) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }
     }
-    applyHash()
-    window.addEventListener('hashchange', applyHash)
-    return () => window.removeEventListener('hashchange', applyHash)
+    applyHash(false)
+    const onHashChange = () => applyHash(true)
+    window.addEventListener('hashchange', onHashChange)
+    return () => window.removeEventListener('hashchange', onHashChange)
   }, [items.length])
 
   return (

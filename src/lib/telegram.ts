@@ -2,9 +2,11 @@ const TELEGRAM_API = 'https://api.telegram.org'
 
 type LeadPayload = {
   name: string
-  phone: string
+  telegram: string
+  whatsapp: string
+  email?: string
   comment?: string
-  source?: 'section' | 'modal'
+  source?: string
 }
 
 function getTelegramConfig() {
@@ -18,22 +20,31 @@ function getTelegramConfig() {
   return { token, chatId }
 }
 
-function formatLeadMessage({ name, phone, comment, source }: LeadPayload): string {
-  const sourceLabel =
-    source === 'modal' ? 'Модальное окно' : 'Форма на странице'
+function formatSourceLabel(source?: string): string {
+  if (!source || source === 'unknown') return 'не указан'
+  if (source === 'modal') return 'Модальное окно'
+  if (source === 'section' || source === 'home_contact') return 'Форма на странице'
+  return source
+}
 
+function formatLeadMessage({ name, telegram, whatsapp, email, comment, source }: LeadPayload): string {
   const lines = [
     '🆕 Новая заявка с сайта WayOfProcessing',
     '',
     `👤 Имя: ${name}`,
-    `📞 Контакт: ${phone}`,
+    `✈️ Telegram: ${telegram}`,
+    `💬 WhatsApp: ${whatsapp}`,
   ]
 
-  if (comment?.trim()) {
-    lines.push(`💬 Комментарий: ${comment.trim()}`)
+  if (email?.trim()) {
+    lines.push(`📧 Email: ${email.trim()}`)
   }
 
-  lines.push(`📍 Источник: ${sourceLabel}`)
+  if (comment?.trim()) {
+    lines.push(`📝 Комментарий: ${comment.trim()}`)
+  }
+
+  lines.push(`📍 Источник: ${formatSourceLabel(source)}`)
 
   return lines.join('\n')
 }

@@ -16,6 +16,7 @@ const staticPaths = [
   '/services',
   '/solutions',
   '/compare/rent-vs-buy',
+  '/compare/stripe-alternatives',
   '/jurisdictions',
   '/niches',
   '/blog',

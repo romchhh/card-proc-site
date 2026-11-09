@@ -1649,7 +1649,7 @@
       "ru": {
         "meta": {
           "title": "Stripe на Кипре: компания Ltd, счёт и подключение",
-          "description": "Как подключить Stripe через кипрскую компанию Ltd: регистрация, требования к присутствию, аудит, банковский счёт и налоги. Честный разбор.",
+          "description": "Cyprus Ltd для Stripe: UBO, кипрский банк, EU-клиенты и требования к экономическому присутствию.",
           "keywords": [
             "stripe на кипре",
             "stripe кипр",
@@ -1683,7 +1683,8 @@
             "title": "Банковский счёт",
             "paragraphs": [
               "Кипрские банки проводят подробную проверку клиентов и бизнеса, а открытие счёта может занять недели или месяцы. Для Stripe нужен счёт в стране регистрации или совместимый вариант.",
-              "Мы заранее оцениваем, какие счета реально доступны вашему бизнесу, и называем риски отказа."
+              "Мы заранее оцениваем, какие счета реально доступны вашему бизнесу, и называем риски отказа.",
+              "Кипрские банки запрашивают экономическое присутствие и прозрачную структуру UBO. Срок счёта зависит от полноты KYC, а не только от «быстрой регистрации Ltd»."
             ]
           },
           {
@@ -1697,15 +1698,16 @@
             "title": "Когда Кипр подходит",
             "paragraphs": [
               "Подходит для бизнесов, которым нужна репутационная ЕС-юрисдикция и у которых есть бюджет на аудит и местные сервисы.",
-              "Хуже подходит для небольших проектов, где важны минимальные расходы и быстрый запуск."
+              "Хуже подходит для небольших проектов, где важны минимальные расходы и быстрый запуск.",
+              "Cyprus Ltd удобен для EU-клиентов при готовности к substance. Для UK-first продаж сравните с UK Ltd; для Азии — с Hong Kong."
             ]
           },
           {
-            "title": "Что подготовить до консультации",
+            "title": "Что подготовить для Cyprus Ltd + Stripe",
             "paragraphs": [
-              "Кратко опишите модель бизнеса, страны клиентов, ожидаемый оборот и текущий способ приёма платежей.",
-              "Пришлите ссылку на сайт или лендинг: Stripe и банк смотрят публичное описание сильнее, чем презентацию в чате.",
-              "Если уже есть отказ Stripe или банка — сохраните переписку: по ней видно, что исправлять в новой связке."
+              "Нужны: структура UBO, зарегистрированный адрес, налоговый статус, описание деятельности под EU-клиентов.",
+              "Банк на Кипре запросит KYC и экономическое присутствие — кратко опишите офис/агента и реальные контракты.",
+              "Для Stripe важны MCC, сайт на языке клиентов и согласованность выплат на кипрский счёт."
             ]
           }
         ],
@@ -1767,7 +1769,7 @@
       "uk": {
         "meta": {
           "title": "Stripe на Кіпрі: компанія Ltd, рахунок і підключення",
-          "description": "Як підключити Stripe через кіпрську компанію Ltd: реєстрація, вимоги до присутності, аудит, банківський рахунок і податки. Чесний розбір.",
+          "description": "Cyprus Ltd для Stripe: UBO, кіпрський банк, EU-клієнти і вимоги до економічної присутності.",
           "keywords": [
             "stripe на кіпрі",
             "stripe кіпр",
@@ -1801,7 +1803,8 @@
             "title": "Банківський рахунок",
             "paragraphs": [
               "Кіпрські банки проводять детальну перевірку клієнтів і бізнесу, а відкриття рахунку може зайняти тижні або місяці. Для Stripe потрібен рахунок у країні реєстрації або сумісний варіант.",
-              "Ми заздалегідь оцінюємо, які рахунки реально доступні вашому бізнесу, і називаємо ризики відмови."
+              "Ми заздалегідь оцінюємо, які рахунки реально доступні вашому бізнесу, і називаємо ризики відмови.",
+              "Кіпрські банки запитують економічну присутність і прозору структуру UBO. Строк рахунку залежить від повноти KYC, а не лише від «швидкої реєстрації Ltd»."
             ]
           },
           {
@@ -1815,15 +1818,16 @@
             "title": "Коли Кіпр підходить",
             "paragraphs": [
               "Підходить для бізнесів, яким потрібна репутаційна юрисдикція ЄС і в яких є бюджет на аудит та місцеві сервіси.",
-              "Гірше підходить для невеликих проєктів, де важливі мінімальні витрати й швидкий запуск."
+              "Гірше підходить для невеликих проєктів, де важливі мінімальні витрати й швидкий запуск.",
+              "Cyprus Ltd зручний для EU-клієнтів за готовності до substance. Для UK-first продажів порівняйте з UK Ltd; для Азії — з Hong Kong."
             ]
           },
           {
-            "title": "Що підготувати до консультації",
+            "title": "Що підготувати для Cyprus Ltd + Stripe",
             "paragraphs": [
-              "Коротко опишіть модель бізнесу, країни клієнтів, очікуваний оборот і поточний спосіб прийому платежів.",
-              "Надішліть посилання на сайт або лендінг: Stripe і банк дивляться публічний опис сильніше, ніж презентацію в чаті.",
-              "Якщо вже є відмова Stripe або банку — збережіть листування: за ним видно, що виправляти в новій зв’язці."
+              "Потрібні: структура UBO, зареєстрована адреса, податковий статус, опис діяльності під EU-клієнтів.",
+              "Банк на Кіпрі запросить KYC і економічну присутність — коротко опишіть офіс/агента й реальні контракти.",
+              "Для Stripe важливі MCC, сайт мовою клієнтів і узгодженість виплат на кіпрський рахунок."
             ]
           }
         ],
@@ -1885,7 +1889,7 @@
       "en": {
         "meta": {
           "title": "Stripe in Cyprus: Ltd company, bank account and setup",
-          "description": "How to connect Stripe through a Cyprus Ltd: registration, substance requirements, audit, a bank account and taxes. An honest overview.",
+          "description": "Cyprus Ltd for Stripe: UBOs, Cyprus banking, EU customers and economic substance requirements.",
           "keywords": [
             "stripe cyprus",
             "company in cyprus for stripe",
@@ -1918,7 +1922,8 @@
             "title": "Bank account",
             "paragraphs": [
               "Cyprus banks run detailed due diligence on clients and their business, and opening an account can take weeks or months. For Stripe you need an account in the country of registration or a compatible option.",
-              "We assess in advance which accounts are realistically available to your business and flag the risk of refusal."
+              "We assess in advance which accounts are realistically available to your business and flag the risk of refusal.",
+              "Cyprus banks ask for economic substance and a clear UBO structure. Account timing depends on KYC completeness, not only a “fast Ltd registration”."
             ]
           },
           {
@@ -1932,15 +1937,16 @@
             "title": "When Cyprus fits",
             "paragraphs": [
               "It fits businesses that want a reputable EU jurisdiction and have a budget for audit and local services.",
-              "It fits less well for small projects where minimal cost and a fast launch matter most."
+              "It fits less well for small projects where minimal cost and a fast launch matter most.",
+              "Cyprus Ltd fits EU customers when you can show substance. For UK-first sales compare UK Ltd; for Asia compare Hong Kong."
             ]
           },
           {
-            "title": "What to prepare before a consult",
+            "title": "What to prepare for Cyprus Ltd + Stripe",
             "paragraphs": [
-              "Briefly describe the business model, customer countries, expected volume and current payment setup.",
-              "Send a site or landing URL: Stripe and banks weigh public copy more than a chat pitch.",
-              "If Stripe or a bank already rejected you, keep the correspondence — it shows what to fix in a new stack."
+              "Prepare UBO structure, registered address, tax status and an activity description for EU customers.",
+              "Cyprus banks will ask for KYC and economic substance — outline office/agent and real contracts.",
+              "For Stripe, MCC, a site in customer languages and payouts to the Cyprus account must align."
             ]
           }
         ],
@@ -2008,7 +2014,7 @@
       "ru": {
         "meta": {
           "title": "Stripe в Великобритании: компания Ltd и бизнес-счёт",
-          "description": "Как подключить Stripe через британскую Ltd: регистрация в Companies House, проверка директоров, бизнес-счёт, налоги и ограничения.",
+          "description": "UK Ltd для Stripe: Companies House, бизнес-счёт после Brexit, PSC и когда Великобритания лучше EU-юрисдикции.",
           "keywords": [
             "stripe великобритания",
             "stripe в uk",
@@ -2036,7 +2042,8 @@
             "title": "Бизнес-счёт",
             "paragraphs": [
               "Британские банки и необанки принимают нерезидентов по-разному: часть требует британского резидентства, другие работают с иностранными владельцами. Stripe в Великобритании выплачивает на британский счёт.",
-              "Мы заранее подбираем варианты и называем риски отказа."
+              "Мы заранее подбираем варианты и называем риски отказа.",
+              "После Brexit банки чаще спрашивают связь с UK-рынком и источник клиентов из ЕС/СНГ. EMI и challenger-банки ускоряют онбординг, но лимиты на старте ниже — закладываем запас по обороту."
             ]
           },
           {
@@ -2056,15 +2063,16 @@
             "title": "Когда Великобритания подходит",
             "paragraphs": [
               "Подходит для SaaS, цифровых услуг и e-commerce с британской и международной аудиторией, если владелец готов вести отчётность.",
-              "Хуже подходит, если вся аудитория в ЕС и вам нужна именно ЕС-юрисдикция."
+              "Хуже подходит, если вся аудитория в ЕС и вам нужна именно ЕС-юрисдикция.",
+              "UK Ltd удобен при команде, готовой к Companies House reporting и англоязычному саппорту. Если клиенты только в ЕС и нет UK-substance — сравните с EU-юрисдикцией."
             ]
           },
           {
-            "title": "Что подготовить до консультации",
+            "title": "Что подготовить для UK Ltd + Stripe",
             "paragraphs": [
-              "Кратко опишите модель бизнеса, страны клиентов, ожидаемый оборот и текущий способ приёма платежей.",
-              "Пришлите ссылку на сайт или лендинг: Stripe и банк смотрят публичное описание сильнее, чем презентацию в чате.",
-              "Если уже есть отказ Stripe или банка — сохраните переписку: по ней видно, что исправлять в новой связке."
+              "Нужны: структура директоров/PSC, адрес в UK, назначение SIC, ожидаемый оборот и страны клиентов после Brexit.",
+              "Для бизнес-счёта — KYC pack (ID, proof of address, source of funds) и описание, почему клиенты платят картой в UK-контуре.",
+              "Если был отказ банка или Stripe — приложите письма: по ним видно, править substance, сайт или модель выплат."
             ]
           }
         ],
@@ -2126,7 +2134,7 @@
       "uk": {
         "meta": {
           "title": "Stripe у Британії: компанія Ltd і бізнес-рахунок",
-          "description": "Як підключити Stripe через британську Ltd: реєстрація в Companies House, перевірка директорів, бізнес-рахунок, податки та обмеження.",
+          "description": "UK Ltd для Stripe: Companies House, бізнес-рахунок після Brexit, PSC і коли Велика Британія краща за EU-юрисдикцію.",
           "keywords": [
             "stripe велика британія",
             "stripe у uk",
@@ -2154,7 +2162,8 @@
             "title": "Бізнес-рахунок",
             "paragraphs": [
               "Британські банки й необанки приймають нерезидентів по-різному: частина вимагає британського резидентства, інші працюють з іноземними власниками. Stripe у Британії виплачує на британський рахунок.",
-              "Ми заздалегідь підбираємо варіанти й називаємо ризики відмови."
+              "Ми заздалегідь підбираємо варіанти й називаємо ризики відмови.",
+              "Після Brexit банки частіше питають зв’язок із UK-ринком і джерело клієнтів з ЄС/СНД. EMI та challenger-банки прискорюють онбординг, але ліміти на старті нижчі — закладаємо запас за обігом."
             ]
           },
           {
@@ -2174,15 +2183,16 @@
             "title": "Коли Британія підходить",
             "paragraphs": [
               "Підходить для SaaS, цифрових послуг і e-commerce з британською та міжнародною аудиторією, якщо власник готовий вести звітність.",
-              "Гірше підходить, якщо вся аудиторія в ЄС і вам потрібна саме юрисдикція ЄС."
+              "Гірше підходить, якщо вся аудиторія в ЄС і вам потрібна саме юрисдикція ЄС.",
+              "UK Ltd зручний за команди, готової до Companies House reporting і англомовної підтримки. Якщо клієнти лише в ЄС і немає UK-substance — порівняйте з EU-юрисдикцією."
             ]
           },
           {
-            "title": "Що підготувати до консультації",
+            "title": "Що підготувати для UK Ltd + Stripe",
             "paragraphs": [
-              "Коротко опишіть модель бізнесу, країни клієнтів, очікуваний оборот і поточний спосіб прийому платежів.",
-              "Надішліть посилання на сайт або лендінг: Stripe і банк дивляться публічний опис сильніше, ніж презентацію в чаті.",
-              "Якщо вже є відмова Stripe або банку — збережіть листування: за ним видно, що виправляти в новій зв’язці."
+              "Потрібні: структура директорів/PSC, адреса в UK, призначення SIC, очікуваний обіг і країни клієнтів після Brexit.",
+              "Для бізнес-рахунку — KYC pack (ID, proof of address, source of funds) і опис, чому клієнти платять картою в UK-контурі.",
+              "Якщо був відмова банку чи Stripe — додайте листи: за ними видно, правити substance, сайт чи модель виплат."
             ]
           }
         ],
@@ -2244,7 +2254,7 @@
       "en": {
         "meta": {
           "title": "Stripe in the UK: Ltd company and business account",
-          "description": "How to connect Stripe through a UK Ltd: Companies House registration, director verification, a business account, taxes and limits.",
+          "description": "UK Ltd for Stripe: Companies House, post-Brexit business accounts, PSCs and when the UK beats an EU jurisdiction.",
           "keywords": [
             "stripe uk",
             "stripe united kingdom",
@@ -2272,7 +2282,8 @@
             "title": "Business account",
             "paragraphs": [
               "UK banks and neobanks treat non-residents differently: some require UK residency, others work with foreign owners. Stripe in the UK pays out to a UK account.",
-              "We line up options in advance and flag the risk of refusal."
+              "We line up options in advance and flag the risk of refusal.",
+              "Post-Brexit banks often ask for a UK-market link and the source of EU/CIS customers. EMI and challenger banks onboard faster but start with lower limits — plan volume headroom."
             ]
           },
           {
@@ -2292,15 +2303,16 @@
             "title": "When the UK fits",
             "paragraphs": [
               "It fits SaaS, digital services and e-commerce with a UK and international audience, if the owner is ready to handle reporting.",
-              "It fits less well if your audience is entirely in the EU and you specifically need an EU jurisdiction."
+              "It fits less well if your audience is entirely in the EU and you specifically need an EU jurisdiction.",
+              "UK Ltd fits teams ready for Companies House reporting and English-language support. If customers are EU-only with no UK substance — compare an EU jurisdiction."
             ]
           },
           {
-            "title": "What to prepare before a consult",
+            "title": "What to prepare for UK Ltd + Stripe",
             "paragraphs": [
-              "Briefly describe the business model, customer countries, expected volume and current payment setup.",
-              "Send a site or landing URL: Stripe and banks weigh public copy more than a chat pitch.",
-              "If Stripe or a bank already rejected you, keep the correspondence — it shows what to fix in a new stack."
+              "Prepare director/PSC structure, UK address, SIC codes, expected volume and customer countries post-Brexit.",
+              "For a business account — KYC pack (ID, proof of address, source of funds) and why customers pay by card in a UK stack.",
+              "If a bank or Stripe declined you — attach the letters so we can fix substance, site or payout model."
             ]
           }
         ],
@@ -2368,7 +2380,7 @@
       "ru": {
         "meta": {
           "title": "Stripe в Гонконге: компания и счёт | WayOfProcessing",
-          "description": "Как подключить Stripe через гонконгскую компанию: регистрация, секретарь, аудит, банковский счёт, налоги и ограничения. Честный разбор.",
+          "description": "Hong Kong company + банк для Stripe: substance, BR, APAC-клиенты и сроки реального онбординга.",
           "keywords": [
             "stripe гонконг",
             "stripe в гонконге",
@@ -2395,7 +2407,8 @@
             "title": "Банковский счёт",
             "paragraphs": [
               "Традиционные банки Гонконга внимательно проверяют бизнес и иногда требуют личного присутствия или связи с регионом. Альтернативой могут быть необанки и платёжные сервисы, которые работают с нерезидентами.",
-              "Мы заранее оцениваем варианты и называем риски отказа."
+              "Мы заранее оцениваем варианты и называем риски отказа.",
+              "Открытие счёта в HK занимает дольше «брошюрного» срока: банк смотрит реальных контрагентов в APAC и происхождение капитала. Без substance заявку часто возвращают."
             ]
           },
           {
@@ -2415,15 +2428,16 @@
             "title": "Когда Гонконг подходит",
             "paragraphs": [
               "Подходит, если у вас клиенты или партнёры в Азии, нужны мультивалютные счета и вы готовы к аудиту.",
-              "Хуже подходит для небольших проектов, где важны минимальные расходы и быстрый запуск."
+              "Хуже подходит для небольших проектов, где важны минимальные расходы и быстрый запуск.",
+              "HK силён для Азии и мультивалютных выплат. Для чисто EU-карточных продаж иногда быстрее EU Ltd + местный банк — сравниваем на консультации."
             ]
           },
           {
-            "title": "Что подготовить до консультации",
+            "title": "Что подготовить для Hong Kong + Stripe",
             "paragraphs": [
-              "Кратко опишите модель бизнеса, страны клиентов, ожидаемый оборот и текущий способ приёма платежей.",
-              "Пришлите ссылку на сайт или лендинг: Stripe и банк смотрят публичное описание сильнее, чем презентацию в чате.",
-              "Если уже есть отказ Stripe или банка — сохраните переписку: по ней видно, что исправлять в новой связке."
+              "Нужны: Certificate of Incorporation, BR, структура directors/shareholders, бизнес-план с гео клиентов (часто APAC + EU).",
+              "Банк в HK смотрит substance и источник средств жёстче «офшорного» шаблона — опишите реальных клиентов и контракты.",
+              "Для Stripe уточните, доступен ли он в вашей связке юрлицо+банк; иначе сразу планируем альтернативный эквайринг."
             ]
           }
         ],
@@ -2485,7 +2499,7 @@
       "uk": {
         "meta": {
           "title": "Stripe у Гонконгу: компанія, рахунок і підключення",
-          "description": "Як підключити Stripe через гонконзьку компанію: реєстрація, секретар, аудит, банківський рахунок, податки та обмеження. Чесний розбір.",
+          "description": "Hong Kong company + банк для Stripe: substance, BR, APAC-клієнти і строки реального онбордингу.",
           "keywords": [
             "stripe гонконг",
             "stripe у гонконгу",
@@ -2512,7 +2526,8 @@
             "title": "Банківський рахунок",
             "paragraphs": [
               "Традиційні банки Гонконгу уважно перевіряють бізнес і іноді вимагають особистої присутності або зв’язку з регіоном. Альтернативою можуть бути необанки та платіжні сервіси, що працюють з нерезидентами.",
-              "Ми заздалегідь оцінюємо варіанти й називаємо ризики відмови."
+              "Ми заздалегідь оцінюємо варіанти й називаємо ризики відмови.",
+              "Відкриття рахунку в HK довше за «брошурний» строк: банк дивиться реальних контрагентів в APAC і походження капіталу. Без substance заявку часто повертають."
             ]
           },
           {
@@ -2532,15 +2547,16 @@
             "title": "Коли Гонконг підходить",
             "paragraphs": [
               "Підходить, якщо у вас клієнти або партнери в Азії, потрібні мультивалютні рахунки й ви готові до аудиту.",
-              "Гірше підходить для невеликих проєктів, де важливі мінімальні витрати й швидкий запуск."
+              "Гірше підходить для невеликих проєктів, де важливі мінімальні витрати й швидкий запуск.",
+              "HK сильний для Азії та мультивалютних виплат. Для суто EU-карткових продажів інколи швидше EU Ltd + місцевий банк — порівнюємо на консультації."
             ]
           },
           {
-            "title": "Що підготувати до консультації",
+            "title": "Що підготувати для Hong Kong + Stripe",
             "paragraphs": [
-              "Коротко опишіть модель бізнесу, країни клієнтів, очікуваний оборот і поточний спосіб прийому платежів.",
-              "Надішліть посилання на сайт або лендінг: Stripe і банк дивляться публічний опис сильніше, ніж презентацію в чаті.",
-              "Якщо вже є відмова Stripe або банку — збережіть листування: за ним видно, що виправляти в новій зв’язці."
+              "Потрібні: Certificate of Incorporation, BR, структура directors/shareholders, бізнес-план із гео клієнтів (часто APAC + EU).",
+              "Банк у HK дивиться substance і джерело коштів жорсткіше за «офшорний» шаблон — опишіть реальних клієнтів і контракти.",
+              "Для Stripe уточніть, чи доступний він у вашій зв’язці юрособа+банк; інакше одразу плануємо альтернативний еквайринг."
             ]
           }
         ],
@@ -2602,7 +2618,7 @@
       "en": {
         "meta": {
           "title": "Stripe in Hong Kong: company, bank account and setup",
-          "description": "How to connect Stripe through a Hong Kong company: registration, secretary, audit, a bank account, taxes and limits. An honest overview.",
+          "description": "Hong Kong company + bank for Stripe: substance, BR, APAC customers and real onboarding timelines.",
           "keywords": [
             "stripe hong kong",
             "company in hong kong for stripe",
@@ -2628,7 +2644,8 @@
             "title": "Bank account",
             "paragraphs": [
               "Traditional Hong Kong banks look closely at the business and sometimes require a personal visit or a link to the region. Neobanks and payment services that work with non-residents can be an alternative.",
-              "We assess options in advance and flag the risk of refusal."
+              "We assess options in advance and flag the risk of refusal.",
+              "HK account opening takes longer than brochure timelines: banks review real APAC counterparties and capital origin. Without substance, applications often bounce."
             ]
           },
           {
@@ -2648,15 +2665,16 @@
             "title": "When Hong Kong fits",
             "paragraphs": [
               "It fits if you have customers or partners in Asia, need multi-currency accounts and are ready for an audit.",
-              "It fits less well for small projects where minimal cost and a fast launch matter most."
+              "It fits less well for small projects where minimal cost and a fast launch matter most.",
+              "HK is strong for Asia and multi-currency payouts. For pure EU card sales an EU Ltd + local bank can be faster — we compare on intake."
             ]
           },
           {
-            "title": "What to prepare before a consult",
+            "title": "What to prepare for Hong Kong + Stripe",
             "paragraphs": [
-              "Briefly describe the business model, customer countries, expected volume and current payment setup.",
-              "Send a site or landing URL: Stripe and banks weigh public copy more than a chat pitch.",
-              "If Stripe or a bank already rejected you, keep the correspondence — it shows what to fix in a new stack."
+              "Prepare Certificate of Incorporation, BR, director/shareholder structure and a plan with customer geos (often APAC + EU).",
+              "HK banks scrutinize substance and source of funds harder than a generic offshore template — describe real clients and contracts.",
+              "Confirm whether Stripe is available for your entity+bank pair; otherwise plan an alternative acquirer early."
             ]
           }
         ],
@@ -2724,7 +2742,7 @@
       "ru": {
         "meta": {
           "title": "Stripe для SaaS: подписки, счета и биллинг без хаоса",
-          "description": "Как подключить Stripe для SaaS: подписки, пробные периоды, счета, налоги и повторные списания. Типовые риски и подготовка к проверке.",
+          "description": "Stripe для SaaS: подписки, trial, Billing и налоги. Скрининг рисков, MCC и когда лучше MoR вместо прямого merchant.",
           "keywords": [
             "stripe для saas",
             "биллинг saas stripe",
@@ -2769,11 +2787,11 @@
             ]
           },
           {
-            "title": "Как мы оцениваем нишу под Stripe",
+            "title": "Скрининг SaaS под Stripe",
             "paragraphs": [
-              "Сверяем MCC, публичное описание оффера, политику возвратов и модель споров — это влияет на лимиты сильнее «просто подключить API».",
-              "Если ниша выглядит restricted, говорим об этом до старта и сравниваем процессинг, аренду, покупку или комплект юрлицо + банк.",
-              "Не обещаем обойти правила Stripe: решение по аккаунту всегда остаётся за платформой."
+              "Смотрим модель подписки: trial → paid, prorate, seat-based billing, дunning и отмена в один клик. MCC обычно software/SaaS — расхождение сайта и тарифов режет доверие.",
+              "Риски: chargeback после silent renew, неясный refund policy, «lifetime» офферы без экономики. Stripe проверяет Terms, privacy и соответствие checkout описанию продукта.",
+              "Stripe уместен, когда продукт цифровой, прозрачный и вы готовы к tax/reporting. MoR (Paddle/Lemon) — если хотите отдать налоги и инвойсинг провайдеру."
             ]
           }
         ],
@@ -2795,8 +2813,8 @@
             "answer": "Да, Stripe поддерживает много валют. Условия и комиссии зависят от страны компании и счёта выплат."
           },
           {
-            "question": "Можно ли гарантировать подключение Stripe для моей ниши?",
-            "answer": "Нет. Мы оцениваем риски и готовим связку, но одобрение даёт Stripe. Если модель не проходит, честно предлагаем другой контур или отказываемся от заведомо неподходящей схемы."
+            "question": "Когда SaaS лучше вести через MoR, а не Stripe?",
+            "answer": "Если нет ресурса на tax/VAT по странам и нужен быстрый глобальный checkout с инвойсами «из коробки» — смотрим Paddle/Lemon. Stripe оставляем, когда нужен свой Billing API и контроль бренда платежей."
           }
         ],
         "ctas": [
@@ -2812,12 +2830,30 @@
             "label": "Бесплатная консультация",
             "path": "/contacts"
           }
+        ],
+        "facts": [
+          {
+            "label": "Типовой формат",
+            "value": "Subscriptions / Billing"
+          },
+          {
+            "label": "MCC-фокус",
+            "value": "Software / SaaS"
+          },
+          {
+            "label": "Риск-тон",
+            "value": "Средний при прозрачном trial"
+          },
+          {
+            "label": "Смотрим в первую очередь",
+            "value": "Cancel UX, dunning, Terms"
+          }
         ]
       },
       "uk": {
         "meta": {
           "title": "Stripe для SaaS: підписки, рахунки та білінг без хаосу",
-          "description": "Як підключити Stripe для SaaS: підписки, пробні періоди, рахунки, податки та повторні списання. Типові ризики та підготовка до перевірки.",
+          "description": "Stripe для SaaS: підписки, trial, Billing і податки. Скринінг ризиків, MCC і коли краще MoR замість прямого merchant.",
           "keywords": [
             "stripe для saas",
             "білінг saas stripe",
@@ -2862,11 +2898,11 @@
             ]
           },
           {
-            "title": "Як ми оцінюємо нішу під Stripe",
+            "title": "Скринінг SaaS під Stripe",
             "paragraphs": [
-              "Звіряємо MCC, публічний опис оферу, політику повернень і модель спорів — це впливає на ліміти сильніше за «просто підключити API».",
-              "Якщо ніша виглядає restricted, кажемо про це до старту і порівнюємо процесинг, оренду, купівлю або комплект юрособа + банк.",
-              "Не обіцяємо обійти правила Stripe: рішення щодо акаунта завжди лишається за платформою."
+              "Дивимось модель підписки: trial → paid, prorate, seat-based billing, dunning і скасування в один клік. MCC зазвичай software/SaaS — розбіжність сайту й тарифів знижує довіру.",
+              "Ризики: chargeback після silent renew, неясний refund policy, «lifetime» офери без економіки. Stripe перевіряє Terms, privacy і відповідність checkout опису продукту.",
+              "Stripe доречний, коли продукт цифровий, прозорий і ви готові до tax/reporting. MoR (Paddle/Lemon) — якщо хочете віддати податки й інвойсинг провайдеру."
             ]
           }
         ],
@@ -2888,8 +2924,8 @@
             "answer": "Так, Stripe підтримує багато валют. Умови й комісії залежать від країни компанії та рахунку виплат."
           },
           {
-            "question": "Чи можна гарантувати підключення Stripe для моєї ніші?",
-            "answer": "Ні. Ми оцінюємо ризики і готуємо зв’язку, але схвалення дає Stripe. Якщо модель не проходить, чесно пропонуємо інший контур або відмовляємось від завідомо невідповідної схеми."
+            "question": "Коли SaaS краще вести через MoR, а не Stripe?",
+            "answer": "Якщо немає ресурсу на tax/VAT по країнах і потрібен швидкий глобальний checkout з інвойсами «з коробки» — дивимось Paddle/Lemon. Stripe лишаємо, коли потрібен свій Billing API і контроль бренду платежів."
           }
         ],
         "ctas": [
@@ -2905,12 +2941,30 @@
             "label": "Безкоштовна консультація",
             "path": "/contacts"
           }
+        ],
+        "facts": [
+          {
+            "label": "Типовий формат",
+            "value": "Subscriptions / Billing"
+          },
+          {
+            "label": "MCC-фокус",
+            "value": "Software / SaaS"
+          },
+          {
+            "label": "Ризик-тон",
+            "value": "Середній за прозорого trial"
+          },
+          {
+            "label": "Дивимось насамперед",
+            "value": "Cancel UX, dunning, Terms"
+          }
         ]
       },
       "en": {
         "meta": {
           "title": "Stripe for SaaS: subscriptions, invoices and billing",
-          "description": "How to set up Stripe for SaaS: subscriptions, free trials, invoices, taxes and recurring charges. Typical risks and review preparation.",
+          "description": "Stripe for SaaS: subscriptions, trials, Billing and tax. Risk screening, MCC fit and when MoR beats a direct merchant.",
           "keywords": [
             "stripe for saas",
             "saas billing stripe",
@@ -2954,11 +3008,11 @@
             ]
           },
           {
-            "title": "How we assess a niche for Stripe",
+            "title": "SaaS screening for Stripe",
             "paragraphs": [
-              "We align MCC, public offer copy, refund policy and dispute patterns — these drive limits more than “just wire the API”.",
-              "If the niche looks restricted, we say so before start and compare processing, rental, purchase or an entity + bank package.",
-              "We do not promise to bypass Stripe rules: the platform always decides on the account."
+              "We review subscription mechanics: trial → paid, prorate, seat-based billing, dunning and one-click cancel. MCC is usually software/SaaS — site vs pricing mismatch hurts trust.",
+              "Risks: chargebacks after silent renewals, vague refunds, “lifetime” offers without unit economics. Stripe checks Terms, privacy and checkout vs product description.",
+              "Stripe fits when the product is digital, transparent and you can handle tax/reporting. MoR (Paddle/Lemon) fits if you want the provider to own tax and invoicing."
             ]
           }
         ],
@@ -2980,8 +3034,8 @@
             "answer": "Yes, Stripe supports many currencies. Terms and fees depend on the company’s country and the payout account."
           },
           {
-            "question": "Can you guarantee Stripe for my niche?",
-            "answer": "No. We assess risk and prepare the stack, but Stripe decides. If the model cannot pass, we propose another path or decline an unfit scheme."
+            "question": "When is MoR better than Stripe for SaaS?",
+            "answer": "If you lack capacity for country tax/VAT and want global checkout with invoices out of the box — look at Paddle/Lemon. Keep Stripe when you need your Billing API and payment-brand control."
           }
         ],
         "ctas": [
@@ -2997,6 +3051,24 @@
             "label": "Free consultation",
             "path": "/contacts"
           }
+        ],
+        "facts": [
+          {
+            "label": "Typical format",
+            "value": "Subscriptions / Billing"
+          },
+          {
+            "label": "MCC focus",
+            "value": "Software / SaaS"
+          },
+          {
+            "label": "Risk tone",
+            "value": "Medium with a clear trial"
+          },
+          {
+            "label": "We check first",
+            "value": "Cancel UX, dunning, Terms"
+          }
         ]
       }
     },
@@ -3008,7 +3080,7 @@
       "ru": {
         "meta": {
           "title": "Stripe для подписок: условия, списания и отмена без споров",
-          "description": "Как принимать подписки через Stripe: повторные списания, пауза, отмена, повторные попытки оплаты и споры. Требования и подготовка к проверке.",
+          "description": "Stripe для подписок: renew, отмена, dispute rate. Как подготовить recurring billing и снизить involuntary churn.",
           "keywords": [
             "stripe для подписок",
             "биллинг подписок",
@@ -3052,11 +3124,11 @@
             ]
           },
           {
-            "title": "Как мы оцениваем нишу под Stripe",
+            "title": "Скрининг подписочной модели",
             "paragraphs": [
-              "Сверяем MCC, публичное описание оффера, политику возвратов и модель споров — это влияет на лимиты сильнее «просто подключить API».",
-              "Если ниша выглядит restricted, говорим об этом до старта и сравниваем процессинг, аренду, покупку или комплект юрлицо + банк.",
-              "Не обещаем обойти правила Stripe: решение по аккаунту всегда остаётся за платформой."
+              "Оцениваем цикл списаний, reminder до renew, политику отмены и долю involuntary churn. Для контент/media-подписок критичен ясный оффер на лендинге.",
+              "Типовые споры: «не узнаю списание», скрытый trial, сложная отмена. Нужны e-mail/SMS до renew и прозрачная история платежей в кабинете.",
+              "Stripe хорош при контроле Billing API. Если подписка digital + глобальный tax — сравниваем с MoR. Физическая доставка по подписке требует отдельного логистического контура."
             ]
           }
         ],
@@ -3074,12 +3146,8 @@
             "answer": "Нужны подтверждение согласия, история использования и переписка. Мы помогаем собрать доказательства и выстроить процесс."
           },
           {
-            "question": "Гарантируете ли вы одобрение Stripe?",
-            "answer": "Нет. Решение принимает Stripe. Мы оцениваем сайт и условия заранее и помогаем подготовить заявку."
-          },
-          {
-            "question": "Можно ли гарантировать подключение Stripe для моей ниши?",
-            "answer": "Нет. Мы оцениваем риски и готовим связку, но одобрение даёт Stripe. Если модель не проходит, честно предлагаем другой контур или отказываемся от заведомо неподходящей схемы."
+            "question": "Как Stripe смотрит на recurring billing и отмены?",
+            "answer": "Критичны reminder до renew, простая отмена и понятный descriptor. Высокий involuntary churn и «тихие» списания повышают dispute rate — правим UX до масштаба оборота."
           }
         ],
         "ctas": [
@@ -3095,12 +3163,30 @@
             "label": "Бесплатная консультация",
             "path": "/contacts"
           }
+        ],
+        "facts": [
+          {
+            "label": "Типовой формат",
+            "value": "Recurring billing"
+          },
+          {
+            "label": "Ключевой риск",
+            "value": "Involuntary churn / disputes"
+          },
+          {
+            "label": "Риск-тон",
+            "value": "Средний"
+          },
+          {
+            "label": "Смотрим в первую очередь",
+            "value": "Renew reminders, cancel path"
+          }
         ]
       },
       "uk": {
         "meta": {
           "title": "Stripe для підписок: списання та скасування без спорів",
-          "description": "Як приймати підписки через Stripe: повторні списання, пауза, скасування, повторні спроби оплати та спори. Вимоги й підготовка до перевірки.",
+          "description": "Stripe для підписок: renew, скасування, dispute rate. Як підготувати recurring billing і знизити involuntary churn.",
           "keywords": [
             "stripe для підписок",
             "білінг підписок",
@@ -3144,11 +3230,11 @@
             ]
           },
           {
-            "title": "Як ми оцінюємо нішу під Stripe",
+            "title": "Скринінг підписної моделі",
             "paragraphs": [
-              "Звіряємо MCC, публічний опис оферу, політику повернень і модель спорів — це впливає на ліміти сильніше за «просто підключити API».",
-              "Якщо ніша виглядає restricted, кажемо про це до старту і порівнюємо процесинг, оренду, купівлю або комплект юрособа + банк.",
-              "Не обіцяємо обійти правила Stripe: рішення щодо акаунта завжди лишається за платформою."
+              "Оцінюємо цикл списань, reminder до renew, політику скасування й частку involuntary churn. Для контент/media-підписок критичний ясний офер на лендингу.",
+              "Типові спори: «не впізнаю списання», прихований trial, складне скасування. Потрібні e-mail/SMS до renew і прозора історія платежів у кабінеті.",
+              "Stripe зручний при контролі Billing API. Якщо підписка digital + глобальний tax — порівнюємо з MoR. Фізична доставка за підпискою потребує окремого логістичного контуру."
             ]
           }
         ],
@@ -3166,12 +3252,8 @@
             "answer": "Потрібні підтвердження згоди, історія використання й листування. Ми допомагаємо зібрати докази та вибудувати процес."
           },
           {
-            "question": "Чи гарантуєте ви схвалення Stripe?",
-            "answer": "Ні. Рішення ухвалює Stripe. Ми оцінюємо сайт і умови заздалегідь та допомагаємо підготувати заявку."
-          },
-          {
-            "question": "Чи можна гарантувати підключення Stripe для моєї ніші?",
-            "answer": "Ні. Ми оцінюємо ризики і готуємо зв’язку, але схвалення дає Stripe. Якщо модель не проходить, чесно пропонуємо інший контур або відмовляємось від завідомо невідповідної схеми."
+            "question": "Як Stripe дивиться на recurring billing і скасування?",
+            "answer": "Критичні reminder до renew, просте скасування й зрозумілий descriptor. Високий involuntary churn і «тихі» списання підвищують dispute rate — правимо UX до масштабу обігу."
           }
         ],
         "ctas": [
@@ -3187,12 +3269,30 @@
             "label": "Безкоштовна консультація",
             "path": "/contacts"
           }
+        ],
+        "facts": [
+          {
+            "label": "Типовий формат",
+            "value": "Recurring billing"
+          },
+          {
+            "label": "Ключовий ризик",
+            "value": "Involuntary churn / disputes"
+          },
+          {
+            "label": "Ризик-тон",
+            "value": "Середній"
+          },
+          {
+            "label": "Дивимось насамперед",
+            "value": "Renew reminders, cancel path"
+          }
         ]
       },
       "en": {
         "meta": {
           "title": "Stripe for subscriptions: terms, charges and cancellation",
-          "description": "How to accept subscriptions with Stripe: recurring charges, pause, cancellation, payment retries and disputes. Requirements and review preparation.",
+          "description": "Stripe for subscriptions: renewals, cancel UX, dispute rate. Prepare recurring billing and cut involuntary churn.",
           "keywords": [
             "stripe for subscriptions",
             "subscription billing",
@@ -3235,11 +3335,11 @@
             ]
           },
           {
-            "title": "How we assess a niche for Stripe",
+            "title": "Subscription model screening",
             "paragraphs": [
-              "We align MCC, public offer copy, refund policy and dispute patterns — these drive limits more than “just wire the API”.",
-              "If the niche looks restricted, we say so before start and compare processing, rental, purchase or an entity + bank package.",
-              "We do not promise to bypass Stripe rules: the platform always decides on the account."
+              "We assess billing cycles, renew reminders, cancel policy and involuntary churn share. Content/media subscriptions need a clear offer on the landing page.",
+              "Typical disputes: “I don’t recognize the charge”, hidden trials, hard cancel. You need e-mail/SMS before renew and a clear payment history in the cabinet.",
+              "Stripe works when you control Billing API. For digital + global tax we compare MoR. Physical subscription boxes need a separate logistics stack."
             ]
           }
         ],
@@ -3257,12 +3357,8 @@
             "answer": "You need proof of consent, usage history and correspondence. We help gather the evidence and set up the process."
           },
           {
-            "question": "Do you guarantee Stripe approval?",
-            "answer": "No. Stripe makes the decision. We assess the site and terms in advance and help prepare the application."
-          },
-          {
-            "question": "Can you guarantee Stripe for my niche?",
-            "answer": "No. We assess risk and prepare the stack, but Stripe decides. If the model cannot pass, we propose another path or decline an unfit scheme."
+            "question": "How does Stripe view recurring billing and cancels?",
+            "answer": "Renew reminders, easy cancel and a clear descriptor matter. High involuntary churn and silent charges raise dispute rate — fix UX before scaling volume."
           }
         ],
         "ctas": [
@@ -3278,6 +3374,24 @@
             "label": "Free consultation",
             "path": "/contacts"
           }
+        ],
+        "facts": [
+          {
+            "label": "Typical format",
+            "value": "Recurring billing"
+          },
+          {
+            "label": "Key risk",
+            "value": "Involuntary churn / disputes"
+          },
+          {
+            "label": "Risk tone",
+            "value": "Medium"
+          },
+          {
+            "label": "We check first",
+            "value": "Renew reminders, cancel path"
+          }
         ]
       }
     },
@@ -3289,7 +3403,7 @@
       "ru": {
         "meta": {
           "title": "Stripe для онлайн-курсов: оплата, рассрочка и возвраты",
-          "description": "Как принимать оплату за курсы через Stripe: Payment Link, Checkout, рассрочка, политика возвратов и подготовка к проверке без обещаний дохода.",
+          "description": "Stripe для онлайн-курсов: офер, refund 14 дней, рекламные обещания. Что проверяют до подключения инфобизнеса.",
           "keywords": [
             "stripe для онлайн-курсов",
             "оплата курсов stripe",
@@ -3333,11 +3447,11 @@
             ]
           },
           {
-            "title": "Как мы оцениваем нишу под Stripe",
+            "title": "Скрининг онлайн-курсов и инфобизнеса",
             "paragraphs": [
-              "Сверяем MCC, публичное описание оффера, политику возвратов и модель споров — это влияет на лимиты сильнее «просто подключить API».",
-              "Если ниша выглядит restricted, говорим об этом до старта и сравниваем процессинг, аренду, покупку или комплект юрлицо + банк.",
-              "Не обещаем обойти правила Stripe: решение по аккаунту всегда остаётся за платформой."
+              "Проверяем описание программы, сроки доступа, политику возврата (часто 14 дней) и соответствие рекламных обещаний реальному курсу.",
+              "Споры растут от «гарантий результата», агрессивного upsell и недоступного саппорта. Stripe смотрит refund rate и качество Terms на языке покупателя.",
+              "Stripe подходит при прозрачном продукте и нормальном refund. Если оффер «разгон дохода» без доказательств — высок риск отказа или hold; иногда честнее другой эквайринг."
             ]
           }
         ],
@@ -3355,12 +3469,8 @@
             "answer": "Нужны подтверждение согласия, доступ клиента к материалам и переписка. Мы помогаем собрать доказательства."
           },
           {
-            "question": "Гарантируете ли вы одобрение Stripe?",
-            "answer": "Нет. Решение принимает Stripe. Мы оцениваем проект заранее и готовим заявку."
-          },
-          {
-            "question": "Можно ли гарантировать подключение Stripe для моей ниши?",
-            "answer": "Нет. Мы оцениваем риски и готовим связку, но одобрение даёт Stripe. Если модель не проходит, честно предлагаем другой контур или отказываемся от заведомо неподходящей схемы."
+            "question": "Какой refund для курсов снижает риск hold?",
+            "answer": "Прозрачное окно возврата (часто 14 дней), доступ к материалам по правилам оферты и отказ от «гарантий дохода» в рекламе. Иначе растёт refund/chargeback и риск review."
           }
         ],
         "ctas": [
@@ -3376,12 +3486,30 @@
             "label": "Бесплатная консультация",
             "path": "/contacts"
           }
+        ],
+        "facts": [
+          {
+            "label": "Типовой формат",
+            "value": "One-time / installments"
+          },
+          {
+            "label": "Ключевой риск",
+            "value": "Refunds & advertising claims"
+          },
+          {
+            "label": "Риск-тон",
+            "value": "Средний–высокий"
+          },
+          {
+            "label": "Смотрим в первую очередь",
+            "value": "Refund window, Terms, ads"
+          }
         ]
       },
       "uk": {
         "meta": {
           "title": "Stripe для онлайн-курсів: оплата, розстрочка та повернення",
-          "description": "Як приймати оплату за курси через Stripe: Payment Link, Checkout, розстрочка, політика повернень і підготовка до перевірки без обіцянок доходу.",
+          "description": "Stripe для онлайн-курсів: офер, refund 14 днів, рекламні обіцянки. Що перевіряють до підключення інфобізнесу.",
           "keywords": [
             "stripe для онлайн-курсів",
             "оплата курсів stripe",
@@ -3425,11 +3553,11 @@
             ]
           },
           {
-            "title": "Як ми оцінюємо нішу під Stripe",
+            "title": "Скринінг онлайн-курсів та інфобізнесу",
             "paragraphs": [
-              "Звіряємо MCC, публічний опис оферу, політику повернень і модель спорів — це впливає на ліміти сильніше за «просто підключити API».",
-              "Якщо ніша виглядає restricted, кажемо про це до старту і порівнюємо процесинг, оренду, купівлю або комплект юрособа + банк.",
-              "Не обіцяємо обійти правила Stripe: рішення щодо акаунта завжди лишається за платформою."
+              "Перевіряємо опис програми, строки доступу, політику повернення (часто 14 днів) і відповідність рекламних обіцянок реальному курсу.",
+              "Спори ростуть від «гарантій результату», агресивного upsell і недоступної підтримки. Stripe дивиться refund rate і якість Terms мовою покупця.",
+              "Stripe підходить за прозорого продукту й нормального refund. Якщо офер «розгін доходу» без доказів — високий ризик відмови чи hold; інколи чесніше інший еквайринг."
             ]
           }
         ],
@@ -3447,12 +3575,8 @@
             "answer": "Потрібні підтвердження згоди, доступ клієнта до матеріалів і листування. Ми допомагаємо зібрати докази."
           },
           {
-            "question": "Чи гарантуєте ви схвалення Stripe?",
-            "answer": "Ні. Рішення ухвалює Stripe. Ми оцінюємо проєкт заздалегідь і готуємо заявку."
-          },
-          {
-            "question": "Чи можна гарантувати підключення Stripe для моєї ніші?",
-            "answer": "Ні. Ми оцінюємо ризики і готуємо зв’язку, але схвалення дає Stripe. Якщо модель не проходить, чесно пропонуємо інший контур або відмовляємось від завідомо невідповідної схеми."
+            "question": "Який refund для курсів знижує ризик hold?",
+            "answer": "Прозоре вікно повернення (часто 14 днів), доступ до матеріалів за правилами оферти й відмова від «гарантій доходу» в рекламі. Інакше зростає refund/chargeback і ризик review."
           }
         ],
         "ctas": [
@@ -3468,12 +3592,30 @@
             "label": "Безкоштовна консультація",
             "path": "/contacts"
           }
+        ],
+        "facts": [
+          {
+            "label": "Типовий формат",
+            "value": "One-time / installments"
+          },
+          {
+            "label": "Ключовий ризик",
+            "value": "Refunds & advertising claims"
+          },
+          {
+            "label": "Ризик-тон",
+            "value": "Середній–високий"
+          },
+          {
+            "label": "Дивимось насамперед",
+            "value": "Refund window, Terms, ads"
+          }
         ]
       },
       "en": {
         "meta": {
           "title": "Stripe for online courses: payments, instalments, refunds",
-          "description": "How to accept payments for courses with Stripe: Payment Links, Checkout, instalments, a refund policy and review preparation without income claims.",
+          "description": "Stripe for online courses: offer, 14-day refunds, ad claims. What gets reviewed before info-product approval.",
           "keywords": [
             "stripe for online courses",
             "course payments stripe",
@@ -3516,11 +3658,11 @@
             ]
           },
           {
-            "title": "How we assess a niche for Stripe",
+            "title": "Online courses / info-product screening",
             "paragraphs": [
-              "We align MCC, public offer copy, refund policy and dispute patterns — these drive limits more than “just wire the API”.",
-              "If the niche looks restricted, we say so before start and compare processing, rental, purchase or an entity + bank package.",
-              "We do not promise to bypass Stripe rules: the platform always decides on the account."
+              "We check program description, access period, refund policy (often 14 days) and whether ads match the actual course.",
+              "Disputes spike from “result guarantees”, aggressive upsells and unreachable support. Stripe watches refund rate and Terms in the buyer’s language.",
+              "Stripe fits a clear product and fair refunds. “Income boost” claims without proof raise refusal/hold risk — another acquirer may be more honest."
             ]
           }
         ],
@@ -3538,12 +3680,8 @@
             "answer": "You need proof of consent, the customer’s access to materials and correspondence. We help gather the evidence."
           },
           {
-            "question": "Do you guarantee Stripe approval?",
-            "answer": "No. Stripe makes the decision. We assess the project in advance and prepare the application."
-          },
-          {
-            "question": "Can you guarantee Stripe for my niche?",
-            "answer": "No. We assess risk and prepare the stack, but Stripe decides. If the model cannot pass, we propose another path or decline an unfit scheme."
+            "question": "What refund policy lowers hold risk for courses?",
+            "answer": "A clear refund window (often 14 days), access rules matching the offer, and no “income guarantees” in ads. Otherwise refunds/chargebacks and review risk rise."
           }
         ],
         "ctas": [
@@ -3559,6 +3697,24 @@
             "label": "Free consultation",
             "path": "/contacts"
           }
+        ],
+        "facts": [
+          {
+            "label": "Typical format",
+            "value": "One-time / installments"
+          },
+          {
+            "label": "Key risk",
+            "value": "Refunds & advertising claims"
+          },
+          {
+            "label": "Risk tone",
+            "value": "Medium–high"
+          },
+          {
+            "label": "We check first",
+            "value": "Refund window, Terms, ads"
+          }
         ]
       }
     },
@@ -3570,7 +3726,7 @@
       "ru": {
         "meta": {
           "title": "Stripe для маркетплейса: когда нужен Connect, а когда нет",
-          "description": "Как принимать платежи на маркетплейсе через Stripe: разница между магазином и платформой, когда нужен Stripe Connect, проверка продавцов и риски.",
+          "description": "Stripe Connect для marketplace: split payouts, KYC селлеров, споры. Когда площадке нужен MoR и правила продавцов.",
           "keywords": [
             "stripe для маркетплейса",
             "stripe connect",
@@ -3614,11 +3770,11 @@
             ]
           },
           {
-            "title": "Как мы оцениваем нишу под Stripe",
+            "title": "Скрининг marketplace / платформы",
             "paragraphs": [
-              "Сверяем MCC, публичное описание оффера, политику возвратов и модель споров — это влияет на лимиты сильнее «просто подключить API».",
-              "Если ниша выглядит restricted, говорим об этом до старта и сравниваем процессинг, аренду, покупку или комплект юрлицо + банк.",
-              "Не обещаем обойти правила Stripe: решение по аккаунту всегда остаётся за платформой."
+              "Разбираем модель: marketplace Connect, split payouts, кто merchant of record. Нужны правила продавцов, KYC селлеров и эскалация споров.",
+              "Риски: токсичные селлеры, delayed fulfillment, неясный ответственный за refund. Stripe Connect требует согласованных Terms и политики чарджбеков.",
+              "Stripe уместен при зрелой политике площадки. Если селлеры high-risk или payouts в «серую» зону — сначала чистим модель, иначе Connect не спасёт."
             ]
           }
         ],
@@ -3636,12 +3792,8 @@
             "answer": "Обычно платформа. Поэтому нужны правила работы с продавцами и механизм разрешения споров."
           },
           {
-            "question": "Гарантируете ли вы одобрение Stripe?",
-            "answer": "Нет. Решение принимает Stripe. Мы помогаем подготовить модель и документы."
-          },
-          {
-            "question": "Можно ли гарантировать подключение Stripe для моей ниши?",
-            "answer": "Нет. Мы оцениваем риски и готовим связку, но одобрение даёт Stripe. Если модель не проходит, честно предлагаем другой контур или отказываемся от заведомо неподходящей схемы."
+            "question": "Нужен ли Stripe Connect для marketplace?",
+            "answer": "Если вы платите селлерам — почти всегда да. Без KYC селлеров, правил споров и ясного MoR Connect не закроет риск; сначала фиксируем модель выплат."
           }
         ],
         "ctas": [
@@ -3657,12 +3809,30 @@
             "label": "Бесплатная консультация",
             "path": "/contacts"
           }
+        ],
+        "facts": [
+          {
+            "label": "Типовой формат",
+            "value": "Connect / split payouts"
+          },
+          {
+            "label": "Ключевой риск",
+            "value": "Seller quality & disputes"
+          },
+          {
+            "label": "Риск-тон",
+            "value": "Средний–высокий"
+          },
+          {
+            "label": "Смотрим в первую очередь",
+            "value": "MoR, seller KYC, refund owner"
+          }
         ]
       },
       "uk": {
         "meta": {
           "title": "Stripe для маркетплейсу: коли потрібен Connect, а коли ні",
-          "description": "Як приймати платежі на маркетплейсі через Stripe: різниця між магазином і платформою, коли потрібен Stripe Connect, перевірка продавців і ризики.",
+          "description": "Stripe Connect для marketplace: split payouts, KYC селерів, спори. Коли майданчику потрібен MoR і правила продавців.",
           "keywords": [
             "stripe для маркетплейсу",
             "stripe connect",
@@ -3706,11 +3876,11 @@
             ]
           },
           {
-            "title": "Як ми оцінюємо нішу під Stripe",
+            "title": "Скринінг marketplace / платформи",
             "paragraphs": [
-              "Звіряємо MCC, публічний опис оферу, політику повернень і модель спорів — це впливає на ліміти сильніше за «просто підключити API».",
-              "Якщо ніша виглядає restricted, кажемо про це до старту і порівнюємо процесинг, оренду, купівлю або комплект юрособа + банк.",
-              "Не обіцяємо обійти правила Stripe: рішення щодо акаунта завжди лишається за платформою."
+              "Розбираємо модель: marketplace Connect, split payouts, хто merchant of record. Потрібні правила продавців, KYC селерів і ескалація спорів.",
+              "Ризики: токсичні селери, delayed fulfillment, неясний відповідальний за refund. Stripe Connect вимагає узгоджених Terms і політики чарджбеків.",
+              "Stripe доречний за зрілої політики майданчика. Якщо селери high-risk або payouts у «сіру» зону — спочатку чистимо модель, інакше Connect не врятує."
             ]
           }
         ],
@@ -3728,12 +3898,8 @@
             "answer": "Зазвичай платформа. Тому потрібні правила роботи з продавцями та механізм вирішення спорів."
           },
           {
-            "question": "Чи гарантуєте ви схвалення Stripe?",
-            "answer": "Ні. Рішення ухвалює Stripe. Ми допомагаємо підготувати модель і документи."
-          },
-          {
-            "question": "Чи можна гарантувати підключення Stripe для моєї ніші?",
-            "answer": "Ні. Ми оцінюємо ризики і готуємо зв’язку, але схвалення дає Stripe. Якщо модель не проходить, чесно пропонуємо інший контур або відмовляємось від завідомо невідповідної схеми."
+            "question": "Чи потрібен Stripe Connect для marketplace?",
+            "answer": "Якщо ви платите селерам — майже завжди так. Без KYC селерів, правил спорів і ясного MoR Connect не закриє ризик; спочатку фіксуємо модель виплат."
           }
         ],
         "ctas": [
@@ -3749,12 +3915,30 @@
             "label": "Безкоштовна консультація",
             "path": "/contacts"
           }
+        ],
+        "facts": [
+          {
+            "label": "Типовий формат",
+            "value": "Connect / split payouts"
+          },
+          {
+            "label": "Ключовий ризик",
+            "value": "Seller quality & disputes"
+          },
+          {
+            "label": "Ризик-тон",
+            "value": "Середній–високий"
+          },
+          {
+            "label": "Дивимось насамперед",
+            "value": "MoR, seller KYC, refund owner"
+          }
         ]
       },
       "en": {
         "meta": {
           "title": "Stripe for marketplaces & Connect | WayOfProcessing",
-          "description": "How to accept payments on a marketplace with Stripe: store versus platform, when Stripe Connect is needed, seller vetting and risks.",
+          "description": "Stripe Connect for marketplaces: split payouts, seller KYC, disputes. When you need MoR and seller rules.",
           "keywords": [
             "stripe for marketplace",
             "stripe connect",
@@ -3797,11 +3981,11 @@
             ]
           },
           {
-            "title": "How we assess a niche for Stripe",
+            "title": "Marketplace / platform screening",
             "paragraphs": [
-              "We align MCC, public offer copy, refund policy and dispute patterns — these drive limits more than “just wire the API”.",
-              "If the niche looks restricted, we say so before start and compare processing, rental, purchase or an entity + bank package.",
-              "We do not promise to bypass Stripe rules: the platform always decides on the account."
+              "We map the model: marketplace Connect, split payouts, who is merchant of record. Seller rules, seller KYC and dispute escalation are required.",
+              "Risks: toxic sellers, delayed fulfillment, unclear refund owner. Stripe Connect needs aligned Terms and chargeback policy.",
+              "Stripe fits a mature marketplace policy. High-risk sellers or grey payouts mean fix the model first — Connect alone will not save it."
             ]
           }
         ],
@@ -3819,12 +4003,8 @@
             "answer": "Usually the platform. That is why you need seller rules and a dispute resolution mechanism."
           },
           {
-            "question": "Do you guarantee Stripe approval?",
-            "answer": "No. Stripe makes the decision. We help prepare the model and the documents."
-          },
-          {
-            "question": "Can you guarantee Stripe for my niche?",
-            "answer": "No. We assess risk and prepare the stack, but Stripe decides. If the model cannot pass, we propose another path or decline an unfit scheme."
+            "question": "Do marketplaces need Stripe Connect?",
+            "answer": "If you pay sellers — almost always yes. Without seller KYC, dispute rules and a clear MoR, Connect will not cover the risk; fix the payout model first."
           }
         ],
         "ctas": [
@@ -3840,6 +4020,24 @@
             "label": "Free consultation",
             "path": "/contacts"
           }
+        ],
+        "facts": [
+          {
+            "label": "Typical format",
+            "value": "Connect / split payouts"
+          },
+          {
+            "label": "Key risk",
+            "value": "Seller quality & disputes"
+          },
+          {
+            "label": "Risk tone",
+            "value": "Medium–high"
+          },
+          {
+            "label": "We check first",
+            "value": "MoR, seller KYC, refund owner"
+          }
         ]
       }
     },
@@ -3851,7 +4049,7 @@
       "ru": {
         "meta": {
           "title": "Stripe для цифровых товаров: доставка, НДС и споры",
-          "description": "Как принимать оплату за цифровые товары через Stripe: моментальная доставка, налоги, защита от мошенничества и работа со спорами.",
+          "description": "Stripe для digital goods: мгновенная доставка, antifraud, лицензии. Как снизить card testing и friendly fraud.",
           "keywords": [
             "stripe для цифровых товаров",
             "оплата digital товаров",
@@ -3894,11 +4092,11 @@
             ]
           },
           {
-            "title": "Как мы оцениваем нишу под Stripe",
+            "title": "Скрининг digital goods",
             "paragraphs": [
-              "Сверяем MCC, публичное описание оффера, политику возвратов и модель споров — это влияет на лимиты сильнее «просто подключить API».",
-              "Если ниша выглядит restricted, говорим об этом до старта и сравниваем процессинг, аренду, покупку или комплект юрлицо + банк.",
-              "Не обещаем обойти правила Stripe: решение по аккаунту всегда остаётся за платформой."
+              "Оцениваем тип товара (софт, шаблоны, лицензии, медиа), мгновенную доставку, лицензионные условия и anti-fraud на «купил-скачал-оспорил».",
+              "Высокий fraud score при дешёвых одноразовых SKU и слабой верификации. Нужны водяные знаки/лицензии, лимиты скачиваний и понятный refund window.",
+              "Stripe ок для легитимных digital goods с нормальным fraud stack. Массовый «серый» контент или ключи без прав — стоп до консультации; смотрим MoR или отказ."
             ]
           }
         ],
@@ -3916,12 +4114,8 @@
             "answer": "Правила зависят от страны клиента и вашего статуса. Консультируйтесь с бухгалтером перед запуском."
           },
           {
-            "question": "Гарантируете ли вы одобрение Stripe?",
-            "answer": "Нет. Решение принимает Stripe. Мы помогаем подготовить сайт, условия и процесс."
-          },
-          {
-            "question": "Можно ли гарантировать подключение Stripe для моей ниши?",
-            "answer": "Нет. Мы оцениваем риски и готовим связку, но одобрение даёт Stripe. Если модель не проходит, честно предлагаем другой контур или отказываемся от заведомо неподходящей схемы."
+            "question": "Почему digital goods часто ловят fraud?",
+            "answer": "Мгновенная доставка + дешёвые SKU удобны для card testing. Нужны лимиты, верификация, лицензии и узкий refund — иначе Stripe режет лимиты."
           }
         ],
         "ctas": [
@@ -3937,12 +4131,30 @@
             "label": "Бесплатная консультация",
             "path": "/contacts"
           }
+        ],
+        "facts": [
+          {
+            "label": "Типовой формат",
+            "value": "Instant digital delivery"
+          },
+          {
+            "label": "Ключевой риск",
+            "value": "Card testing / friendly fraud"
+          },
+          {
+            "label": "Риск-тон",
+            "value": "Высокий без antifraud"
+          },
+          {
+            "label": "Смотрим в первую очередь",
+            "value": "Licenses, limits, refund window"
+          }
         ]
       },
       "uk": {
         "meta": {
           "title": "Stripe для цифрових товарів: доставка, ПДВ і спори",
-          "description": "Як приймати оплату за цифрові товари через Stripe: миттєва доставка, податки, захист від шахрайства та робота зі спорами.",
+          "description": "Stripe для digital goods: миттєва доставка, antifraud, ліцензії. Як знизити card testing і friendly fraud.",
           "keywords": [
             "stripe для цифрових товарів",
             "оплата digital товарів",
@@ -3985,11 +4197,11 @@
             ]
           },
           {
-            "title": "Як ми оцінюємо нішу під Stripe",
+            "title": "Скринінг digital goods",
             "paragraphs": [
-              "Звіряємо MCC, публічний опис оферу, політику повернень і модель спорів — це впливає на ліміти сильніше за «просто підключити API».",
-              "Якщо ніша виглядає restricted, кажемо про це до старту і порівнюємо процесинг, оренду, купівлю або комплект юрособа + банк.",
-              "Не обіцяємо обійти правила Stripe: рішення щодо акаунта завжди лишається за платформою."
+              "Оцінюємо тип товару (софт, шаблони, ліцензії, медіа), миттєву доставку, ліцензійні умови й anti-fraud на «купив-завантажив-оскаржив».",
+              "Високий fraud score за дешевих одноразових SKU і слабкої верифікації. Потрібні водяні знаки/ліцензії, ліміти завантажень і зрозумілий refund window.",
+              "Stripe ок для легітимних digital goods із нормальним fraud stack. Масовий «сірий» контент або ключі без прав — стоп до консультації; дивимось MoR або відмову."
             ]
           }
         ],
@@ -4007,12 +4219,8 @@
             "answer": "Правила залежать від країни клієнта та вашого статусу. Консультуйтеся з бухгалтером перед запуском."
           },
           {
-            "question": "Чи гарантуєте ви схвалення Stripe?",
-            "answer": "Ні. Рішення ухвалює Stripe. Ми допомагаємо підготувати сайт, умови та процес."
-          },
-          {
-            "question": "Чи можна гарантувати підключення Stripe для моєї ніші?",
-            "answer": "Ні. Ми оцінюємо ризики і готуємо зв’язку, але схвалення дає Stripe. Якщо модель не проходить, чесно пропонуємо інший контур або відмовляємось від завідомо невідповідної схеми."
+            "question": "Чому digital goods часто ловлять fraud?",
+            "answer": "Миттєва доставка + дешеві SKU зручні для card testing. Потрібні ліміти, верифікація, ліцензії й вузький refund — інакше Stripe ріже ліміти."
           }
         ],
         "ctas": [
@@ -4028,12 +4236,30 @@
             "label": "Безкоштовна консультація",
             "path": "/contacts"
           }
+        ],
+        "facts": [
+          {
+            "label": "Типовий формат",
+            "value": "Instant digital delivery"
+          },
+          {
+            "label": "Ключовий ризик",
+            "value": "Card testing / friendly fraud"
+          },
+          {
+            "label": "Ризик-тон",
+            "value": "Високий без antifraud"
+          },
+          {
+            "label": "Дивимось насамперед",
+            "value": "Licenses, limits, refund window"
+          }
         ]
       },
       "en": {
         "meta": {
           "title": "Stripe for digital products: delivery, VAT and disputes",
-          "description": "How to accept payments for digital products with Stripe: instant delivery, taxes, fraud protection and dispute handling.",
+          "description": "Stripe for digital goods: instant delivery, antifraud, licenses. Cut card testing and friendly fraud risk.",
           "keywords": [
             "stripe for digital products",
             "digital goods payments",
@@ -4075,11 +4301,11 @@
             ]
           },
           {
-            "title": "How we assess a niche for Stripe",
+            "title": "Digital goods screening",
             "paragraphs": [
-              "We align MCC, public offer copy, refund policy and dispute patterns — these drive limits more than “just wire the API”.",
-              "If the niche looks restricted, we say so before start and compare processing, rental, purchase or an entity + bank package.",
-              "We do not promise to bypass Stripe rules: the platform always decides on the account."
+              "We assess product type (software, templates, licenses, media), instant delivery, license terms and anti-fraud for buy-download-dispute patterns.",
+              "Fraud score rises on cheap one-off SKUs and weak verification. Watermarks/licenses, download limits and a clear refund window help.",
+              "Stripe works for legitimate digital goods with a solid fraud stack. Grey content or keys without rights — stop before intake; MoR or decline."
             ]
           }
         ],
@@ -4097,12 +4323,8 @@
             "answer": "The rules depend on the customer’s country and your status. Consult an accountant before launch."
           },
           {
-            "question": "Do you guarantee Stripe approval?",
-            "answer": "No. Stripe makes the decision. We help prepare the site, the terms and the process."
-          },
-          {
-            "question": "Can you guarantee Stripe for my niche?",
-            "answer": "No. We assess risk and prepare the stack, but Stripe decides. If the model cannot pass, we propose another path or decline an unfit scheme."
+            "question": "Why do digital goods attract fraud?",
+            "answer": "Instant delivery plus cheap SKUs suit card testing. Limits, verification, licenses and a tight refund window are required — otherwise Stripe cuts limits."
           }
         ],
         "ctas": [
@@ -4118,6 +4340,24 @@
             "label": "Free consultation",
             "path": "/contacts"
           }
+        ],
+        "facts": [
+          {
+            "label": "Typical format",
+            "value": "Instant digital delivery"
+          },
+          {
+            "label": "Key risk",
+            "value": "Card testing / friendly fraud"
+          },
+          {
+            "label": "Risk tone",
+            "value": "High without antifraud"
+          },
+          {
+            "label": "We check first",
+            "value": "Licenses, limits, refund window"
+          }
         ]
       }
     },
@@ -4129,7 +4369,7 @@
       "ru": {
         "meta": {
           "title": "Stripe для gaming: что можно, а что запрещено правилами",
-          "description": "Как принимать платежи в игровых проектах через Stripe: внутриигровые покупки, подписки, возрасты, споры и ограничения для игр на деньги.",
+          "description": "Stripe для gaming: in-game покупки, soft currency, граница с gambling. Что нужно для легитимного game merchant.",
           "keywords": [
             "stripe для игровых проектов",
             "stripe gaming",
@@ -4173,11 +4413,11 @@
             ]
           },
           {
-            "title": "Как мы оцениваем нишу под Stripe",
+            "title": "Скрининг gaming / in-game",
             "paragraphs": [
-              "Сверяем MCC, публичное описание оффера, политику возвратов и модель споров — это влияет на лимиты сильнее «просто подключить API».",
-              "Если ниша выглядит restricted, говорим об этом до старта и сравниваем процессинг, аренду, покупку или комплект юрлицо + банк.",
-              "Не обещаем обойти правила Stripe: решение по аккаунту всегда остаётся за платформой."
+              "Смотрим: soft currency, skins, battle pass, P2P marketplace внутри игры. Критичны возраст/регион, запрет real-money gambling механик без лицензии.",
+              "Споры: «не получил предмет», chargeback после токсичного PvP, неясные ToS. Нужны логи выдачи, поддержка 24/7 на пиках и жёсткий antifraud.",
+              "Stripe возможен при чистом game product без gambling. Смешение с betting/loot-схемами — отдельный риск-профиль; часто нужен другой эквайринг или лицензия."
             ]
           }
         ],
@@ -4195,12 +4435,8 @@
             "answer": "Есть специализированные провайдеры для игровых проектов, но условия у них жёстче. Мы поясним варианты."
           },
           {
-            "question": "Гарантируете ли вы одобрение Stripe?",
-            "answer": "Нет. Решение принимает платёжная система. Мы оцениваем проект до подачи заявки."
-          },
-          {
-            "question": "Можно ли гарантировать подключение Stripe для моей ниши?",
-            "answer": "Нет. Мы оцениваем риски и готовим связку, но одобрение даёт Stripe. Если модель не проходит, честно предлагаем другой контур или отказываемся от заведомо неподходящей схемы."
+            "question": "Можно ли принимать оплату за внутриигровые предметы?",
+            "answer": "Да, если это не gambling/betting без лицензии и выдача логируется. Смешение с real-money wagering — отдельный профиль; часто Stripe недоступен."
           }
         ],
         "ctas": [
@@ -4216,12 +4452,30 @@
             "label": "Бесплатная консультация",
             "path": "/contacts"
           }
+        ],
+        "facts": [
+          {
+            "label": "Типовой формат",
+            "value": "In-app / soft currency"
+          },
+          {
+            "label": "Ключевой риск",
+            "value": "Gambling overlap, item disputes"
+          },
+          {
+            "label": "Риск-тон",
+            "value": "Высокий"
+          },
+          {
+            "label": "Смотрим в первую очередь",
+            "value": "License boundary, delivery logs"
+          }
         ]
       },
       "uk": {
         "meta": {
           "title": "Stripe для gaming: що можна, а що заборонено правилами",
-          "description": "Як приймати платежі в ігрових проєктах через Stripe: внутрішньоігрові покупки, підписки, вік, спори та обмеження для ігор на гроші.",
+          "description": "Stripe для gaming: in-game покупки, soft currency, межа з gambling. Що потрібно для легітимного game merchant.",
           "keywords": [
             "stripe для ігрових проєктів",
             "stripe gaming",
@@ -4265,11 +4519,11 @@
             ]
           },
           {
-            "title": "Як ми оцінюємо нішу під Stripe",
+            "title": "Скринінг gaming / in-game",
             "paragraphs": [
-              "Звіряємо MCC, публічний опис оферу, політику повернень і модель спорів — це впливає на ліміти сильніше за «просто підключити API».",
-              "Якщо ніша виглядає restricted, кажемо про це до старту і порівнюємо процесинг, оренду, купівлю або комплект юрособа + банк.",
-              "Не обіцяємо обійти правила Stripe: рішення щодо акаунта завжди лишається за платформою."
+              "Дивимось: soft currency, skins, battle pass, P2P marketplace всередині гри. Критичні вік/регіон, заборона real-money gambling механік без ліцензії.",
+              "Спори: «не отримав предмет», chargeback після токсичного PvP, неясні ToS. Потрібні логи видачі, підтримка 24/7 на піках і жорсткий antifraud.",
+              "Stripe можливий за чистого game product без gambling. Змішування з betting/loot-схемами — окремий ризик-профіль; часто потрібен інший еквайринг або ліцензія."
             ]
           }
         ],
@@ -4287,12 +4541,8 @@
             "answer": "Є спеціалізовані провайдери для ігрових проєктів, але умови в них жорсткіші. Ми поясним варіанти."
           },
           {
-            "question": "Чи гарантуєте ви схвалення Stripe?",
-            "answer": "Ні. Рішення ухвалює платіжна система. Ми оцінюємо проєкт до подання заявки."
-          },
-          {
-            "question": "Чи можна гарантувати підключення Stripe для моєї ніші?",
-            "answer": "Ні. Ми оцінюємо ризики і готуємо зв’язку, але схвалення дає Stripe. Якщо модель не проходить, чесно пропонуємо інший контур або відмовляємось від завідомо невідповідної схеми."
+            "question": "Чи можна приймати оплату за внутрішньоігрові предмети?",
+            "answer": "Так, якщо це не gambling/betting без ліцензії і видача логується. Змішування з real-money wagering — окремий профіль; часто Stripe недоступний."
           }
         ],
         "ctas": [
@@ -4308,12 +4558,30 @@
             "label": "Безкоштовна консультація",
             "path": "/contacts"
           }
+        ],
+        "facts": [
+          {
+            "label": "Типовий формат",
+            "value": "In-app / soft currency"
+          },
+          {
+            "label": "Ключовий ризик",
+            "value": "Gambling overlap, item disputes"
+          },
+          {
+            "label": "Ризик-тон",
+            "value": "Високий"
+          },
+          {
+            "label": "Дивимось насамперед",
+            "value": "License boundary, delivery logs"
+          }
         ]
       },
       "en": {
         "meta": {
           "title": "Stripe for gaming: what is allowed and what is not",
-          "description": "How to accept payments for game projects with Stripe: in-game purchases, subscriptions, age, disputes and limits for real-money games.",
+          "description": "Stripe for gaming: in-game purchases, soft currency, gambling boundary. What a legitimate game merchant needs.",
           "keywords": [
             "stripe for gaming",
             "stripe gaming",
@@ -4356,11 +4624,11 @@
             ]
           },
           {
-            "title": "How we assess a niche for Stripe",
+            "title": "Gaming / in-game screening",
             "paragraphs": [
-              "We align MCC, public offer copy, refund policy and dispute patterns — these drive limits more than “just wire the API”.",
-              "If the niche looks restricted, we say so before start and compare processing, rental, purchase or an entity + bank package.",
-              "We do not promise to bypass Stripe rules: the platform always decides on the account."
+              "We review soft currency, skins, battle pass and in-game P2P markets. Age/region rules matter; real-money gambling mechanics need a license.",
+              "Disputes: “item not received”, chargebacks after toxic PvP, vague ToS. Delivery logs, peak support and strict antifraud are required.",
+              "Stripe can work for a clean game product without gambling. Mixing betting/loot schemes is a different risk profile — often another acquirer or a license."
             ]
           }
         ],
@@ -4378,12 +4646,8 @@
             "answer": "Specialised providers exist for game projects, but their terms are stricter. We explain the options."
           },
           {
-            "question": "Do you guarantee Stripe approval?",
-            "answer": "No. The payment platform makes the decision. We assess the project before an application."
-          },
-          {
-            "question": "Can you guarantee Stripe for my niche?",
-            "answer": "No. We assess risk and prepare the stack, but Stripe decides. If the model cannot pass, we propose another path or decline an unfit scheme."
+            "question": "Can we charge for in-game items?",
+            "answer": "Yes if it is not unlicensed gambling/betting and delivery is logged. Mixing real-money wagering is a different profile — Stripe is often unavailable."
           }
         ],
         "ctas": [
@@ -4399,6 +4663,24 @@
             "label": "Free consultation",
             "path": "/contacts"
           }
+        ],
+        "facts": [
+          {
+            "label": "Typical format",
+            "value": "In-app / soft currency"
+          },
+          {
+            "label": "Key risk",
+            "value": "Gambling overlap, item disputes"
+          },
+          {
+            "label": "Risk tone",
+            "value": "High"
+          },
+          {
+            "label": "We check first",
+            "value": "License boundary, delivery logs"
+          }
         ]
       }
     },
@@ -4410,7 +4692,7 @@
       "ru": {
         "meta": {
           "title": "High-risk и Stripe: честный скрининг без гарантий",
-          "description": "Что считается high-risk для Stripe, какие ниши ограничены, как проходит проверка и какие есть варианты, если Stripe не подходит.",
+          "description": "High-risk и Stripe: жёсткий скрининг категории, банка и сайта. Честная оценка без гарантии одобрения.",
           "keywords": [
             "процессинг для high risk",
             "high risk merchant account",
@@ -4454,18 +4736,18 @@
             ]
           },
           {
-            "title": "Как мы оцениваем нишу под Stripe",
+            "title": "Скрининг high-risk ниши",
             "paragraphs": [
-              "Сверяем MCC, публичное описание оффера, политику возвратов и модель споров — это влияет на лимиты сильнее «просто подключить API».",
-              "Если ниша выглядит restricted, говорим об этом до старта и сравниваем процессинг, аренду, покупку или комплект юрлицо + банк.",
-              "Не обещаем обойти правила Stripe: решение по аккаунту всегда остаётся за платформой."
+              "Фиксируем категорию: adult-adjacent, supplements, travel, ticketing, crypto-adjacent и т.д. Сразу говорим, что стандартный Stripe часто недоступен.",
+              "Смотрим chargeback history, банк, юрисдикцию, сайт и рекламу. Без честного описания модели консультация бессмысленна.",
+              "Stripe — только после жёсткой оценки. Часто итогом бывает отказ, routing через другой контур или требование сменить оффер/гео — без обещаний «одобрим любой high-risk»."
             ]
           }
         ],
         "faq": [
           {
             "question": "Гарантируете ли вы подключение high-risk ниши?",
-            "answer": "Нет. Решение принимает Stripe или другой провайдер. Мы проводим скрининг и называем реальные шансы."
+            "answer": "Нет. Сначала жёсткий скрининг категории, сайта и истории споров. Итог может быть отказ, другой эквайринг или смена оффера — без обещания одобрения Stripe."
           },
           {
             "question": "Что такое chargeback rate?",
@@ -4478,10 +4760,6 @@
           {
             "question": "Что делать, если аккаунт уже ограничен?",
             "answer": "Это отдельная ситуация. Подробности смотрите на странице о проблемах с аккаунтом Stripe."
-          },
-          {
-            "question": "Можно ли гарантировать подключение Stripe для моей ниши?",
-            "answer": "Нет. Мы оцениваем риски и готовим связку, но одобрение даёт Stripe. Если модель не проходит, честно предлагаем другой контур или отказываемся от заведомо неподходящей схемы."
           }
         ],
         "ctas": [
@@ -4497,12 +4775,30 @@
             "label": "Бесплатная консультация",
             "path": "/contacts"
           }
+        ],
+        "facts": [
+          {
+            "label": "Типовой формат",
+            "value": "Case-by-case"
+          },
+          {
+            "label": "Ключевой риск",
+            "value": "Category prohibition / hold"
+          },
+          {
+            "label": "Риск-тон",
+            "value": "Критический"
+          },
+          {
+            "label": "Смотрим в первую очередь",
+            "value": "Category, history, bank, ads"
+          }
         ]
       },
       "uk": {
         "meta": {
           "title": "High-risk і Stripe: чесний скринінг без гарантій",
-          "description": "Що вважається high-risk для Stripe, які ніші обмежені, як проходить перевірка та які є варіанти, якщо Stripe не підходить.",
+          "description": "High-risk і Stripe: жорсткий скринінг категорії, банку й сайту. Чесна оцінка без гарантії схвалення.",
           "keywords": [
             "процесинг для high risk",
             "high risk merchant account",
@@ -4546,18 +4842,18 @@
             ]
           },
           {
-            "title": "Як ми оцінюємо нішу під Stripe",
+            "title": "Скринінг high-risk ніші",
             "paragraphs": [
-              "Звіряємо MCC, публічний опис оферу, політику повернень і модель спорів — це впливає на ліміти сильніше за «просто підключити API».",
-              "Якщо ніша виглядає restricted, кажемо про це до старту і порівнюємо процесинг, оренду, купівлю або комплект юрособа + банк.",
-              "Не обіцяємо обійти правила Stripe: рішення щодо акаунта завжди лишається за платформою."
+              "Фіксуємо категорію: adult-adjacent, supplements, travel, ticketing, crypto-adjacent тощо. Одразу кажемо, що стандартний Stripe часто недоступний.",
+              "Дивимось chargeback history, банк, юрисдикцію, сайт і рекламу. Без чесного опису моделі консультація марна.",
+              "Stripe — лише після жорсткої оцінки. Часто підсумок — відмова, routing через інший контур або вимога змінити офер/гео — без обіцянок «схвалимо будь-який high-risk»."
             ]
           }
         ],
         "faq": [
           {
             "question": "Чи гарантуєте ви підключення high-risk ніші?",
-            "answer": "Ні. Рішення ухвалює Stripe або інший провайдер. Ми проводимо скринінг і називаємо реальні шанси."
+            "answer": "Ні. Спочатку жорсткий скринінг категорії, сайту й історії спорів. Підсумок може бути відмова, інший еквайринг або зміна оферу — без обіцянки схвалення Stripe."
           },
           {
             "question": "Що таке chargeback rate?",
@@ -4570,10 +4866,6 @@
           {
             "question": "Що робити, якщо акаунт уже обмежено?",
             "answer": "Це окрема ситуація. Подробиці дивіться на сторінці про проблеми з акаунтом Stripe."
-          },
-          {
-            "question": "Чи можна гарантувати підключення Stripe для моєї ніші?",
-            "answer": "Ні. Ми оцінюємо ризики і готуємо зв’язку, але схвалення дає Stripe. Якщо модель не проходить, чесно пропонуємо інший контур або відмовляємось від завідомо невідповідної схеми."
           }
         ],
         "ctas": [
@@ -4589,12 +4881,30 @@
             "label": "Безкоштовна консультація",
             "path": "/contacts"
           }
+        ],
+        "facts": [
+          {
+            "label": "Типовий формат",
+            "value": "Case-by-case"
+          },
+          {
+            "label": "Ключовий ризик",
+            "value": "Category prohibition / hold"
+          },
+          {
+            "label": "Ризик-тон",
+            "value": "Критичний"
+          },
+          {
+            "label": "Дивимось насамперед",
+            "value": "Category, history, bank, ads"
+          }
         ]
       },
       "en": {
         "meta": {
           "title": "High-risk and Stripe: honest screening, no guarantees",
-          "description": "What counts as high-risk for Stripe, which niches are restricted, how review works and what your options are if Stripe does not fit.",
+          "description": "High-risk and Stripe: strict screening of category, bank and site. Honest assessment with no approval promise.",
           "keywords": [
             "high risk merchant account",
             "high risk stripe",
@@ -4637,18 +4947,18 @@
             ]
           },
           {
-            "title": "How we assess a niche for Stripe",
+            "title": "High-risk niche screening",
             "paragraphs": [
-              "We align MCC, public offer copy, refund policy and dispute patterns — these drive limits more than “just wire the API”.",
-              "If the niche looks restricted, we say so before start and compare processing, rental, purchase or an entity + bank package.",
-              "We do not promise to bypass Stripe rules: the platform always decides on the account."
+              "We pin the category: adult-adjacent, supplements, travel, ticketing, crypto-adjacent, etc. Standard Stripe is often unavailable — we say that upfront.",
+              "We review chargeback history, bank, jurisdiction, site and ads. Without an honest model description, intake is pointless.",
+              "Stripe only after strict screening. Outcomes are often decline, routing via another stack, or changing offer/geo — never “we’ll approve any high-risk”."
             ]
           }
         ],
         "faq": [
           {
-            "question": "Do you guarantee a high-risk niche will be connected?",
-            "answer": "No. Stripe or another provider makes the decision. We run a screening and tell you the realistic odds."
+            "question": "Do you guarantee high-risk niche approval?",
+            "answer": "No. Strict screening of category, site and dispute history comes first. Outcomes may be decline, another acquirer or offer changes — never a Stripe approval promise."
           },
           {
             "question": "What is a chargeback rate?",
@@ -4661,10 +4971,6 @@
           {
             "question": "What if my account is already restricted?",
             "answer": "That is a separate situation. See the page on Stripe account issues for details."
-          },
-          {
-            "question": "Can you guarantee Stripe for my niche?",
-            "answer": "No. We assess risk and prepare the stack, but Stripe decides. If the model cannot pass, we propose another path or decline an unfit scheme."
           }
         ],
         "ctas": [
@@ -4680,6 +4986,24 @@
             "label": "Free consultation",
             "path": "/contacts"
           }
+        ],
+        "facts": [
+          {
+            "label": "Typical format",
+            "value": "Case-by-case"
+          },
+          {
+            "label": "Key risk",
+            "value": "Category prohibition / hold"
+          },
+          {
+            "label": "Risk tone",
+            "value": "Critical"
+          },
+          {
+            "label": "We check first",
+            "value": "Category, history, bank, ads"
+          }
         ]
       }
     },
@@ -4691,7 +5015,7 @@
       "ru": {
         "meta": {
           "title": "Stripe и Forex: возможно ли подключение | WayOfProcessing",
-          "description": "Forex и брокерские услуги обычно не подходят для Stripe. Что говорят правила платформы и какие есть альтернативы.",
+          "description": "Forex/CFD и Stripe: лицензии, disclosures, почему retail без регулятора почти всегда отказ.",
           "keywords": [
             "процессинг для форекс",
             "forex payment processing",
@@ -4735,11 +5059,11 @@
             ]
           },
           {
-            "title": "Как мы оцениваем нишу под Stripe",
+            "title": "Скрининг forex / CFD / брокерских моделей",
             "paragraphs": [
-              "Сверяем MCC, публичное описание оффера, политику возвратов и модель споров — это влияет на лимиты сильнее «просто подключить API».",
-              "Если ниша выглядит restricted, говорим об этом до старта и сравниваем процессинг, аренду, покупку или комплект юрлицо + банк.",
-              "Не обещаем обойти правила Stripe: решение по аккаунту всегда остаётся за платформой."
+              "Проверяем лицензии, юрисдикцию регулятора, публичные disclosures и запрет на приём платёжек без разрешённого статуса. Без лицензии Stripe почти всегда стоп.",
+              "Риски: mis-selling, агрессивный affiliate, вывод средств клиентам, санкционные гео. Нужны compliance officer и чистый сайт без «гарантий прибыли».",
+              "Stripe для retail forex/CFD чаще недоступен. Реалистичный путь — лицензированный стек + специализированный эквайринг; мы честно отсекаем нелегальные схемы."
             ]
           }
         ],
@@ -4761,8 +5085,8 @@
             "answer": "Нет. Мы не обходим правила платёжной системы. Мы оцениваем модель и объясняем, какие есть законные варианты."
           },
           {
-            "question": "Можно ли гарантировать подключение Stripe для моей ниши?",
-            "answer": "Нет. Мы оцениваем риски и готовим связку, но одобрение даёт Stripe. Если модель не проходит, честно предлагаем другой контур или отказываемся от заведомо неподходящей схемы."
+            "question": "Почему forex/CFD почти не проходит в Stripe?",
+            "answer": "Нужны лицензии и разрешённый статус. Retail брокерские модели без регулятора Stripe обычно отклоняет; ищем специализированный стек или честно отказываем."
           }
         ],
         "ctas": [
@@ -4778,12 +5102,30 @@
             "label": "Бесплатная консультация",
             "path": "/contacts"
           }
+        ],
+        "facts": [
+          {
+            "label": "Типовой формат",
+            "value": "Licensed broker stack"
+          },
+          {
+            "label": "Ключевой риск",
+            "value": "Unlicensed retail forex"
+          },
+          {
+            "label": "Риск-тон",
+            "value": "Критический"
+          },
+          {
+            "label": "Смотрим в первую очередь",
+            "value": "License, disclosures, geos"
+          }
         ]
       },
       "uk": {
         "meta": {
           "title": "Stripe і Forex: чи можливе підключення | WayOfProcessing",
-          "description": "Forex і брокерські послуги зазвичай не підходять для Stripe. Що кажуть правила платформи і які є альтернативи.",
+          "description": "Forex/CFD і Stripe: ліцензії, disclosures, чому retail без регулятора майже завжди відмова.",
           "keywords": [
             "процесинг для форекс",
             "forex payment processing",
@@ -4827,11 +5169,11 @@
             ]
           },
           {
-            "title": "Як ми оцінюємо нішу під Stripe",
+            "title": "Скринінг forex / CFD / брокерських моделей",
             "paragraphs": [
-              "Звіряємо MCC, публічний опис оферу, політику повернень і модель спорів — це впливає на ліміти сильніше за «просто підключити API».",
-              "Якщо ніша виглядає restricted, кажемо про це до старту і порівнюємо процесинг, оренду, купівлю або комплект юрособа + банк.",
-              "Не обіцяємо обійти правила Stripe: рішення щодо акаунта завжди лишається за платформою."
+              "Перевіряємо ліцензії, юрисдикцію регулятора, публічні disclosures і заборону прийому платежів без дозволеного статусу. Без ліцензії Stripe майже завжди стоп.",
+              "Ризики: mis-selling, агресивний affiliate, вивід коштів клієнтам, санкційні гео. Потрібні compliance officer і чистий сайт без «гарантій прибутку».",
+              "Stripe для retail forex/CFD частіше недоступний. Реалістичний шлях — ліцензований стек + спеціалізований еквайринг; ми чесно відсікаємо нелегальні схеми."
             ]
           }
         ],
@@ -4853,8 +5195,8 @@
             "answer": "Ні. Ми не обходимо правила платіжної системи. Ми оцінюємо модель і пояснюємо, які є законні варіанти."
           },
           {
-            "question": "Чи можна гарантувати підключення Stripe для моєї ніші?",
-            "answer": "Ні. Ми оцінюємо ризики і готуємо зв’язку, але схвалення дає Stripe. Якщо модель не проходить, чесно пропонуємо інший контур або відмовляємось від завідомо невідповідної схеми."
+            "question": "Чому forex/CFD майже не проходить у Stripe?",
+            "answer": "Потрібні ліцензії й дозволений статус. Retail брокерські моделі без регулятора Stripe зазвичай відхиляє; шукаємо спеціалізований стек або чесно відмовляємо."
           }
         ],
         "ctas": [
@@ -4870,12 +5212,30 @@
             "label": "Безкоштовна консультація",
             "path": "/contacts"
           }
+        ],
+        "facts": [
+          {
+            "label": "Типовий формат",
+            "value": "Licensed broker stack"
+          },
+          {
+            "label": "Ключовий ризик",
+            "value": "Unlicensed retail forex"
+          },
+          {
+            "label": "Ризик-тон",
+            "value": "Критичний"
+          },
+          {
+            "label": "Дивимось насамперед",
+            "value": "License, disclosures, geos"
+          }
         ]
       },
       "en": {
         "meta": {
           "title": "Stripe and Forex: Is It Possible? | WayOfProcessing",
-          "description": "Forex and brokerage services are usually not accepted by Stripe. What the platform rules say and what the alternatives are.",
+          "description": "Forex/CFD and Stripe: licenses, disclosures, why unregulated retail is almost always declined.",
           "keywords": [
             "forex payment processing",
             "stripe forex",
@@ -4918,11 +5278,11 @@
             ]
           },
           {
-            "title": "How we assess a niche for Stripe",
+            "title": "Forex / CFD / broker screening",
             "paragraphs": [
-              "We align MCC, public offer copy, refund policy and dispute patterns — these drive limits more than “just wire the API”.",
-              "If the niche looks restricted, we say so before start and compare processing, rental, purchase or an entity + bank package.",
-              "We do not promise to bypass Stripe rules: the platform always decides on the account."
+              "We check licenses, regulator jurisdiction, public disclosures and rules against taking cards without authorized status. Without a license Stripe is almost always a stop.",
+              "Risks: mis-selling, aggressive affiliates, client withdrawals, sanctioned geos. You need a compliance owner and a clean site with no “profit guarantees”.",
+              "Stripe for retail forex/CFD is often unavailable. A licensed stack plus a specialist acquirer is realistic; we decline illegal schemes outright."
             ]
           }
         ],
@@ -4944,8 +5304,8 @@
             "answer": "No. We do not work around the payment platform’s rules. We assess the model and explain which lawful options exist."
           },
           {
-            "question": "Can you guarantee Stripe for my niche?",
-            "answer": "No. We assess risk and prepare the stack, but Stripe decides. If the model cannot pass, we propose another path or decline an unfit scheme."
+            "question": "Why do forex/CFD rarely pass Stripe?",
+            "answer": "Licenses and authorized status are required. Unregulated retail broker models are usually declined; we seek a specialist stack or decline honestly."
           }
         ],
         "ctas": [
@@ -4961,6 +5321,24 @@
             "label": "Free consultation",
             "path": "/contacts"
           }
+        ],
+        "facts": [
+          {
+            "label": "Typical format",
+            "value": "Licensed broker stack"
+          },
+          {
+            "label": "Key risk",
+            "value": "Unlicensed retail forex"
+          },
+          {
+            "label": "Risk tone",
+            "value": "Critical"
+          },
+          {
+            "label": "We check first",
+            "value": "License, disclosures, geos"
+          }
         ]
       }
     },
@@ -4972,7 +5350,7 @@
       "ru": {
         "meta": {
           "title": "Stripe для украинского бизнеса | WayOfProcessing",
-          "description": "Как принимать международные платежи через Stripe украинскому бизнесу: схема, документы, сроки и вывод средств.",
+          "description": "Stripe для Украины и ФОП: почему нужен foreign entity, аренда на старте и как выбрать юрисдикцию под клиентов.",
           "keywords": [
             "stripe для украинского бизнеса",
             "stripe в украине",
@@ -5022,6 +5400,22 @@
             ]
           },
           {
+            "title": "ФОП vs иностранная компания",
+            "paragraphs": [
+              "ФОП удобен для локальных налогов, но Stripe для Украины в прямом подключении недоступен — нужен иностранный контур.",
+              "Foreign Ltd (PL/EE/CY/UK/HK) + бизнес-счёт даёт шанс на свой Stripe при прозрачном сайте и нише.",
+              "На пилоте допустима аренда/routing, пока готовится юрлицо; после стабильного оборота — переход на свой perimeter."
+            ]
+          },
+          {
+            "title": "Что решить до выбора страны",
+            "paragraphs": [
+              "Где клиенты и валюта выплат, готовы ли к substance и отчётности, какой MCC и refund policy.",
+              "Сравниваем Польшу/Эстонию для EU-first, UK после Brexit, HK для Азии — без «одной страны для всех».",
+              "Документы: паспорт, структура владения, сайт, оферта. Без этого регистрация юрлица не ускорит Stripe."
+            ]
+          },
+          {
             "title": "Следующий шаг",
             "paragraphs": [
               "Опишите ситуацию в заявке: ниша, сайт, страна клиентов и что уже пробовали.",
@@ -5060,12 +5454,30 @@
             "label": "Бесплатная консультация",
             "path": "/contacts"
           }
+        ],
+        "facts": [
+          {
+            "label": "ФОП в Украине",
+            "value": "Не открывает Stripe напрямую"
+          },
+          {
+            "label": "Типовой путь",
+            "value": "Foreign entity + bank"
+          },
+          {
+            "label": "Альтернатива",
+            "value": "Оренда / routing на старте"
+          },
+          {
+            "label": "Срок",
+            "value": "Зависит от юрисдикции и KYC"
+          }
         ]
       },
       "uk": {
         "meta": {
           "title": "Stripe для українського бізнесу | WayOfProcessing",
-          "description": "Як приймати міжнародні платежі через Stripe українському бізнесу: схема, документи, терміни та виведення коштів.",
+          "description": "Stripe для України та ФОП: чому потрібен foreign entity, оренда на старті і як обрати юрисдикцію під клієнтів.",
           "keywords": [
             "stripe для українського бізнесу",
             "stripe в україні",
@@ -5115,6 +5527,22 @@
             ]
           },
           {
+            "title": "ФОП vs іноземна компанія",
+            "paragraphs": [
+              "ФОП зручний для локальних податків, але Stripe для України в прямому підключенні недоступний — потрібен іноземний контур.",
+              "Foreign Ltd (PL/EE/CY/UK/HK) + бізнес-рахунок дає шанс на свій Stripe за прозорого сайту й ніші.",
+              "На пілоті допустима оренда/routing, поки готується юрособа; після стабільного обігу — перехід на свій perimeter."
+            ]
+          },
+          {
+            "title": "Що вирішити до вибору країни",
+            "paragraphs": [
+              "Де клієнти й валюта виплат, чи готові до substance і звітності, який MCC і refund policy.",
+              "Порівнюємо Польщу/Естонію для EU-first, UK після Brexit, HK для Азії — без «однієї країни для всіх».",
+              "Документи: паспорт, структура власності, сайт, оферта. Без цього реєстрація юрособи не прискорить Stripe."
+            ]
+          },
+          {
             "title": "Наступний крок",
             "paragraphs": [
               "Опишіть ситуацію в заявці: ніша, сайт, країна клієнтів і що вже пробували.",
@@ -5153,12 +5581,30 @@
             "label": "Безкоштовна консультація",
             "path": "/contacts"
           }
+        ],
+        "facts": [
+          {
+            "label": "ФОП в Україні",
+            "value": "Не відкриває Stripe напряму"
+          },
+          {
+            "label": "Типовий шлях",
+            "value": "Foreign entity + bank"
+          },
+          {
+            "label": "Альтернатива",
+            "value": "Оренда / routing на старті"
+          },
+          {
+            "label": "Строк",
+            "value": "Залежить від юрисдикції і KYC"
+          }
         ]
       },
       "en": {
         "meta": {
           "title": "Stripe for Ukrainian Business | WayOfProcessing",
-          "description": "How a Ukrainian business can accept international payments via Stripe: structure, documents, timelines and withdrawing funds.",
+          "description": "Stripe for Ukraine and sole traders: why you need a foreign entity, rental at start and how to pick a jurisdiction.",
           "keywords": [
             "stripe for ukrainian business",
             "stripe in ukraine",
@@ -5207,6 +5653,22 @@
             ]
           },
           {
+            "title": "Sole trader vs foreign company",
+            "paragraphs": [
+              "A Ukrainian sole trader works for local tax, but Stripe is not available as a direct UA connection — you need a foreign stack.",
+              "A foreign Ltd (PL/EE/CY/UK/HK) plus a business account can unlock your own Stripe with a clear site and niche.",
+              "Rental/routing can cover the pilot while the entity is prepared; after stable volume, move to your own perimeter."
+            ]
+          },
+          {
+            "title": "Decide before picking a country",
+            "paragraphs": [
+              "Where customers and payout currency sit, readiness for substance/reporting, MCC and refund policy.",
+              "We compare Poland/Estonia for EU-first, UK post-Brexit, HK for Asia — no single “country for everyone”.",
+              "Documents: passport, ownership structure, site, terms. Entity registration alone will not speed up Stripe."
+            ]
+          },
+          {
             "title": "Next step",
             "paragraphs": [
               "Describe the case in the request: niche, site, customer countries and what you already tried.",
@@ -5245,6 +5707,24 @@
             "label": "Free consultation",
             "path": "/contacts"
           }
+        ],
+        "facts": [
+          {
+            "label": "Ukrainian sole trader",
+            "value": "Cannot open Stripe directly"
+          },
+          {
+            "label": "Typical path",
+            "value": "Foreign entity + bank"
+          },
+          {
+            "label": "Alternative",
+            "value": "Rental / routing at start"
+          },
+          {
+            "label": "Timeline",
+            "value": "Depends on jurisdiction and KYC"
+          }
         ]
       }
     },
@@ -5256,7 +5736,7 @@
       "ru": {
         "meta": {
           "title": "Блокировка и лимиты Stripe: что делать | WayOfProcessing",
-          "description": "Заморозка выплат, лимиты и закрытие аккаунта Stripe. Причины, порядок действий и как снизить риск повторения.",
+          "description": "Блокировка или hold Stripe: что делать за 48 часов, какие документы собрать и когда менять платёжный контур.",
           "keywords": [
             "stripe заблокировал аккаунт",
             "stripe review что делать",
@@ -5310,6 +5790,22 @@
             ]
           },
           {
+            "title": "Чеклист документов за 48 часов",
+            "paragraphs": [
+              "Сохраните все письма Stripe (Account update, Restricted, Reserve), скрины Dashboard и даты последних выплат.",
+              "Соберите выписки банка, договор/оферту, описание продукта и рекламные креативы за период споров.",
+              "Зафиксируйте chargeback reason codes и ответы в Evidence — без этого новый контур повторит ошибку."
+            ]
+          },
+          {
+            "title": "Когда останавливать попытки «починить» аккаунт",
+            "paragraphs": [
+              "Если категория запрещена или сайт систематически не соответствует платежам — дальнейшие апелляции редко помогают.",
+              "При повторных reserve/hold на том же MCC разумнее план B: другой аккаунт/routing или смена модели.",
+              "Мы говорим стоп до оплаты «волшебного разблокирования» — без документов и честной оценки это слив бюджета."
+            ]
+          },
+          {
             "title": "Следующий шаг",
             "paragraphs": [
               "Опишите ситуацию в заявке: ниша, сайт, страна клиентов и что уже пробовали.",
@@ -5348,12 +5844,30 @@
             "label": "Бесплатная консультация",
             "path": "/contacts"
           }
+        ],
+        "facts": [
+          {
+            "label": "Первые 48 часов",
+            "value": "Не менять оффер хаотично"
+          },
+          {
+            "label": "Документы",
+            "value": "Письма Stripe, выписки, сайт"
+          },
+          {
+            "label": "Типичный исход",
+            "value": "Снять hold или сменить контур"
+          },
+          {
+            "label": "Чего не обещаем",
+            "value": "Гарантированное снятие блокировки"
+          }
         ]
       },
       "uk": {
         "meta": {
           "title": "Блокування та ліміти Stripe: що робити | WayOfProcessing",
-          "description": "Замороження виплат, ліміти й закриття акаунта Stripe. Причини, порядок дій і як знизити ризик повторення.",
+          "description": "Блокування або hold Stripe: що робити за 48 годин, які документи зібрати і коли міняти платіжний контур.",
           "keywords": [
             "stripe заблокував акаунт",
             "stripe review що робити",
@@ -5407,6 +5921,22 @@
             ]
           },
           {
+            "title": "Чеклист документів за 48 годин",
+            "paragraphs": [
+              "Збережіть усі листи Stripe (Account update, Restricted, Reserve), скріни Dashboard і дати останніх виплат.",
+              "Зберіть виписки банку, договір/оферту, опис продукту й рекламні креативи за період спорів.",
+              "Зафіксуйте chargeback reason codes і відповіді в Evidence — без цього новий контур повторить помилку."
+            ]
+          },
+          {
+            "title": "Коли зупиняти спроби «полагодити» акаунт",
+            "paragraphs": [
+              "Якщо категорія заборонена або сайт системно не відповідає платежам — подальші апеляції рідко допомагають.",
+              "За повторних reserve/hold на тому ж MCC розумніше план B: інший акаунт/routing або зміна моделі.",
+              "Ми кажемо стоп до оплати «чарівного розблокування» — без документів і чесної оцінки це злив бюджету."
+            ]
+          },
+          {
             "title": "Наступний крок",
             "paragraphs": [
               "Опишіть ситуацію в заявці: ніша, сайт, країна клієнтів і що вже пробували.",
@@ -5445,12 +5975,30 @@
             "label": "Безкоштовна консультація",
             "path": "/contacts"
           }
+        ],
+        "facts": [
+          {
+            "label": "Перші 48 годин",
+            "value": "Не змінювати офер хаотично"
+          },
+          {
+            "label": "Документи",
+            "value": "Листи Stripe, виписки, сайт"
+          },
+          {
+            "label": "Типовий наслідок",
+            "value": "Зняти hold або змінити контур"
+          },
+          {
+            "label": "Чого не обіцяємо",
+            "value": "Гарантоване зняття блокування"
+          }
         ]
       },
       "en": {
         "meta": {
           "title": "Stripe Account Limits and Holds: What to Do | WayOfProcessing",
-          "description": "Payout holds, limits and account closures on Stripe. Causes, action plan and how to reduce the risk of a repeat.",
+          "description": "Stripe block or hold: what to do in 48 hours, which documents to gather and when to change the payment stack.",
           "keywords": [
             "stripe account suspended",
             "stripe account under review",
@@ -5504,6 +6052,22 @@
             ]
           },
           {
+            "title": "48-hour document checklist",
+            "paragraphs": [
+              "Keep every Stripe email (Account update, Restricted, Reserve), Dashboard screenshots and last payout dates.",
+              "Gather bank statements, terms/offer, product description and ads from the dispute period.",
+              "Log chargeback reason codes and Evidence replies — without them a new stack repeats the failure."
+            ]
+          },
+          {
+            "title": "When to stop “fixing” the account",
+            "paragraphs": [
+              "If the category is prohibited or the site systematically mismatches payments, more appeals rarely help.",
+              "Repeated reserves/holds on the same MCC mean plan B: another account/routing or a model change.",
+              "We stop before paying for a “magic unlock” — without documents and honest assessment it wastes budget."
+            ]
+          },
+          {
             "title": "Next step",
             "paragraphs": [
               "Describe the case in the request: niche, site, customer countries and what you already tried.",
@@ -5541,6 +6105,24 @@
           {
             "label": "Free consultation",
             "path": "/contacts"
+          }
+        ],
+        "facts": [
+          {
+            "label": "First 48 hours",
+            "value": "Do not change the offer chaotically"
+          },
+          {
+            "label": "Documents",
+            "value": "Stripe emails, statements, site"
+          },
+          {
+            "label": "Typical outcome",
+            "value": "Lift hold or change stack"
+          },
+          {
+            "label": "What we never promise",
+            "value": "Guaranteed unlock"
           }
         ]
       }

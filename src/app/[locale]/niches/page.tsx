@@ -128,7 +128,7 @@ export default async function NichesHubPage({ params }: Props) {
           </ul>
         </header>
 
-        <HubRichBody intro={view.intro} sections={view.sections} />
+        <HubRichBody intro={view.intro} sections={view.sections} ctas={view.ctas} locale={locale} />
 
         <div className={styles.guideTables}>
           {getHubTables('niches', locale).map((table) => (

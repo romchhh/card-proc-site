@@ -7,11 +7,13 @@ import { ContactModalProvider } from './ContactModalProvider'
 import CookieConsent from './CookieConsent'
 import HashScrollHandler from './HashScrollHandler'
 import LangSync from './LangSync'
+import LocaleScrollReset from './LocaleScrollReset'
 
 export default function Providers({ children }: { children: React.ReactNode }) {
   return (
     <I18nextProvider i18n={i18n}>
       <LangSync />
+      <LocaleScrollReset />
       <HashScrollHandler />
       <ContactModalProvider>{children}</ContactModalProvider>
       <CookieConsent />

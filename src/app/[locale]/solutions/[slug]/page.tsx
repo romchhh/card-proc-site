@@ -11,7 +11,7 @@ import {
   isValidLandingSlug,
 } from '@/lib/landings'
 import { getLandingServiceImage, landingToServiceView } from '@/lib/landing-as-service'
-import { buildServiceJsonLd, getDefaultServiceProcess } from '@/lib/service-seo'
+import { buildServiceJsonLd } from '@/lib/service-seo'
 import { buildPageMetadata } from '@/lib/seo'
 import { siteConfig } from '@/lib/site'
 
@@ -65,7 +65,6 @@ export default async function SolutionPage({ params }: Props) {
           locale,
           path: landing.path,
           parent: { name: hubTitle, path: '/solutions' },
-          processSteps: getDefaultServiceProcess(locale),
         })}
 
       />

@@ -113,6 +113,54 @@
   text-underline-offset: 3px;
 }
 
+.scenarios {
+  margin: 0 0 var(--space-10);
+}
+
+.scenariosTitle {
+  margin: 0 0 var(--space-5);
+  font-size: var(--page-h2);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--gray-900);
+}
+
+.scenarioList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.scenarioList li {
+  padding: 18px 20px;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  background: rgba(246, 249, 252, 0.7);
+}
+
+.scenarioList h3 {
+  margin: 0 0 8px;
+  font-size: var(--text-base);
+  font-weight: 800;
+  color: var(--gray-900);
+}
+
+.scenarioList p {
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: var(--leading-body);
+  color: var(--gray-500);
+}
+
+@media (max-width: 768px) {
+  .scenarioList {
+    grid-template-columns: 1fr;
+  }
+}
+
 .faqTitle {
   font-size: var(--page-h2);
   font-weight: 800;
