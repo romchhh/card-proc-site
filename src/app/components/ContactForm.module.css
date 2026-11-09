@@ -79,38 +79,209 @@
   min-height: 0;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
 }
 
-.formModal .field input,
-.formModal .field textarea {
-  padding: 14px 16px;
-}
-
-.fieldGrow {
-  flex: 1;
-  min-height: 0;
+.floatField {
   display: flex;
   flex-direction: column;
+  gap: 6px;
+  padding: 16px 20px 14px;
+  border-radius: 22px;
+  background: #fff;
+  border: 2.5px solid #c9d3e0;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
 }
 
-.formModal .fieldGrow textarea {
+.floatField:focus-within {
+  background: #fff;
+  border-color: var(--stripe-blue);
+  box-shadow: 0 0 0 3px var(--stripe-blue-light);
+}
+
+.floatInvalid {
+  border-color: #f87171;
+}
+
+.floatField label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gray-500);
+  letter-spacing: 0.01em;
+}
+
+.floatOptional {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--gray-400);
+}
+
+.floatField input,
+.floatField textarea {
+  width: 100%;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  color: var(--gray-900);
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.35;
+  outline: none;
+  resize: none;
+  box-shadow: none;
+}
+
+.floatField input::placeholder,
+.floatField textarea::placeholder {
+  color: var(--gray-400);
+  font-weight: 500;
+}
+
+.floatField input:focus,
+.floatField textarea:focus {
+  border: none;
+  box-shadow: none;
+}
+
+.floatMessage {
+  min-height: 110px;
+  flex: 1;
+}
+
+.floatMessage textarea {
   flex: 1;
   min-height: 72px;
+  height: 100%;
 }
 
-.formModal .submit {
-  margin-top: auto;
+.phoneRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dialSelectWrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  color: var(--gray-900);
+}
+
+.dialSelect {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--gray-900);
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 0 18px 0 0;
+  margin: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+.dialSelect option {
+  color: var(--gray-900);
+  background: #fff;
+}
+
+.dialChevron {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: var(--gray-400);
+  display: flex;
+}
+
+.phoneRow input {
+  flex: 1;
+  min-width: 0;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.consentModal {
+  margin-top: 4px;
+  gap: 10px;
+}
+
+.consentModal span {
+  color: var(--gray-500);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.consentModal input {
+  accent-color: var(--stripe-blue);
+}
+
+.submitModal {
+  margin-top: 8px;
   align-self: stretch;
   justify-content: center;
-  padding: 16px 32px;
-  font-size: var(--text-base);
+  gap: 10px;
+  padding: 18px 28px;
+  border-radius: 999px;
+  background: var(--stripe-blue);
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  box-shadow: none;
+}
+
+.submitModal:hover:not(:disabled) {
+  transform: translateY(-2px);
+  background: var(--stripe-blue-hover);
+  box-shadow: 0 8px 24px rgba(99, 91, 255, 0.25);
+}
+
+.submitArrowModal {
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 500;
 }
 
 .successModal {
   flex: 1;
   justify-content: center;
-  padding: 0;
+  padding: 24px 8px;
+  color: var(--gray-900);
+}
+
+.successModal h3 {
+  color: var(--gray-900);
+}
+
+.successModal p {
+  color: var(--gray-500);
+}
+
+.formModal .error {
+  color: #dc2626;
+}
+
+.formModal .fieldError {
+  color: #dc2626;
 }
 
 .consent {

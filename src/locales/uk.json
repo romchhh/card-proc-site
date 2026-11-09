@@ -288,7 +288,14 @@
       "whatsapp": "Вкажіть номер WhatsApp із кодом країни",
       "email": "Перевірте формат email"
     },
-    "modalTitle": "Зв’язатися з WayOfProcessing",
+    "modalTitle": "Залиште ваші контакти — ми зв’яжемось з вами протягом дня",
+    "modalNameLabel": "Як вас звати?",
+    "modalNamePlaceholder": "Напишіть сюди своє ім’я",
+    "modalPhoneLabel": "Телефон",
+    "modalPhonePlaceholder": "96 123 45 67",
+    "modalTelegramPlaceholder": "@user_name",
+    "modalCommentPlaceholder": "Розкажіть про вашу задачу та проєкт",
+    "modalSubmit": "Відправити",
     "close": "Закрити",
     "imageAlt": "WayOfProcessing — прийом міжнародних платежів через Stripe",
     "services": {

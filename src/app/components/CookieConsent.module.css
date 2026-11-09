@@ -11,11 +11,11 @@
   align-items: flex-start;
   justify-content: space-between;
   gap: 18px 24px;
-  background: rgba(10, 37, 64, 0.96);
-  color: #fff;
+  background: #fff;
+  color: var(--gray-900);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-subtle);
 }
 
 .copy {
@@ -28,24 +28,25 @@
   font-size: var(--text-base);
   font-weight: 700;
   letter-spacing: -0.01em;
+  color: var(--gray-900);
 }
 
 .text {
   margin: 0;
   font-size: var(--text-sm);
   line-height: 1.55;
-  color: rgba(255, 255, 255, 0.78);
+  color: var(--gray-500);
 }
 
 .link {
-  color: #fff;
+  color: var(--stripe-blue);
   font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
 .link:hover {
-  color: rgba(255, 255, 255, 0.92);
+  color: var(--stripe-blue-hover);
 }
 
 .actions {
@@ -64,28 +65,28 @@
   font-size: var(--text-sm);
   font-weight: 600;
   cursor: pointer;
-  transition: transform 0.2s var(--ease-out), background 0.2s var(--ease-out);
+  transition: transform 0.2s var(--ease-out), background 0.2s var(--ease-out), border-color 0.2s;
 }
 
 .button {
   border: none;
-  background: #fff;
-  color: var(--gray-900);
+  background: var(--stripe-blue);
+  color: #fff;
 }
 
 .button:hover {
   transform: translateY(-1px);
-  background: rgba(255, 255, 255, 0.92);
+  background: var(--stripe-blue-hover);
 }
 
 .buttonGhost {
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  background: transparent;
-  color: #fff;
+  border: 1px solid var(--border-subtle);
+  background: #fff;
+  color: var(--gray-900);
 }
 
 .buttonGhost:hover {
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--gray-100);
 }
 
 @media (max-width: 720px) {

@@ -43,14 +43,15 @@ export default function ContactModal() {
           onClick={close}
           aria-label={t('contact.close')}
         >
-          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 22 22" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" aria-hidden="true">
             <path d="M4 4 L18 18 M18 4 L4 18" />
           </svg>
         </button>
 
         <div className={styles.header}>
-          <h2 id="contact-modal-title" className={styles.title}>{t('contact.modalTitle')}</h2>
-          <p className={styles.subtitle}>{t('contact.subheading')}</p>
+          <h2 id="contact-modal-title" className={styles.title}>
+            {t('contact.modalTitle')}
+          </h2>
         </div>
         <div className={styles.body}>
           <ContactForm modal />
