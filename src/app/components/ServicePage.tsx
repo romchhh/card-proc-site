@@ -21,6 +21,7 @@ import BlogCard from './BlogCard'
 import ContentTable from './ContentTable'
 import ServiceCard from './ServiceCard'
 import SpecialistsSection from './SpecialistsSection'
+import TestimonialsSlider from './TestimonialsSlider'
 import { getChecklistTable, getLandingGuideTables, getSetupPathTable } from '@/lib/guide-tables'
 import type { LandingGroup } from '@/lib/landings'
 import styles from './ServicePage.module.css'
@@ -382,6 +383,8 @@ export default function ServicePage({ slug, view: viewProp, image, breadcrumbs, 
               </div>
             </nav>
           )}
+
+          {!isLanding && <TestimonialsSlider />}
 
           {view.faq.length > 0 && (
             <section id="faq" className={styles.faqSection} aria-labelledby="service-faq-heading">

@@ -1,40 +1,40 @@
 {
   "seo": {
-    "heroImageAlt": "WayOfProcessing — Stripe payment system setup for business",
-    "bottomTitle": "Rent, buy and Stripe processing for business",
-    "bottomText": "WayOfProcessing: rent or buy a Stripe account, turnkey processing, or a company plus bank package. Fees from 1.5%, basic launch from 3 days, payouts in EUR, USD or USDT. Below: setup services and guides on Stripe as a payment system.\n\nTypical path: niche review → rental, purchase or jurisdiction (GB, HK, CY, PL, EE, CZ) → checkout and payouts. Stripe may request documents or restrict an account — we state that before launch.",
+    "heroImageAlt": "WayOfProcessing — turnkey Stripe setup for business",
+    "bottomTitle": "Turnkey Stripe setup for business",
+    "bottomText": "WayOfProcessing helps you connect Stripe turnkey: a payment account, company and bank, payouts in EUR, USD or USDT. Fees from 1.5%, basic launch from 3 days. Below: services and Stripe guides.\n\nTypical path: niche review → format (rental, purchase or jurisdiction GB, HK, CY, PL, EE, CZ) → on-site payments and payouts. If Stripe blocked an account or you need Stripe for Ukraine / without a local LLC — see the solutions section. We do not promise Stripe approval.",
     "guidesHeading": "Guides on Stripe and payment systems",
     "hubsHeading": "Directories: countries, niches, solutions",
     "servicesHeading": "Stripe setup services",
-    "faqHeading": "FAQ on renting, buying and Stripe processing",
+    "faqHeading": "FAQ on connecting Stripe",
     "faq": [
       {
-        "question": "How much does Stripe processing cost?",
-        "answer": "Fees start from 1.5%. The exact rate depends on niche, volume and format (rental, purchase or turnkey processing). We quote after reviewing the site."
+        "question": "How much does Stripe setup cost?",
+        "answer": "Fees start from 1.5%. The exact rate depends on niche, volume and format (rental, purchase or turnkey setup). We quote after reviewing the site."
       },
       {
         "question": "How fast can I start accepting payments?",
-        "answer": "Basic setup from 3 business days with a ready site and agreed niche. Timing grows if you need a custom MCC, routing or a company plus bank package."
+        "answer": "Basic setup from 3 business days with a ready site and agreed niche. Timing grows if you need a custom business code, a backup payment channel or a company plus bank package."
       },
       {
         "question": "Rent or buy a Stripe account — which to choose?",
         "answer": "Rent for a pilot and a fast start. Buy when volume is predictable and you need your own access. Compare options on the rent vs buy page."
       },
       {
+        "question": "What if Stripe blocked the account?",
+        "answer": "Keep emails and dashboard screenshots, do not change the offer chaotically and gather documents within 48 hours. Holds and blocks are covered on the account issues page. We do not guarantee Stripe will lift restrictions."
+      },
+      {
+        "question": "Can I connect Stripe for Ukraine, a sole trader or without an LLC?",
+        "answer": "A Ukrainian sole trader cannot connect Stripe directly. You usually need a foreign stack (company + bank) or rental at the start. See Stripe for Ukraine for details."
+      },
+      {
         "question": "Do you guarantee Stripe will not block the account?",
-        "answer": "No. Stripe decides verification, limits and reviews. We match the setup to the niche and can add routing, but we do not promise approval or a life without checks."
+        "answer": "No. Stripe decides verification, limits and reviews. We match the setup to the niche and can add a backup payment channel, but we do not promise approval or a life without checks."
       },
       {
         "question": "Do I need a company and a bank?",
-        "answer": "For a long-term stack — yes: company, bank account and Stripe. For a pilot, rental is often enough. Jurisdictions: GB, HK, CY, PL, EE, CZ."
-      },
-      {
-        "question": "What is WayOfProcessing?",
-        "answer": "A Stripe setup service: account rental or purchase, processing, CRM and support. Operated by MSM Financial Consultancy Limited, United Kingdom."
-      },
-      {
-        "question": "What is payment routing?",
-        "answer": "Switching transactions to a backup channel if the primary account is under review. It reduces storefront downtime but does not remove Stripe’s risk of restrictions."
+        "answer": "For a long-term setup — yes: company, bank account and Stripe. For a pilot, rental is often enough. Jurisdictions: GB, HK, CY, PL, EE, CZ."
       },
       {
         "question": "How do I get in touch?",
@@ -60,10 +60,10 @@
     "openContact": "Leave a request"
   },
   "hero": {
-    "headline": "Rent and buy",
-    "stripe": "a Stripe account",
+    "headline": "Connect Stripe",
+    "stripe": "turnkey",
     "badge": "Fees from 1.5% · launch from 3 business days",
-    "description": "Turnkey setup, company and bank. We match the format to your niche and jurisdiction — payouts in EUR, USD or USDT.",
+    "description": "A payment account, company and bank. We match the format to your niche and country — payouts in EUR, USD or USDT.",
     "offerRent": "Rent a Stripe account",
     "offerBuy": "Buy a Stripe account",
     "cardLabel": "Leave a request",
@@ -72,18 +72,18 @@
   },
   "specialists": {
     "heading": "What we handle for Stripe setup",
-    "descriptionPrefix": "We help with merchant account, checkout and routing. Launch ",
+    "descriptionPrefix": "We help with a payment account, on-site checkout and a backup channel. Launch ",
     "descriptionBold": "from 3 business days after a full document pack",
     "descriptionSuffix": ". Timing depends on the jurisdiction and Stripe review.",
     "cta": "Get a free consultation",
-    "lead": "In a typical stack:",
+    "lead": "In a typical setup:",
     "item1": "Entity and bank paperwork when a Stripe-ready package is needed",
     "item2Prefix": "Format selection and account support — ",
     "item2Bold": "after niche review, with no Stripe approval guarantee",
-    "item3": "Payout and CRM access setup under the agreed scheme"
+    "item3": "Payout and dashboard access under the agreed scheme"
   },
   "stats": {
-    "heading": "We know our business:",
+    "heading": "Stripe setup: rates and timelines",
     "stat1": {
       "value": "from 1.5%",
       "desc": "processing fee. The exact rate is calculated from the niche after you apply"
@@ -99,7 +99,7 @@
     "cta": "Learn more about WayOfProcessing"
   },
   "services": {
-    "heading": "Stripe setup and payment solutions for business",
+    "heading": "Stripe setup services for business",
     "more": "Learn more",
     "complex": {
       "title": "Legal entity, bank and Stripe — as one package",
@@ -116,13 +116,13 @@
     },
     "processing": {
       "title": "Accepting payments via Stripe",
-      "intro": "We set up checkout for your project — from site API to pay-by-link with no development. Fees from 1.5%, no hidden charges or setup fees.",
+      "intro": "We set up payment acceptance for your project — from site API to pay-by-link with no development. Fees from 1.5%, no hidden charges or setup fees.",
       "rate": "1.5%",
       "rateSuffix": " of turnover",
       "items": {
         "api": "Integration into your site, app or CRM through the official Stripe API.",
-        "cloaking": "Routing between accounts — payments keep flowing if one goes under review.",
-        "invoice": "Payment Link and Invoice: customers pay via a link, no developer required on your side."
+        "cloaking": "Backup channel: payments keep flowing if one account goes under review.",
+        "invoice": "Pay-by-link and invoices: customers pay via a link, no developer required on your side."
       }
     },
     "fintech": {
@@ -136,40 +136,40 @@
     }
   },
   "accounts": {
-    "heading": "Stripe for your project — without doing it alone",
+    "heading": "A Stripe account matched to niche and volume",
     "lead": "Take an account under management or get one registered for yourself. We match the setup to your niche, volume and country.",
-    "desc": "Every case is handled by a specialist: we assess risk, prepare infrastructure and connect in days, not months.",
-    "galleryHeading": "Accounts in operation",
-    "imageAlt": "Stripe interface: payments, balance and payouts — example {{number}}",
+    "desc": "Every request is handled by a specialist: we assess risk, prepare the setup and connect in days, not months.",
+    "galleryHeading": "What the Stripe dashboard looks like",
+    "imageAlt": "Stripe UI illustration (not a client screenshot): payments and balance — example {{number}}",
     "prev": "Previous slide",
     "next": "Next slide",
     "dotsLabel": "Slide navigation",
     "goTo": "Go to slide {{number}}"
   },
   "howWeWork": {
-    "heading": "How we work",
+    "heading": "How to connect Stripe turnkey in 3 days",
     "step1": {
       "title": "Niche and site audit",
-      "desc": "1–2 business days: offer, card geos, Terms/Refund, MCC and CB risk. We state what Stripe may request or reject — no “any project approved” promise."
+      "desc": "1–2 business days: offer, card countries, refund rules, business code and dispute risk. We state what Stripe may request or reject — no “any project approved” promise."
     },
     "step2": {
       "title": "Format and documents",
-      "desc": "Rental, purchase, turnkey processing or company + bank. We agree the docs pack, descriptor, payout currency and who owns which step."
+      "desc": "Rental, purchase, turnkey setup or company + bank. We agree the docs pack, statement descriptor, payout currency and who owns which step."
     },
     "step3": {
       "title": "Integration and live tests",
-      "desc": "From 3 business days with a ready site: Checkout/API, 3DS rules, 10–20 live payments, payout path and statement check."
+      "desc": "From 3 business days with a ready site: on-site payments or API, 3DS rules, 10–20 live payments, payout path and statement check."
     },
     "step4": {
       "title": "Launch and support",
-      "desc": "Decline/CB monitoring, Telegram support, routing and a backup channel when needed. Reviews and limits stay with Stripe."
+      "desc": "Decline and dispute monitoring, Telegram support, a backup payment channel when needed. Reviews and limits stay with Stripe."
     }
   },
   "advantages": {
-    "heading": "Benefits of working with WayOfProcessing",
+    "heading": "Why teams connect Stripe with WayOfProcessing",
     "uptime": {
-      "title": "Payments don't stop when something breaks",
-      "desc": "If one Stripe account goes under review, transactions switch to a backup channel — revenue does not depend on a single point of failure."
+      "title": "Payments don’t stop during reviews",
+      "desc": "If one Stripe account goes under review, payments switch to a backup channel — revenue does not depend on a single point of failure."
     },
     "accounts": {
       "title": "Accounts with history, not blank slates",
@@ -193,7 +193,7 @@
     }
   },
   "clients": {
-    "heading": "Our clients",
+    "heading": "Niches we connect Stripe for",
     "marketplaces": {
       "title": "Marketplaces",
       "desc": "For platforms offering goods and services from various suppliers."

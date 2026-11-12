@@ -1,0 +1,59 @@
+{
+  "heading": {
+    "ru": "Отзывы о подключении Stripe",
+    "uk": "Відгуки про підключення Stripe",
+    "en": "Feedback on Stripe setup"
+  },
+  "items": [
+    {
+      "id": "alex-saas",
+      "name": { "ru": "Алексей", "uk": "Олексій", "en": "Alex" },
+      "niche": { "ru": "SaaS", "uk": "SaaS", "en": "SaaS" },
+      "text": {
+        "ru": "Нужен был быстрый старт без своей компании. Аренда аккаунта Stripe закрыла пилот: объяснили риски hold и что Stripe может запросить документы.",
+        "uk": "Потрібен був швидкий старт без своєї компанії. Оренда акаунта Stripe закрила пілот: пояснили ризики hold і що Stripe може запросити документи.",
+        "en": "Needed a fast start without our own company. Stripe account rental covered the pilot: they explained hold risks and that Stripe may still request documents."
+      }
+    },
+    {
+      "id": "maria-courses",
+      "name": { "ru": "Мария", "uk": "Марія", "en": "Maria" },
+      "niche": { "ru": "Онлайн-курсы", "uk": "Онлайн-курси", "en": "Online courses" },
+      "text": {
+        "ru": "Помогли привести офер и возвраты к виду, который Stripe смотрит на проверке. Без обещаний «одобрят любой инфобизнес» — честно сказали, где отказ вероятен.",
+        "uk": "Допомогли привести офер і повернення до вигляду, який Stripe дивиться на перевірці. Без обіцянок «схвалять будь-який інфобізнес» — чесно сказали, де відмова ймовірна.",
+        "en": "Helped align the offer and refunds with what Stripe reviews. No “any info-product approved” promises — they were clear where refusal is likely."
+      }
+    },
+    {
+      "id": "igor-ua",
+      "name": { "ru": "Игорь", "uk": "Ігор", "en": "Ihor" },
+      "niche": { "ru": "Stripe для Украины", "uk": "Stripe для України", "en": "Stripe for Ukraine" },
+      "text": {
+        "ru": "Искали схему без ООО в Украине. Разложили ФОП vs иностранная компания и когда хватает аренды на старте. Доступы передали после проверки ниши.",
+        "uk": "Шукали схему без ТОВ в Україні. Розклали ФОП vs іноземна компанія і коли вистачає оренди на старті. Доступи передали після перевірки ніші.",
+        "en": "Needed a setup without a Ukrainian LLC. They mapped sole trader vs foreign company and when rental is enough at the start. Access came after the niche review."
+      }
+    },
+    {
+      "id": "elena-hold",
+      "name": { "ru": "Елена", "uk": "Олена", "en": "Elena" },
+      "niche": { "ru": "Hold / блокировка", "uk": "Hold / блокування", "en": "Hold / block" },
+      "text": {
+        "ru": "Когда Stripe заморозил выплаты, собрали пакет за 48 часов и поняли, где апелляция бессмысленна. Снятия hold не обещали — помогли с планом B.",
+        "uk": "Коли Stripe заморозив виплати, зібрали пакет за 48 годин і зрозуміли, де апеляція марна. Зняття hold не обіцяли — допомогли з планом B.",
+        "en": "When Stripe froze payouts, we packed evidence in 48 hours and saw where appeals were pointless. No unlock promise — they helped with plan B."
+      }
+    },
+    {
+      "id": "dmitry-buy",
+      "name": { "ru": "Дмитрий", "uk": "Дмитро", "en": "Dmytro" },
+      "niche": { "ru": "Купить аккаунт", "uk": "Купити акаунт", "en": "Buy an account" },
+      "text": {
+        "ru": "После пилота на аренде перешли на покупку аккаунта Stripe. Сверили MCC и сайт до передачи — без «вечных лимитов» в рекламе.",
+        "uk": "Після пілоту на оренді перейшли на купівлю акаунта Stripe. Звірили MCC і сайт до передачі — без «вічних лімітів» у рекламі.",
+        "en": "After a rental pilot we bought a Stripe account. MCC and site were checked before handover — no “forever limits” marketing."
+      }
+    }
+  ]
+}

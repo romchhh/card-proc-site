@@ -4,28 +4,27 @@ import { pickLocaleCopy } from './i18n/config'
 export const siteConfig = {
   name: 'WayOfProcessing',
   title: 'WayOfProcessing — Stripe Payment Processing',
-  titleRu: 'Аренда и покупка аккаунта Stripe, подключение под ключ | WayOfProcessing',
-  titleUk: 'Оренда і купівля акаунта Stripe, підключення під ключ | WayOfProcessing',
-  titleEn: 'Rent or Buy a Stripe Account, Turnkey Setup | WayOfProcessing',
+  titleRu: 'Подключение Stripe под ключ для бизнеса | WayOfProcessing',
+  titleUk: 'Підключення Stripe під ключ для бізнесу | WayOfProcessing',
+  titleEn: 'Turnkey Stripe Setup for Business | WayOfProcessing',
   description:
-    'Stripe payment processing for business: account setup, routing and payouts. Honest limits, no false guarantees.',
+    'Stripe payment processing for business: turnkey account setup, backup payment channel and payouts. Honest limits, no false guarantees.',
   descriptionRu:
-    'Аренда и покупка аккаунта Stripe, процессинг под ключ, юрлицо и банк. Выплаты в EUR, USD и USDT. Комиссия от 1.5%.',
+    'Подключение Stripe под ключ: аккаунт для приёма платежей, юрлицо и банк, выплаты в EUR, USD и USDT. Комиссия от 1.5%.',
   descriptionUk:
-    'Оренда і купівля акаунта Stripe, процесинг під ключ, юрособа і банк. Виплати в EUR, USD і USDT. Комісія від 1.5%.',
+    'Підключення Stripe під ключ: акаунт для прийому платежів, юрособа і банк, виплати в EUR, USD і USDT. Комісія від 1.5%.',
   descriptionEn:
-    'Rent or buy a Stripe account, turnkey processing, company and bank. Payouts in EUR, USD and USDT. Fees from 1.5%.',
+    'Turnkey Stripe setup: payment account, company and bank, payouts in EUR, USD and USDT. Fees from 1.5%.',
   url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://wayofprocessing.com',
   email: 'hello@wayofprocessing.com',
   telegram: '@wayofprocessing',
   telegramChannelUrl: 'https://t.me/wayofprocessing',
   telegramOperatorUrl: 'https://t.me/wayofprocessing',
   locale: 'ru_RU',
-  alternateLocale: 'en_US',
   ogImage: '/images/hero-stripe.webp',
-  ogImageAlt: 'Аренда и покупка аккаунта Stripe — WayOfProcessing',
-  ogImageAltUk: 'Оренда та покупка акаунта Stripe — WayOfProcessing',
-  ogImageAltEn: 'Stripe account rental and purchase — WayOfProcessing',
+  ogImageAlt: 'Подключение Stripe под ключ — WayOfProcessing',
+  ogImageAltUk: 'Підключення Stripe під ключ — WayOfProcessing',
+  ogImageAltEn: 'Turnkey Stripe setup — WayOfProcessing',
   company: {
     legalName: 'MSM FINANCIAL CONSULTANCY LIMITED',
     number: '04820256',
@@ -104,8 +103,8 @@ export const siteConfig = {
     'WayOfProcessing',
   ],
   seo: {
-    slogan: 'Аренда или покупка аккаунта Stripe — от 1.5%',
-    sloganUk: 'Оренда або купівля акаунта Stripe — від 1.5%',
+    slogan: 'Подключение Stripe под ключ — от 1.5%',
+    sloganUk: 'Підключення Stripe під ключ — від 1.5%',
     disclaimer:
       'WayOfProcessing — независимый сервис и не является аффилированным лицом, партнёром или дочерней компанией Stripe, Inc.',
     disclaimerUk:
