@@ -66,9 +66,9 @@ export default function SeoLanding({ locale, landing, view, breadcrumbs }: Props
     en: 'Share the site, customer countries and volume — we will propose a jurisdiction or setup format without promising to bypass Stripe rules.',
   })
   const disclaimer = pickLocaleCopy(locale, {
-    ru: 'WayOfProcessing не аффилирован со Stripe, Inc. Материал информационный и не заменяет налоговую или юридическую консультацию.',
-    uk: 'WayOfProcessing не афілійований зі Stripe, Inc. Матеріал інформаційний і не замінює податкову чи юридичну консультацію.',
-    en: 'WayOfProcessing is not affiliated with Stripe, Inc. This material is informational and is not a substitute for tax or legal advice.',
+    ru: 'WayOfProcessing не аффилирован со Stripe, Inc. Материал информационный и не заменяет налоговую или юридическую консультацию. Юрисдикция или ниша на странице — не обещание обойти правила Stripe.',
+    uk: 'WayOfProcessing не афілійований зі Stripe, Inc. Матеріал інформаційний і не замінює податкову чи юридичну консультацію. Юрисдикція або ніша на сторінці — не обіцянка обійти правила Stripe.',
+    en: 'WayOfProcessing is not affiliated with Stripe, Inc. This material is informational and is not a substitute for tax or legal advice. A jurisdiction or niche on this page is not a promise to bypass Stripe rules.',
   })
 
   return (

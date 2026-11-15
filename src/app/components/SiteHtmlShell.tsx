@@ -19,7 +19,8 @@ export default function SiteHtmlShell({ locale, children }: Props) {
       <head>
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
         <link rel="alternate" type="text/plain" href="/ai.txt" title="AI information" />
-        <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM information" />
+        <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLM information" />
+        <link rel="api-catalog" href="/.well-known/api-catalog" title="API catalog" />
       </head>
       <body className={montserrat.className}>
         <Providers>{children}</Providers>

@@ -16,7 +16,10 @@ WayOfProcessing is an independent service and is not affiliated with, endorsed b
 - Processing fees from 1.5%, quoted after a niche review
 - Basic setup often from 3 business days when the site is ready
 - Not affiliated with Stripe, Inc. Stripe may decline or restrict an account
+- Renting/buying a merchant account is not a Stripe ToS bypass; KYC, limits and review stay with Stripe
+- Forex/brokers and other explicitly rejected categories are not accepted
 - Not a tax-free offer and not tax advice
+- On-site testimonials are niche feedback summaries, not an independent rating
 - Named client reviews are not published without written consent
 - Languages: Russian (/ru, default), Ukrainian (/uk), English (/en)
 

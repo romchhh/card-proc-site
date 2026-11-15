@@ -422,6 +422,15 @@
       }
     }
   },
+  "complianceNotice": {
+    "heading": "About Stripe platform rules",
+    "body": "Renting or buying a merchant account is not a way to “bypass” Stripe. The platform alone decides verification, limits and account closure. We help with the stack (entity, bank, MCC, site, routing) — not with masking prohibited activity.",
+    "item1": "We do not take forex, brokers or other categories Stripe explicitly rejects.",
+    "item2": "We do not promise hold removal, permanent limits or approval of every niche.",
+    "item3": "Your site, offer, refund policy and chargeback rate remain on your side of the risk.",
+    "disclaimerLink": "Disclaimer",
+    "compareLink": "Rent vs buy comparison"
+  },
   "servicePages": {
     "aboutService": "About this service",
     "aboutTopic": "Topic overview",
@@ -510,7 +519,7 @@
     "telegramOperator": "Telegram operator",
     "support247": "24/7 support",
     "aboutHeading": "WayOfProcessing",
-    "aboutText": "WayOfProcessing helps connect Stripe as a payment system: merchant account, checkout, payment routing, a company with a bank account, and a free consultation. The service is not affiliated with Stripe, Inc.",
+    "aboutText": "WayOfProcessing helps connect Stripe: merchant account, checkout, routing, company with a bank. Not affiliated with Stripe, Inc. We do not promise account approval or a platform-rules bypass.",
     "privacy": "Privacy policy",
     "terms": "Terms",
     "disclaimer": "Disclaimer",
@@ -526,12 +535,13 @@
   },
   "trustStrip": {
     "heading": "Transparent company",
-    "lead": "A UK Ltd with a public Companies House record. We are an independent service and not affiliated with Stripe, Inc.",
+    "lead": "A UK Ltd with a public Companies House record. We are an independent service and not affiliated with Stripe, Inc. Renting or buying an account is not a platform-rules bypass: KYC, limits and review stay with Stripe.",
     "legal": "Legal entity",
     "registry": "Registry",
     "companiesHouse": "Companies House no. {{number}}",
     "address": "Address",
     "team": "Team",
-    "aboutLink": "About and contacts"
+    "aboutLink": "About and contacts",
+    "disclaimerLink": "Disclaimer"
   }
 }

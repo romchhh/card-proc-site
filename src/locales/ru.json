@@ -422,6 +422,15 @@
       }
     }
   },
+  "complianceNotice": {
+    "heading": "Важно о правилах Stripe",
+    "body": "Аренда или покупка merchant-аккаунта — это не способ «обойти» Stripe. Платформа сама решает верификацию, лимиты и закрытие аккаунта. Мы помогаем с контуром (юрлицо, банк, MCC, сайт, routing), а не с маскировкой запрещённой деятельности.",
+    "item1": "Не берём forex, брокеров и другие категории, которые Stripe прямо не принимает.",
+    "item2": "Не обещаем снятие hold, вечные лимиты или одобрение любой ниши.",
+    "item3": "Сайт, оферта, refund policy и chargeback rate остаются на вашей стороне риска.",
+    "disclaimerLink": "Отказ от ответственности",
+    "compareLink": "Аренда или покупка — сравнение"
+  },
   "servicePages": {
     "aboutService": "Об услуге",
     "aboutTopic": "Коротко по теме",
@@ -510,7 +519,7 @@
     "telegramOperator": "Телеграм-оператор",
     "support247": "Поддержка 24/7",
     "aboutHeading": "WayOfProcessing",
-    "aboutText": "WayOfProcessing помогает подключить Stripe как платёжную систему: merchant-аккаунт, checkout, payment routing, компания с банком и бесплатная консультация. Сервис не аффилирован со Stripe, Inc.",
+    "aboutText": "WayOfProcessing помогает подключить Stripe: merchant-аккаунт, checkout, routing, компания с банком. Не аффилированы со Stripe, Inc. Одобрение аккаунта и обход правил платформы не обещаем.",
     "privacy": "Политика конфиденциальности",
     "terms": "Условия",
     "disclaimer": "Отказ от ответственности",
@@ -526,12 +535,13 @@
   },
   "trustStrip": {
     "heading": "Прозрачная компания",
-    "lead": "UK Ltd с публичной записью в Companies House. Мы независимый сервис и не аффилированы со Stripe, Inc.",
+    "lead": "UK Ltd с публичной записью в Companies House. Мы независимый сервис и не аффилированы со Stripe, Inc. Аренда или покупка аккаунта — не обход правил платформы: KYC, лимиты и review остаются у Stripe.",
     "legal": "Юрлицо",
     "registry": "Реестр",
     "companiesHouse": "Companies House № {{number}}",
     "address": "Адрес",
     "team": "Команда",
-    "aboutLink": "О компании и контакты"
+    "aboutLink": "О компании и контакты",
+    "disclaimerLink": "Отказ от ответственности"
   }
 }

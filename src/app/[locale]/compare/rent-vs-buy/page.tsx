@@ -21,7 +21,7 @@ const COPY = {
     title: 'Аренда или покупка аккаунта Stripe',
     description:
       'Сравнение аренды, покупки и комплекта юрлицо + банк для Stripe: сроки, контроль доступов и когда какой формат уместен.',
-    lead: 'Один запрос «купить или арендовать Stripe» закрывает три разных контура. Ниже — когда какой выбирать. Stripe в любом случае может запросить документы или ограничить приём.',
+    lead: 'Один запрос «купить или арендовать Stripe» закрывает три разных контура. Ниже — когда какой выбирать. Это не обход правил платформы: Stripe в любом случае может запросить документы, ограничить приём или закрыть аккаунт.',
     rows: [
       {
         label: 'Задача',
@@ -113,7 +113,7 @@ const COPY = {
     title: 'Оренда чи купівля акаунта Stripe',
     description:
       'Порівняння оренди, купівлі і комплекту юрособа + банк для Stripe: строки, контроль доступів і коли який формат доречний.',
-    lead: 'Один запит «купити або орендувати Stripe» закриває три різні контури. Нижче — коли який обирати. Stripe в будь-якому разі може запросити документи або обмежити прийом.',
+    lead: 'Один запит «купити або орендувати Stripe» закриває три різні контури. Нижче — коли який обирати. Це не обхід правил платформи: Stripe в будь-якому разі може запросити документи, обмежити прийом або закрити акаунт.',
     rows: [
       {
         label: 'Завдання',
@@ -205,7 +205,7 @@ const COPY = {
     title: 'Rent or buy a Stripe account',
     description:
       'Compare Stripe account rental, purchase and a company plus bank package: timing, access control and when each format fits.',
-    lead: '“Buy or rent Stripe” covers three different stacks. Below is when to pick each. Stripe may still request documents or restrict acceptance in every format.',
+    lead: '“Buy or rent Stripe” covers three different stacks. Below is when to pick each. This is not a platform-rules bypass: Stripe may still request documents, restrict acceptance or close an account in every format.',
     rows: [
       {
         label: 'Goal',

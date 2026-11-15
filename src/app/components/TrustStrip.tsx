@@ -36,6 +36,10 @@ export default function TrustStrip() {
             <span className={styles.label}>{t('trustStrip.team')}</span>
             <Link href={lp('/about')}>{t('trustStrip.aboutLink')}</Link>
           </li>
+          <li>
+            <span className={styles.label}>{t('footer.disclaimer')}</span>
+            <Link href={lp('/disclaimer')}>{t('trustStrip.disclaimerLink')}</Link>
+          </li>
         </ul>
       </div>
     </section>

@@ -45,6 +45,14 @@ const nextConfig = {
           },
         ],
       },
+      {
+        source: '/llms.txt',
+        headers: [{ key: 'Content-Type', value: 'text/markdown; charset=utf-8' }],
+      },
+      {
+        source: '/.well-known/api-catalog',
+        headers: [{ key: 'Content-Type', value: 'application/linkset+json; charset=utf-8' }],
+      },
     ]
   },
 }

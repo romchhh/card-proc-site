@@ -179,9 +179,9 @@ export default async function AboutPage({ params }: Props) {
             <h1 className={styles.heroTitle}>{title}</h1>
             <p className={styles.heroLead}>
               {pickLocaleCopy(locale, {
-                ru: 'WayOfProcessing подключает бизнес к Stripe: аренда или покупка аккаунта, процессинг под ключ и комплект «юрлицо + банк». Сервис оказывает компания, зарегистрированная в Великобритании.',
-                uk: 'WayOfProcessing підключає бізнес до Stripe: оренда або купівля акаунта, процесинг під ключ і комплект «юрособа + банк». Сервіс надає компанія, зареєстрована у Великій Британії.',
-                en: 'WayOfProcessing connects businesses to Stripe: account rental or purchase, turnkey processing, and a company plus bank package. The service is provided by a UK-registered company.',
+                ru: 'WayOfProcessing подключает бизнес к Stripe: аренда или покупка аккаунта, процессинг под ключ и комплект «юрлицо + банк». UK Ltd (Companies House № 04820256). Мы не аффилированы со Stripe и не обещаем обход правил платформы.',
+                uk: 'WayOfProcessing підключає бізнес до Stripe: оренда або купівля акаунта, процесинг під ключ і комплект «юрособа + банк». UK Ltd (Companies House № 04820256). Ми не афілійовані зі Stripe і не обіцяємо обхід правил платформи.',
+                en: 'WayOfProcessing connects businesses to Stripe: account rental or purchase, turnkey processing, and a company plus bank package. UK Ltd (Companies House no. 04820256). We are not affiliated with Stripe and do not promise a platform-rules bypass.',
               })}
             </p>
           </div>

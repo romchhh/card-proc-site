@@ -2,15 +2,19 @@
 
 import { useRef } from 'react'
 import { useTranslation } from 'react-i18next'
-import { getTestimonials, getTestimonialsHeading } from '@/lib/testimonials'
+import Link from 'next/link'
+import { getTestimonials, getTestimonialsHeading, getTestimonialsNote } from '@/lib/testimonials'
 import { resolveLocale } from '@/lib/i18n/resolve-locale'
+import { useLocalizedPath } from '@/lib/i18n/use-locale'
 import styles from './TestimonialsSlider.module.css'
 
 export default function TestimonialsSlider() {
   const { i18n, t } = useTranslation()
+  const lp = useLocalizedPath()
   const locale = resolveLocale(i18n.language)
   const items = getTestimonials(locale)
   const heading = getTestimonialsHeading(locale)
+  const note = getTestimonialsNote(locale)
   const trackRef = useRef<HTMLUListElement>(null)
 
   const scrollBy = (dir: -1 | 1) => {
@@ -60,6 +64,10 @@ export default function TestimonialsSlider() {
           </li>
         ))}
       </ul>
+      <p className={styles.note}>
+        {note}{' '}
+        <Link href={lp('/disclaimer')}>{t('footer.disclaimer')}</Link>
+      </p>
     </section>
   )
 }

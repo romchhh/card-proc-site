@@ -95,6 +95,25 @@
   color: var(--stripe-blue);
 }
 
+.note {
+  margin: 14px 0 0;
+  max-width: 70ch;
+  font-size: var(--text-xs);
+  line-height: 1.5;
+  color: var(--gray-400);
+}
+
+.note a {
+  color: var(--stripe-blue);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.note a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 @media (max-width: 640px) {
   .head {
     align-items: center;

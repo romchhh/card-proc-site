@@ -67,8 +67,10 @@ export function buildHomeJsonLd(locale: Locale) {
         sameAs: [
           siteConfig.telegramChannelUrl,
           siteConfig.telegramOperatorUrl,
-          'https://find-and-update.company-information.service.gov.uk/company/04820256',
+          siteConfig.company.registryUrl,
         ],
+        publishingPrinciples: absoluteUrl(localePath('/disclaimer', locale)),
+        ethicsPolicy: absoluteUrl(localePath('/disclaimer', locale)),
       },
       {
         '@type': 'WebSite',
@@ -123,6 +125,39 @@ export function buildHomeJsonLd(locale: Locale) {
           'Merchant account setup',
         ],
         termsOfService: absoluteUrl(localePath('/terms', locale)),
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: pickLocaleCopy(locale, {
+            ru: 'Услуги подключения Stripe',
+            uk: 'Послуги підключення Stripe',
+            en: 'Stripe setup services',
+          }),
+          itemListElement: SERVICE_SLUGS.map((slug) => {
+            const service = getServiceBySlug(slug)
+            if (!service) return null
+            const view = getServiceView(service, locale)
+            return {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: view.card.title,
+                url: absoluteUrl(localePath(`/services/${slug}`, locale)),
+              },
+            }
+          }).filter(Boolean),
+        },
+        additionalProperty: [
+          {
+            '@type': 'PropertyValue',
+            name: 'Disclaimer',
+            value: absoluteUrl(localePath('/disclaimer', locale)),
+          },
+          {
+            '@type': 'PropertyValue',
+            name: 'Companies House',
+            value: siteConfig.company.registryUrl,
+          },
+        ],
         offers: {
           '@type': 'Offer',
           name: pickLocaleCopy(locale, {

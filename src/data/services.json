@@ -5,7 +5,7 @@
       "ru": {
         "meta": {
           "title": "Аренда аккаунта Stripe для бизнеса | WayOfProcessing",
-          "description": "Аренда аккаунта Stripe для приёма платежей: CRM, резервный канал, вывод в EUR, USD и USDT. Подключение от 3 рабочих дней, комиссия от 1.5%.",
+          "description": "Аренда аккаунта Stripe для пилота: CRM, routing, вывод EUR/USD/USDT. Без обещаний обойти правила платформы; комиссия от 1.5%, от 3 рабочих дней.",
           "keywords": [
             "аренда stripe",
             "аренда stripe аккаунта",
@@ -16,7 +16,7 @@
             "WayOfProcessing"
           ]
         },
-        "lead": "Аренда аккаунта Stripe — быстрый способ начать принимать международные платежи без самостоятельной регистрации компании, банка и верификации.",
+        "lead": "Аренда аккаунта Stripe — быстрый старт приёма платежей без самостоятельной регистрации компании и банка. Это не обход правил платформы: ниша, сайт и MCC должны совпадать, а решения Stripe остаются за Stripe.",
         "intro": [
           "Самостоятельная регистрация Stripe часто занимает недели: нужно юрлицо в подходящей стране, расчётный счёт, сайт с офертой и refund policy, корректный MCC и история, которой у нового аккаунта нет. Для пилота или выхода на новый рынок это слишком долго и дорого.",
           "Аренда снимает эту связку с вас. Вы получаете доступ к уже верифицированному аккаунту с оборотом, CRM для контроля платежей и, при необходимости, routing на резервный канал. Юрлицо и банк остаются на инфраструктуре WayOfProcessing — вы платите за использование и процессинг, а не собираете комплект подрядчиков.",
@@ -48,11 +48,12 @@
             ]
           },
           {
-            "title": "Риски и ограничения",
+            "title": "Риски, правила Stripe и что мы не обещаем",
             "paragraphs": [
+              "Аренда или покупка аккаунта часто воспринимается как обход правил Stripe. Для нас это не так: мы не маскируем запрещённую деятельность, не подменяем MCC и не обещаем «невидимость» для платформы.",
               "Stripe может запросить документы, изменить лимиты или увести аккаунт в review — это политика платформы, а не «сбой» интеграции.",
               "Мы не гарантируем одобрение любой ниши, снятие hold или отсутствие chargeback. Обещаем честную оценку до старта, сопровождение и резервный канал при routing.",
-              "High-risk и restricted категории требуют отдельного скрининга; часть вертикалей (например, forex/брокеры) мы не подключаем."
+              "High-risk и restricted категории требуют отдельного скрининга; forex, брокеров и другие вертикали, которые Stripe прямо не принимает, мы не подключаем."
             ]
           }
         ],
@@ -82,6 +83,10 @@
           {
             "question": "Чем аренда Stripe аккаунта отличается от покупки?",
             "answer": "При аренде аккаунт и юрлицо остаются на инфраструктуре WayOfProcessing: вы платите за использование и процессинг. При покупке аккаунт оформляется под ваш контроль. Аренда подходит для пилота, покупка — для долгосрочного оборота."
+          },
+          {
+            "question": "Это не обход правил Stripe?",
+            "answer": "Нет. Мы помогаем собрать рабочий контур (юрлицо, банк, MCC, сайт, routing) под заявленную деятельность. Маскировку запрещённых ниш, подмену MCC или «серый» аккаунт без соответствия сайту не предлагаем. Решение о верификации, лимитах и закрытии всегда за Stripe."
           },
           {
             "question": "Как происходит передача доступа?",
@@ -140,7 +145,7 @@
       "en": {
         "meta": {
           "title": "Rent a Stripe Account for Business | WayOfProcessing",
-          "description": "Rent a Stripe account to accept payments: CRM, backup channel, payouts in EUR, USD and USDT. Setup from 3 business days, fees from 1.5%.",
+          "description": "Stripe account rental for a pilot: CRM, routing, EUR/USD/USDT payouts. No promise to bypass platform rules; fees from 1.5%, from 3 business days.",
           "keywords": [
             "rent stripe account",
             "stripe account rental",
@@ -150,7 +155,7 @@
             "WayOfProcessing"
           ]
         },
-        "lead": "Renting a Stripe account is a fast way to accept international cards without registering a company, bank and verification yourself.",
+        "lead": "Stripe account rental is a fast way to start accepting payments without registering a company and bank yourself. It is not a platform-rules bypass: niche, site and MCC must match, and Stripe decisions stay with Stripe.",
         "intro": [
           "A DIY Stripe setup often takes weeks: a legal entity in the right country, a bank account, a site with terms and refund policy, a matching MCC, and transaction history that a brand-new account does not have. For a pilot or a new market that is slow and expensive.",
           "Rental removes that stack from your plate. You get access to a verified account with turnover, CRM for payment control and, if needed, routing to a backup channel. The entity and bank stay on WayOfProcessing infrastructure — you pay for usage and processing instead of assembling vendors.",
@@ -182,11 +187,12 @@
             ]
           },
           {
-            "title": "Risks and limits",
+            "title": "Risks, Stripe rules and what we do not promise",
             "paragraphs": [
-              "Stripe may request documents, change limits or send an account into review — that is platform policy, not an integration failure.",
-              "We do not guarantee approval of every niche, hold removal or zero chargebacks. We promise an honest pre-launch assessment, support and a backup channel when routing is used.",
-              "High-risk and restricted categories need separate screening; some verticals (e.g. forex/brokers) we do not connect."
+              "Renting or buying an account is often read as a Stripe rules bypass. That is not our model: we do not mask prohibited activity, spoof an MCC or promise “invisibility” to the platform.",
+              "Stripe may request documents, change limits or put an account under review — that is platform policy, not an integration “bug”.",
+              "We do not guarantee approval of every niche, hold removal or zero chargebacks. We promise an honest pre-start review, support and a backup channel when routing is enabled.",
+              "High-risk and restricted categories need separate screening; forex, brokers and other verticals Stripe explicitly rejects are not accepted."
             ]
           }
         ],
@@ -216,6 +222,10 @@
           {
             "question": "How is renting different from buying a Stripe account?",
             "answer": "With rental, the account and entity stay on WayOfProcessing infrastructure: you pay for usage and processing. With purchase, the account is set up under your control. Rent for a pilot, buy for long-term volume."
+          },
+          {
+            "question": "Is this a Stripe rules bypass?",
+            "answer": "No. We help assemble a working stack (entity, bank, MCC, site, routing) for the stated activity. We do not offer masking prohibited niches, spoofing an MCC or a “grey” account that does not match the site. Verification, limits and closure always stay with Stripe."
           },
           {
             "question": "How is access handed over?",
@@ -274,7 +284,7 @@
       "uk": {
         "meta": {
           "title": "Оренда акаунта Stripe для бізнесу | WayOfProcessing",
-          "description": "Оренда акаунта Stripe для прийому платежів: CRM, резервний канал, вивід у EUR, USD і USDT. Підключення від 3 робочих днів, комісія від 1.5%.",
+          "description": "Оренда акаунта Stripe для пілоту: CRM, routing, вивід EUR/USD/USDT. Без обіцянок обійти правила платформи; комісія від 1.5%, від 3 робочих днів.",
           "keywords": [
             "оренда stripe",
             "оренда акаунта stripe",
@@ -285,7 +295,7 @@
             "WayOfProcessing"
           ]
         },
-        "lead": "Оренда акаунта Stripe — швидкий спосіб почати приймати міжнародні платежі без самостійної реєстрації компанії, банку та верифікації.",
+        "lead": "Оренда акаунта Stripe — швидкий старт прийому платежів без самостійної реєстрації компанії та банку. Це не обхід правил платформи: ніша, сайт і MCC мають збігатися, а рішення Stripe залишаються за Stripe.",
         "intro": [
           "Самостійна реєстрація Stripe часто триває тижнями: потрібна юрособа у відповідній країні, розрахунковий рахунок, сайт з офертою та refund policy, коректний MCC та історія, якої в нового акаунта немає. Для пілота чи виходу на новий ринок це занадто довго й дорого.",
           "Оренда знімає цей клубок із вас. Ви отримуєте доступ до вже верифікованого акаунта з оборотом, CRM для контролю платежів і, за потреби, routing на резервний канал. Юрособа та банк залишаються в інфраструктурі WayOfProcessing — ви платите за користування та процесинг, а не збираєте набір підрядників.",
@@ -317,11 +327,12 @@
             ]
           },
           {
-            "title": "Ризики та обмеження",
+            "title": "Ризики, правила Stripe і що ми не обіцяємо",
             "paragraphs": [
+              "Оренда чи купівля акаунта часто сприймається як обхід правил Stripe. Для нас це не так: ми не маскуємо заборонену діяльність, не підміняємо MCC і не обіцяємо «невидимість» для платформи.",
               "Stripe може запросити документи, змінити ліміти або відправити акаунт у review — це політика платформи, а не «збій» інтеграції.",
-              "Ми не гарантуємо схвалення будь-якої ніші, зняття hold або відсутність chargeback. Обіцяємо чесну оцінку до старту, супровід і резервний канал при routing.",
-              "High-risk і restricted категорії потребують окремого скринінгу; частину вертикалей (наприклад, forex/брокери) ми не підключаємо."
+              "Ми не гарантуємо схвалення будь-якої ніші, зняття hold чи відсутність chargeback. Обіцяємо чесну оцінку до старту, супровід і резервний канал за routing.",
+              "High-risk і restricted категорії потребують окремого скринінгу; forex, брокерів та інші вертикалі, які Stripe прямо не приймає, ми не підключаємо."
             ]
           }
         ],
@@ -351,6 +362,10 @@
           {
             "question": "Чим оренда акаунта Stripe відрізняється від купівлі?",
             "answer": "За оренди акаунт і юрособа залишаються в інфраструктурі WayOfProcessing: ви платите за користування та процесинг. За купівлі акаунт оформлюється під ваш контроль. Оренда підходить для пілота, купівля — для довгострокового обороту."
+          },
+          {
+            "question": "Це не обхід правил Stripe?",
+            "answer": "Ні. Ми допомагаємо зібрати робочий контур (юрособа, банк, MCC, сайт, routing) під заявлену діяльність. Маскування заборонених ніш, підміну MCC чи «сірий» акаунт без відповідності сайту не пропонуємо. Рішення про верифікацію, ліміти і закриття завжди за Stripe."
           },
           {
             "question": "Як відбувається передача доступу?",
@@ -412,7 +427,7 @@
       "ru": {
         "meta": {
           "title": "Купить аккаунт Stripe для бизнеса | WayOfProcessing",
-          "description": "Купить аккаунт Stripe: передача доступов, MCC под нишу, юрлицо и счёт. Сроки, стоимость и чем покупка отличается от аренды.",
+          "description": "Купить аккаунт Stripe: доступы, MCC, юрлицо и счёт. Честные риски review и hold; сроки и стоимость после оценки ниши.",
           "keywords": [
             "купить stripe аккаунт",
             "покупка merchant аккаунта",
@@ -422,7 +437,7 @@
             "WayOfProcessing"
           ]
         },
-        "lead": "Купить аккаунт Stripe имеет смысл, когда оборот уже понятен и нужен свой контроль над платёжной системой на месяцы, а не пилот на несколько недель.",
+        "lead": "Купить аккаунт Stripe имеет смысл, когда оборот уже понятен и нужен свой контроль над платёжной системой. Покупка — не «вечный» кабинет вне правил Stripe: KYC, лимиты и review остаются на стороне платформы.",
         "intro": [
           "Купить аккаунт имеет смысл, когда оборот уже понятен и вы не хотите зависеть от чужой инфраструктуры. Вы получаете верифицированный аккаунт с историей, подобранным MCC, связкой с юрлицом и счётом — не «пустой кабинет», который Stripe ещё не видел.",
           "Свежая регистрация с нуля почти всегда слабее на старте: нет истории, лимиты уже, любой скачок объёма выглядит подозрительно. Прогретый аккаунт проходит этот участок спокойнее, если ниша, сайт и MCC совпадают.",
@@ -452,11 +467,12 @@
             ]
           },
           {
-            "title": "Риски и ограничения",
+            "title": "Риски, правила Stripe и что мы не обещаем",
             "paragraphs": [
+              "Аренда или покупка аккаунта часто воспринимается как обход правил Stripe. Для нас это не так: мы не маскируем запрещённую деятельность, не подменяем MCC и не обещаем «невидимость» для платформы.",
               "Stripe может запросить документы, изменить лимиты или увести аккаунт в review — это политика платформы, а не «сбой» интеграции.",
               "Мы не гарантируем одобрение любой ниши, снятие hold или отсутствие chargeback. Обещаем честную оценку до старта, сопровождение и резервный канал при routing.",
-              "High-risk и restricted категории требуют отдельного скрининга; часть вертикалей (например, forex/брокеры) мы не подключаем."
+              "High-risk и restricted категории требуют отдельного скрининга; forex, брокеров и другие вертикали, которые Stripe прямо не принимает, мы не подключаем."
             ]
           }
         ],
@@ -486,6 +502,10 @@
           {
             "question": "Сколько стоит купить Stripe аккаунт?",
             "answer": "Стоимость зависит от ниши, оборота, юрисдикции и комплектации. Фиксированного прайса на все случаи нет — после заявки считаем диапазон бесплатно."
+          },
+          {
+            "question": "Это не обход правил Stripe?",
+            "answer": "Нет. Мы помогаем собрать рабочий контур (юрлицо, банк, MCC, сайт, routing) под заявленную деятельность. Маскировку запрещённых ниш, подмену MCC или «серый» аккаунт без соответствия сайту не предлагаем. Решение о верификации, лимитах и закрытии всегда за Stripe."
           },
           {
             "question": "Аккаунт прогрет или регистрируется с нуля?",
@@ -544,7 +564,7 @@
       "en": {
         "meta": {
           "title": "Buy a Stripe Account for Business | WayOfProcessing",
-          "description": "Buy a Stripe account: access handover, niche MCC, company and bank. Timelines, cost and how purchase differs from rental.",
+          "description": "Buy a Stripe account: access, MCC, company and bank. Honest review and hold risks; timeline and price after niche review.",
           "keywords": [
             "buy stripe account",
             "buy merchant account",
@@ -554,7 +574,7 @@
             "WayOfProcessing"
           ]
         },
-        "lead": "Buying a Stripe account fits when volume is clear and you need control over the payment stack for months, not a short pilot.",
+        "lead": "Buying a Stripe account makes sense when volume is already clear and you need your own control of the payment stack. A purchase is not a “forever” dashboard outside Stripe rules: KYC, limits and review stay with the platform.",
         "intro": [
           "A purchase makes sense when volume is already clear and you do not want to depend on someone else’s infrastructure. You get a verified account with history, a matching MCC, and an entity plus bank bundle — not an empty dashboard Stripe has never seen.",
           "A fresh registration is almost always weaker at the start: no history, tighter limits, and any volume spike looks suspicious. A warmed account handles that stretch more calmly if niche, site and MCC match.",
@@ -584,11 +604,12 @@
             ]
           },
           {
-            "title": "Risks and limits",
+            "title": "Risks, Stripe rules and what we do not promise",
             "paragraphs": [
-              "Stripe may request documents, change limits or send an account into review — that is platform policy, not an integration failure.",
-              "We do not guarantee approval of every niche, hold removal or zero chargebacks. We promise an honest pre-launch assessment, support and a backup channel when routing is used.",
-              "High-risk and restricted categories need separate screening; some verticals (e.g. forex/brokers) we do not connect."
+              "Renting or buying an account is often read as a Stripe rules bypass. That is not our model: we do not mask prohibited activity, spoof an MCC or promise “invisibility” to the platform.",
+              "Stripe may request documents, change limits or put an account under review — that is platform policy, not an integration “bug”.",
+              "We do not guarantee approval of every niche, hold removal or zero chargebacks. We promise an honest pre-start review, support and a backup channel when routing is enabled.",
+              "High-risk and restricted categories need separate screening; forex, brokers and other verticals Stripe explicitly rejects are not accepted."
             ]
           }
         ],
@@ -618,6 +639,10 @@
           {
             "question": "How much does a Stripe account cost?",
             "answer": "Price depends on niche, volume, jurisdiction and package. There is no single price for every case — we calculate a range for free after the request."
+          },
+          {
+            "question": "Is this a Stripe rules bypass?",
+            "answer": "No. We help assemble a working stack (entity, bank, MCC, site, routing) for the stated activity. We do not offer masking prohibited niches, spoofing an MCC or a “grey” account that does not match the site. Verification, limits and closure always stay with Stripe."
           },
           {
             "question": "Is the account warmed or registered from scratch?",
@@ -676,7 +701,7 @@
       "uk": {
         "meta": {
           "title": "Купити акаунт Stripe для бізнесу | WayOfProcessing",
-          "description": "Купити акаунт Stripe: передача доступів, MCC під нішу, юрособа і рахунок. Строки, вартість і чим купівля відрізняється від оренди.",
+          "description": "Купити акаунт Stripe: доступи, MCC, юрособа і рахунок. Чесні ризики review і hold; строки і вартість після оцінки ніші.",
           "keywords": [
             "купити акаунт stripe",
             "купівля мерчант-акаунта",
@@ -686,7 +711,7 @@
             "WayOfProcessing"
           ]
         },
-        "lead": "Купити акаунт Stripe має сенс, коли обіг уже зрозумілий і потрібен свій контроль над платіжною системою на місяці, а не пілот на кілька тижнів.",
+        "lead": "Купити акаунт Stripe має сенс, коли оборот уже зрозумілий і потрібен власний контроль над платіжною системою. Купівля — не «вічний» кабінет поза правилами Stripe: KYC, ліміти і review залишаються на боці платформи.",
         "intro": [
           "Купувати акаунт має сенс, коли оборот уже зрозумілий і ви не хочете залежати від чужої інфраструктури. Ви отримуєте верифікований акаунт з історією, підібраним MCC, зв’язкою з юрособою та рахунком — а не «порожній кабінет», якого Stripe ще не бачив.",
           "Свіжа реєстрація з нуля майже завжди слабша на старті: немає історії, ліміти вужчі, будь-який стрибок обсягу виглядає підозріло. Прогрітий акаунт проходить цю ділянку спокійніше, якщо ніша, сайт і MCC збігаються.",
@@ -716,11 +741,12 @@
             ]
           },
           {
-            "title": "Ризики та обмеження",
+            "title": "Ризики, правила Stripe і що ми не обіцяємо",
             "paragraphs": [
+              "Оренда чи купівля акаунта часто сприймається як обхід правил Stripe. Для нас це не так: ми не маскуємо заборонену діяльність, не підміняємо MCC і не обіцяємо «невидимість» для платформи.",
               "Stripe може запросити документи, змінити ліміти або відправити акаунт у review — це політика платформи, а не «збій» інтеграції.",
-              "Ми не гарантуємо схвалення будь-якої ніші, зняття hold або відсутність chargeback. Обіцяємо чесну оцінку до старту, супровід і резервний канал при routing.",
-              "High-risk і restricted категорії потребують окремого скринінгу; частину вертикалей (наприклад, forex/брокери) ми не підключаємо."
+              "Ми не гарантуємо схвалення будь-якої ніші, зняття hold чи відсутність chargeback. Обіцяємо чесну оцінку до старту, супровід і резервний канал за routing.",
+              "High-risk і restricted категорії потребують окремого скринінгу; forex, брокерів та інші вертикалі, які Stripe прямо не приймає, ми не підключаємо."
             ]
           }
         ],
@@ -750,6 +776,10 @@
           {
             "question": "Скільки коштує купити акаунт Stripe?",
             "answer": "Вартість залежить від ніші, обороту, юрисдикції та комплектації. Фіксованого прайсу на всі випадки немає — після заявки безкоштовно розраховуємо діапазон."
+          },
+          {
+            "question": "Це не обхід правил Stripe?",
+            "answer": "Ні. Ми допомагаємо зібрати робочий контур (юрособа, банк, MCC, сайт, routing) під заявлену діяльність. Маскування заборонених ніш, підміну MCC чи «сірий» акаунт без відповідності сайту не пропонуємо. Рішення про верифікацію, ліміти і закриття завжди за Stripe."
           },
           {
             "question": "Акаунт прогрітий чи реєструється з нуля?",

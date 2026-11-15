@@ -22,9 +22,12 @@ import ContentTable from './ContentTable'
 import ServiceCard from './ServiceCard'
 import SpecialistsSection from './SpecialistsSection'
 import TestimonialsSlider from './TestimonialsSlider'
+import ComplianceNotice from './ComplianceNotice'
 import { getChecklistTable, getLandingGuideTables, getSetupPathTable } from '@/lib/guide-tables'
 import type { LandingGroup } from '@/lib/landings'
 import styles from './ServicePage.module.css'
+
+const YMYL_SERVICE_SLUGS = new Set<ServiceSlug>(['stripe-account-rent', 'stripe-account-buy'])
 
 type BreadcrumbItem = {
   name: string
@@ -205,6 +208,7 @@ export default function ServicePage({ slug, view: viewProp, image, breadcrumbs, 
               ))}
             </nav>
           )}
+          {slug && YMYL_SERVICE_SLUGS.has(slug) && <ComplianceNotice compact />}
         </div>
       </section>
 

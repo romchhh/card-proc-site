@@ -18,6 +18,10 @@ export function getTestimonialsHeading(locale: Locale): string {
   return pick(data.heading as Localized, locale)
 }
 
+export function getTestimonialsNote(locale: Locale): string {
+  return pick((data as { note: Localized }).note, locale)
+}
+
 export function getTestimonials(locale: Locale): TestimonialItem[] {
   return (data.items as { id: string; name: Localized; niche: Localized; text: Localized }[]).map(
     (item) => ({

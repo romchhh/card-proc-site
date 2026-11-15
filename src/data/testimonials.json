@@ -4,6 +4,11 @@
     "uk": "Відгуки про підключення Stripe",
     "en": "Feedback on Stripe setup"
   },
+  "note": {
+    "ru": "Краткие сводки обратной связи по нише — не независимый рейтинг и не гарантия результата. Подробнее в отказе от ответственности.",
+    "uk": "Короткі зведення зворотного зв’язку за нішею — не незалежний рейтинг і не гарантія результату. Детальніше у відмові від відповідальності.",
+    "en": "Short niche feedback summaries — not an independent rating and not a guarantee of results. See the disclaimer for details."
+  },
   "items": [
     {
       "id": "alex-saas",

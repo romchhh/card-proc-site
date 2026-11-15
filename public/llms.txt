@@ -4,6 +4,8 @@
 
 WayOfProcessing helps businesses accept cards worldwide via Stripe: merchant account, checkout, payment routing, CRM and payouts. Independent service, not affiliated with Stripe, Inc.
 
+Important: renting or buying a merchant account is not a Stripe Terms-of-Service bypass. Verification, limits, review and account closure stay with Stripe. Forex/brokers and other explicitly rejected categories are not accepted. See /disclaimer.
+
 ## Key pages
 
 - [Home (RU)](https://wayofprocessing.com/ru)
