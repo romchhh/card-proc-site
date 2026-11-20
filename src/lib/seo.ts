@@ -50,7 +50,8 @@ export function buildHreflangLanguages(path: string) {
     ru: ruUrl,
     uk: ukUrl,
     en: enUrl,
-    'x-default': ruUrl,
+    // International default → English; RU/UK keep self-canonical via languages map
+    'x-default': enUrl,
   }
 }
 

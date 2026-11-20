@@ -18,7 +18,7 @@ const postKeywords: Record<string, { ru: string[]; uk?: string[]; en: string[] }
     en: ['payment system online store', 'stripe payment system', 'fast payments', 'e-commerce checkout', 'accept stripe payments'],
   },
   'business-categories-stripe': {
-    ru: ['high-risk Stripe', 'ниши Stripe', 'блокировка Stripe', 'прогретый аккаунт', 'процессинг платежей'],
+    ru: ['high-risk Stripe', 'ниши Stripe', 'блокировка Stripe', 'аккаунт под нишу', 'процессинг платежей'],
     en: ['high-risk Stripe', 'Stripe niches', 'Stripe account block', 'warmed Stripe account', 'payment processing'],
   },
   'stripe-webhooks-guide': {

@@ -4,17 +4,17 @@ import { pickLocaleCopy } from './i18n/config'
 export const siteConfig = {
   name: 'WayOfProcessing',
   title: 'WayOfProcessing — Stripe Payment Processing',
-  titleRu: 'Подключение Stripe под ключ для бизнеса | WayOfProcessing',
-  titleUk: 'Підключення Stripe під ключ для бізнесу | WayOfProcessing',
-  titleEn: 'Turnkey Stripe Setup for Business | WayOfProcessing',
+  titleRu: 'Процессинг Stripe для бизнеса | WayOfProcessing',
+  titleUk: 'Процесинг Stripe для бізнесу | WayOfProcessing',
+  titleEn: 'Stripe Processing for Business | WayOfProcessing',
   description:
-    'Stripe payment processing for business: turnkey account setup, backup payment channel and payouts. Honest limits, no false guarantees.',
+    'Stripe processing setup and support: backup payment channel, payouts in EUR, USD and USDT. Fees from 1.5%. Niche review before launch, no approval guarantees.',
   descriptionRu:
-    'Подключение Stripe под ключ: юрлицо, банк и приём платежей. Комиссия от 1.5%. Без обещаний обойти правила Stripe — честная оценка ниши до старта.',
+    'Подключение и сопровождение процессинга Stripe: резервный канал, выплаты в EUR, USD и USDT. Комиссия от 1.5%. Оценка ниши до старта, без гарантий одобрения.',
   descriptionUk:
-    'Підключення Stripe під ключ: юрособа, банк і прийом платежів. Комісія від 1.5%. Без обіцянок обійти правила Stripe — чесна оцінка ніші до старту.',
+    'Підключення і супровід процесингу Stripe: резервний канал, виплати в EUR, USD і USDT. Комісія від 1.5%. Оцінка ніші до старту, без гарантій схвалення.',
   descriptionEn:
-    'Turnkey Stripe setup: company, bank and payment acceptance. Fees from 1.5%. No promise to bypass Stripe rules — honest niche review before start.',
+    'Stripe processing setup and support: backup payment channel, payouts in EUR, USD and USDT. Fees from 1.5%. Niche review before launch, no approval guarantees.',
   url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://wayofprocessing.com',
   email: 'hello@wayofprocessing.com',
   telegram: '@wayofprocessing',
@@ -89,11 +89,11 @@ export const siteConfig = {
     slogan: 'Подключение Stripe под ключ — от 1.5%',
     sloganUk: 'Підключення Stripe під ключ — від 1.5%',
     disclaimer:
-      'WayOfProcessing — независимый сервис, не аффилирован со Stripe, Inc. Аренда или покупка аккаунта не означает обход правил платформы: верификация, лимиты и review остаются у Stripe.',
+      'WayOfProcessing — независимый сервис и не аффилирован со Stripe, Inc. Верификация, лимиты и review остаются у Stripe.',
     disclaimerUk:
-      'WayOfProcessing — незалежний сервіс, не афілійований зі Stripe, Inc. Оренда чи купівля акаунта не означає обхід правил платформи: верифікація, ліміти і review залишаються у Stripe.',
+      'WayOfProcessing — незалежний сервіс і не афілійований зі Stripe, Inc. Верифікація, ліміти і review залишаються у Stripe.',
     disclaimerEn:
-      'WayOfProcessing is an independent service, not affiliated with Stripe, Inc. Renting or buying an account is not a platform-rules bypass: verification, limits and review stay with Stripe.',
+      'WayOfProcessing is an independent service and is not affiliated with Stripe, Inc. Verification, limits and review stay with Stripe.',
     contentLanguages: 'ru, uk, en',
     knowsAbout: [
       'Stripe payment system',

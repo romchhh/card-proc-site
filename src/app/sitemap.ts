@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next'
 import { getAllPosts } from '@/lib/blog'
 import { HOME_UPDATED, LANDINGS_UPDATED, PRIVACY_UPDATED, SERVICES_UPDATED } from '@/lib/content-dates'
-import { isIndexBlogSlug } from '@/lib/seo-index'
+import { isIndexBlogSlug, isIndexedLandingSlug } from '@/lib/seo-index'
 import { getAllLandings } from '@/lib/landings'
 import { SERVICE_SLUGS } from '@/lib/services'
 import { localePath, locales, type Locale } from '@/lib/i18n/config'
@@ -75,9 +75,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   )
 
   const landingEntries = locales.flatMap((locale) =>
-    getAllLandings().map((landing) =>
-      localizedSitemapEntry(landing.path, locale, landingsUpdated),
-    ),
+    getAllLandings()
+      .filter((landing) => isIndexedLandingSlug(landing.slug))
+      .map((landing) =>
+        localizedSitemapEntry(landing.path, locale, landingsUpdated),
+      ),
   )
 
   const postEntries = locales.flatMap((locale) =>

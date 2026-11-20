@@ -59,6 +59,9 @@ export default function Footer() {
           <p className={styles.copyright}>{t('footer.copyright', { year })}</p>
           <address className={styles.company}>
             <span className={styles.companyName}>{siteConfig.company.legalName}</span>
+            <span className={styles.companyMeta}>
+              {t('footer.companyMetaLine', { number: siteConfig.company.number })}
+            </span>
             <a
               href={siteConfig.company.registryUrl}
               className={styles.companyLink}

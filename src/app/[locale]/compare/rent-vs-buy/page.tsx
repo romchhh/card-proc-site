@@ -18,10 +18,10 @@ type Props = { params: Promise<{ locale: string }> }
 
 const COPY = {
   ru: {
-    title: 'Аренда или покупка аккаунта Stripe',
+    title: 'Форматы подключения Stripe: что выбрать',
     description:
-      'Сравнение аренды, покупки и комплекта юрлицо + банк для Stripe: сроки, контроль доступов и когда какой формат уместен.',
-    lead: 'Один запрос «купить или арендовать Stripe» закрывает три разных контура. Ниже — когда какой выбирать. Это не обход правил платформы: Stripe в любом случае может запросить документы, ограничить приём или закрыть аккаунт.',
+      'Сравнение форматов подключения Stripe: быстрый старт, готовый merchant-аккаунт, процессинг под ключ, своя компания.',
+    lead: 'Один запрос на подключение Stripe закрывает разные контуры. Ниже — когда какой выбирать. Stripe в любом случае может запросить документы, ограничить приём или закрыть аккаунт.',
     rows: [
       {
         label: 'Задача',
@@ -101,8 +101,8 @@ const COPY = {
         answer: 'Что Stripe одобрит любой проект или никогда не запросит документы. Это решает платформа.',
       },
     ],
-    ctaRent: 'Аренда аккаунта Stripe',
-    ctaBuy: 'Купить аккаунт Stripe',
+    ctaRent: 'Stripe для быстрого старта',
+    ctaBuy: 'Merchant-аккаунт Stripe',
     ctaLegal: 'Юрлицо и банк для Stripe',
     ctaAlt: 'Альтернативы Stripe',
     colRent: 'Аренда',
@@ -110,10 +110,10 @@ const COPY = {
     colLegal: 'Юрлицо + банк',
   },
   uk: {
-    title: 'Оренда чи купівля акаунта Stripe',
+    title: 'Формати підключення Stripe: що обрати',
     description:
-      'Порівняння оренди, купівлі і комплекту юрособа + банк для Stripe: строки, контроль доступів і коли який формат доречний.',
-    lead: 'Один запит «купити або орендувати Stripe» закриває три різні контури. Нижче — коли який обирати. Це не обхід правил платформи: Stripe в будь-якому разі може запросити документи, обмежити прийом або закрити акаунт.',
+      'Порівняння форматів підключення Stripe: швидкий старт, готовий merchant-акаунт, процесинг під ключ, своя компанія.',
+    lead: 'Один запит на підключення Stripe закриває різні контури. Нижче — коли який обирати. Stripe в будь-якому разі може запросити документи, обмежити прийом або закрити акаунт.',
     rows: [
       {
         label: 'Завдання',
@@ -193,8 +193,8 @@ const COPY = {
         answer: 'Що Stripe схвалить будь-який проєкт або ніколи не запросить документи. Це вирішує платформа.',
       },
     ],
-    ctaRent: 'Оренда акаунта Stripe',
-    ctaBuy: 'Купити акаунт Stripe',
+    ctaRent: 'Stripe для швидкого старту',
+    ctaBuy: 'Merchant-акаунт Stripe',
     ctaLegal: 'Юрособа і банк для Stripe',
     ctaAlt: 'Альтернативи Stripe',
     colRent: 'Оренда',
@@ -202,10 +202,10 @@ const COPY = {
     colLegal: 'Юрособа + банк',
   },
   en: {
-    title: 'Rent or buy a Stripe account',
+    title: 'Stripe setup formats: what to choose',
     description:
-      'Compare Stripe account rental, purchase and a company plus bank package: timing, access control and when each format fits.',
-    lead: '“Buy or rent Stripe” covers three different stacks. Below is when to pick each. This is not a platform-rules bypass: Stripe may still request documents, restrict acceptance or close an account in every format.',
+      'Compare Stripe setup formats: quick start, ready-made merchant account, turnkey processing, your own company.',
+    lead: 'One Stripe setup request covers different stacks. Below is when to pick each. Stripe may still request documents, restrict acceptance or close an account in every format.',
     rows: [
       {
         label: 'Goal',
@@ -285,8 +285,8 @@ const COPY = {
         answer: 'That Stripe will approve every project or never ask for documents. That decision stays with the platform.',
       },
     ],
-    ctaRent: 'Rent a Stripe account',
-    ctaBuy: 'Buy a Stripe account',
+    ctaRent: 'Stripe for a quick start',
+    ctaBuy: 'Stripe merchant account',
     ctaLegal: 'Company and bank for Stripe',
     ctaAlt: 'Stripe alternatives',
     colRent: 'Rental',
@@ -302,15 +302,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return buildPageMetadata({
     title: pickLocaleCopy(locale, {
-      ru: 'Аренда или покупка аккаунта Stripe: сравнение | WayOfProcessing',
-      uk: 'Оренда чи купівля акаунта Stripe: порівняння | WayOfProcessing',
-      en: 'Rent vs Buy a Stripe Account: Comparison | WayOfProcessing',
+      ru: 'Форматы подключения Stripe: сравнение | WayOfProcessing',
+      uk: 'Формати підключення Stripe: порівняння | WayOfProcessing',
+      en: 'Stripe Setup Options Compared | WayOfProcessing',
     }),
-    description: pickLocaleCopy(locale, {
-      ru: 'Сравнение аренды и покупки аккаунта Stripe по стоимости, срокам, контролю и рискам. Таблица и рекомендации по типу бизнеса.',
-      uk: 'Порівняння оренди та купівлі акаунта Stripe за вартістю, строками, контролем і ризиками. Таблиця та рекомендації за типом бізнесу.',
-      en: 'Renting and buying a Stripe account compared by cost, timeline, control and risk. A table and recommendations by business type.',
-    }),
+    description: copy.description,
     path: '/compare/rent-vs-buy',
     locale,
   })

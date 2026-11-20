@@ -36,15 +36,12 @@ export function buildHomeJsonLd(locale: Locale) {
         email: siteConfig.email,
         description,
         knowsAbout: siteConfig.seo.knowsAbout,
-        identifier: {
-          '@type': 'PropertyValue',
-          name: 'Company Number',
-          value: '04820256',
-        },
+        identifier: '04820256',
         address: {
           '@type': 'PostalAddress',
           streetAddress: '45 Avion Gardens, Kings Hill',
           addressLocality: 'West Malling',
+          addressRegion: 'England',
           postalCode: 'ME19 4RH',
           addressCountry: 'GB',
         },

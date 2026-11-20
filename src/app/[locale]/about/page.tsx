@@ -21,14 +21,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return buildPageMetadata({
     title: pickLocaleCopy(locale, {
-      ru: 'О компании WayOfProcessing | Stripe-процессинг',
-      uk: 'Про компанію WayOfProcessing | Stripe-процесинг',
-      en: 'About WayOfProcessing | Stripe Processing',
+      ru: 'О компании | WayOfProcessing',
+      uk: 'Про компанію | WayOfProcessing',
+      en: 'About | WayOfProcessing',
     }),
     description: pickLocaleCopy(locale, {
-      ru: 'Кто мы, как работаем и где зарегистрирована компания: № 04820256 (Companies House), Kings Hill, West Malling.',
-      uk: 'Хто ми, як працюємо і де зареєстрована компанія: № 04820256 (Companies House), Kings Hill, West Malling.',
-      en: 'Who we are, how we work and where the company is registered: no. 04820256 (Companies House), Kings Hill, West Malling.',
+      ru: 'WayOfProcessing: команда, юрлицо MSM Financial Consultancy Limited, реквизиты и контакты.',
+      uk: 'WayOfProcessing: команда, юрособа MSM Financial Consultancy Limited, реквізити і контакти.',
+      en: 'WayOfProcessing: team, legal entity MSM Financial Consultancy Limited, company details and contacts.',
     }),
     path: '/about',
     locale,

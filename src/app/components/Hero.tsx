@@ -46,11 +46,11 @@ export default function Hero() {
             <p className={styles.description}>{t('hero.description')}</p>
 
             <nav className={styles.offerLinks} aria-label={t('seo.servicesHeading')}>
-              <Link href={lp('/services/stripe-account-rent')} className={styles.offerLink}>
-                {t('hero.offerRent')}
-              </Link>
-              <Link href={lp('/services/stripe-account-buy')} className={styles.offerLink}>
-                {t('hero.offerBuy')}
+              <button type="button" className={styles.offerLink} onClick={openContactModal}>
+                {t('hero.offerPrimary')}
+              </button>
+              <Link href={lp('/services')} className={styles.offerLink}>
+                {t('hero.offerSecondary')}
               </Link>
             </nav>
           </div>

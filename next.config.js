@@ -23,8 +23,39 @@ function collectImageHostnames() {
   }))
 }
 
+const LOCALES = ['ru', 'uk', 'en']
+
+/** Paths consolidated per SEO plan 01 (301). */
+const SEO_REDIRECTS = [
+  ['/jurisdictions/czech-republic', '/jurisdictions#czech-republic'],
+  ['/jurisdictions/cyprus', '/jurisdictions#cyprus'],
+  ['/jurisdictions/hong-kong', '/jurisdictions#hong-kong'],
+  ['/niches/subscriptions', '/niches/saas'],
+  ['/niches/digital-products', '/niches/online-courses'],
+  ['/niches/forex', '/niches/high-risk'],
+  // Blog slug aliases → canonical
+  ['/blog/stripe-chargeback-dispute-prevention', '/blog/stripe-chargeback-prevention'],
+  ['/blog/smart-payment-routing-stripe-uptime', '/blog/stripe-payment-routing-uptime'],
+  ['/blog/stripe-international-payment-integration', '/blog/stripe-international-payments-integration'],
+  ['/blog/fast-payment-system-ecommerce', '/blog/fast-payment-system'],
+  ['/blog/international-payments-for-business', '/blog/stripe-international-payments-integration'],
+]
+
 const nextConfig = {
   trailingSlash: false,
+  async redirects() {
+    const entries = []
+    for (const locale of LOCALES) {
+      for (const [from, to] of SEO_REDIRECTS) {
+        entries.push({
+          source: `/${locale}${from}`,
+          destination: `/${locale}${to}`,
+          permanent: true,
+        })
+      }
+    }
+    return entries
+  },
   images: {
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 60 * 60 * 24 * 30,

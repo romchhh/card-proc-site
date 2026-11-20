@@ -8,7 +8,7 @@
   max-width: var(--content-max);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.1fr 0.7fr 0.9fr 1.15fr 0.85fr 1.1fr;
+  grid-template-columns: 1.2fr 0.9fr 0.9fr 1.2fr;
   gap: 36px 28px;
   padding-bottom: 24px;
 }
@@ -65,6 +65,10 @@
   font-weight: 700;
   color: rgba(255, 255, 255, 0.88);
   letter-spacing: 0.01em;
+}
+
+.companyMeta {
+  color: rgba(255, 255, 255, 0.62);
 }
 
 .companyLink {

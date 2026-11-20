@@ -49,7 +49,7 @@
     "blog": "Blog",
     "niches": "Niches",
     "jurisdictions": "Countries",
-    "solutions": "Solutions",
+    "solutions": "Processing",
     "compare": "Rent or buy",
     "cta": "Contact us",
     "openMenu": "Open menu",
@@ -57,18 +57,21 @@
     "menuDialog": "Navigation menu",
     "language": "Language",
     "telegram": "Message on Telegram",
-    "openContact": "Leave a request"
+    "openContact": "Leave a request",
+    "contacts": "Contact"
   },
   "hero": {
-    "headline": "Connect Stripe",
-    "stripe": "turnkey",
+    "headline": "Stripe processing",
+    "stripe": "for business",
     "badge": "Fees from 1.5% · launch from 3 business days",
-    "description": "A payment account, company and bank. We match the format to your niche and country — payouts in EUR, USD or USDT.",
-    "offerRent": "Rent a Stripe account",
-    "offerBuy": "Buy a Stripe account",
+    "description": "Setup and support: backup payment channel, payouts in EUR, USD and USDT. Niche review before launch, no approval guarantees.",
+    "offerRent": "Request a quote",
+    "offerBuy": "Services",
     "cardLabel": "Leave a request",
     "cardHighlight": "from 1.5%",
-    "cardSub": "Free consultation on Stripe setup for your niche"
+    "cardSub": "Free consultation on Stripe setup for your niche",
+    "offerPrimary": "Request a quote",
+    "offerSecondary": "Services"
   },
   "specialists": {
     "heading": "What we handle for Stripe setup",
@@ -136,8 +139,8 @@
     }
   },
   "accounts": {
-    "heading": "A Stripe account matched to niche and volume",
-    "lead": "Take an account under management or get one registered for yourself. We match the setup to your niche, volume and country.",
+    "heading": "An account configured for your niche",
+    "lead": "We choose the account setup for your niche, country and expected volume. Limits and reviews remain with Stripe.",
     "desc": "Every request is handled by a specialist: we assess risk, prepare the setup and connect in days, not months.",
     "galleryHeading": "What the Stripe dashboard looks like",
     "imageAlt": "Stripe UI illustration (not a client screenshot): payments and balance — example {{number}}",
@@ -168,12 +171,12 @@
   "advantages": {
     "heading": "Why teams connect Stripe with WayOfProcessing",
     "uptime": {
-      "title": "Payments don’t stop during reviews",
-      "desc": "If one Stripe account goes under review, payments switch to a backup channel — revenue does not depend on a single point of failure."
+      "title": "A backup channel reduces dependence on one account",
+      "desc": "If the main channel goes under review, the backup keeps accepting payments — revenue does not depend on a single point of failure."
     },
     "accounts": {
-      "title": "Accounts with history, not blank slates",
-      "desc": "We hand over verified accounts with real turnover — they handle limits more smoothly than freshly registered ones. Up to $500,000 per month."
+      "title": "An account configured for your niche",
+      "desc": "We choose the account setup for your niche, country and expected volume. Limits and reviews remain with Stripe."
     },
     "tax": {
       "title": "A jurisdiction that fits the bank",
@@ -184,8 +187,8 @@
       "desc": "Personal CRM dashboard: transaction statuses, filters, Excel and CSV export — no need to ask a manager for reports."
     },
     "niches": {
-      "title": "We work where others say no",
-      "desc": "E-commerce, SaaS, subscriptions, gaming — with a controlled chargeback rate we'll find a setup. We do not connect Forex or brokers: Stripe does not accept them."
+      "title": "We assess your niche first",
+      "desc": "If Stripe does not accept your niche, we will tell you before work starts. We do not connect forex or brokers."
     },
     "withdrawals": {
       "title": "Withdraw in fiat or USDT",
@@ -424,12 +427,12 @@
   },
   "complianceNotice": {
     "heading": "About Stripe platform rules",
-    "body": "Renting or buying a merchant account is not a way to “bypass” Stripe. The platform alone decides verification, limits and account closure. We help with the stack (entity, bank, MCC, site, routing) — not with masking prohibited activity.",
+    "body": "We are an independent service and not affiliated with Stripe, Inc. The platform alone decides verification, limits and account closure. We help with the stack (entity, bank, MCC, site, routing) — not with masking prohibited activity.",
     "item1": "We do not take forex, brokers or other categories Stripe explicitly rejects.",
     "item2": "We do not promise hold removal, permanent limits or approval of every niche.",
     "item3": "Your site, offer, refund policy and chargeback rate remain on your side of the risk.",
     "disclaimerLink": "Disclaimer",
-    "compareLink": "Rent vs buy comparison"
+    "compareLink": "Setup formats comparison"
   },
   "servicePages": {
     "aboutService": "About this service",
@@ -523,7 +526,8 @@
     "privacy": "Privacy policy",
     "terms": "Terms",
     "disclaimer": "Disclaimer",
-    "developedBy": "Developed by"
+    "developedBy": "Developed by",
+    "companyMetaLine": "Company number {{number}}"
   },
   "homeDirectories": {
     "heading": "Stripe by country, niche and solution",
@@ -535,7 +539,7 @@
   },
   "trustStrip": {
     "heading": "Transparent company",
-    "lead": "A UK Ltd with a public Companies House record. We are an independent service and not affiliated with Stripe, Inc. Renting or buying an account is not a platform-rules bypass: KYC, limits and review stay with Stripe.",
+    "lead": "A UK Ltd with a public Companies House record. We are an independent service and not affiliated with Stripe, Inc.",
     "legal": "Legal entity",
     "registry": "Registry",
     "companiesHouse": "Companies House no. {{number}}",

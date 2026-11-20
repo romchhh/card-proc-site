@@ -13,14 +13,11 @@ import LangSwitcher from './LangSwitcher'
 import styles from './Navbar.module.css'
 
 const NAV_LINKS = [
-  { key: 'about', path: '/about' },
   { key: 'services', path: '/services' },
-  { key: 'niches', path: '/niches' },
-  { key: 'jurisdictions', path: '/jurisdictions' },
   { key: 'solutions', path: '/solutions' },
-  { key: 'compare', path: '/compare/rent-vs-buy' },
-  { key: 'clients', path: '/clients' },
   { key: 'blog', path: '/blog' },
+  { key: 'about', path: '/about' },
+  { key: 'contacts', path: '/contacts' },
 ] as const
 
 export default function Navbar({ transparent = false }: { transparent?: boolean }) {
@@ -56,12 +53,8 @@ export default function Navbar({ transparent = false }: { transparent?: boolean 
   const isActive = (path: string) => {
     if (path === '/blog') return pathOnly === '/blog' || pathOnly.startsWith('/blog/')
     if (path === '/services') return pathOnly === '/services' || pathOnly.startsWith('/services/')
-    if (path === '/niches') return pathOnly === '/niches' || pathOnly.startsWith('/niches/')
-    if (path === '/jurisdictions') {
-      return pathOnly === '/jurisdictions' || pathOnly.startsWith('/jurisdictions/')
-    }
     if (path === '/solutions') return pathOnly === '/solutions' || pathOnly.startsWith('/solutions/')
-    if (path === '/compare/rent-vs-buy') return pathOnly.startsWith('/compare/')
+    if (path === '/contacts') return pathOnly === '/contacts'
     return pathOnly === path
   }
 

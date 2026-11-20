@@ -19,6 +19,15 @@ type Props = {
   locale?: Locale
 }
 
+const SECTION_ANCHORS: Record<string, string> = {
+  Чехия: 'czech-republic',
+  Czechia: 'czech-republic',
+  Кипр: 'cyprus',
+  Cyprus: 'cyprus',
+  Гонконг: 'hong-kong',
+  'Hong Kong': 'hong-kong',
+}
+
 function renderParagraphs(paragraphs: string[]) {
   const blocks: React.ReactNode[] = []
   let list: string[] = []
@@ -61,7 +70,7 @@ export default function HubRichBody({ intro, sections, ctas, locale = 'ru' }: Pr
       {sections.length > 0 && (
         <div className={styles.sections}>
           {sections.map((section) => (
-            <section key={section.title}>
+            <section key={section.title} id={SECTION_ANCHORS[section.title]}>
               <h2 className={styles.sectionTitle}>{section.title}</h2>
               <div className={styles.sectionBody}>{renderParagraphs(section.paragraphs)}</div>
             </section>

@@ -12,6 +12,7 @@ import PriorityLinks from '../../components/seo/PriorityLinks'
 import { isValidLocale, localePath, pickLocaleCopy, type Locale } from '@/lib/i18n/config'
 import { getHubTables } from '@/lib/guide-tables'
 import { getHubView, getLandingView, getLandingsByGroup } from '@/lib/landings'
+import { isIndexedLandingSlug } from '@/lib/seo-index'
 import { getLandingServiceImage } from '@/lib/landing-as-service'
 import { buildFaqPageJsonLd } from '@/lib/service-seo'
 import { absoluteUrl, buildBreadcrumbJsonLd, buildGraphJsonLd, buildPageMetadata, buildWebPageJsonLd } from '@/lib/seo'
@@ -40,16 +41,18 @@ export default async function NichesHubPage({ params }: Props) {
   const { locale: rawLocale } = await params
   const locale = (isValidLocale(rawLocale) ? rawLocale : 'ru') as Locale
   const view = getHubView('niches', locale)
-  const items = getLandingsByGroup('niches').map((landing) => {
-    const itemView = getLandingView(landing, locale)
-    return {
-      slug: landing.slug,
-      path: landing.path,
-      title: itemView.h1,
-      description: itemView.lead,
-      image: getLandingServiceImage(landing),
-    }
-  })
+  const items = getLandingsByGroup('niches')
+    .filter((landing) => isIndexedLandingSlug(landing.slug))
+    .map((landing) => {
+      const itemView = getLandingView(landing, locale)
+      return {
+        slug: landing.slug,
+        path: landing.path,
+        title: itemView.h1,
+        description: itemView.lead,
+        image: getLandingServiceImage(landing),
+      }
+    })
   const pageUrl = absoluteUrl(localePath('/niches', locale))
 
   const graph = buildGraphJsonLd([
